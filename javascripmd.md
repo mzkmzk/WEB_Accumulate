@@ -36,3 +36,4 @@ IE8及其低版本不支持'`getElementsByClassName`
 | previousElementSlibing | previousSlibing   |
 
 以上属性IE6/7/8只支持children属性,使用新的API会比旧的要快很多,因为少了空白等无用的节点个数.
+
