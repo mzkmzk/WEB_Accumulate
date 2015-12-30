@@ -23,3 +23,16 @@ IE8及其低版本不支持'`getElementsByClassName`
 `IE7 8`支持CSS2选择器.
 
 但是很多浏览器拒绝返回伪类`:link` 和 `:visited`
+
+##4. children等节点方法
+
+| 属性名                 | 被替代的属性      |
+|------------------------|-------------------|
+| children               | childNodes        |
+| childElmentCount       | childNodes.length |
+| firstElementChild      | firstChild        |
+| lastElementChild       | lastChild         |
+| nextElementSlibling    | nextSlibling      |
+| previousElementSlibing | previousSlibing   |
+
+以上属性IE6/7/8只支持children属性,使用新的API会比旧的要快很多,因为少了空白等无用的节点个数.
