@@ -16,4 +16,8 @@
 
 具体严格程度参考<http://www.w3school.com.cn/tags/tag_doctype.asp>
 
-IE8及其低版本不支持'`getElementsByClassName`'
+IE8及其低版本不支持'`getElementsByClassName`
+
+##3. `querySelectorAll`
+
+IE8开始支持.
