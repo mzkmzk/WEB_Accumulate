@@ -8,4 +8,4 @@
 
 `getElementByName()`同上,也会返回匹配的ID.
 
-所以最好不要起`ID`和`name`
+所以最好不要起`ID`和`name`起一样的.
