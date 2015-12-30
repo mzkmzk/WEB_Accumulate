@@ -6,4 +6,4 @@
 
 `getElementByID()`对匹配元素的ID不区分大小写,而且也会返回匹配name属性的元素
 
-`getElementByName()`同上,也会返回匹配的ID
+`getElementByName()`同上,也会返回匹配的ID.
