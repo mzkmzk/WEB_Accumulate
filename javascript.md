@@ -5,3 +5,4 @@
 ```javascript
 Array.prototype.slice.call(nodelist,0);
 ```
+
