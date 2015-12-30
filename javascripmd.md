@@ -12,3 +12,6 @@
 
 ##2. `getElementsByClassName`
 
+`!DOCTYPE`声明的严格程度来选择`怪异模式`和`标准模式`
+
+具体严格程度参考<http://www.w3school.com.cn/tags/tag_doctype.asp>
