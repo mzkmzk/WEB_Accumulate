@@ -7,4 +7,5 @@
        * [JavaScript](javascripmd.md)
        * [CSS](css.md)
    * [黑魔法](hei_mo_fa.md)
+       * JavaScript
 
