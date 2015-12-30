@@ -20,4 +20,4 @@ IE8及其低版本不支持'`getElementsByClassName`
 
 ##3. `querySelectorAll`
 
-IE8开始支持.
+`IE7 8`支持CSS2选择器.
