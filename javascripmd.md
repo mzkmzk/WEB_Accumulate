@@ -1,6 +1,6 @@
 # JavaScript
 
-##1. `getElementByID()`
+##1. `getElementByID()`和`getElementByName`
 
 低于IE8时
 
