@@ -21,3 +21,5 @@ IE8及其低版本不支持'`getElementsByClassName`
 ##3. `querySelectorAll`
 
 `IE7 8`支持CSS2选择器.
+
+但是很多浏览器拒绝返回伪类`:link` 和 `:visited`
