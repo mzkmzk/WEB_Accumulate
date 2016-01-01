@@ -19,3 +19,5 @@
     ```shell
     ClientAliveInterval 60
     ```
+    
+参考链接<http://www.cnblogs.com/dudu/archive/2013/02/07/ssh-write-failed-broken-pipe.html>
