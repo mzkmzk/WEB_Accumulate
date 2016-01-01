@@ -41,3 +41,4 @@ IE8及其低版本不支持'`getElementsByClassName`
 
 1. 判断是否为数组 `Array.isArray([])`
 2. 函数调用的this 权威`8.2.1`
+3. 无法使用擦;;ee和caller8.3.2
