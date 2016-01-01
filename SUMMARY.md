@@ -9,5 +9,5 @@
        * [HTML](html.md)
    * [黑魔法](hei_mo_fa.md)
        * [JavaScript](javascript.md)
-* Linux
+* [Linux](linux.md)
 
