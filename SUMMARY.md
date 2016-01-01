@@ -10,5 +10,5 @@
    * [黑魔法](hei_mo_fa.md)
        * [JavaScript](javascript.md)
 * [Linux](linux.md)
-   * Common
+   * [Common](common.md)
 
