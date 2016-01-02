@@ -41,4 +41,6 @@ IE8及其低版本不支持'`getElementsByClassName`
 
 1. 判断是否为数组 `Array.isArray([])`
 2. 函数调用的this 权威`8.2.1`
-3. 无法使用擦;;ee和caller8.3.2
+3. 严格模式下,无法使用擦callee和caller8.3.2
+4. 严格模式下,call和apply第一个参数8.7.3
+5. ECMAScript新增bing 8.7.4
