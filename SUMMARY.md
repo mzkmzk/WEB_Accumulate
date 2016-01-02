@@ -9,7 +9,7 @@
        * [HTML](html.md)
    * [黑魔法](hei_mo_fa.md)
        * [JavaScript](javascript.md)
-   * Utils
+   * [Utils](utils.md)
 * [Linux](linux.md)
    * [Common](common.md)
 
