@@ -10,7 +10,7 @@
    * [黑魔法](hei_mo_fa.md)
        * [JavaScript](javascript.md)
    * [Utils](utils.md)
-       * Gulp
+       * [Gulp](gulp.md)
 * [Linux](linux.md)
    * [Common](common.md)
 
