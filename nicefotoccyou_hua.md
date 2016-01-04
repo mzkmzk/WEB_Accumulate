@@ -22,6 +22,7 @@
 
 至于轮播,当网页load完才加载其他照片
 
+有个小技巧,一次次`append`js访问DOM会慢,把内容放在变量里,一次`append`
 ```javascript
 window.onload = function(){
     var lazy_loading_html = '<div class="item"><img src="../Images/Slider_Index_2.png"> </div>';
