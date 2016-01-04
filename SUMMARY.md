@@ -11,6 +11,7 @@
        * [JavaScript](javascript.md)
    * [Utils](utils.md)
        * [Gulp](gulp.md)
+   * Nicefoto.cc优化
 * [Linux](linux.md)
    * [Common](common.md)
 
