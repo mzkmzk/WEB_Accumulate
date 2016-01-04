@@ -14,3 +14,5 @@
 
 最基本和最有用的技巧.
 
+<http://www.cn.spritegen.website-performance.org/>
+
