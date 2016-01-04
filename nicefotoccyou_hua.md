@@ -18,3 +18,14 @@
 
 先把需要的图片放进去,然后里面会有css/less导出,再用相应的class放到图片的位置上.
 
+##2. 轮播图加载
+
+至于轮播,当网页load完才加载其他照片
+
+```javascript
+window.onload = function(){
+    var lazy_loading_html = '<div class="item"><img src="../Images/Slider_Index_2.png"> </div>';
+    lazy_loading_html += '<div class="item"><img src="../Images/Slider_Index_3.png"> </div>';
+    $("#lazy_loading").append(lazy_loading_html);
+}
+```
