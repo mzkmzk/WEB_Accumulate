@@ -16,3 +16,5 @@
 
 <http://www.cn.spritegen.website-performance.org/>
 
+先把需要的图片放进去,然后里面会有css/less导出,再用相应的class放到图片的位置上.
+
