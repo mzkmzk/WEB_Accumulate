@@ -7,3 +7,5 @@
 ```css
  background: no-repeat center top url("../Image/Index/index.jpg");
 ```
+
+##2 sass 怎么在s前加变量
