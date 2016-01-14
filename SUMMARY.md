@@ -9,7 +9,7 @@
        * [HTML](html.md)
    * [黑魔法](hei_mo_fa.md)
        * [JavaScript](javascript.md)
-       * CSS
+       * [CSS](magic_css.md)
    * [Utils](utils.md)
        * [Gulp](gulp.md)
    * [Nicefoto.cc优化](nicefotoccyou_hua.md)
