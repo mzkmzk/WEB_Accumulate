@@ -15,4 +15,5 @@
    * [Nicefoto.cc优化](nicefotoccyou_hua.md)
 * [Linux](linux.md)
    * [Common](common.md)
+* 服务器
 
