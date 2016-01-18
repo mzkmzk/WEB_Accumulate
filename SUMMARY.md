@@ -17,5 +17,5 @@
    * [Common](common.md)
 * [服务器](fu_wu_qi.md)
    * [PHP](php.md)
-       * 常见只是
+       * 常见知识
 
