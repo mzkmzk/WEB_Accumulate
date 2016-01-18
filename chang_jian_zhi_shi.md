@@ -28,6 +28,7 @@ echo $example(); //string(5) "hello"
 $message = 'hello';
 
 // Inherit by-reference
+// 重新定义方法,参数用指针.
 $example = function () use (&$message) {
     var_dump($message);
 };
@@ -35,10 +36,12 @@ echo $example(); //string(5) "hello"
 
 // The changed value in the parent scope
 // is reflected inside the function call
+// 因为用了指针,后续更改有用
 $message = 'world';
 echo $example(); //string(5) "world"
 
 // Closures can also accept regular arguments
+// 还可以在匿名函数中自定义参数,和从父作用域中共同使用.
 $example = function ($arg) use ($message) {
     var_dump($arg . ' ' . $message);
 };
