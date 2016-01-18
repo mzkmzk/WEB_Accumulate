@@ -20,9 +20,9 @@ echo $example(); //string(5) "hello"
 
 // Inherited variable's value is from when the function
 // is defined, not when called
-//"hello"在函数定义时就确定了,后续改无用
+// 在函数定义时就确定了,后续改无用
 $message = 'world';
-echo $example(); //string(5) 
+echo $example(); //string(5) "hello"
 
 // Reset message
 $message = 'hello';
