@@ -31,4 +31,4 @@ HTML5 实现
 
 解释一下`width=device-width`意思是把布局视口的宽度改成屏幕的宽度.
 
-`initial-scale=1`表示
+`initial-scale=1`表示将视图
