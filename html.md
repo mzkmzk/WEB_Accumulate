@@ -31,4 +31,4 @@ HTML5 实现
 
 解释一下`width=device-width`意思是把布局视口的宽度改成屏幕的宽度.
 
-`initial-scale=1`表示将视图
+`initial-scale=1`表示将视图缩放尺寸设置为1倍的意思,所有和`width=device-width`表达的意思一样,两个都写是为了兼容更多的浏览器
