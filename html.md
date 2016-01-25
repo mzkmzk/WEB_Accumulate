@@ -29,4 +29,5 @@ HTML5 实现
 
 所需我在头部中设置`<meta name="viewport" content="width=device-width,initial-scale=1">`
 
-解释一下`width=device-width`是什么意思
+解释一下`width=device-width`意思是把布局视口的宽度改成屏幕的宽度.
+
