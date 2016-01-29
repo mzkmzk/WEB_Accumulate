@@ -33,4 +33,4 @@
     ![uptime](QQ20160129-3.png)
 2. top 显示CPU的运行状态
 
-    ![top](QQ20160129-4.png)
+    ![top](QQ20160129-5.png)
