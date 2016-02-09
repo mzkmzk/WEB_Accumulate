@@ -50,3 +50,7 @@ $example("hello"); //string(11) "hello world"
 ```
 
 参考链接<http://php.net/manual/zh/functions.anonymous.php>
+
+##2. 获取子类的类名
+
+<http://www.php-note.com/article/detail/874>
