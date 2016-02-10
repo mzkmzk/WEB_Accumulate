@@ -6,3 +6,12 @@
 
 ###1.1 依赖
 
+```php
+     /**
+     * @depends 被依赖方法
+     */
+     public function testPush(array $stack)
+     ...
+```
+
+`@depends`
