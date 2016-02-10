@@ -7,11 +7,34 @@
 ###1.1 依赖
 
 ```php
-     /**
-     * @depends 被依赖方法
+<?php
+class MultipleDependenciesTest extends PHPUnit_Framework_TestCase
+{
+    public function testProducerFirst()
+    {
+        $this->assertTrue(true);
+        return 'first';
+    }
+
+    public function testProducerSecond()
+    {
+        $this->assertTrue(true);
+        return 'second';
+    }
+
+    /**
+     * @depends testProducerFirst
+     * @depends testProducerSecond
      */
-     public function testPush(array $stack)
-     ...
+    public function testConsumer()
+    {
+        $this->assertEquals(
+            array('first', 'second'),
+            func_get_args()
+        );
+    }
+}
+?>
 ```
 
-`@depends`
+`@depends`指明依赖关系,
