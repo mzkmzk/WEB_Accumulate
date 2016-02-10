@@ -37,4 +37,5 @@ class MultipleDependenciesTest extends PHPUnit_Framework_TestCase
 ?>
 ```
 
-`@depends`指明依赖关系,
+`@depends`指明依赖关系,按依赖顺序在参数中返回.
+
