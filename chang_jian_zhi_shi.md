@@ -54,3 +54,6 @@ $example("hello"); //string(11) "hello world"
 ##2. 获取子类的类名
 
 <http://www.php-note.com/article/detail/874>
+
+##3. 递归爆栈 错误提示
+
