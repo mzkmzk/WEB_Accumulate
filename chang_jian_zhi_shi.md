@@ -61,3 +61,6 @@ $example("hello"); //string(11) "hello world"
 
 来个不限制内存的设置...
 
+程序中设置`ini_set('memory_limit', '-1');`
+
+或者到php.ini中设置
