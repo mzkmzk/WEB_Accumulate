@@ -59,4 +59,5 @@ $example("hello"); //string(11) "hello world"
 
     Allowed memory size of 134217728 bytes exhausted (tried to allocate 72 bytes) i
 
-    
+来个不限制内存的设置...
+
