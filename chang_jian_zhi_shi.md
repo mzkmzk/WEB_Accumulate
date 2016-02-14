@@ -57,3 +57,4 @@ $example("hello"); //string(11) "hello world"
 
 ##3. 递归爆栈 错误提示
 
+    Allowed memory size of 134217728 bytes exhausted (tried to allocate 72 bytes) i
