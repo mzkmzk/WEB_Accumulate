@@ -15,5 +15,9 @@
 
 那么现在想实现一个遮掩层达到高度100%
 
+做法可以有`html-body-我的div`都设置成100%.
+
+
+
 参考:<http://www.webhek.com/css-100-percent-height>
 
