@@ -17,7 +17,7 @@
 
 做法可以有`html-body-我的div`都设置成100%.
 
-
+但是这样的做法不太优雅,因为要影响html和body的高度设置
 
 参考:<http://www.webhek.com/css-100-percent-height>
 
