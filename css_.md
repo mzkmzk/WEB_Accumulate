@@ -13,3 +13,7 @@
 1. 百分比设置参照父元素;
 2. 元素默认的高度为height:auto;
 
+那么现在想
+
+参考:<http://www.webhek.com/css-100-percent-height>
+
