@@ -19,5 +19,7 @@
 
 但是这样的做法不太优雅,因为要影响html和body的高度设置
 
+我觉得这里用`javascript`获取屏幕高度设置给div可能会比较好
+
 参考:<http://www.webhek.com/css-100-percent-height>
 
