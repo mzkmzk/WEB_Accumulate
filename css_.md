@@ -72,6 +72,6 @@
 
 缺点很明显 需要固定好高宽,才能算出margin
 
-###方法二: 绝对定位+top+left_transform
+###方法二: 绝对定位+top+left+transform
 
 
