@@ -129,5 +129,7 @@ Margin对待的元素主要有三种
 
     Margin`top/right/bootom/left`皆可用
 
+###6. 负Margin的应用
+
 
 
