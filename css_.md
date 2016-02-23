@@ -81,5 +81,5 @@
     transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
 }
 
-`translate`偏移的百分比
+`translate`偏移的百分比是根据容器自身的`width`
 ```
