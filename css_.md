@@ -123,7 +123,7 @@ Margin对待的元素主要有三种
     
     对于块状元素,Margin基本无限制的.
 2. 不可置换内联元素:`#PCDATA（即文本）| TT | I | B | BIG | SMALL|EM | STRONG | DFN | CODE |SAMP | KBD | VAR | CITE | ABBR | ACRONYM|A | OBJECT | BR | SCRIPT | MAP | Q | SUB | SUP | SPAN | BDO`
-    
+    `margin-top/bottom`无影响
 3. 可置换内联元素:`IMG|INPUT|SELECT|TEXTAREA|BUTTON|LABEL`
 
 
