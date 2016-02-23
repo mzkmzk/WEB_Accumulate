@@ -98,13 +98,15 @@
 
 ###4. 外边框合并问题
 
-外边框合并: 当普通文档流中的垂直方向发生两个元素的margin区域重合,就会发生外边框合并.两个margin最后形成一个margin,值为原先margin大的值,`行边框`,`浮动框`,`绝对定位`不会发生外边框合并.
+外边框合并: 当`普通文档流`中的`垂直`方向发生两个元素的margin区域重合,就会发生外边框`合并`.两个margin最后形成一个margin,值为原先margin大的值,`行边框`,`浮动框`,`绝对定位`不会发生外边框合并.
+
 
 margin合并主要有3种情况
 
 1. 一个元素的`margin-bottom`和`margin-top`合并
     ![情况如下](QQ20160223-1.png)
 2. 一个元素包含另外一个元素,然后两个元素有重叠情况
+3. 一个空元素,无padding和border
 
 参考链接<http://www.w3school.com.cn/css/css_margin_collapsing.asp>
 
