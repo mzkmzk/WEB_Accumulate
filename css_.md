@@ -59,7 +59,7 @@
 
 这个问题,大概有100种解决方式
 
-###方法一: 绝对定位+top+left
+###方法一: 绝对定位+top+left+margin
 
 ```css
 .element {
@@ -71,5 +71,7 @@
 ```
 
 缺点很明显 需要固定好高宽,才能算出margin
+
+###方法二: 绝对定位+top+left_transform
 
 
