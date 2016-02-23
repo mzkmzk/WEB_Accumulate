@@ -74,4 +74,10 @@
 
 ###方法二: 绝对定位+top+left+transform
 
-
+```css
+.element {
+    width: 600px; height: 400px;
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
+}
+```
