@@ -104,9 +104,12 @@
 margin合并主要有3种情况
 
 1. 一个元素的`margin-bottom`和`margin-top`合并
-    ![情况如下](QQ20160223-1.png)
+    ![普通margin合并](QQ20160223-1.png)
 2. 一个元素包含另外一个元素,然后两个元素有重叠情况
-3. 一个空元素,无padding和border
+    ![包含margin重叠](QQ20160223-2.png)
+    记住哦,只有垂直方向的margin会合并,margin-left/right是不会合并的.
+3. 一个空元素,无padding和border,只有margin
+    ![自身margin合并](QQ20160223-3.png)
 
 参考链接<http://www.w3school.com.cn/css/css_margin_collapsing.asp>
 
