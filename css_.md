@@ -121,11 +121,13 @@ Margin对待的元素主要有三种
 
 1. 块状元素:`P|H1|H2|H3|H4|H5|H6|UL|OL|PRE| DL | DIV | NOSCRIPT | BLOCKQUOTE | FORM | HR | TABLE | FIELDSET | ADDRESS`.
     
-    对于块状元素,Margin基本无限制的.
+    Margin`top/right/bootom/left`皆可用
 2. 不可置换内联元素:`#PCDATA（即文本）| TT | I | B | BIG | SMALL|EM | STRONG | DFN | CODE |SAMP | KBD | VAR | CITE | ABBR | ACRONYM|A | OBJECT | BR | SCRIPT | MAP | Q | SUB | SUP | SPAN | BDO`
 
     `margin-top/bottom`不起作用.`margin-left/right`起作用
 3. 可置换内联元素:`IMG|INPUT|SELECT|TEXTAREA|BUTTON|LABEL`
+
+    Margin`top/right/bootom/left`皆可用
 
 
 
