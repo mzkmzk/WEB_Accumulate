@@ -55,3 +55,8 @@
 
 参考:<http://www.webhek.com/css-100-percent-height>
 
+##2. 垂直居中
+
+这个问题,大概有100种解决方式
+
+
