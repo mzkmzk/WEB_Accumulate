@@ -107,7 +107,7 @@ margin合并主要有3种情况
     ![普通margin合并](QQ20160223-1.png)
 2. 一个元素包含另外一个元素,然后两个元素有重叠情况
     ![包含margin重叠](QQ20160223-2.png)
-    记住哦,只有垂直方向的margin会合并,margin-left/right是不会合并的.
+    记住哦,只有垂直方向的margin会合并,margin-left/right是不会合并的.这种情况可以给父元素加个border或padding或者内容.
 3. 一个空元素,无padding和border,只有margin
     ![自身margin合并](QQ20160223-3.png)
 
