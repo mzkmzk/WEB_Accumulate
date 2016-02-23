@@ -59,4 +59,13 @@
 
 这个问题,大概有100种解决方式
 
+###方法一: 绝对定位+top+left
 
+```css
+.element {
+    width: 600px; height: 400px;
+    position: absolute; left: 50%; top: 50%;
+    margin-top: -200px;    /* 高度的一半 */
+    margin-left: -300px;    /* 宽度的一半 */
+}
+```
