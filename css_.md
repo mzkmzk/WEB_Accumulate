@@ -96,7 +96,7 @@
 
 参考链接<http://www.zhangxinxu.com/wordpress/2013/11/margin-auto-absolute-%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D-%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/>
 
-###4. 外边框合并问题
+###4. Margin合并问题
 
 外边框合并: 当`普通文档流`中的`垂直`方向发生两个元素的margin区域重合,就会发生外边框`合并`.两个margin最后形成一个margin,值为原先margin大的值,`行边框`,`浮动框`,`绝对定位`不会发生外边框合并.
 
