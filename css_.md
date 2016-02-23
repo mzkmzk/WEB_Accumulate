@@ -34,7 +34,13 @@
 
 ###方法三: `fixed`和 0(最后采用)
 
-因为想起了`Bootstrap`,也有个添加遮掩层,然后在上面加`Model`的做法,所以就看了看代码
+因为想起了`Bootstrap`,也有个添加遮掩层,然后在上面加`Model`的做法,所以就看了看代码<http://getbootstrap.com/javascript/#live-demo>
+
+大致层次为
+
+![Bootstrap_Model](QQ20160223-0.png)
+
+可以查看到`Model`的父层
 
 ```css
 .model{
