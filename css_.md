@@ -80,4 +80,6 @@
     position: absolute; left: 50%; top: 50%;
     transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
 }
+
+`translate`偏移的百分比
 ```
