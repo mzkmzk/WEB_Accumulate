@@ -121,4 +121,4 @@ Margin对待的元素主要有三种
 
 1. 块状元素:`P|H1|H2|H3|H4|H5|H6|UL|OL|PRE| DL | DIV | NOSCRIPT | BLOCKQUOTE | FORM | HR | TABLE | FIELDSET | ADDRESS`.
 2. 不可置换内联元素
-3. 可置换内联元素
+3. 可置换内联元素:`img|input|select|textarea|button|label`
