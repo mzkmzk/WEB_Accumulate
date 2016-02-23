@@ -115,3 +115,6 @@ margin合并主要有3种情况
 
 参考链接<http://www.w3school.com.cn/css/css_margin_collapsing.asp>
 
+###5, Margin对待元素的差别
+
+
