@@ -100,3 +100,5 @@
 
 外边框合并: 当普通文档流中的垂直方向发生两个元素的margin区域重合,就会发生外边框合并.两个margin最后形成一个margin,值为原先margin大的值,`行边框`,`浮动框`,`绝对定位`不会发生外边框合并.
 
+参考链接<http://www.w3school.com.cn/css/css_margin_collapsing.asp>
+
