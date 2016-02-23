@@ -140,4 +140,6 @@ Margin对待的元素主要有三种
 Margin参考线分两类
 
 1. Top和Left,都是从外往内容推距离
-2. Right和Bottom,
+2. Right和Bottom,都是内容框内往外推距离.
+
+以上只是Margin为正,
