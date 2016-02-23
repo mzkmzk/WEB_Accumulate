@@ -111,6 +111,7 @@ margin合并主要有3种情况
 3. 一个空元素,无padding和border,只有margin
     ![自身margin合并](QQ20160223-3.png)
 
+解决方法:页面只设定单向`Margin`.
 
 参考链接<http://www.w3school.com.cn/css/css_margin_collapsing.asp>
 
