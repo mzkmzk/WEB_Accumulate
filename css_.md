@@ -137,13 +137,14 @@ Margin对待的元素主要有三种
 
 当`margin`4个值都为正时,Margin的计算方向就如红色线那样隔开.
 
+以上只是Margin为正的情况,当Margin则会相反.
+
 Margin参考线和参考物分两类
 
 1. Top和Left,都是从外往内容推距离,以自身为参考物
-2. Right和Bottom,都是内容框内往外推距离.以临近元素为参考物.
+2. Right和Bottom,都是内容框内往外推距离.以临近元素为参考物.例如`margin-bottom`为-10px时,会把临近的下方元素给提上来10px
 
 
-以上只是Margin为正的情况,当Margin则会相反.
 
 
 
