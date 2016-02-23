@@ -83,7 +83,7 @@
 `translate`偏移的百分比是根据容器自身的`width`和``
 ```
 
-###方法三:觉得定位+各方向0+margin
+###方法三:绝对定位+各方向0+margin
 
 ```css
 .element {
