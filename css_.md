@@ -34,6 +34,8 @@
 
 ###方法三: `fixed`和 0(最后采用)
 
+因为想起了`Bootstrap`,也有个添加遮掩层,然后
+
 ```css
 .model{
     position: fixed;
@@ -44,6 +46,8 @@
     z-index: 1050;
 }
 ```
+
+
 
 参考:<http://www.webhek.com/css-100-percent-height>
 
