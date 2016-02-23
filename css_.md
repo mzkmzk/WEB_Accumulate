@@ -131,5 +131,7 @@ Margin对待的元素主要有三种
 
 ###6. 负Margin的应用
 
+要玩负Margin,必须先了解Margin参考线
 
+![Margin参考线](QQ20160223-4.png)
 
