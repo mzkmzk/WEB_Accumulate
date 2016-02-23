@@ -135,3 +135,9 @@ Margin对待的元素主要有三种
 
 ![Margin参考线](QQ20160223-4.png)
 
+当`margin`4个值都为正时,Margin的计算方向就如红色线那样隔开.
+
+Margin参考线分两类
+
+1. Top和Left,都是从外往内容推距离
+2. Right和Bottom,
