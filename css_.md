@@ -32,7 +32,18 @@
 1. 出现了遮掩层后,变化浏览器尺寸时,高度100%是无法根据拖动情况而改变的.
 2. 
 
-###方法三: `fixed`和 0
+###方法三: `fixed`和 0(最后采用)
+
+```css
+.model{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1050;
+}
+```
 
 参考:<http://www.webhek.com/css-100-percent-height>
 
