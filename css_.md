@@ -150,3 +150,6 @@ Margin参考线和参考物分两类
 
 如果直接没兼容移动端的网页在手机上打开,会放大/缩小页面,以达到和PC端的浏览效果类似,下面语句阻止浏览器放大/缩小界面
 
+```html
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+```
