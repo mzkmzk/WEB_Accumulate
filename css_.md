@@ -145,3 +145,6 @@ Margin参考线和参考物分两类
 2. Right和Bottom,都是内容框内往外推距离.以临近元素为参考物.例如`margin-bottom`为-10px时,会把临近的下方元素给提上来10px
 
 参考链接<http://www.hicss.net/i-know-you-do-not-know-the-negative-margin/>
+
+###7. 移动端自动缩放
+
