@@ -4,3 +4,4 @@
 
 `属性`->`搜索File Watchers`->`双击SCSS`
 
+![](QQ20160224-1@2x.png)
