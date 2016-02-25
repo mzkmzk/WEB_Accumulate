@@ -64,3 +64,10 @@ $example("hello"); //string(11) "hello world"
 程序中设置`ini_set('memory_limit', '-1');`
 
 或者到php.ini中设置
+
+##4. 根据变量获取类名
+
+```php
+get_class($base_Model);
+//返回 "命名空间\Patient_Model"
+```
