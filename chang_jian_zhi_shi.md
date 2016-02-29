@@ -71,3 +71,14 @@ $example("hello"); //string(11) "hello world"
 get_class($base_Model);
 //返回 "命名空间\Patient_Model"
 ```
+
+##5. 配置本地域名
+
+修改apache配置文件`/etc/apache/httpd.conf`
+
+启动虚拟主机加载,去掉#
+
+```
+# Virtual hosts
+Include /private/etc/apache2/extra/httpd-vhosts.conf
+```
