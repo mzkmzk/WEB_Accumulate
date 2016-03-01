@@ -82,3 +82,9 @@ get_class($base_Model);
 # Virtual hosts
 Include /private/etc/apache2/extra/httpd-vhosts.conf
 ```
+
+然后修改`extra/httpd-vhosts`
+
+不过笔者改了以后没在vhotst声明的之前的项目都无法访问了.
+
+还会有403权限问题.我把整个项目都777以后,才可以访问.
