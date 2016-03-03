@@ -33,3 +33,4 @@ for(var index = 0 ; index<10;index++){
         ul.appendChild(li);
     }
 ```
+这里没有直接把匿名函数赋给onclick,
