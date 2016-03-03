@@ -31,3 +31,4 @@ for(var index = 0 ; index<10;index++){
         ul.appendChild(li);
     }
 ```
+什么鬼..后面加个`(index)`就可以了?...
