@@ -14,7 +14,7 @@
        * [Gulp](gulp.md)
    * [常见问题](chang_jian_wen_ti.md)
        * [CSS](css_.md)
-       * JS
+       * [JS](js.md)
 * [Nicefoto.cc优化](nicefotoccyou_hua.md)
 * [Linux](linux.md)
    * [Common](common.md)
