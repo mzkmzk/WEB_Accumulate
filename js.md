@@ -25,7 +25,7 @@ for(var index = 0 ; index<10;index++){
  for(var index = 0 ; index<header_children_length;index++){
         var li = document.createElement("li");
         li.innerText = header_children[index].innerText;
-        li.onclick = function(index){
+        li.onclick = function(){
             console.log(index);
         }(index);
         ul.appendChild(li);
