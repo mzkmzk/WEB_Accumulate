@@ -18,3 +18,16 @@ for(var index = 0 ; index<10;index++){
 但是实际上console.log出来的都是10
 
 为什么,因为在用户点击的li的时候,这个for循环早已结束,index与for形成了一个闭包,因为onclick函数长期有效,导致for循环并没有被回收,但for循环已结束,所以index一直是10.
+
+如何解决
+
+```javascript
+ for(var index = 0 ; index<header_children_length;index++){
+        var li = document.createElement("li");
+        li.innerText = header_children[index].innerText;
+        li.onclick = function(){
+            console.log(index);
+        }(index);
+        ul.appendChild(li);
+    }
+```
