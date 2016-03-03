@@ -33,4 +33,6 @@ for(var index = 0 ; index<10;index++){
 ```
 什么鬼..后面加个`(index)`就可以了?
 
-原理: 后面加(index)表名,立马调用匿名函数,并把index参数传给匿名函数内,
+原理: 后面加(index)表名,立马调用匿名函数,并把index参数传给匿名函数内,然后就会把函数执行的结果赋给onclick属性.
+
+关于函数的返回值,如果有return ,就会return值, 没有return 就返回函数本身.
