@@ -33,4 +33,4 @@ for(var index = 0 ; index<10;index++){
         ul.appendChild(li);
     }
 ```
-这里没有直接把匿名函数赋给onclick,
+这里没有直接把匿名函数赋给onclick,而是通过一个直接执行的函数把参数传给匿名函数.
