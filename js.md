@@ -25,10 +25,12 @@ for(var index = 0 ; index<10;index++){
  for(var index = 0 ; index<header_children_length;index++){
         var li = document.createElement("li");
         li.innerText = header_children[index].innerText;
-        li.onclick = function(){
+        li.onclick = function(index){
             console.log(index);
         }(index);
         ul.appendChild(li);
     }
 ```
-什么鬼..后面加个`(index)`就可以了?...
+什么鬼..后面加个`(index)`就可以了?
+
+原理: 后面加(index)表名,立马调用匿名函数,并把index参数传给匿名函数内,
