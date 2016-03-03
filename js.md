@@ -17,3 +17,4 @@ for(var index = 0 ; index<10;index++){
 
 但是实际上console.log出来的都是10
 
+为什么,因为在用户点击的li的时候,
