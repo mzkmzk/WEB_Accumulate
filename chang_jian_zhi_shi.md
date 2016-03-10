@@ -88,3 +88,9 @@ Include /private/etc/apache2/extra/httpd-vhosts.conf
 不过笔者改了以后没在vhotst声明的之前的项目都无法访问了.
 
 还会有403权限问题.我把整个项目都777以后,才可以访问.
+
+##6. 获取php中定义的所有页面
+
+问题是这样的:我Laravel后台传输给前台很多变量,我需要获取所有值.
+
+`get_defined_vars()`可以获取页面的所有变量.
