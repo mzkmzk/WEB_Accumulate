@@ -17,7 +17,7 @@
        * [JS](js.md)
    * [JavaScript](javascript__.md)
        * [Package.json](packagejson.md)
-       * npm
+       * [npm](npm.md)
 * [Nicefoto.cc优化](nicefotoccyou_hua.md)
 * [Linux](linux.md)
    * [Common](common.md)
