@@ -21,6 +21,7 @@
 3. `devDependencies`: 项目开发需要模块
 4.      
 
+##2. 
 ##参考链接
 
 <http://javascript.ruanyifeng.com/nodejs/packagejson.html>
