@@ -3,14 +3,14 @@
 ##1. 基本命令介绍
 
 1. `npm init`: 创建新的package.json,加-f/-y(yes)可跳过
-2. `npm set`: 设定环境变量,存在`~/.npmrc`文件
+2. `npm set 变量名`: 设定环境变量,存在`~/.npmrc`文件
      
      1. init-author-name
      2. init-author-email
      3. init-author-url
      4. init-license
      5. save-exact true/false :记录准确版本
-3. 
+3. `npm info 模块名`:  
 
 
 ##2. 其余命令
