@@ -9,6 +9,7 @@
      2. init-author-email
      3. init-author-url
      4. init-license
+     5. save-exact true/false :记录准确版本
 3. 
 
 
