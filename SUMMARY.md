@@ -15,7 +15,7 @@
    * [常见问题](chang_jian_wen_ti.md)
        * [CSS](css_.md)
        * [JS](js.md)
-   * JavaScript
+   * [JavaScript](javascript__.md)
 * [Nicefoto.cc优化](nicefotoccyou_hua.md)
 * [Linux](linux.md)
    * [Common](common.md)
