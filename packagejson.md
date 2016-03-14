@@ -47,4 +47,6 @@
 4. `npm install express --save-dev`,同上,但写入的是devDependencies属性
 ##参考链接
 
-<http://javascript.ruanyifeng.com/nodejs/packagejson.html>
+阮一峰<http://javascript.ruanyifeng.com/nodejs/packagejson.html>
+
+外文,更详细<https://docs.npmjs.com/files/package.json>
