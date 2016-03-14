@@ -19,9 +19,14 @@
 
     
 3. `devDependencies`: 项目开发需要模块
-4.      
+4. `peerDependencies`: 用来声明插件指定所需的主软件的版本,注意npm 3以后,不会默认安装`peerDependencies`的模块.     
 
-##2. 
+##2. 命令参考
+
+1. `npm init`:可生成空的package.json文件
+2. `npm install` 安装目录中声明的模块
+3. `npm install express --save`: 单独安装express模块,并写入dependencies属性中
+4. `npm install express --save-dev`,同上,但写入的是devDependencies属性
 ##参考链接
 
 <http://javascript.ruanyifeng.com/nodejs/packagejson.html>
