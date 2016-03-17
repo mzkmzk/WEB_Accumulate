@@ -19,7 +19,24 @@
     1. `npm install sax@latest`
     2. `npm install sax@0.11`
     3. `npm install sax@">=0.10 <0.2.0"`
-7. 
+    4. `npm install 模块名 --save-exact`: 会安装`package.json`指定的确切版本
+    5. `npm install sax --save|-S`: 安装到dependencies中 
+    6. `npm install sax --save-dev-D`: 安装到devDependencies中
+    7. `npm install sax@beta`: 安装最新的beta版本.
+    8. `npm install sax@1.3.1-beta.3`: 安装指定beta版本
+    9. `npm install --production`: 只安装`dependencies`
+7. `npm update|uninstall [-global] [package name]`: 更新/卸载模块.
+
+    但是这个最会更新顶级模块,要想更新依赖其的模块可以`npm --depth 9999 update`
+  
+  
+
+##2. 模块标签
+
+1. `npm dist-tag add <pkg>@<version> [<tag>]`: 新建标签
+2. `npm install<name>@<tag>`: 安装指定标签
+
+
 
 
 ##2. 其余命令
@@ -29,3 +46,8 @@
 3. `npm -v`: 查看npm版本
 4. `npm config list -l`: npm配置
 5. `npm install npm@latest -g`: 安装最新版的npm
+6. `npm shrinkwrap [--dev]`: 锁定版本,会生成`npm-shrinkwrap.json`会保存当前项目的所有依赖的版本,用户下次install,版本完全根据此文件.
+7. `npm prune [package name]`:此命令与`npm shrinkwrap`配套使用,使用`npm shrinkwrap`时,可能存在某个已安装模块不在`dependencies`的情况,这时`npm shrinkwrap`就会报错,`npm prune`可以移除所有不在`dependencies`字段里的模块.
+
+##参考资料
+<http://javascript.ruanyifeng.com/nodejs/npm.html>
