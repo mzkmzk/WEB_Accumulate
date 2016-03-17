@@ -13,7 +13,12 @@
 3. `npm info 模块名 [具体属性]`: 查看每个模块的具体信息 
 4. `npm search <搜索词>`: 搜索仓库,可跟正则
 5. `npm list [-global] [模块名]`: 显示当前目录的模块 / 显示全局模块 / 单个模块
-6. `npm install [-g] 模块名|[git 地址]`: 安装本项目/全局模块, 一般全局模块只安装工具类,可以通过命令行调用.
+6. `npm install [-g] 模块名|[git 地址] [-f]`: 安装本项目/全局模块, 一般全局模块只安装工具类,可以通过命令行调用.--force可以强制重新安装.
+
+    `npm install`默认安装最新版本 模块,如果需要指定版本号可
+    1. `npm install sax@latest`
+    2. `npm install sax@0.11`
+    3. `npm install sax@">=0.10 <0.2.0"`
 7. 
 
 
