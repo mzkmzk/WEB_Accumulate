@@ -9,8 +9,12 @@
      2. init-author-email
      3. init-author-url
      4. init-license
-     5. save-exact true/false :记录准确版本
-3. `npm info 模块名`:  
+     5. npm save-exact true/false :记录准确版本
+3. `npm info 模块名 [具体属性]`: 查看每个模块的具体信息 
+4. `npm search <搜索词>`: 搜索仓库,可跟正则
+5. `npm list [-global] [模块名]`: 显示当前目录的模块 / 显示全局模块 / 单个模块
+6. `npm install [-g] 模块名|[git 地址]`: 安装本项目/全局模块, 一般全局模块只安装工具类,可以通过命令行调用.
+7. 
 
 
 ##2. 其余命令
