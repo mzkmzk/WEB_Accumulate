@@ -27,7 +27,7 @@
     9. `npm install --production`: 只安装`dependencies`
 7. `npm update|uninstall [-global] [package name]`: 更新/卸载模块.
 
-    但是这个最会更新顶级模块,要想更新依赖其的模块可以`npm --depth 9999 update`
+    但是这个只会更新顶级模块,要想更新依赖其的模块可以`npm --depth 9999 update`
   
   
 
