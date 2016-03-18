@@ -18,6 +18,7 @@
    * [JavaScript](javascript__.md)
        * [Package.json](packagejson.md)
        * [npm](npm.md)
+           * 项目安装失败经验
 * [Nicefoto.cc优化](nicefotoccyou_hua.md)
 * [Linux](linux.md)
    * [Common](common.md)
