@@ -94,3 +94,16 @@ Include /private/etc/apache2/extra/httpd-vhosts.conf
 问题是这样的:我Laravel后台传输给前台很多变量,我需要获取所有值.
 
 `get_defined_vars()`可以获取页面的所有变量.
+
+##7. HTTP_ORIGIN什么时候存在
+
+最近在PHP调用`$_SERVER['HTTP_ORIGIN']`,发现有时会有,有时不会
+
+默认什么时候有,一般的ajax访问都会有
+
+![](QQ20160321-1.png)
+
+而如果是直接的页面跳转或资源访问
+
+![](QQ20160321-2.png)
+
