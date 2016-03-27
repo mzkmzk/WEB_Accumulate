@@ -11,3 +11,8 @@
 ## 2. npm安装babel-cli
 
 1. cd 到项目根目录,执行`sudo npm install --save-dev babel-cli`
+
+
+## 参考资料
+
+<http://blog.jetbrains.com/webstorm/2015/05/ecmascript-6-in-webstorm-transpiling/>
