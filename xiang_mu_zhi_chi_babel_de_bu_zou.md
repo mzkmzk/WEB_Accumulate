@@ -1,9 +1,12 @@
-# 项目支持Babel转JSX的步骤
+# PhpStrom支持Babel转JSX的步骤
 
 ## 1. npm支持
 
 1. 安装babel : cd 到项目根目录,执行`sudo npm install --save-dev babel-cli`
-2. 创建babel读取的配置文件 : 在项目的根目录中新建`.babelrc`文件,内容为 : 
+2. 安装需要转换的语法包 : 
+    1. `sudo npm install --save-dev babel-preset-es2015`
+    2. `sudo npm install --save-dev babel-preset-react`
+3. 创建babel读取的配置文件 : 在项目的根目录中新建`.babelrc`文件,内容为 : 
 
       ```xml
       {
