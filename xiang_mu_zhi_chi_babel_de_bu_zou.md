@@ -8,4 +8,6 @@
 
 选择Javascript language version 为JSX Harmony即可
 
-## 2. 
+## 2. npm安装babel-cli
+
+1. cd 到项目根目录,执行`sudo npm install --save-dev babel-cli`
