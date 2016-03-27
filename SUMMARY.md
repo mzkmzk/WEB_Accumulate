@@ -19,6 +19,7 @@
        * [Package.json](packagejson.md)
        * [npm](npm.md)
            * [项目安装失败经验](xiang_mu_an_zhuang_shi_bai_jing_yan.md)
+   * 项目支持Babel的步骤
 * [Nicefoto.cc优化](nicefotoccyou_hua.md)
 * [Linux](linux.md)
    * [Common](common.md)
