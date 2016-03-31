@@ -12,6 +12,7 @@
     
     而在if里声明`let`,这样let变量会存在if作用域内.
 2. const: 该变量为常量.
+3. `...`拷贝数组: const copy_array = [...array];
 
 令我蛋疼的改进
 
