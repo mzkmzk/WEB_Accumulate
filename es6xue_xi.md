@@ -13,6 +13,12 @@
     而在if里声明`let`,这样let变量会存在if作用域内.
 2. const: 该变量为常量.
 3. `...`拷贝数组: const copy_array = [...array];
+4. `Array.from`: 将类似数组的对象转化为数组
+
+    ```javascript
+    const foo = document.querySelectorAll('.foo');
+    const nodes = Array.from(foo);
+    ```
 
 令我蛋疼的改进
 
