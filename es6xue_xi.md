@@ -19,6 +19,12 @@
     const foo = document.querySelectorAll('.foo');
     const nodes = Array.from(foo);
     ```
+5. `箭头函数`: 主要函数绑定了`this`
+
+   ```javascript
+  //第一个x代表参数,后面`x*x`表示返回的结果.
+  [1,2,3].map(x =>x * x) ;
+  ```
 
 令我蛋疼的改进
 
