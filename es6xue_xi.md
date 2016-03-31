@@ -73,6 +73,50 @@
     }
     
     //新写法
+    class PeekableQueue extends Queue {
+      peek() {
+        return this._queue[0];
+      }
+    }
+    ```
+8. `Module`模块写法
+
+    ```javascript
+    //旧写法
+    const moduleA =require('ModuleA');
+    const func1 = moduleA.func1;
+    const func2 = modulea.func2;
+    
+    //新写法
+    import {func1,func2} from 'ModuleA';
+    ```
+    
+    export取代module.exports
+    
+    ```javascript
+    var React = require('react');
+    
+    var Breadcrumbs = React.createClass({
+      render() {
+        return <nav />;
+      }
+    });
+    
+    module.exports = Breadcrumbs;
+    
+    //ES6写法
+    import React from 'react';
+    
+    const Breadcrmbs = React.createClass({
+        render () {
+          return <nav />;
+        }
+    });
+    //当模块只有一个输出值的时候使用export default
+    //而是使用export
+    //主要export default 与export同时使用
+    export default Breadcrmbs;
+    
     ```
 
 令我蛋疼的改进
