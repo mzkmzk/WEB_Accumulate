@@ -45,8 +45,35 @@
       this._queue.splice(0.1);
       return value; 
     }
+    
+    //新写法
+    class Queue {
+      constructor(contents = []) {
+        this._queue = [...contents];
+      }
+      
+      pop() {
+          const value = this._queue[0];
+          this._queue.splice(0,1);
+          return value;
+      }
+    }
     ```
+7. `extends`实现继承
 
+    ```javascript
+    //旧写法
+    const inherts = require('inherits');
+    function PeekbleQueue(contents) {
+        Queue.apply(this,contents);
+    }
+    innherits(PeekableQueue,Queue);
+    PeekableQueue.prototype.peek = function() {
+      return this._queue[0];
+    }
+    
+    //新写法
+    ```
 
 令我蛋疼的改进
 
@@ -69,7 +96,11 @@
     function getFullName ({firstName,lastName}) {
     }
     ```
-3. 
 
+
+## 参考链接
+
+
+<http://es6.ruanyifeng.com/>
     
 
