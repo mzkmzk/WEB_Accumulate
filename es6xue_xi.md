@@ -24,7 +24,29 @@
    ```javascript
   //第一个x代表参数,后面`x*x`表示返回的结果.
   [1,2,3].map(x =>x * x) ;
+  
+  //旧写法
+  const self =this;
+  const boundMethod = function(...params) {
+      return method.apply(self,params);
+  }
+  //新写法
+  const boundMethod = (...params) => method.apply(this,params);
   ```
+6. `class代替prototype`: 
+
+    ```javascript
+    //旧写法
+    function Queue (contents = [] ) {
+      this._queue = [...contents];
+    }
+    Queue.prototype.pop = function () {
+      const value = this._queue[0];
+      this._queue.splice(0.1);
+      return value; 
+    }
+    ```
+
 
 令我蛋疼的改进
 
