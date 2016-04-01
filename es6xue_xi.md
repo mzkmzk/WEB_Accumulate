@@ -120,9 +120,9 @@
     ```
 9. `Object.assign`: Object.assign(target, ...sources)
 
-     ```javascript
-     
-     ```
+   ```javascript
+   
+   ```
 
 令我蛋疼的改进
 
