@@ -118,7 +118,7 @@
     export default Breadcrmbs;
     
     ```
-9. `Object.assign`: Object.assign(target, ...sources)
+9. `Object.assign`: Object.assign(target, ...sources),可以jiang
 
    ```javascript
    
