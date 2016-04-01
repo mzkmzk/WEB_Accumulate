@@ -18,7 +18,7 @@
 
 `$_SERVER`会返回什么
 
-![FireFox_ORIGIN](QQ20160401-3.png)
+![FireFox_ORIGIN](QQ20160401-5.png)
 
 这个FireFox并没有返回HTTP_ORIGIN
 
