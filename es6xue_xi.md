@@ -118,10 +118,11 @@
     export default Breadcrmbs;
     
     ```
-9. `Object.assign`: Object.assign(target, ...sources),可以jiang
+9. `Object.assign`: Object.assign(target, ...sources),可以将来自一个或多个源对象,复制到一个目标对象
 
    ```javascript
-   
+   //下来就是把todo,添加一个text属性给一个空对象
+   Object.assign({}, todo, { text: action.text })
    ```
 
 令我蛋疼的改进
