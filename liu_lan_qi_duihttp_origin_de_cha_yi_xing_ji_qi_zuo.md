@@ -12,13 +12,13 @@
 
 在Chrome中测试当浏览器发送ajax的POST请求时,`$_SERVER`会存储哪些HTTP信息头
 
-![QQ20160401-0.png][1]
+![Chrome_ORIGIN](QQ20160401-4.png)
 
 而当FireFox执行相同的操作时
 
 `$_SERVER`会返回什么
 
-![QQ20160401-1.png][2]
+![FireFox_ORIGIN](QQ20160401-3.png)
 
 这个FireFox并没有返回HTTP_ORIGIN
 
@@ -31,8 +31,3 @@
 ## 4. 解决方式
 
 用`HTTP_HOST`代替,这个`HTTP_HOST`是基本所有浏览器都会返回的信息头,所以用`$Server['HTTP_HOST']`来获取域名,会比较可靠一点.
-
-
-
-  [1]: http://tec.grouplus.com/usr/uploads/2016/04/3362918390.png
-  [2]: http://tec.grouplus.com/usr/uploads/2016/04/4157500289.png
