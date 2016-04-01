@@ -118,6 +118,11 @@
     export default Breadcrmbs;
     
     ```
+9. `Object.assign`: Object.assign(target, ...sources)
+
+     ```javascript
+     
+     ```
 
 令我蛋疼的改进
 
