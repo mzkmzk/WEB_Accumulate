@@ -121,9 +121,14 @@ npm WARN webpack-dev-middleware@1.6.1 requires a peer of webpack@1 || ^2.1.0-bet
 `
 3. 打开: `http://localhost:8080/`
 
-## 基本命令
+## 8.基本命令
 
 1. `webpack --progress --colors --watch`监听变化
 
+## 参考链接
+
+代码参考:<http://webpack.github.io/docs/tutorials/getting-started/>
+
+命令: <http://www.w3ctech.com/topic/1557>
 
   
