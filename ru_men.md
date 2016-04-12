@@ -32,4 +32,7 @@ sudo npm install webpack -g
 
 基本很简单,`webpack`配置好了基本都OK 
     
-## 3.     
+## 3. 引入JS
+
+代码地址<https://github.com/mzkmzk/Webpack_Example/tree/master/2-exports_js>
+
