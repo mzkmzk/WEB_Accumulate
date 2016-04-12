@@ -71,4 +71,6 @@ sudo npm install webpack -g
       ```
 5. `webpack ./entry.js bundle.js`
 
-     
+## 5. 命令引入CSS模块
+
+1. copy上一步代码
