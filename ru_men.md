@@ -54,6 +54,8 @@ sudo npm install webpack -g
 
 ## 4. 引入CSS
 
+代码地址<https://github.com/mzkmzk/Webpack_Example/tree/master/3-require_css>
+
 1. copy上一步的代码
 2. `npm install css-loader style-loader`
 3. 增加样式
