@@ -112,6 +112,11 @@ sudo npm install webpack -g
 ## 7. 开启本地Server
 
 1. 安装Server: `sudo npm install webpack-dev-server -g`
+    弹出警告
+    ```
+    npm WARN webpack-dev-server@1.14.1 requires a peer of webpack@>=1.3.0 <3 but none was installed.
+npm WARN webpack-dev-middleware@1.6.1 requires a peer of webpack@1 || ^2.1.0-beta but none was installed.
+    ```
 2. 开启监听: `webpack-dev-server --progress --colors
 `
 ## 基本命令
