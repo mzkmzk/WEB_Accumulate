@@ -69,3 +69,6 @@ sudo npm install webpack -g
     + require("!style!css!./style.css");
     document.write(require("./content.js"));
       ```
+5. `webpack ./entry.js bundle.js`
+
+     
