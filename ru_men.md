@@ -124,6 +124,6 @@ npm WARN webpack-dev-middleware@1.6.1 requires a peer of webpack@1 || ^2.1.0-bet
 ## 基本命令
 
 1. `webpack --progress --colors --watch`监听变化
-2. 
+
 
   
