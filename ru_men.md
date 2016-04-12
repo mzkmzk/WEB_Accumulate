@@ -75,6 +75,8 @@ sudo npm install webpack -g
 
 ## 5. 命令引入CSS模块
 
+代码路径<https://github.com/mzkmzk/Webpack_Example/tree/master/4-require_css_order>
+
 1. copy上一步代码
 2. 修改`entry.js`
 
@@ -84,4 +86,5 @@ sudo npm install webpack -g
       document.write(require("./content.js"));
     ```
 3. 执行`webpack ./entry.js bundle.js --module-bind 'css=style!css'
+
 `    
