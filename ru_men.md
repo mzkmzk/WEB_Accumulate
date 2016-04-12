@@ -50,5 +50,5 @@ sudo npm install webpack -g
      ```
 4. `$ webpack ./entry.js bundle.js
 
-
+这部分使用了`exports`模块
 `     
