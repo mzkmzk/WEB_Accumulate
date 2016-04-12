@@ -28,5 +28,7 @@ sudo npm install webpack -g
     </body>
 </html>
     ```
-3. 执行命令: `webpack ./entry.js bundle.js`    
+3. 执行命令: `webpack ./entry.js bundle.js`  
+
+基本很简单,`webpack`配置好了基本都OK 
     
