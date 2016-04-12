@@ -36,3 +36,19 @@ sudo npm install webpack -g
 
 代码地址<https://github.com/mzkmzk/Webpack_Example/tree/master/2-exports_js>
 
+1. 复制`2. 基本测试`
+2. 增加`content.js`
+
+    ```javascript
+    module.exports = "It works from content.js.";
+    ```
+3. 修改`entry.js`
+
+     ```javascript
+     - document.write("It works.");
+      + document.write(require("./content.js"));
+     ```
+4. `$ webpack ./entry.js bundle.js
+
+
+`     
