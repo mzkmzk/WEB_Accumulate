@@ -88,6 +88,8 @@ sudo npm install webpack -g
 
 ## 6. 引入配置文件
 
+代码地址<https://github.com/mzkmzk/Webpack_Example/tree/master/5-config_file>
+
 1. copy上一步骤嗲吗
 2. 新建webpack.config.js
 
