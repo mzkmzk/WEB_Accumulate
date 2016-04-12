@@ -123,7 +123,14 @@ npm WARN webpack-dev-middleware@1.6.1 requires a peer of webpack@1 || ^2.1.0-bet
 
 ## 8.基本命令
 
-1. `webpack --progress --colors --watch`监听变化
+1. wepack: 基本打包
+2. wepack -w: 提供watch
+3. wepack -p: 打包后文件压缩
+4. wepack -d 提供SourceMap
+5. wepack --colors: 结果带彩色,用时久的显示红色
+6. wepack --profile: 输出性能数据
+7. wepack --display-modules: 默认`node_modules`的模块隐藏,加上这个可以显示
+2. `webpack --progress --colors --watch`监听变化
 
 ## 参考链接
 
