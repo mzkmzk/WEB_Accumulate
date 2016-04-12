@@ -111,7 +111,7 @@ sudo npm install webpack -g
 
 ## 7. 开启本地Server
 
-1. 安装Server: `npm install webpack-dev-server -g`
+1. 安装Server: `sudo npm install webpack-dev-server -g`
 2. 开启监听: `webpack-dev-server --progress --colors
 `
 ## 基本命令
