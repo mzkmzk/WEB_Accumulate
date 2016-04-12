@@ -51,4 +51,21 @@ sudo npm install webpack -g
 4. `$ webpack ./entry.js bundle.js
 
 这部分使用了`exports`模块
-`     
+
+## 4. 引入CSS
+
+1. copy上一步的代码
+2. `npm install css-loader style-loader`
+3. 增加样式
+
+    ```css
+    body { 
+      background: yellow ;
+    }
+    ```
+4. 更新`entry.js`
+
+      ```javascript
+    + require("!style!css!./style.css");
+    document.write(require("./content.js"));
+      ```
