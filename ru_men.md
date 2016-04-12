@@ -109,7 +109,10 @@ sudo npm install webpack -g
   ```
 3. `webpack`
 
-## 7. 其余命令
+## 7. 开启本地服务器
+
+
+## 基本命令
 
 1. `webpack --progress --colors --watch`监听变化
 2. 
