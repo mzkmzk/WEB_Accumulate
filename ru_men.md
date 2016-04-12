@@ -87,4 +87,24 @@ sudo npm install webpack -g
     ```
 3. 执行`webpack ./entry.js bundle.js --module-bind 'css=style!css'
 
-`    
+## 6. 引入配置文件
+
+1. copy上一步骤嗲吗
+2. 新建webpack.config.js
+
+```javascript
+module.exports = {
+    entry: "./entry.js",
+    output: {
+        path: __dirname,
+        filename: "bundle.js"
+    },
+    module: {
+        loaders: [
+            { test: /\.css$/, loader: "style!css" }
+        ]
+    }
+};
+```
+
+  
