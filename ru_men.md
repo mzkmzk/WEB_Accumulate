@@ -76,3 +76,12 @@ sudo npm install webpack -g
 ## 5. 命令引入CSS模块
 
 1. copy上一步代码
+2. 修改`entry.js`
+
+    ```javascript
+      - require("!style!css!./style.css");
+      + require("./style.css");
+      document.write(require("./content.js"));
+    ```
+3. 执行`webpack ./entry.js bundle.js --module-bind 'css=style!css'
+`    
