@@ -1,4 +1,3 @@
-
 # 入门
 
 ## 1. 安装环境
@@ -92,19 +91,22 @@ sudo npm install webpack -g
 1. copy上一步骤嗲吗
 2. 新建webpack.config.js
 
-```javascript
-module.exports = {
-    entry: "./entry.js",
-    output: {
-        path: __dirname,
-        filename: "bundle.js"
-    },
-    module: {
-        loaders: [
-            { test: /\.css$/, loader: "style!css" }
-        ]
-    }
-};
-```
+  ```javascript
+  module.exports = {
+      entry: "./entry.js",
+      output: {
+          path: __dirname,
+          filename: "bundle.js"
+      },
+      module: {
+          loaders: [
+              { test: /\.css$/, loader: "style!css" }
+          ]
+      }
+  };
+  ```
+3. `webpack`
+
+
 
   
