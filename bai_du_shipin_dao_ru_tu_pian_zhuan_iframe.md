@@ -41,3 +41,11 @@ html.push(creatInsertStr( vi.url, vi.width || 420,  vi.height || 280, id + i, nu
 
 OK,基本确认我们只要在grouplus_iframe中生成iframe即可
 
+完成
+
+```javascript
+ case 'grouplus_iframe':
+      str = '<iframe ' + (id ? 'id="' + id+'"' : '') + ' width="'+ width +'" height="' + height + '" src="'+url+'" class="' + classname.replace(/\bvideo-js\b/, '') + '"'  +
+           ' style="border:1px solid gray;'+(align ? 'float:' + align + ';': '')+'" ></iframe>';
+      break; 
+```
