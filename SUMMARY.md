@@ -24,7 +24,7 @@
            * [入门](ru_men.md)
    * [工作](gong_zuo.md)
        * [G8](g.md)
-           * 导入微信视频
+           * [导入微信视频](dao_ru_wei_xin_shi_pin.md)
 * [项目支持Babel转JSX的步骤](xiang_mu_zhi_chi_babel_de_bu_zou.md)
 * [Nicefoto.cc优化](nicefotoccyou_hua.md)
 * [Linux](linux.md)
