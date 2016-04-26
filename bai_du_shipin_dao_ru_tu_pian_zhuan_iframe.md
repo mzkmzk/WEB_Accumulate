@@ -30,3 +30,14 @@
 
 就能找到在哪生成这个img的啦
 
+大概在一个`insertvideo`的command中找到了
+```javascript
+html.push(creatInsertStr( vi.url, vi.width || 420,  vi.height || 280, id + i, null, cl, 'image'));
+```
+
+再找到`creatInsertStr`的地方
+
+![插入视频](QQ20160426-6.png)
+
+OK,基本确认我们只要在grouplus_iframe中生成iframe即可
+
