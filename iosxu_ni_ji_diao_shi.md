@@ -14,6 +14,6 @@
 
 ## 参考链接
 
-<http://taobaofed.org/blog/2015/11/13/web-debug-in-ios/>
+淘宝前端: <http://taobaofed.org/blog/2015/11/13/web-debug-in-ios/>
 
-<http://yujiangshui.com/multidevice-frontend-debug/>
+比较全面: <http://yujiangshui.com/multidevice-frontend-debug/>
