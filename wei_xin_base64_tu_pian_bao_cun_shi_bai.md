@@ -76,7 +76,7 @@ html由重构师,完成,其实`HTML->canvas->base64->img.src->长按保存`很�
 
     如果不用Base64,基本方案只有Blob或者LocalFileSystem
     
-    Blob的基本实现思路是把base64转换为二进制文件保存在浏览器中,打死你blob的话iOS(点击保存后无反应)和Android(Blob下载超时,可能因为Blob的Request不会包含Host)都无法保存下来.
+    Blob的基本实现思路是把base64转换为二进制文件保存在浏览器中,但是blob的话iOS(点击保存后无反应)和Android(Blob下载超时,可能因为Blob的Request不会包含Host)都无法保存下来.
     
     核心代码
     
