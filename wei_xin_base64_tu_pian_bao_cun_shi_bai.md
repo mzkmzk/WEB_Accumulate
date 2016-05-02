@@ -80,7 +80,7 @@ html由重构师,完成,其实`HTML->canvas->base64->img.src->长按保存`很�
     
     核心代码
     
-    ```javascript
+```javascript
           function canvansToBlob(){
           function b64toBlob(b64Data, contentType, sliceSize) {
               contentType = contentType || '';
@@ -115,6 +115,12 @@ html由重构师,完成,其实`HTML->canvas->base64->img.src->长按保存`很�
           var img = document.getElementById('canvasToBlob');
           img.src = blobUrl;
           document.body.appendChild(img);
-          ```
+```
     
-    LocalFileSystem也是相同原理,不过W3C在2014明确放弃了LocalFileSystem,可能由于安全原因吧,不过老外用这个写了个简单的linux,还挺好玩<http://www.html5rocks.com/en/tutorials/file/filesystem/>
+   LocalFileSystem也是相同原理,不过W3C在2014明确放弃了LocalFileSystem,可能由于安全原因吧,不过老外用这个写了个简单的linux,还挺好玩<http://www.html5rocks.com/en/tutorials/file/filesystem/>
+    
+ 最终的效果测试可见<http://test.manager.grouplus.cn/canvas.html>
+    
+![最终](QQ20160502-6.png)
+    
+  很遗憾,最后都没很好的实现.
