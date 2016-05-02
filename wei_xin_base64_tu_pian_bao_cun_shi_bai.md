@@ -124,3 +124,11 @@ html由重构师,完成,其实`HTML->canvas->base64->img.src->长按保存`很�
 ![最终](QQ20160502-6.png)
     
   很遗憾,最后都没很好的实现.
+  
+## 4. 收获
+
+1. canvas基本
+2. blob基本
+3. LocalFileSystem基本
+4. base64基本
+5. Android机+iOS真机调试
