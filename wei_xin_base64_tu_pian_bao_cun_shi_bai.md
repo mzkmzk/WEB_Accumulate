@@ -14,3 +14,35 @@ OK,所以最后思路定位,HTML->canvas->base64->img.src->长按保存
 
 ## 2. 解决思路
 
+html由重构师,完成,其实`HTML->canvas->base64->img.src->长按保存`很容易实现
+
+关键代码
+
+```javascript
+  //1. 引入html5canvas库
+  html2canvas($('#share_html'), {
+      onrendered: function(canvas) {
+      var newImg = document.createElement('img');
+          newImg.src =  URL.createObjectURL(canvas.toDataURL());
+          var newbody = document.body.appendChild(newImg);
+      }
+});
+```
+
+这样在iOS基本能完成需求,但是发现这样生成的图片清晰度太低了.
+
+因为Retina屏是x2的,所以根据原本的HTML生成canvas清晰度很低,
+
+解决方式很粗暴,在Retina中生成的HTML为2倍,这样生成的图片像素OK
+
+在android中按照原来的来就OK(如果也根据2倍生成,android机很容易失去响应)
+
+但是android微信不支持长按保存base64图片,所以但android微信长按图片弹出用其他浏览器打开
+
+最后思路基本这样
+
+
+
+## 3. 弯路
+
+从上面这样一看,好像
