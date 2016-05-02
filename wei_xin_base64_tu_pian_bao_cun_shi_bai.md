@@ -41,8 +41,7 @@ html由重构师,完成,其实`HTML->canvas->base64->img.src->长按保存`很�
 
 最后思路基本这样
 
-![最终思路](QQ20160502-2.png)
-
+![最终想法](QQ20160502-5.png)
 ## 3. 弯路
 
 从上面这样一看,好像还挺简单的,但是这个功能..折腾了我快一个星期...
@@ -70,4 +69,52 @@ html由重构师,完成,其实`HTML->canvas->base64->img.src->长按保存`很�
     2. 还有一个很明显就是谷歌搜`android browser long press save base64  image fail`之类的关键词,搜出来都是Android WebView中的类似问题,并没有我们所遇到的问题
        
        但是只要搜`微信 长按 保存 base64图片`,就会发现有很多苦逼的开发人员像我这样遇到这些问题,然而上面并没有解决方案
-    3. 微信保存图片能显示保存图片失败,而其他浏览器直接奔溃,其实是因为微信压根没想下载这个图片,而其他浏览器本来想下载这图片的,太大了(原本拿HTML X2 400+KB来下载,X1 70+KB基本无这个问题),所以导致奔溃   
+    3. 微信保存图片能显示保存图片失败,而其他浏览器直接奔溃,其实是因为微信压根没想下载这个图片,而其他浏览器本来想下载这图片的,太大了(原本拿HTML X2 400+KB来下载,X1 70+KB基本无这个问题),所以导致奔溃
+5. 周日: 不用base64
+
+    我也怀疑过为啥base64不行,会不会跟编码有过,因为base64有一个可选位置,可以填写编码方式,我设了下改成UTF-8..不行...所以就想想base64的其他方法
+
+    如果不用Base64,基本方案只有Blob或者LocalFileSystem
+    
+    Blob的基本实现思路是把base64转换为二进制文件保存在浏览器中
+    
+    核心代码
+    
+    ```javascript
+          function canvansToBlob(){
+          function b64toBlob(b64Data, contentType, sliceSize) {
+              contentType = contentType || '';
+              sliceSize = sliceSize || 512;
+
+              var byteCharacters = atob(b64Data);
+              var byteArrays = [];
+
+              for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+                  var slice = byteCharacters.slice(offset, offset + sliceSize);
+
+                  var byteNumbers = new Array(slice.length);
+                  for (var i = 0; i < slice.length; i++) {
+                      byteNumbers[i] = slice.charCodeAt(i);
+                  }
+
+                  var byteArray = new Uint8Array(byteNumbers);
+
+                  byteArrays.push(byteArray);
+              }
+
+              var blob = new Blob(byteArrays, {type: contentType});
+              return blob;
+          }
+
+
+          var contentType = 'image/png';
+          var b64Data = '...base64码';
+           var blob = b64toBlob(b64Data, contentType);
+          var blobUrl = URL.createObjectURL(blob);
+
+          var img = document.getElementById('canvasToBlob');
+          img.src = blobUrl;
+          document.body.appendChild(img);
+          ```
+    
+    LocalFileSystem也是相同原理,不过W3C在2014明确放弃了LocalFileSystem,可能由于安全原因吧,不过老外用这个写了个简单的linux,还挺好玩<http://www.html5rocks.com/en/tutorials/file/filesystem/>
