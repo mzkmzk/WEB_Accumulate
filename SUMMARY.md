@@ -27,7 +27,7 @@
            * [导入微信视频](dao_ru_wei_xin_shi_pin.md)
            * [百度视频导入图片转iframe](bai_du_shipin_dao_ru_tu_pian_zhuan_iframe.md)
        * [iOS虚拟机调试](iosxu_ni_ji_diao_shi.md)
-       * 微信base64图片保存失败
+       * [微信base64图片保存失败](wei_xin_base64_tu_pian_bao_cun_shi_bai.md)
 * [项目支持Babel转JSX的步骤](xiang_mu_zhi_chi_babel_de_bu_zou.md)
 * [Nicefoto.cc优化](nicefotoccyou_hua.md)
 * [Linux](linux.md)
