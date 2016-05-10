@@ -23,6 +23,15 @@ output:
 2. getComputedStyle把所有CSS都列出来(包括未设置的),而style只列举设置了的
 3. getComputedStyle.length表示浏览器支持的CSS属性个数,而style.length为0
 
+## 兼容
+
+兼容IE6~8
+
+```javascript
+elementStyle = (element.currentStyle? element.currentStyle : window.getComputedStyle(element, null)));
+
+```
+
 ## 参考链接
 
 <http://www.zhangxinxu.com/wordpress/2012/05/getcomputedstyle-js-getpropertyvalue-currentstyle/>
