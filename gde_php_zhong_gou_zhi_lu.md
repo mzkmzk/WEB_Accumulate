@@ -3,7 +3,7 @@
 重构入门: 
 
 1. 确定命名: 方法和类用驼峰,变量_
-2. 找重复点
+2. 尽可能的消除重复代码
 
 现在主要的类型有:
 
@@ -21,5 +21,6 @@
 以activity为基础
 
 1. 共同不同,跳转的url和menu不一致
-2. activity和crowdfunding基本一致
-3. activity比questionnaire多一个新手指导
+2. activity比applyform多新手指导、获取地址、获取社群的基本信息
+3. activity和crowdfunding基本一致
+4. activity比questionnaire多一个新手指导
