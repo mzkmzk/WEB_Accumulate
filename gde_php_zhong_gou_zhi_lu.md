@@ -5,8 +5,21 @@
 1. 确定命名: 方法和类用驼峰,变量_
 2. 找重复点
 
-现在主要的类型有: 
+现在主要的类型有:
+
+1. activity
+2. applyForm
+3. crowdfunding
+4. questionaire
 
 ## 1. release_pre
 
-这是进入发布页面前
+这是进入发布页面前需要获取一些用户的信息,用来填充一些控件
+
+首先查找这几个重复度好大,但是只有这几部分不同
+
+以activity为基础
+
+1. 共同不同,跳转的url和menu不一致
+2. activity和crowdfunding基本一致
+3. activity比questionnaire多一个新手指导
