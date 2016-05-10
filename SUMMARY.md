@@ -22,7 +22,7 @@
        * [ES6学习](es6xue_xi.md)
        * [WebPack](webpack.md)
            * [入门](ru_men.md)
-       * 基础语法
+       * [基础语法](ji_chu_yu_fa.md)
    * [工作](gong_zuo.md)
        * [G8](g.md)
            * [导入微信视频](dao_ru_wei_xin_shi_pin.md)
