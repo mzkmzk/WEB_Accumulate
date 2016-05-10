@@ -17,6 +17,7 @@
        * [JS](js.md)
    * [JavaScript](javascript__.md)
        * [基础语法](ji_chu_yu_fa.md)
+           * getComputedStyle
        * [Package.json](packagejson.md)
        * [npm](npm.md)
            * [项目安装失败经验](xiang_mu_an_zhuang_shi_bai_jing_yan.md)
