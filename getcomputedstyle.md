@@ -29,8 +29,9 @@ output:
 
 ```javascript
 elementStyle = (element.currentStyle? element.currentStyle : window.getComputedStyle(element, null)));
-
 ```
+
+但是坑还是好多IE专属的currentStyle和其他浏览器的getComputedStyle属性命名都有很多差异...
 
 ## 参考链接
 
