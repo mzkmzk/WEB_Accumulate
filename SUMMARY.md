@@ -42,5 +42,5 @@
        * [浏览器对HTTP_ORIGIN的差异性及其作用](liu_lan_qi_duihttp_origin_de_cha_yi_xing_ji_qi_zuo.md)
 * [工具](gong_ju.md)
 * [单元测试](dan_yuan_ce_shi.md)
-* 重构
+* [重构](zhong_gou.md)
 
