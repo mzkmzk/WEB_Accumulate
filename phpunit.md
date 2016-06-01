@@ -52,3 +52,13 @@ class MultipleDependenciesTest extends PHPUnit_Framework_TestCase
 每个数组都会逐一被用来作为参数测试测试方法
 
 同时使用依赖和数据提供器时,参数顺序:`数据供给器的参数将先于来自所依赖的测试`
+
+## 2.3 对异常进行测试
+
+## 2.4 对输出进行测试
+
+# 4. 基镜(fixture)
+
+1. setUp(): 运行在测试方法之前
+2. tearDown(): 运行在测试方法之后 
+
