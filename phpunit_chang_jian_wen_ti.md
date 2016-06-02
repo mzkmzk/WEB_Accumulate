@@ -82,3 +82,6 @@ Fatal error: Call to a member function make() on null in /Users/maizhikun/Learni
         $this->assertEquals(302, $response->status());
     }
 ```
+
+这样session就会保存在我们之后的测试用例当中
+
