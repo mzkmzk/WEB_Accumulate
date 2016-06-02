@@ -95,3 +95,5 @@ $method->setAccessible(true); //改变private为public
 dump($method->invoke(new AController()); 调用方法
 ```
 
+参考<http://blog.csdn.net/u011832039/article/details/50343109>
+
