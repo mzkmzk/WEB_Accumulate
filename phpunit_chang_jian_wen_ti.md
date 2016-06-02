@@ -85,3 +85,13 @@ Fatal error: Call to a member function make() on null in /Users/maizhikun/Learni
 
 这样session就会保存在我们之后的测试用例当中
 
+# 6. 测试私有方法
+
+通过放射机制
+
+```php
+$method = new ReflectionMethod('\App\Http\Controllers\AController','method__');
+$method->setAccessible(true); //改变private为public
+dump($method->invoke($this->activity_controller)); 调用方法
+```
+
