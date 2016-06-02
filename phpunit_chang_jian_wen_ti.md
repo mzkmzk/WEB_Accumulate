@@ -92,6 +92,6 @@ Fatal error: Call to a member function make() on null in /Users/maizhikun/Learni
 ```php
 $method = new ReflectionMethod('\App\Http\Controllers\AController','method__');
 $method->setAccessible(true); //改变private为public
-dump($method->invoke($this->activity_controller)); 调用方法
+dump($method->invoke(被实例化的AController); 调用方法
 ```
 
