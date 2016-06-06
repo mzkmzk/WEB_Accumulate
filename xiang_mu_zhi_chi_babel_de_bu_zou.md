@@ -60,7 +60,6 @@
 2. 在`Edit Watcher`中点击`inser macro`里面会显示文件a和美元符号中定义的变量的值
 
 
-
 ## 参考资料
 
 PhpStrom设置Babel <http://blog.jetbrains.com/webstorm/2015/05/ecmascript-6-in-webstorm-transpiling/>
