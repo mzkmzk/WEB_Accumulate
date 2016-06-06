@@ -39,6 +39,22 @@
 
 所以我们要优化下参数,要做到改变一个文件,只编译一个文件
 
+![babel](465B399A-D01B-4C21-A12C-CFB8B3D47F6D.png)
+
+在这里要注意下scope,要选择需要编译的js的文件夹
+
+选择scope如下
+
+![设置scope](QQ20160606-0.png)
+
+大概步骤如下
+
+1. 设置scope,指定要编译的路径
+2. `Program`: 选择npm install成功的babel命名, eg : `项目路径/node_modules/.bin/babel`
+3. `Arguments`: `--out-file 项目路径/public/js/requirejs-modules/grouplus-admin/$FileDirPathFromParent(js)$$FileNameWithoutExtension$.js $FilePath$` 指定编译后输出的地方和需要编译的文件
+4. output paths to refresh: 清空
+
+##4 File Watchers教程
 
 
 
