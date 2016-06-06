@@ -33,6 +33,12 @@
         2. `Arguments` : `指定源码路径 -d  指定输出路径` eg: `项目路径/resources/assets/js/ -d  项目路径/public/js`
         3. `Working directory` : 指定监听的工作路径,eg : `项目路径/resources/assets/js/`
     
+## 3. 后续优化
+
+看步骤2,其实可以很明显的发现`Arguments`明显不好,因为改变一个js,就要导致整个项目的js都重新编译一下,电脑要卡爆.
+
+所以我们要优化下参数,要做到改变一个文件,只编译一个文件
+
 
 
 
