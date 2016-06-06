@@ -31,7 +31,7 @@
     2. 主要设置的地方有 : 
         1. `Program` : 选择npm install成功的babel命名, eg : `项目路径/node_modules/.bin/babel`
         2. `Arguments` : `指定源码路径 -d  指定输出路径` eg: `项目路径/resources/assets/js/ -d  项目路径/public/js`
-        3. `Working directory` : 指定监听的工作路径,eg : `项目路径/resources/assets/js/`
+        3. `Working directory` : 指定命令执行的路径,eg : `项目路径/resources/assets/js/`
     
 ## 3. 后续优化
 
