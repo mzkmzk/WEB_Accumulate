@@ -54,7 +54,10 @@
 3. `Arguments`: `--out-file 项目路径/public/js/requirejs-modules/grouplus-admin/$FileDirPathFromParent(js)$$FileNameWithoutExtension$.js $FilePath$` 指定编译后输出的地方和需要编译的文件
 4. output paths to refresh: 清空
 
-##4 File Watchers教程
+如果你奇怪命令里面美元符号表达的是啥意思,你可以
+
+1. 先打开一个文件a
+2. 在`Edit Watcher`中点击`inser macro`里面会显示文件a和美元符号中定义的变量的值
 
 
 
