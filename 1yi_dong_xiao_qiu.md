@@ -118,19 +118,19 @@ draw_screen要执行的操作有
     var Lead = {
         ...
         change_velocity: function() {
-        if (this.more_direction[65] === true) {
-            this.more_left();
-        }
-        if (this.more_direction[68] === true) {
-            this.more_right();
-        }
-        if (this.more_direction[83] === true) {
-            this.more_up();
-        }
-        if (this.more_direction[87] === true) {
-            this.more_down();
-        }
-    },
+          if (this.more_direction[65] === true) {
+              this.more_left();
+          }
+          if (this.more_direction[68] === true) {
+              this.more_right();
+          }
+          if (this.more_direction[83] === true) {
+              this.more_up();
+          }
+          if (this.more_direction[87] === true) {
+              this.more_down();
+          }
+      },
       more_left: function(){
           this.velocity['x'] -= this.ACCELERATED_VELOCITY;
       },
