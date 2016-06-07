@@ -28,7 +28,6 @@
        * [兼容问题](_jian_rong_wen_ti.md)
            * [基础](jichu_js.md)
        * [黑魔法](_hei_mo_fa.md)
-           * [JavaScript](javascript.md)
            * [基本](tmp.md)
    * [工作](gong_zuo.md)
        * [G8](g.md)
