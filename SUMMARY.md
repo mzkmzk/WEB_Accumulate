@@ -35,7 +35,6 @@
        * [iOS虚拟机调试](iosxu_ni_ji_diao_shi.md)
        * [微信base64图片保存失败](wei_xin_base64_tu_pian_bao_cun_shi_bai.md)
        * [canvas优化图片大小](canvasyou_hua_tu_pian_da_xiao.md)
-* [项目支持Babel转JSX的步骤](xiang_mu_zhi_chi_babel_de_bu_zou.md)
 * [Linux](linux.md)
    * [Common](common.md)
 * [服务器](fu_wu_qi.md)
@@ -44,6 +43,7 @@
        * [PHPUnit](phpunit.md)
        * [浏览器对HTTP_ORIGIN的差异性及其作用](liu_lan_qi_duihttp_origin_de_cha_yi_xing_ji_qi_zuo.md)
 * [工具](gong_ju.md)
+   * [项目支持Babel转JSX的步骤](xiang_mu_zhi_chi_babel_de_bu_zou.md)
    * tmp
 * [单元测试](dan_yuan_ce_shi.md)
    * [常见问题](phpunit_chang_jian_wen_ti.md)
