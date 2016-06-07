@@ -2,6 +2,8 @@
 
 源码<https://github.com/mzkmzk/Canvas/tree/v0.1_complete_ball_more/demo/shoot_game>
 
+尝鲜在线版<http://canvas.404mzk.com/shoot_game/html/1_base.html>
+
 # 1. 定义Canvas
 ```html
 <canvas id="base_1"></canvas>
