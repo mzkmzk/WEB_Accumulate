@@ -16,6 +16,8 @@
 
 ```javascript
 var base_1 = document.getElementById('base_1');
+
+//定义canvas的宽度,和定义背景为黑色
 base_1.width = document.body.scrollWidth;
 base_1.height = document.body.scrollHeight;
 var ctx = base_1.getContext('2d');
@@ -36,7 +38,7 @@ clear_base_1();
 KeyPress.init();
 ```
 
-这里主要定义canvas的宽度,和定义背景为黑色.
+
 
 # 3. 小球数据结构
 
