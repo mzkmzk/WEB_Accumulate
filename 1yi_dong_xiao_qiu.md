@@ -4,7 +4,7 @@
 ```html
 <canvas id="base_1"></canvas>
 ```
-## 2. 初始化画布和准备清除画布函数
+# 2. 初始化画布和准备清除画布函数
 
 ```javascript
 var base_1 = document.getElementById('base_1');
@@ -25,7 +25,7 @@ clear_base_1();
 
 这里主要定义canvas的宽度,和定义背景为黑色.
 
-## 3. 小球数据结构
+# 3. 小球数据结构
 
 ```javascript
 vae Lead = {
@@ -61,7 +61,7 @@ vae Lead = {
 }
 ```
 
-## 4. 移动逻辑
+# 4. 移动逻辑
 
 Canvas中更新状态是全局变化,就是我的小球要移动
 
@@ -153,6 +153,29 @@ draw_screen要执行的操作有
         ctx.fill();
     },
   ```
+
+# 5.键盘监听
+
+```javascript
+var KeyPress = {
+    init_key_up: function() {
+        document.onkeyup = function(e) {
+            e = e || window.event;
+            Lead.more_direction[e.keyCode] = false;
+        }
+    },
+    init_key_down: function() {
+        document.onkeydown = function(e) {
+            e = e || window.evnet;
+            Lead.more_direction[e.keyCode] = true;
+        }
+    },
+    init: function(){
+        this.init_key_down();
+        this.init_key_up();
+    }
+}
+```
 
 
 
