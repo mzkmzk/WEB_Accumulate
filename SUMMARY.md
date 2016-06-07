@@ -5,7 +5,6 @@
    * [黑魔法](hei_mo_fa.md)
    * [Utils](utils.md)
        * [Gulp](gulp.md)
-   * [常见问题](chang_jian_wen_ti.md)
    * [JavaScript](javascript__.md)
        * [基础语法](ji_chu_yu_fa.md)
            * [JS](js.md)
