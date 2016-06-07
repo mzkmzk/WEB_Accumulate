@@ -67,3 +67,93 @@ Canvas中更新状态是全局变化,就是我的小球要移动
 
 1. 必须把前一次的画布清除,即重绘背景
 2. 重新把小球定义到要移动的位置
+
+canvas主要通过定时器更新画布
+
+```javascript
+loop_game();
+function loop_game() {
+    Lead.draw_screen();
+    window.setTimeout(loop_game, 1000/40);
+}
+```
+
+这里主要是执行draw_screen();
+
+```javascript
+var Lead = {
+    //数据结构
+    ...
+    draw_screen: function(){
+        clear_base_1();
+        this.change_velocity();
+        this.more();
+        this.draw_ball();
+    }
+}
+
+```
+
+draw_screen要执行的操作有
+
+1. 清空画布
+2. 判断按键,计算小球速度
+    ```javascript
+  var Lead = {
+      ...
+      change_velocity: function() {
+      if (this.more_direction[65] === true) {
+          this.more_left();
+      }
+      if (this.more_direction[68] === true) {
+          this.more_right();
+      }
+      if (this.more_direction[83] === true) {
+          this.more_up();
+      }
+      if (this.more_direction[87] === true) {
+          this.more_down();
+      }
+  },
+    more_left: function(){
+        this.velocity['x'] -= this.ACCELERATED_VELOCITY;
+    },
+    more_right: function(){
+        this.velocity['x'] += this.ACCELERATED_VELOCITY;
+    },
+    more_up: function(){
+        this.velocity['y'] += this.ACCELERATED_VELOCITY;
+    },
+    more_down: function(){
+        this.velocity['y'] -= this.ACCELERATED_VELOCITY;
+    },
+        ...
+    }
+    ```
+3. 根据小球速度,计算小球下次该出现的坐标
+
+  ```javascript
+  vae Lead = {
+    ...
+     more: function() {
+        this.x += this.velocity['x'];
+        this.y += this.velocity['y'];
+    },
+    ...
+  }
+  ```
+4. 画出小球
+
+  ```javascript
+  draw_ball: function(){
+        ctx.beginPath();
+        ctx.fillStyle = 'white';
+        ctx.arc(this.x +this.radius, this.y+this.radius, 10, 0, Math.PI * 2, true);
+        ctx.closePath();
+        ctx.fill();
+    },
+  ```
+
+
+
+
