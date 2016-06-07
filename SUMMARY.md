@@ -18,7 +18,7 @@
    * [JavaScript](javascript__.md)
        * [基础语法](ji_chu_yu_fa.md)
            * [getComputedStyle](getcomputedstyle.md)
-           * keyCode问题
+           * [keyCode问题](keycodewen_ti.md)
        * [npm](npm.md)
            * [Package.json](packagejson.md)
            * [项目安装失败经验](xiang_mu_an_zhuang_shi_bai_jing_yan.md)
