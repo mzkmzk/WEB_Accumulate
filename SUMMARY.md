@@ -2,8 +2,6 @@
 
 * [Introduction](README.md)
 * [前端](qian_duan.md)
-   * [Utils](utils.md)
-       * [Gulp](gulp.md)
    * [JavaScript](javascript__.md)
        * [基础语法](ji_chu_yu_fa.md)
            * [JS](js.md)
@@ -32,6 +30,8 @@
    * [HTML](_html.md)
        * [兼容问题](__jian_rong_wen_ti.md)
            * [基本](jiben__.md)
+   * [Utils](utils.md)
+       * [Gulp](gulp.md)
    * [工作](gong_zuo.md)
        * [G8](g.md)
            * [导入微信视频](dao_ru_wei_xin_shi_pin.md)
