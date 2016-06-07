@@ -4,7 +4,13 @@
 ```html
 <canvas id="base_1"></canvas>
 ```
-# 2. 初始化画布和准备清除画布函数
+# 2. 初始化
+
+初始化主要有
+
+1. 初始化画布
+2. 和准备清除画布函数
+3. 注册键盘监听事件
 
 ```javascript
 var base_1 = document.getElementById('base_1');
@@ -21,6 +27,11 @@ function clear_base_1 (){
 }
 
 clear_base_1();
+
+/**
+ * 注册键盘监听事件
+ */
+KeyPress.init();
 ```
 
 这里主要定义canvas的宽度,和定义背景为黑色.
