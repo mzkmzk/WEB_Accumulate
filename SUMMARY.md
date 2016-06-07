@@ -26,6 +26,7 @@
            * [入门](ru_men.md)
        * [Canvas](canvas.md)
            * [shoot_game制作过程](shootgame_zhi_zuo_guo_cheng.md)
+       * ES6
    * [工作](gong_zuo.md)
        * [G8](g.md)
            * [导入微信视频](dao_ru_wei_xin_shi_pin.md)
