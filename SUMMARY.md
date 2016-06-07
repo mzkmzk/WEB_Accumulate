@@ -36,7 +36,6 @@
        * [微信base64图片保存失败](wei_xin_base64_tu_pian_bao_cun_shi_bai.md)
        * [canvas优化图片大小](canvasyou_hua_tu_pian_da_xiao.md)
 * [项目支持Babel转JSX的步骤](xiang_mu_zhi_chi_babel_de_bu_zou.md)
-* [Nicefoto.cc优化](nicefotoccyou_hua.md)
 * [Linux](linux.md)
    * [Common](common.md)
 * [服务器](fu_wu_qi.md)
@@ -49,5 +48,6 @@
    * [常见问题](phpunit_chang_jian_wen_ti.md)
 * [重构](zhong_gou.md)
    * [G+的PHP重构之路](gde_php_zhong_gou_zhi_lu.md)
+* [Nicefoto.cc优化](nicefotoccyou_hua.md)
 * 优化实践
 
