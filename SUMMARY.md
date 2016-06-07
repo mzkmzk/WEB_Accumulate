@@ -40,7 +40,7 @@
        * [兼容问题](__jian_rong_wen_ti.md)
            * [基本](jiben__.md)
    * [CSS](___css.md)
-       * 兼容问题
+       * [兼容问题](___jian_rong_wen_ti.md)
 * [Linux](linux.md)
    * [Common](common.md)
 * [服务器](fu_wu_qi.md)
