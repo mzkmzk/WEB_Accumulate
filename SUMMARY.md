@@ -6,7 +6,6 @@
    * [Utils](utils.md)
        * [Gulp](gulp.md)
    * [常见问题](chang_jian_wen_ti.md)
-       * [CSS](css_.md)
    * [JavaScript](javascript__.md)
        * [基础语法](ji_chu_yu_fa.md)
            * [JS](js.md)
@@ -42,6 +41,7 @@
            * [基本](css__ji_ben.md)
        * [常见问题](css_chang_jian_wen_ti.md)
            * 基本
+* [CSS](css_.md)
 * [Linux](linux.md)
    * [Common](common.md)
 * [服务器](fu_wu_qi.md)
