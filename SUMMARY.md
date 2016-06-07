@@ -21,11 +21,11 @@
        * [npm](npm.md)
            * [Package.json](packagejson.md)
            * [项目安装失败经验](xiang_mu_an_zhuang_shi_bai_jing_yan.md)
-       * [ES6学习](es6xue_xi.md)
        * [WebPack](webpack.md)
            * [入门](ru_men.md)
        * [Canvas](canvas.md)
            * [shoot_game制作过程](shootgame_zhi_zuo_guo_cheng.md)
+       * [ES6学习](es6xue_xi.md)
        * ES6
    * [工作](gong_zuo.md)
        * [G8](g.md)
