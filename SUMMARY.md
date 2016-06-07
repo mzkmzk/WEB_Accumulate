@@ -40,7 +40,7 @@
        * [黑魔法](css_hei_mo_fa.md)
            * [基本](css__ji_ben.md)
        * [常见问题](css_chang_jian_wen_ti.md)
-           * 基本
+           * [基本](ji_ben.md)
 * [CSS](css_.md)
 * [Linux](linux.md)
    * [Common](common.md)
