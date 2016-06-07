@@ -6,7 +6,6 @@
        * [CSS](css.md)
        * [HTML](html.md)
    * [黑魔法](hei_mo_fa.md)
-       * [JavaScript](javascript.md)
        * [CSS](magic_css.md)
    * [Utils](utils.md)
        * [Gulp](gulp.md)
@@ -30,6 +29,7 @@
            * [基础](jichu_js.md)
        * [黑魔法](_hei_mo_fa.md)
            * tmp
+   * [JavaScript](javascript.md)
    * [工作](gong_zuo.md)
        * [G8](g.md)
            * [导入微信视频](dao_ru_wei_xin_shi_pin.md)
