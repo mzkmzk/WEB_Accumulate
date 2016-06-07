@@ -48,7 +48,7 @@
    * [常见问题](phpunit_chang_jian_wen_ti.md)
 * [重构](zhong_gou.md)
    * [G+的PHP重构之路](gde_php_zhong_gou_zhi_lu.md)
-* [Nicefoto.cc优化](nicefotoccyou_hua.md)
 * [优化实践](you_hua_shi_jian.md)
+   * [Nicefoto.cc优化](nicefotoccyou_hua.md)
    * tmp
 
