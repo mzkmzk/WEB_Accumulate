@@ -1,5 +1,7 @@
 # 1_移动小球
 
+源码<https://github.com/mzkmzk/Canvas/tree/v0.1_complete_ball_more/demo/shoot_game>
+
 # 1. 定义Canvas
 ```html
 <canvas id="base_1"></canvas>
@@ -187,6 +189,9 @@ var KeyPress = {
     }
 }
 ```
+
+# 6 展示
+
 
 
 
