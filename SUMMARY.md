@@ -25,8 +25,8 @@
            * [入门](ru_men.md)
        * [Canvas](canvas.md)
            * [shoot_game制作过程](shootgame_zhi_zuo_guo_cheng.md)
-       * [ES6学习](es6xue_xi.md)
        * [ES6](es6.md)
+           * [ES6学习](es6xue_xi.md)
            * tmp
    * [工作](gong_zuo.md)
        * [G8](g.md)
