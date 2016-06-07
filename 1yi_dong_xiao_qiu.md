@@ -111,6 +111,7 @@ draw_screen要执行的操作有
 
 1. 清空画布
 2. 判断按键,计算小球速度
+
     ```javascript
     var Lead = {
         ...
