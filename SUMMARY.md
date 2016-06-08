@@ -48,6 +48,7 @@
        * [常见知识](chang_jian_zhi_shi.md)
        * [PHPUnit](phpunit.md)
        * [浏览器对HTTP_ORIGIN的差异性及其作用](liu_lan_qi_duihttp_origin_de_cha_yi_xing_ji_qi_zuo.md)
+       * Closure
 * [工具](gong_ju.md)
    * [PhPStorm](phpstorm.md)
        * [项目支持Babel转JSX的步骤](xiang_mu_zhi_chi_babel_de_bu_zou.md)
