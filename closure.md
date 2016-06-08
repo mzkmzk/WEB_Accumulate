@@ -20,6 +20,20 @@ Schema::create('Institutes', function (Blueprint $table) {
 });
 ```
 
+对应的Laravel源码
+
+`Illuminate/Database/Schena/Builder.php`第126行
+```php
+public function create($table, Closure $callback)
+{
+    $blueprint = $this->createBlueprint($table);
+    $blueprint->create();
+    $callback($blueprint);
+    $this->build($blueprint);
+}
+```
+
+
 
 
 # 参考资料
