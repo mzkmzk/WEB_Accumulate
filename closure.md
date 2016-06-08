@@ -33,7 +33,7 @@ public function create($table, Closure $callback)
 }
 ```
 
-
+## 3. 由使用者决定一个布林
 
 
 # 参考资料
