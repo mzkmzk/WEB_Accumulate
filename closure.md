@@ -11,8 +11,16 @@
 Laravel中的migrate中,创建表时,就大量使用了Closure
 
 ```php
-
+Schema::create('Institutes', function (Blueprint $table) {
+    $table->string('code');
+    $table->string('address');
+    $table->string('contact_person');
+    $table->string('contact_phone');
+    $table->string('comment');
+});
 ```
+
+
 
 # 参考资料
 
