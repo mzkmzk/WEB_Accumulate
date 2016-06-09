@@ -91,7 +91,22 @@ Post::where(function ($query) {
 
 `Illuminate/Database/Eloquent/Build.php`
 ```php
+class Build {
+  public function where($column, $operator = null, $value = null, $boolean = 'and')
+    {
+        if ($column instanceof Closure) {
+            $query = $this->model->newQueryWithoutScopes();
 
+            call_user_func($column, $query);
+
+            $this->query->addNestedWhereQuery($query->getQuery(), $boolean);
+        } else {
+            call_user_func_array([$this->query, 'where'], func_get_args());
+        }
+
+        return $this;
+    }
+}
 ```
 
 
