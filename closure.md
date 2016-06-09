@@ -6,6 +6,8 @@
 2. 由使用者决定一个boolean
 3. 由使用者改变一个物件
 
+其实核心的逻辑都是: 我在我的函数为你写好上下文,中间一些具体的不同的地方,你通过闭包来改变.
+
 # 2. 由使用者执行的一些逻辑
 
 Laravel中的migrate中,创建表时,就大量使用了Closure
@@ -33,7 +35,7 @@ public function create($table, Closure $callback)
 }
 ```
 
-## 3. 由使用者决定一个boolean
+# 3. 由使用者决定一个boolean
 
 例如Laravel的`collection->firtst()`
 
@@ -64,6 +66,9 @@ public static function first($array, callable $callback = null, $default = null)
         return value($default);
     }
 ```
+
+
+# 4. 由使用者改变一个物件 
 
 # 参考资料
 
