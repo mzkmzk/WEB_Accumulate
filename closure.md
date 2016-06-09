@@ -73,6 +73,11 @@ public static function first($array, callable $callback = null, $default = null)
 
 # 4. 由使用者改变一个物件 
 
+例如要实现`SELECT * 
+FROM posts
+WHERE (status = 0 or status = 1)
+`语句
+
 
 
 # 参考资料
