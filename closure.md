@@ -83,7 +83,7 @@ SELECT * FROM posts WHERE (status = 0 or status = 1)
 ```php
 Post::where(function ($query) {
     $query->where('status', 0)
-        ->orWhere('status', 1);
+           ->orWhere('status', 1);
 })->get();
 ```
 
