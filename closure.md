@@ -87,6 +87,13 @@ Post::where(function ($query) {
 })->get();
 ```
 
+再看看Laravel源码
+
+`Illuminate/Database/Eloquent/Build.php`
+```php
+
+```
+
 
 # 参考资料
 
