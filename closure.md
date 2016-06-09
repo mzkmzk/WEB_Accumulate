@@ -73,6 +73,8 @@ public static function first($array, callable $callback = null, $default = null)
 
 # 4. 由使用者改变一个物件 
 
+
+
 # 参考资料
 
 <http://oomusou.io/php/php-closure-practice/>
