@@ -47,8 +47,22 @@ collect([1, 2, 3, 4])->first(function ($key, $value) {
 
 Laravel实现源码
 
+`Illuminate/Support/Arr.php`
 ```php
+public static function first($array, callable $callback = null, $default = null)
+    {
+        if (is_null($callback)) {
+            return empty($array) ? value($default) : reset($array);
+        }
 
+        foreach ($array as $key => $value) {
+            if (call_user_func($callback, $key, $value)) {
+                return $value;
+            }
+        }
+
+        return value($default);
+    }
 ```
 
 # 参考资料
