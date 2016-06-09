@@ -35,6 +35,21 @@ public function create($table, Closure $callback)
 
 ## 3. 由使用者决定一个boolean
 
+例如Laravel的`collection->firtst()`
+
+使用
+
+```php
+collect([1, 2, 3, 4])->first(function ($key, $value) {
+    return $value > 2;
+});
+```
+
+Laravel实现源码
+
+```php
+
+```
 
 # 参考资料
 
