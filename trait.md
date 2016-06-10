@@ -55,6 +55,9 @@ class MyClass
 1. `A::someFunc insteadof B`: 代表用a的someFunc,而不用B的
 2. `B::otherFunc as differentFunc`: 代表B的otherFunc改名为differentFunc
 3. 这样写的话,B中的someFunc,是永远无法被调用的
+4. 还是建议一个class只引用一个trait的
+
+
 
 
 
