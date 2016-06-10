@@ -117,3 +117,7 @@ bingTo方法
 1. 若只要public变量,只传第一个参数就可以
 2. 参数可以是变量/class名称等.
 
+# 参考链接
+
+<http://oomusou.io/php/php-bindTo/>
+
