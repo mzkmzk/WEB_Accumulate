@@ -87,3 +87,28 @@ php如何捕抓到类中的name
 
 # 5. bindTo()
 
+```php
+class Foo
+{
+    private $name;
+
+    function __construct($name)
+    {
+        $this->name = $name;
+    }
+
+}
+
+$obj = new Foo('Sam');
+
+$cl = function() {
+    return "Hello " . $this->name;
+};
+
+$cl = $cl->bindTo($obj, $obj);
+echo($cl());
+
+// Result:
+// Hello Sam
+```
+
