@@ -90,6 +90,8 @@ return ReturnJson::returnJson($res,function($res){
 });
 ```
 
+这样每次调用,我们都只需要把需要针对的内容抽取出来.
+
 # 3. 由使用者决定一个boolean
 
 例如Laravel的`collection->firtst()`
