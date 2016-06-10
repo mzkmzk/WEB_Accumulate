@@ -54,6 +54,7 @@
    * [PhPStorm](phpstorm.md)
        * [项目支持Babel转JSX的步骤](xiang_mu_zhi_chi_babel_de_bu_zou.md)
        * [PhPStorm支持SASS](phpstormzhi_chi_sass.md)
+   * iTerm
 * [单元测试](dan_yuan_ce_shi.md)
    * [常见问题](phpunit_chang_jian_wen_ti.md)
 * [重构](zhong_gou.md)
