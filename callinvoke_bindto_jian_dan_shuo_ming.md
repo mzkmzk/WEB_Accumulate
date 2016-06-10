@@ -1,3 +1,4 @@
+
 # __call __invoke bindTo简单说明
 
 # 1. javascript动态添加方法
@@ -83,4 +84,6 @@ print(obj.say());
 php如何捕抓到类中的name
 
 直接`$this->name`,这样写的话$this只会指向到say函数
+
+# 5. bindTo()
 
