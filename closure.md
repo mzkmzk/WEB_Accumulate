@@ -38,6 +38,10 @@ public function create($table, Closure $callback)
 }
 ```
 
+## 2.1 实践
+
+
+
 # 3. 由使用者决定一个boolean
 
 例如Laravel的`collection->firtst()`
@@ -108,6 +112,8 @@ class Build {
     }
 }
 ```
+
+
 
 
 # 参考资料
