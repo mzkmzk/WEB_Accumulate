@@ -63,6 +63,10 @@ class MyClass
 2. 多态: 想要解耦合既有程序功能
 3. Trait: 想要共享相同的程序功能
 
+# 参考链接
+
+<http://oomusou.io/php/php-trait/>
+
 
 
 
