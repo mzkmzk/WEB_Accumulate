@@ -22,4 +22,8 @@ value3
 
 # 2. 使用环境
 
-1. 相当于多个return,
+1. 相当于多个return.
+
+# 参考链接
+
+<http://oomusou.io/php/php-generator/>
