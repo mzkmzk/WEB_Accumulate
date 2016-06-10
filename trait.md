@@ -16,5 +16,46 @@ trait是介于extend 和 interface 的一种实现方式
 
 如果有trait a 和trait b 实现了同一个方法,那么这样use肯定会出现命名冲突啊,咋办
 
+```php
+trait A 
+{
+    function someFunc() 
+    {
+        ...
+    }
+
+    function otherFunc() 
+    {
+        ...
+    }
+}
+
+trait B 
+{
+    function someFunc() 
+    {
+        ...
+    }
+
+    function otherFunc() 
+    {
+        ...
+    }
+}
+
+class MyClass 
+{
+    use A, B {
+        A::someFunc insteadof B;
+        B::otherFunc as differentFunc;
+    }
+}
+```
+
+1. `A::someFunc insteadof B`: 代表用a的someFunc,而不用B的
+2. `B::otherFunc as differentFunc`: 代表B的otherFunc改名为differentFunc
+3. 这样写的话,B中的someFunc,是永远无法被调用的
+
+
 
 
