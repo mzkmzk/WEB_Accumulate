@@ -40,7 +40,21 @@ public function create($table, Closure $callback)
 
 ## 2.1 实践
 
+在前端php,调用后端Go接口时,需要做一些重复的校验
 
+```php
+$rs = 调用后端接口.  
+    if($rs->err_code==0){
+      ...
+        return response()->json(array('rs'=>'success',...);
+    }else{
+        return response()->json(array('rs'=>'error','msg'=>$rs->err_msg));
+    }
+}else{
+    return response()->json(array("rs"=>"error","msg"=>$this->sys_model->get_last_err_msg()));
+}
+}
+```
 
 # 3. 由使用者决定一个boolean
 
