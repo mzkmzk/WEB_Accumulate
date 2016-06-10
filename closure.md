@@ -43,7 +43,8 @@ public function create($table, Closure $callback)
 在前端php,调用后端Go接口时,需要做一些重复的校验
 
 ```php
-$rs = 调用后端接口.  
+$rs = 调用后端接口. 
+if($rs)
     if($rs->err_code==0){
       ...
         return response()->json(array('rs'=>'success',...);
