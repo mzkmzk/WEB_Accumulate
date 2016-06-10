@@ -61,5 +61,26 @@ echo($obj->say->__invoke());
 // Hello World
 ```
 
-# 4. 读取私人属性
+# 4. 读取类中原本属性
+
+之前的helloworld当中,没用到类中定义到的变量
+
+例如
+
+```javascript
+function Foo(name) {
+    this.name = name;
+}
+
+var obj = new Foo('Sam');
+obj.say = function () {
+    return "Hello " + this.name;
+};
+print(obj.say());
+
+```
+
+php如何捕抓到类中的name
+
+直接`$this->name`,这样写的话$this只会指向到say函数
 
