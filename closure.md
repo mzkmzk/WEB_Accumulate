@@ -59,7 +59,36 @@ if($rs)
 }
 ```
 
-这里只有针对特定错误码时的代码有用
+这里只有针对特定错误码时的代码有用,第一个判断$rs是否为false和倒数第二个else其实都是无用的代码,我们通过闭包抽取出来
+
+填写接受闭包方法
+```php
+public static function returnJson( $rs ,\Closure $closure){
+        if ($rs) {
+            $result = call_user_func($closure,$rs);
+            if (!is_null($result)) {
+                return $result;
+            }else {
+                return response()->json(array('rs'=>'error','msg'=>"操作失败,错误信息：{$rs->msg}"));
+            }
+        }else {
+            return response()->json(array('rs'=>'error','msg'=>'调用后台接口出错'));
+        }
+    }
+```
+
+调用时
+
+```php
+$rs = 调用后端;
+return ReturnJson::returnJson($res,function($res){
+    if($rs->err_code == 0){
+        return response()->json(array('rs'=>'success','imgRoot'=>$imgRoot));
+    } else if ($rs->err_code == 9999) {
+      return response()->json(array('rs'=>'error',...);
+    }
+});
+```
 
 # 3. 由使用者决定一个boolean
 
