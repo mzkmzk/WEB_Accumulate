@@ -12,5 +12,9 @@ trait是介于extend 和 interface 的一种实现方式
 
 简言而之: use trait类,就跟把其代码复制过来,一毛一样
 
+# 2. 冲突
+
+如果有trait a 和trait b 实现了同一个方法,那么这样use肯定会出现命名冲突啊,咋办
+
 
 
