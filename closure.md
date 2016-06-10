@@ -49,7 +49,7 @@ $rs = 调用后端接口.
         return response()->json(array('rs'=>'success',...);
     }else if ($rs->err_code == 9999){
         return response()->json(array('rs'=>'error',...);
-    }  else{
+    }else{
         return response()->json(array('rs'=>'error','msg'=>$rs->err_msg));
     }
 }else{
@@ -58,7 +58,7 @@ $rs = 调用后端接口.
 }
 ```
 
-这里只有一
+这里只有针对特定错误码时的代码有用
 
 # 3. 由使用者决定一个boolean
 
