@@ -1,6 +1,6 @@
 # 常见知识
 
-##1. 匿名函数及其作用域
+#1. 匿名函数及其作用域
 
 ```php
 <?php
@@ -51,11 +51,11 @@ $example("hello"); //string(11) "hello world"
 
 参考链接<http://php.net/manual/zh/functions.anonymous.php>
 
-##2. 获取子类的类名
+#2. 获取子类的类名
 
 <http://www.php-note.com/article/detail/874>
 
-##3. 递归爆栈 错误提示
+#3. 递归爆栈 错误提示
 
     Allowed memory size of 134217728 bytes exhausted (tried to allocate 72 bytes) i
 
@@ -65,14 +65,14 @@ $example("hello"); //string(11) "hello world"
 
 或者到php.ini中设置
 
-##4. 根据变量获取类名
+#4. 根据变量获取类名
 
 ```php
 get_class($base_Model);
 //返回 "命名空间\Patient_Model"
 ```
 
-##5. 配置本地域名
+#5. 配置本地域名
 
 修改apache配置文件`/etc/apache/httpd.conf`
 
@@ -89,13 +89,13 @@ Include /private/etc/apache2/extra/httpd-vhosts.conf
 
 还会有403权限问题.我把整个项目都777以后,才可以访问.
 
-##6. 获取php中定义的所有页面
+#6. 获取php中定义的所有页面
 
 问题是这样的:我Laravel后台传输给前台很多变量,我需要获取所有值.
 
 `get_defined_vars()`可以获取页面的所有变量.
 
-##7. HTTP_ORIGIN什么时候存在
+#7. HTTP_ORIGIN什么时候存在
 
 最近在PHP调用`$_SERVER['HTTP_ORIGIN']`,发现有时会有,有时不会
 
@@ -107,3 +107,4 @@ Include /private/etc/apache2/extra/httpd-vhosts.conf
 
 ![](QQ20160321-2.png)
 
+#8. list
