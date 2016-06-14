@@ -64,4 +64,5 @@
 * [优化实践](you_hua_shi_jian.md)
    * [Nicefoto.cc优化](nicefotoccyou_hua.md)
 * [项目总结](xiang_mu_zong_jie.md)
+   * Journey
 
