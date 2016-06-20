@@ -3,7 +3,7 @@
 #1. 设置tab和显示行号
 
 1. `vi --version`: 查看要修改的配置文件
-2. 在配置文件中,添加`set tabstop=4`
+2. 在配置文件中,添加`set tabstop=4`: 设置tab间隔
 3. `set nu|nonu`: 显示|不显示行号
 
 参考链接
