@@ -1,12 +1,12 @@
 # 入门
 
-## 1. 安装环境
+# 1. 安装环境
 
 ```javascript
 sudo npm install webpack -g
 ```
 
-## 2. 基本测试
+# 2. 基本测试
 
 代码地址<https://github.com/mzkmzk/Webpack_Example/tree/master/1-base>
 
@@ -31,7 +31,7 @@ sudo npm install webpack -g
 
 基本很简单,`webpack`配置好了基本都OK 
     
-## 3. 引入JS
+# 3. 引入JS
 
 代码地址<https://github.com/mzkmzk/Webpack_Example/tree/master/2-exports_js>
 
@@ -51,7 +51,7 @@ sudo npm install webpack -g
 
 这部分使用了`exports`模块
 
-## 4. 引入CSS
+# 4. 引入CSS
 
 代码地址<https://github.com/mzkmzk/Webpack_Example/tree/master/3-require_css>
 
@@ -72,7 +72,7 @@ sudo npm install webpack -g
       ```
 5. `webpack ./entry.js bundle.js`
 
-## 5. 命令引入CSS模块
+# 5. 命令引入CSS模块
 
 代码路径<https://github.com/mzkmzk/Webpack_Example/tree/master/4-require_css_order>
 
@@ -86,7 +86,7 @@ sudo npm install webpack -g
     ```
 3. 执行`webpack ./entry.js bundle.js --module-bind 'css=style!css'
 
-## 6. 引入配置文件
+# 6. 引入配置文件
 
 代码地址<https://github.com/mzkmzk/Webpack_Example/tree/master/5-config_file>
 
@@ -109,7 +109,7 @@ sudo npm install webpack -g
   ```
 3. `webpack`
 
-## 7. 开启本地Server
+# 7. 开启本地Server
 
 1. 安装Server: `sudo npm install webpack-dev-server -g`
     弹出警告
@@ -121,7 +121,7 @@ npm WARN webpack-dev-middleware@1.6.1 requires a peer of webpack@1 || ^2.1.0-bet
 `
 3. 打开: `http://localhost:8080/`
 
-## 8.基本命令
+# 8.基本命令
 
 1. wepack: 基本打包
 2. wepack -w: 提供watch
@@ -132,7 +132,7 @@ npm WARN webpack-dev-middleware@1.6.1 requires a peer of webpack@1 || ^2.1.0-bet
 7. wepack --display-modules: 默认`node_modules`的模块隐藏,加上这个可以显示
 2. `webpack --progress --colors --watch`监听变化
 
-## 参考链接
+# 参考链接
 
 代码参考:<http://webpack.github.io/docs/tutorials/getting-started/>
 
