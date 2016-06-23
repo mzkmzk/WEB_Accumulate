@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "babel-core": "6.9.1", //babel核心库
-    "babel-loader": "6.2.4", //babel核心库
+    "babel-loader": "6.2.4", //webpack渲染babel
     "babel-preset-es2015": "6.9.0", //babel转es6
     "babel-preset-react": "6.5.0", //babel转react
     "css-loader": "0.23.1", //webpack加载css
@@ -55,16 +55,16 @@ module.exports = {
 		loaders: [
             {
                 test: /\.js/, //后缀名为js
-                loader: 'babel',通过babel加载
+                loader: 'babel',通过babel-loader渲染
                 include: __dirname + '/Src', //只渲染这个目录下的js
             },
             {
-                test: /\.scss/,
-                loaders: ['style','css','sass'],
+                test: /\.scss/, //后缀名为scss
+                loaders: ['style','css','sass'],//通过style-loader、css-loader、sass-loader渲染
             },
             {
-                test: /\.html/,
-                loader: 'html',
+                test: /\.html/, //后缀名为html
+                loader: 'html', //使用html-load渲染
             },
 		],
 	},
