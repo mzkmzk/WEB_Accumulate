@@ -123,6 +123,29 @@ class Time_Axis extends Component {
 export default Time_Axis
 ```
 
+scss代码
+
+```scss
+.time_axis {
+    display: flex; //设置flex布局
+    flex-wrap: wrap; //当空间不足时,往下一行排
+    justify-content: center; //居中显示
+    margin-top: 50px; 
+    article {
+        flex: 0 1 80%; //0为flex-grow的默认值,意思为如果存在剩余空间，也不放大,
+        display: flex;
+        section {
+            padding-left: 1%;
+            margin-left: 1%;
+            padding-bottom: 50px;
+            border-left: 1px solid black;
+            flex: 0 0 86%;
+
+        }
+    }
+}
+```
+
 
 # 参考
 
