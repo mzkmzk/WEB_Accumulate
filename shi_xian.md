@@ -79,6 +79,12 @@ module.exports = {
 
 ![截图](QQ20160623-1.png)
 
+其实这里要是不用Flex,用传统的CSSue很容易实现
+
+例如 中间占80% 两边10%
+
+
+
 # 参考
 
 webpack入门: <https://cnodejs.org/topic/57528759adc77ac170409e79?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io>
