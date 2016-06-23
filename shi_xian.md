@@ -20,19 +20,19 @@
 
 先说一下`package.json`,项目需要使用的依赖
 
+主要分开发时依赖和运行时依赖
+
 ```javascript
   "dependencies": {
     "jquery": "3.0.0",
-    "mustache": "2.2.1",
     "react": "15.1.0",
     "react-dom": "15.1.0",
-    "underscore": "1.8.3"
   },
   "devDependencies": {
-    "babel-core": "6.9.1",
-    "babel-loader": "6.2.4",
-    "babel-preset-es2015": "6.9.0",
-    "babel-preset-react": "6.5.0",
+    "babel-core": "6.9.1", //babel核心库
+    "babel-loader": "6.2.4", //babel核心库
+    "babel-preset-es2015": "6.9.0", //babel转es6
+    "babel-preset-react": "6.5.0", //babel转react
     "css-loader": "0.23.1",
     "html-loader": "0.4.3",
     "node-sass": "3.8.0",
