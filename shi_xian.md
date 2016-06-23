@@ -79,11 +79,14 @@ module.exports = {
 
 ![截图](QQ20160623-1.png)
 
-其实这里要是不用Flex,用传统的CSSue很容易实现
+其实这里要是不用Flex,用传统的CSS很容易实现
 
 例如 中间占80% 两边10%
 
-
+```css
+  margin: auto;
+  width: 80%;
+```
 
 # 参考
 
