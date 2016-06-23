@@ -133,7 +133,7 @@ scss代码
     margin-top: 50px; 
     article {
         flex: 0 1 80%; //0为flex-grow的默认值,意思为如果存在剩余空间，也不放大, 1为flex-shrink的默认值,意思为如果空间不足,该项目缩小,80% 表示占父元素主轴的80%空间
-        display: flex;
+        display: flex; //又定义一个flex
         section {
             padding-left: 1%;
             margin-left: 1%;
