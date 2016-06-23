@@ -33,8 +33,8 @@
     "babel-loader": "6.2.4", //babel核心库
     "babel-preset-es2015": "6.9.0", //babel转es6
     "babel-preset-react": "6.5.0", //babel转react
-    "css-loader": "0.23.1",
-    "html-loader": "0.4.3",
+    "css-loader": "0.23.1", //webpack加载css
+    "html-loader": "0.4.3", //wepack加载html,其实这里作用不大,因为html已经写在react里了
     "node-sass": "3.8.0",
     "sass-loader": "3.2.1",
     "style-loader": "0.13.1",
