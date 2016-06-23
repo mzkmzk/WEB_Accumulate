@@ -48,8 +48,8 @@
 module.exports = {
 	entry: './Src/Index', //入口 webpack从这个js开始拓展找其他js
 	output: {
-		path: 'Public',
-		filename: 'bundle.js'
+		path: 'Public', //输出路径
+		filename: 'bundle.js' //输出名称
 	},
 	module: {
 		loaders: [
@@ -69,8 +69,9 @@ module.exports = {
 		],
 	},
 };
-
 ```
+
+当然我现在只有一个页面,所以配置应该是最简单的
 
 # 参考
 
