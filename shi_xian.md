@@ -139,12 +139,13 @@ scss代码
             margin-left: 1%;
             padding-bottom: 50px;
             border-left: 1px solid black;
-            flex: 0 0 86%;
-
+            flex: 0 1 86%; 内容占用86%空间
         }
     }
 }
 ```
+
+怎么说,这里其实到现在还没有太体现出flex的优势,因为flex主要是伸缩,但是现在的页面其实不太会有多个模块去挤压需要伸缩的需求
 
 
 # 参考
