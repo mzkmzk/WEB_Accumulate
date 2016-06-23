@@ -90,6 +90,38 @@ module.exports = {
 
 这里主要讲讲`Time_Axis`模块
 
+html代码
+
+```javascript
+class Time_Axis extends Component {
+    render() {
+        return (
+            <section className="time_axis">
+                <article>
+                    <time datatime="2016-06-20 19:34" className="time_axis_item_time">2016-06-20 19:34</time>
+                    <section >
+                        今天有点小纠结今天有点小纠结...
+                    </section>
+                </article>
+                <article>
+                    <time datatime="2016-06-20 19:34" className="time_axis_item_time">2016-06-20 19:34</time>
+                    <section >
+                        今天有点小纠结今天有点小纠结...
+                    </section>
+                </article>
+                <article>
+                    <time datatime="2016-06-20 19:34" className="time_axis_item_time">2016-06-20 19:34</time>
+                    <section >
+                        今天有点小纠结今天有点小纠结...
+                    </section>
+                </article>
+            </section>
+        )
+    }
+}
+
+export default Time_Axis
+```
 
 
 # 参考
