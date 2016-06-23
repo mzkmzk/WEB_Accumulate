@@ -75,7 +75,9 @@ module.exports = {
 
 #2. Flex
 
+初始版本截图
 
+![截图](QQ20160623-1.png)
 
 # 参考
 
