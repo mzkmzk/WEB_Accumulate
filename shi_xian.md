@@ -4,5 +4,7 @@
 
 webpack入门: <https://cnodejs.org/topic/57528759adc77ac170409e79?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io>
 
-flex参加:
+flex参考:
+
+<http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html>
 
