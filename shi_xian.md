@@ -54,9 +54,9 @@ module.exports = {
 	module: {
 		loaders: [
             {
-                test: /\.js/,
-                loader: 'babel',
-                include: __dirname + '/Src',
+                test: /\.js/, //后缀名为js
+                loader: 'babel',通过babel加载
+                include: __dirname + '/Src', //只渲染这个目录下的js
             },
             {
                 test: /\.scss/,
