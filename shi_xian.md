@@ -73,6 +73,10 @@ module.exports = {
 
 当然我现在只有一个页面,所以配置应该是最简单的
 
+#2. Flex
+
+
+
 # 参考
 
 webpack入门: <https://cnodejs.org/topic/57528759adc77ac170409e79?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io>
