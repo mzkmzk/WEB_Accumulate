@@ -46,7 +46,7 @@
 
 ```javascript
 module.exports = {
-	entry: './Src/Index',
+	entry: './Src/Index', //入口 webpack从这个js开始拓展找其他js
 	output: {
 		path: 'Public',
 		filename: 'bundle.js'
