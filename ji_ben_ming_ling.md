@@ -36,6 +36,10 @@ nginx: configuration file 404/nginx.conf test is successful
     ```shell
     nginx -V
     ```
+4. 启动nginx: 
+
+  1. nginx
+  2. nginx -s reload: 平滑启动nginx,表示不停止nginx的情况下重启nginx
 
 # 参考链接
 
