@@ -22,7 +22,16 @@ worker_processes  4;
 ## 绑定每个nginx进程所使用的CPU，使nginx可以利用cpu的多核
 worker_cpu_affinity 0001 0010 0100 1000;
   ```
-  
+
+2. 检查配置文件的正确性: `sudo nginx -t`
+
+   ```shell
+   work@TEST01:~/env/nginx/default/conf$ sudo nginx -t
+[sudo] password for work:
+nginx: the configuration file /home/work/env/nginx/nginx-1.7.11/conf/nginx.conf syntax is ok
+nginx: configuration file /home/work/env/nginx/nginx-1.7.11/conf/nginx.conf test is successful
+work@TEST01:~/env/nginx/default/conf$ Write failed: Broken pipe
+   ```
 
 # 参考链接
 
