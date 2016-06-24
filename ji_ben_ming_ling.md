@@ -40,6 +40,14 @@ nginx: configuration file 404/nginx.conf test is successful
 
   1. nginx
   2. nginx -s reload: 平滑启动nginx,表示不停止nginx的情况下重启nginx
+5. 停止nginx: 
+
+  1. 完美停止nginx: `kill -QUIT `cat /var/run/nginx.pid``
+  2. 快速停止nginx: `kill -INT `cat /var/run/nginx.pid``
+  3. 完美停止工作进程,只要用作平滑升级: `kill -WINCH `cat /var/run/nginx.pid``
+  4. 强制停止nginx: `pkill -9 nginx`
+  5. 停止ngix: `nginx -s stop`
+
 
 # 参考链接
 
