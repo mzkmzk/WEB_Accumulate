@@ -11,12 +11,14 @@
 
 1. 设置配置文件
 
-```shell
-  6     server_name  xxx.cn www.com;
-  7     if ($host != xxx.cn) {
-  8         rewrite ^/(.*)$ http://xxx.cn/$1 permanent;
-  9     }
-```
+    ```shell
+      6     server_name  xxx.cn www.com;
+      7     if ($host != xxx.cn) {
+      8         rewrite ^/(.*)$ http://xxx.cn/$1 permanent;
+      9     }
+    ```
+  
+  1. permanent: 表示永久重定向到301
 
 2. 校验配置文件正确性: `nginx -t`
 3. 重启nginx: `-s reload`
