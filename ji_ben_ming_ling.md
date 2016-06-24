@@ -2,7 +2,9 @@
 
 # 1. 入门
 
+1. 查看nginx进程: `ps -ef|grep nginx`
 
+  
 
 # 参考链接
 
