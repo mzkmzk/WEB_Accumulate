@@ -31,6 +31,11 @@ worker_cpu_affinity 0001 0010 0100 1000;
 nginx: the configuration file 404/nginx.conf syntax is ok
 nginx: configuration file 404/nginx.conf test is successful
    ```
+3. 检查nginx完整配置信息: `sudo nginx -V`
+
+    ```shell
+    nginx -V
+    ```
 
 # 参考链接
 
