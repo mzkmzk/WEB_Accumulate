@@ -22,3 +22,7 @@
 
 2. 校验配置文件正确性: `nginx -t`
 3. 重启nginx: `-s reload`
+
+# 参考链接
+
+301参考链接 <http://www.cnblogs.com/benio/archive/2010/08/16/1800584.html>
