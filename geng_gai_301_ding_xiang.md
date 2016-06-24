@@ -9,7 +9,7 @@
 
 # Nginx配置
 
-设置配置文件
+1. 设置配置文件
 
 ```shell
   6     server_name  xxx.cn www.com;
@@ -17,3 +17,6 @@
   8         rewrite ^/(.*)$ http://xxx.cn/$1 permanent;
   9     }
 ```
+
+2. 校验配置文件正确性: `nginx -t`
+3. 重启nginx: `-s reload`
