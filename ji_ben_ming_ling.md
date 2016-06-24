@@ -26,11 +26,10 @@ worker_cpu_affinity 0001 0010 0100 1000;
 2. 检查配置文件的正确性: `sudo nginx -t`
 
    ```shell
-   work@TEST01:~/env/nginx/default/conf$ sudo nginx -t
+   404@40401:~/env/nginx/default/conf$ sudo nginx -t
 [sudo] password for work:
-nginx: the configuration file /home/work/env/nginx/nginx-1.7.11/conf/nginx.conf syntax is ok
-nginx: configuration file /home/work/env/nginx/nginx-1.7.11/conf/nginx.conf test is successful
-work@TEST01:~/env/nginx/default/conf$ Write failed: Broken pipe
+nginx: the configuration file 404/nginx.conf syntax is ok
+nginx: configuration file 404/nginx.conf test is successful
    ```
 
 # 参考链接
