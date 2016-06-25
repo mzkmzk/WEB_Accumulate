@@ -9,4 +9,6 @@
 1. cd /usr/local/mysql/data/
 2. sudo rm -rf database_name
 
+参考: 
 
+<http://stackoverflow.com/questions/16527054/drop-database-return-error-dropping-database-errno-66-in-mysql>
