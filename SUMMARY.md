@@ -57,6 +57,7 @@
        * [更改301定向](geng_gai_301_ding_xiang.md)
    * [MySQL](mysql.md)
        * [常见问题](chang_jian_wen_ti.md)
+       * 常见命令
 * [工具](gong_ju.md)
    * [PhPStorm](phpstorm.md)
        * [项目支持Babel转JSX的步骤](xiang_mu_zhi_chi_babel_de_bu_zou.md)
