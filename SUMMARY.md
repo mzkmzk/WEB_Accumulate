@@ -55,7 +55,7 @@
    * [Nginx](nginx.md)
        * [基本命令](ji_ben_ming_ling.md)
        * [更改301定向](geng_gai_301_ding_xiang.md)
-   * MySQL
+   * [MySQL](mysql.md)
 * [工具](gong_ju.md)
    * [PhPStorm](phpstorm.md)
        * [项目支持Babel转JSX的步骤](xiang_mu_zhi_chi_babel_de_bu_zou.md)
