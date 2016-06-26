@@ -26,7 +26,7 @@
                    * [计时器](ji_shi_qi.md)
                    * [JSX_Hello_World](jsxhello_world.md)
                * [知识点](zhi_shi_dian.md)
-                   * React声明周期和props & state
+                   * [React声明周期和props & state](reactsheng_ming_zhou_qi_he_props_&_state.md)
            * [Redux](redux.md)
    * [CSS](___css.md)
        * [兼容问题](___jian_rong_wen_ti.md)
