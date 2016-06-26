@@ -34,7 +34,7 @@
            * [Redux](redux.md)
                * [常见问题](redux_chang_jian_wen_ti.md)
                    * [redux-thunk引入](redux-thunkyin_ru.md)
-               * API
+               * [API](redux_api.md)
            * [常见问题](react_chang_jian_wen_ti.md)
            * [常用站点](chang_yong_zhan_dian.md)
    * [CSS](___css.md)
