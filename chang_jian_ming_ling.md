@@ -4,7 +4,7 @@
 
 `CREATE DATABASE 数据库名;` 
 
-# 2.每一个单一数据库创建单一的读写权限用户
+# 2. 每一个单一数据库创建单一的读写权限用户
 
     mysql -u ... -h ... -p
     //进去后,可以查看授权的配置
@@ -17,4 +17,10 @@
     use mysql;
     select distinct(User) from user;
     //显示该数据库授权登陆的用户名(其实还有HOST的限制)
-        
+
+# 3. 查看数据库里的时间和现在的时间差
+
+```sql
+select * from `表名` wher  TIMESTAMPDIFF(DAY,now(),存储的时间属性) <= 天数
+```
+可以得出属性中的时间小于天数的所有行.
