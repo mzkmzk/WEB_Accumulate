@@ -2,3 +2,4 @@
 
 1. 确定state对象的结构
 2. 开发renducer
+3. 
