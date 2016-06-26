@@ -38,7 +38,7 @@
                * [案例](redux_an_li.md)
                    * [数字加减](shu_zi_jia_jian.md)
                    * [Todos](todos.md)
-                   * 统计table选择列总数
+                   * [统计table选择列总数](tong_ji_table_xuan_ze_lie_zong_shu.md)
                    * TODOS_MVC
    * [CSS](___css.md)
        * [兼容问题](___jian_rong_wen_ti.md)
