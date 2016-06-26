@@ -24,8 +24,6 @@
            * [入门](react_ru_men.md)
                * 案例
            * [Redux](redux.md)
-       * [Grunt](grunt.md)
-           * [入门](grunt_ru_men.md)
    * [CSS](___css.md)
        * [兼容问题](___jian_rong_wen_ti.md)
            * [基本](css_ji_ben.md)
@@ -49,6 +47,8 @@
        * [Chrome](chrome.md)
            * [断点调试](duan_dian_diao_shi.md)
    * [打包](da_bao.md)
+       * [Grunt](grunt.md)
+           * [入门](grunt_ru_men.md)
        * [Gulp](gulp_gulp.md)
 * [服务器](fu_wu_qi.md)
    * [Linux](linux.md)
