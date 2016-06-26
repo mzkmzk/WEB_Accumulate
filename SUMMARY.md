@@ -47,7 +47,7 @@
        * [canvas优化图片大小](canvasyou_hua_tu_pian_da_xiao.md)
    * [Utils](utils.md)
        * [Gulp](gulp.md)
-       * Chrome
+       * [Chrome](chrome.md)
 * [服务器](fu_wu_qi.md)
    * [Linux](linux.md)
        * [Common](common.md)
