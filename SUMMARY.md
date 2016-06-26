@@ -33,6 +33,7 @@
                * [基础API](ji_chu_api.md)
            * [Redux](redux.md)
                * [常见问题](redux_chang_jian_wen_ti.md)
+                   * redux-thunk引入
            * [常见问题](react_chang_jian_wen_ti.md)
    * [CSS](___css.md)
        * [兼容问题](___jian_rong_wen_ti.md)
