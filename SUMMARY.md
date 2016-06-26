@@ -31,6 +31,7 @@
                * [基础API](ji_chu_api.md)
            * [Redux](redux.md)
                * [常见错误](chang_jian_cuo_wu.md)
+                   * redux-thunk引入
    * [CSS](___css.md)
        * [兼容问题](___jian_rong_wen_ti.md)
            * [基本](css_ji_ben.md)
