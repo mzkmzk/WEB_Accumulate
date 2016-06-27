@@ -10,3 +10,40 @@
 
 # 2. 解决
 
+改一下`apache.conf`
+
+原本
+
+```shell
+<Directory />
+        Options FollowSymLinks
+        AllowOverride All
+        Require all denied
+</Directory>
+```
+
+改为
+
+```shell
+<Directory />
+        Options FollowSymLinks
+        Require all denied
+        Header set Access-Control-Allow-Origin *
+        #AllowOverride All
+        #Require all denied
+</Directory>
+```
+
+这样设置Header需要引入`mod_headers`模块
+
+不然启动时,会报
+
+```shell
+AH00526: Syntax error on line 156 of /etc/apache2/apache2.conf:
+Invalid command 'Header', perhaps misspelled or defined by a module not included in the server configuration
+Action 'restart' failed.
+```
+
+引入`mod_headers`
+
+`/etc/apache2/mods-enabled# ln -s ../mods-available/headers.load ./`
