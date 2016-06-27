@@ -47,3 +47,5 @@ Action 'restart' failed.
 引入`mod_headers`
 
 `/etc/apache2/mods-enabled# ln -s ../mods-available/headers.load ./`
+
+完事~.
