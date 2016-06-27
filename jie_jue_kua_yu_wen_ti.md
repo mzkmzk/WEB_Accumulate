@@ -14,7 +14,7 @@
 
 原本
 
-```shell
+```
 <Directory />
         Options FollowSymLinks
         AllowOverride All
@@ -24,7 +24,7 @@
 
 改为
 
-```shell
+```
 <Directory />
         Options FollowSymLinks
         Require all denied
@@ -49,3 +49,7 @@ Action 'restart' failed.
 `/etc/apache2/mods-enabled# ln -s ../mods-available/headers.load ./`
 
 完事~.
+
+# 参考链接
+
+<http://www.jb51.net/article/60084.htm>
