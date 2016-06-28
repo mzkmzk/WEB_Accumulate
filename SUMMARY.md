@@ -104,6 +104,7 @@
    * [Nicefoto.cc优化](nicefotoccyou_hua.md)
 * [项目总结](xiang_mu_zong_jie.md)
    * [Journey](journey.md)
+       * [v0.2](v02.md)
        * [v0.1](v01.md)
            * [设计](she_ji.md)
            * [实现](shi_xian.md)
