@@ -68,7 +68,7 @@
            * [入门](grunt_ru_men.md)
        * [Gulp](gulp_gulp.md)
    * [素材](su_cai.md)
-       * 炫酷网站收集
+       * [炫酷网站收集](xuan_ku_wang_zhan_shou_ji.md)
 * [服务器](fu_wu_qi.md)
    * [Linux](linux.md)
        * [Common](common.md)
