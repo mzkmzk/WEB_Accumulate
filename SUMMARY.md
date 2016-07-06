@@ -95,7 +95,7 @@
        * [项目支持Babel转JSX的步骤](xiang_mu_zhi_chi_babel_de_bu_zou.md)
        * [PhPStorm支持SASS](phpstormzhi_chi_sass.md)
    * [iTerm](iterm.md)
-       * 快捷键
+       * [快捷键](kuai_jie_jian.md)
    * [Vim](vim.md)
        * [常用命令](chang_yong_ming_ling.md)
        * [常见配置](chang_jian_pei_zhi.md)
