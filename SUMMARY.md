@@ -119,5 +119,5 @@
 * [优秀网站](you_xiu_wang_zhan.md)
    * [设计](web_she_ji.md)
    * [前端](web_qian_duan.md)
-* 其他
+* [其他](qi_ta.md)
 
