@@ -120,4 +120,5 @@
    * [设计](web_she_ji.md)
    * [前端](web_qian_duan.md)
 * [其他](qi_ta.md)
+   * 简历
 
