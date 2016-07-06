@@ -122,5 +122,5 @@
 * [其他](qi_ta.md)
    * [简历](jian_li.md)
 * [运维](yun_wei.md)
-   * 阿里云服务器裸机初始化及安装Docker + Nginx + PHP + MySQL + Luajit
+   * [阿里云服务器裸机初始化及安装Docker + Nginx + PHP + MySQL + Luajit](a_li_yun_fu_wu_qi_luo_ji_chu_shi_hua_ji_an_zhuang_.md)
 
