@@ -9,3 +9,11 @@
 
 1. 切换标签: command + 数字 / command + 左右方向
 2. 切换全屏: command + Enter
+
+# 3. 历史
+
+1. 查看历史命令: command + ;
+2. 
+
+
+
