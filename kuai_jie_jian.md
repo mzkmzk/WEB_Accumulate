@@ -16,5 +16,7 @@
 1. 查看历史命令: command + ;
 2. 查看剪贴板历史: command +shift + h
 
+# 参考链接 
 
+1. http://cnbin.github.io/blog/2015/06/20/iterm2-kuai-jie-jian-da-quan/
 
