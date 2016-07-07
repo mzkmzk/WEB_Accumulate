@@ -6,7 +6,7 @@
 
 原因: 
 
-pareseOptions中默认的sourceType为`sourceType`
+pareseOptions中默认的sourceType为`script`
 
 
 
