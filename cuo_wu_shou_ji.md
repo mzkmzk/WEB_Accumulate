@@ -8,6 +8,8 @@
 
 pareseOptions中默认的sourceType为`sourceType`
 
+
+
 改正方法: 修改.eslintrc
 
 ```javascript
