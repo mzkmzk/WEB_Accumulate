@@ -7,5 +7,9 @@
 修改.eslintrc
 
 ```javascript
-
+"parseOptions": {
+  ...
+  "sourceType": "module"
+  ...
+}
 ```
