@@ -20,3 +20,6 @@ pareseOptions中默认的sourceType为`script`
 }
 ```
 
+# 2. 强制/禁止分号
+
+
