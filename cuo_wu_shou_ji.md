@@ -24,4 +24,20 @@ pareseOptions中默认的sourceType为`script`
 
 错误提示: `error  Missing semicolon  semi`
 
-修正
+原因在于
+
+我在rules中设置了semi为[2,"always"]
+
+这样的话会强制要求分号
+
+所以改为semi: [2,'never']为永不要分号,要了分号会爆`error  Extra semicolon  semi`
+
+改正方法: 修改.eslintrc
+
+```javascript
+"rules": {
+  ...
+  "semi": [2,"never"]
+  ...
+}
+```
