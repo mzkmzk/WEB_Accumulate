@@ -1,6 +1,6 @@
 # 错误收集
 
-# 1. 代码来源设置
+# 1. 引入代码设置
 
 错误提示: `Parsing error: 'import' and 'export' may appear only with 'sourceType: module'`
 
