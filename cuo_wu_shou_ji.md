@@ -22,4 +22,6 @@ pareseOptions中默认的sourceType为`script`
 
 # 2. 强制/禁止分号
 
+错误提示: `error  Missing semicolon  semi`
 
+修正
