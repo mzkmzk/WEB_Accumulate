@@ -162,5 +162,5 @@ url是类似` "/v1/official/info/:info_id/weight/:weight";`这样的字符串
 getModelInfo('/v1/official/info/:info_id/weight/:weight',[1,2]);
 
 //返回/v1/official/info/1/weight/2
-
 ```
+
