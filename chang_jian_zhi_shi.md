@@ -141,7 +141,7 @@ var_dump($bar); // NULL
 
         if(!empty($urlParams)) {
             $index = 0;
-            preg_replace_callback('(:\w+)',function($matches) use ($urlParams) {
+            preg_replace_callback('(:\w+)',function($matches) use (&$index,$urlParams) {
                 foreach( $urlParams as $key => $value) {
                     return $urlParams[$index++];
                 }
