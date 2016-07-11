@@ -1,4 +1,4 @@
-zhe# 常见知识
+# 常见知识
 
 #1. 匿名函数及其作用域
 
@@ -137,7 +137,7 @@ var_dump($bar); // NULL
 先给下最终代码
 
 ```php
-    public function getModelInfo($url,$method,$urlParams, $params = []){
+    public function getModelInfo($url,$urlParams = []){
 
         if(!empty($urlParams)) {
             $index = 0;
@@ -148,8 +148,10 @@ var_dump($bar); // NULL
             },$url);
 
         }
-        return $this->http_client->$method($url);
+        ...
     }
 ```
 
 url是类似` "/v1/official/info/:info_id/weight/:weight";`这样的字符串
+
+这个函数的作用就是,`$urlParams`中的元素对应的替换url中的待替换字符.
