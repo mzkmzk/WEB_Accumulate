@@ -151,3 +151,6 @@ var_dump($bar); // NULL
         return $this->http_client->$method($url);
     }
 ```
+
+url是类似` "/v1/official/info/:info_id/weight/:weight";`这样的字符串
+
