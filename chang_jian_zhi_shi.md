@@ -141,12 +141,12 @@ var_dump($bar); // NULL
 
         if(!empty($urlParams)) {
             $index = 0;
-            preg_replace_callback('(:\w+)',function($matches) use (&$index,$urlParams) {
+            $string = preg_replace_callback('(:\w+)',function($matches) use (&$index,$urlParams) {
                 foreach( $urlParams as $key => $value) {
                     return $urlParams[$index++];
                 }
             },$url);
-
+            echo $string;
         }
         ...
     }
@@ -155,3 +155,12 @@ var_dump($bar); // NULL
 url是类似` "/v1/official/info/:info_id/weight/:weight";`这样的字符串
 
 这个函数的作用就是,`$urlParams`中的元素对应的替换url中的待替换字符.即`:info_id`和`:weight`
+
+例如:
+
+```php
+getModelInfo('/v1/official/info/:info_id/weight/:weight',[1,2]);
+
+//返回/v1/official/info/1/weight/2
+
+```
