@@ -164,3 +164,8 @@ getModelInfo('/v1/official/info/:info_id/weight/:weight',[1,2]);
 //返回/v1/official/info/1/weight/2
 ```
 
+弯路:
+
+一开始正则写的是`:\w+`,但是提醒` “Delimiter must not be alphanumeric or backslash” error.`
+
+应该是没有设置匹配组..改成`(:\w+)`就OK了
