@@ -131,3 +131,6 @@ list($bar) = "abcde";
 var_dump($bar); // NULL
 ?>
 ```
+
+#9. preg_replace_callback的应用
+
