@@ -134,3 +134,20 @@ var_dump($bar); // NULL
 
 #9. preg_replace_callback的应用
 
+先给下最终代码
+
+```php
+    public function getModelInfo($url,$method,$urlParams, $params = []){
+
+        if(!empty($urlParams)) {
+            $index = 0;
+            preg_replace_callback('(:\w+)',function($matches) use ($urlParams) {
+                foreach( $urlParams as $key => $value) {
+                    return $urlParams[$index++];
+                }
+            },$url);
+
+        }
+        return $this->http_client->$method($url);
+    }
+```
