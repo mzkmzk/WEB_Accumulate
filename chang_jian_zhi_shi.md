@@ -152,6 +152,8 @@ var_dump($bar); // NULL
     }
 ```
 
+
+
 url是类似` "/v1/official/info/:info_id/weight/:weight";`这样的字符串
 
 这个函数的作用就是,`$urlParams`中的元素对应的替换url中的待替换字符.即`:info_id`和`:weight`
@@ -163,6 +165,8 @@ getModelInfo('/v1/official/info/:info_id/weight/:weight',[1,2]);
 
 //返回/v1/official/info/1/weight/2
 ```
+
+闭包中的$matches参数表示当次匹配成功的字符串,以上示例,闭包执行了两次,$matches分别代表`:info_id`和`:weight`
 
 弯路:
 
