@@ -1,4 +1,4 @@
-# 常见知识
+zhe# 常见知识
 
 #1. 匿名函数及其作用域
 
@@ -153,4 +153,3 @@ var_dump($bar); // NULL
 ```
 
 url是类似` "/v1/official/info/:info_id/weight/:weight";`这样的字符串
-
