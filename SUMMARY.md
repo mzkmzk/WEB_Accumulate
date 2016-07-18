@@ -52,7 +52,7 @@
            * [基本](css__ji_ben.md)
        * [常见问题](css_chang_jian_wen_ti.md)
            * [基本](ji_ben.md)
-           * 高斯模糊+图片缩放
+           * [高斯模糊+图片缩放](gao_si_mo_7cca+_tu_pian_suo_fang.md)
    * [HTML](_html.md)
        * [兼容问题](__jian_rong_wen_ti.md)
            * [基本](jiben__.md)
