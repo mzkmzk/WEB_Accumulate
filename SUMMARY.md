@@ -118,7 +118,7 @@
            * [设计](v0.2_she_ji.md)
 * [正则表达式](zheng_ze_biao_da_shi.md)
    * [入门](regular_ru_men.md)
-   * 常用的正则
+   * [常用的正则](chang_yong_de_zheng_ze.md)
 * [Git](git.md)
    * [常用知识](chang_yong_zhi_shi.md)
 * [优秀网站](you_xiu_wang_zhan.md)
