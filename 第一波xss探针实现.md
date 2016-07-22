@@ -15,5 +15,5 @@
 
 置入js,然后远程就可以获取到cookie和浏览器的一些信息
 
-![xss结果](assets/QQ20160722-1.png)
+![xss结果](assets/QQ20160722-2.png)
 
