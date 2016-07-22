@@ -129,5 +129,6 @@
     * [阿里云服务器裸机初始化及安装Docker + Nginx + PHP + MySQL + Luajit](a_li_yun_fu_wu_qi_luo_ji_chu_shi_hua_ji_an_zhuang_.md)
 * [安全](安全.md)
     * [前端](前端.md)
-        * XSS
+        * [XSS](xss.md)
+            * [第一波XSS探针实现](第一波xss探针实现.md)
 
