@@ -74,6 +74,8 @@
         * [Gulp](gulp_gulp.md)
     * [素材](su_cai.md)
         * [炫酷网站收集](xuan_ku_wang_zhan_shou_ji.md)
+    * [第三方嵌入](第三方嵌入.md)
+        * [新浪微博](新浪微博.md)
 * [服务器](fu_wu_qi.md)
     * [Linux](linux.md)
         * [Common](common.md)
