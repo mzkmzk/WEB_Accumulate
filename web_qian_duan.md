@@ -6,3 +6,4 @@
 4. http://www.oneapm.com: 性能检测
 5. https://github.com/gf-rd/gulp-gf-md5: 广发银行js文件md5加密
 6. http://www.aliued.cn/: 阿里1688前端团队
+7. http://rapheal.sinaapp.com/: 微信拉风的博客
