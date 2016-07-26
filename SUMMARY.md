@@ -119,6 +119,8 @@
             * [实现](shi_xian.md)
         * [v0.2](v02.md)
             * [设计](v0.2_she_ji.md)
+    * [前端监控](前端监控.md)
+        * [入门了解](入门了解.md)
 * [正则表达式](zheng_ze_biao_da_shi.md)
     * [入门](regular_ru_men.md)
 * [Git](git.md)
