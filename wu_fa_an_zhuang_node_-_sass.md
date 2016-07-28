@@ -32,7 +32,7 @@ ERROR in dlopen(/node_modules/node-sass/vendor/darwin-x64-47/binding.node, 1): n
   1. 首先删除node-sass: rm -rf node_modules/node-sass
   2. 单独安装node-sass: npm install --save-dev node-sass,参考<https://paulschreiber.com/blog/2015/06/22/fixing-dlopen-no-suitable-image-found-errors-with-node-sass-and-grunt/>
   3. webpack打包,成功
-3. 再尝试install
+3. 再尝试一次性install
 
   1. 因为不信邪,为了一探究竟,重新重置node_modules,直接npm install全部安装
   2. ....突然成功了...我日....
