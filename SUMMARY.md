@@ -54,7 +54,7 @@
            * [基本](ji_ben.md)
            * [高斯模糊+图片缩放](gao_si_mo_7cca+_tu_pian_suo_fang.md)
        * [常用功能](chang_yong_gong_neng.md)
-           * CSS实现响应式全屏背景图
+           * [CSS实现响应式全屏背景图](cssshi_xian_xiang_ying_shi_quan_ping_bei_jing_tu.md)
    * [HTML](_html.md)
        * [兼容问题](__jian_rong_wen_ti.md)
            * [基本](jiben__.md)
