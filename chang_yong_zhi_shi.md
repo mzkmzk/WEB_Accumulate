@@ -40,3 +40,11 @@ git clone 时,默认为仓库的名字 要想重命名 砸破
       2048 96:32:2a:5d:5c:c1:74:25:1a:d2:d4:39:76:ec:66:6e /Users/maizhikun/.ssh/id_rsa (RSA)
 2. 尝试能否连接git服务商 : `ssh -T git@github.com`
 3. 重新生成key : `ssh-keygen`
+
+# 7. git查看单人提交的commit
+
+普通调用
+
+``
+
+参考<http://stackoverflow.com/questions/4259996/how-can-i-view-a-git-log-of-just-one-users-commits>
