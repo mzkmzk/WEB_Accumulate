@@ -45,6 +45,8 @@ git clone 时,默认为仓库的名字 要想重命名 砸破
 
 普通调用
 
-``
+`git log --author "单人名字"`
+
+参考链接还有一些正则的使用方式
 
 参考<http://stackoverflow.com/questions/4259996/how-can-i-view-a-git-log-of-just-one-users-commits>
