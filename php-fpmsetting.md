@@ -14,6 +14,7 @@ php-5.6.7
 6. 关闭php-fpm: kill -INT `对应的PID` | pkill php-fpm
 7. 重启php-fpm: kill -USR2 ``对应的PID`
 8. 查看php-fpm是否开启: `netstat -tunpl | grep 9000`(9000是默认)
+9. 查看PHP-fpm指定的PID: 在php-fpm.conf设置的pid属性,指定的文件有设置pid,默认为`run/php-fpm.pid`
 
 # 参考连接
 
