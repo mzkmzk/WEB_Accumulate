@@ -15,11 +15,6 @@ php-5.6.7
 7. 重启php-fpm: kill -USR2 ``对应的PID`
 8. 查看php-fpm是否开启: `netstat -tunpl | grep 9000`(9000是默认)
 
-# 参考链接
-
-1. 
-2. 
-
 # 参考连接
 
 1. php-fom.conf配置相关: <http://php.net/manual/zh/install.fpm.configuration.php>
