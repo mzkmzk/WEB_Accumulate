@@ -32,8 +32,8 @@ idle processes:       2 //闲置的进程
 active processes:     1 //正在运行的进程
 total processes:      3 //总共的进程
 max active processes: 3 //最大的活动进程数
-max children reached: 0
-slow requests:        1
+max children reached: 0 //达到进程最大数量限制的次数,如果这个数量不为0,则说明你的最大进程数量太小了.
+slow requests:        1 //如果设置了slow-log,超时请求的次数
     ```
 
 # 参考链接
