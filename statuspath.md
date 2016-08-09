@@ -35,6 +35,12 @@ max active processes: 3 //最大的活动进程数
 max children reached: 0 //达到进程最大数量限制的次数,如果这个数量不为0,则说明你的最大进程数量太小了.
 slow requests:        1 //如果设置了slow-log,超时请求的次数
     ```
+    
+# 2. 其他形式
+
+1. 更加详细的参数说明(各线程的具体运行情况): `http://example.com/status?full`
+2. 其他格式的参数说明: `http://example.com/status?full&json`或xml、html
+
 
 # 参考链接
 
