@@ -95,6 +95,7 @@
        * [call invoke bindTo简单说明](callinvoke_bindto_jian_dan_shuo_ming.md)
        * [常用命令](常用命令.md)
        * [php-fpm设置](php-fpmsetting.md)
+           * status_path
    * [Nginx](nginx.md)
        * [基本命令](ji_ben_ming_ling.md)
        * [更改301定向](geng_gai_301_ding_xiang.md)
