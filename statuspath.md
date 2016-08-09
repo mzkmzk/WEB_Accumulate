@@ -24,7 +24,7 @@ pool:                 www // 连接池的名字,一般叫www
 process manager:      dynamic //进程管理
 start time:           09/Aug/2016:13:31:40 +0800 //php-fpm启动时间
 start since:          27750 //php-fpm启动了多少秒
-accepted conn:        3070
+accepted conn:        3070 //接受了多少链接
 listen queue:         0
 max listen queue:     4
 listen queue len:     128
