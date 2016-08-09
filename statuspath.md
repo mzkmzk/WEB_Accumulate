@@ -27,8 +27,8 @@ start since:          27750 //php-fpm启动了多少秒
 accepted conn:        3070 //接受了多少链接
 listen queue:         0 //请求等待队列,如果这个值不为0,那么要增加FPM的进程数量
 max listen queue:     4 //在此次启动php-fpm后,最大的等待队列
-listen queue len:     128
-idle processes:       2
+listen queue len:     128 //socket等待队列长度
+idle processes:       2 //闲置的进程
 active processes:     1
 total processes:      3
 max active processes: 3
