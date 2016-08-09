@@ -20,7 +20,7 @@
 
     ```shell
     work@TEST01:~$ curl http://example.com/status
-pool:                 www
+pool:                 www //
 process manager:      dynamic
 start time:           09/Aug/2016:13:31:40 +0800
 start since:          27750
