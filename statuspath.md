@@ -26,7 +26,7 @@ start time:           09/Aug/2016:13:31:40 +0800 //php-fpm启动时间
 start since:          27750 //php-fpm启动了多少秒
 accepted conn:        3070 //接受了多少链接
 listen queue:         0 //请求等待队列,如果这个值不为0,那么要增加FPM的进程数量
-max listen queue:     4
+max listen queue:     4 //在此次启动php-fpm后,最大的等待队列
 listen queue len:     128
 idle processes:       2
 active processes:     1
