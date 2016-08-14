@@ -13,3 +13,6 @@
 
 `ab   -n 10 -c 2 -H "Cookie: laravel_session=59ef9ff8f0fcb776c87b725ea80280cd5726037c"  -T 'application/x-www-form-urlencoded' -p wechat_ueditor_post.txt https://test-manager.grouplus.com/ueditor/get_wx_content`
 
+1. -n: 请求次数
+2. -c: 并发的请求次数
+3. 
