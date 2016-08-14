@@ -29,3 +29,7 @@ slowlog = /usr/local/php/log/php-fpm.log.slow
 6793 [0x00007f4277e20038] getStuffForEngineTypeTable() /data/nginx/hosts/pma/phpMyAdmin-4.5.2-all-languages/libraries/controllers/DatabaseStructureController.class.php:262
 6794 [0x00007f4277e1ace0] indexAction() /data/nginx/hosts/pma/phpMyAdmin-4.5.2-all-languages/db_structure.php:54
 ```
+
+# 4. 改进
+
+但是有没有方法能获取到当时运行的参数?.这样有数据会好还原.
