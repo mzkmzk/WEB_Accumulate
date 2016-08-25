@@ -12,7 +12,7 @@
        * [npm](npm.md)
            * [Package.json](packagejson.md)
            * [项目安装失败经验](xiang_mu_an_zhuang_shi_bai_jing_yan.md)
-           * 插件
+           * [插件](cha_jian.md)
        * [Canvas](canvas.md)
            * [shoot\_game制作过程](shootgame_zhi_zuo_guo_cheng.md)
            * [shoot\_game](shootgame.md)
