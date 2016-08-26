@@ -103,7 +103,7 @@
            * [status_path](statuspath.md)
            * [设置慢查询](she_zhi_man_cha_xun.md)
        * [composer](composer.md)
-           * 第一个自动的composer插件
+           * [第一个自动的composer插件](di_yi_ge_zi_dong_de_composer_cha_jian.md)
    * [Nginx](nginx.md)
        * [基本命令](ji_ben_ming_ling.md)
        * [更改301定向](geng_gai_301_ding_xiang.md)
