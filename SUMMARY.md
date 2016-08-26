@@ -47,7 +47,7 @@
                * [开发步骤](redux_kai_fa_bu_zou.md)
        * [ESLint](eslint.md)
            * [错误收集](cuo_wu_shou_ji.md)
-       * 全景
+       * [全景](quan_jing.md)
    * [CSS](___css.md)
        * [基本语法](CSS_ji_ben_yu_fa.md)
        * [兼容问题](___jian_rong_wen_ti.md)
