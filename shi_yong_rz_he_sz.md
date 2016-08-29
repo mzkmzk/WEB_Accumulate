@@ -18,6 +18,8 @@ sudo chmod 777 /usr/local/bin/iterm2-*
 
 ![配置](QQ20160829-0.png)
 
+但是也有一个问题.我在rz了以后,弹出选择框以后,点击取消,会一直弹选择框......
+
 # 参考
 
 http://xfhnever.com/2015/09/04/mac-rzsz/
