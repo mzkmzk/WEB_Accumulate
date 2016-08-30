@@ -72,6 +72,7 @@
    * [Utils](utils.md)
        * [Chrome](chrome.md)
            * [断点调试](duan_dian_diao_shi.md)
+       * Mac搭建代理,实现共享hosts
    * [打包](da_bao.md)
        * [WebPack](webpack.md)
            * [入门](ru_men.md)
