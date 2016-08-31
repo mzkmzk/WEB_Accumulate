@@ -41,6 +41,9 @@
     最下面两个是监听的,而上面的是正在使用服务的ip
 7.  手机设置: 首先要在同一局域网,一般你PC能ping通手机即可,然后设置HTTP代理ip为你本地ip,端口为8118即可
 
+
+http://daviswang.iteye.com/blog/819176
+
 # 参考
 
 基本配置: http://liuhonghe.me/mac-set-shadowsocks-share-lan.html
