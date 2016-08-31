@@ -21,4 +21,9 @@
     
     `ComposerAutoloaderInit9830e50881e975b6d46e598d3a511e66`是上面一行引入的autoload_real.php中正在的类名,用于调用静态方法`getLoader`
     
-    
+4. 通过上一部的getLoader,整个程序会得到一个加载器`Composer\Autoload\ClassLoader`,ClassLoader主要用来加载PSR0、PSR4和classmap
+
+# 加载过程
+
+核心的加载在ClassLoader,autoload_real.php如何通过getLoader获得加载器
+
