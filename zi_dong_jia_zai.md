@@ -18,3 +18,7 @@
     require_once __DIR__ . '/composer' . '/autoload_real.php';
     return ComposerAutoloaderInit9830e50881e975b6d46e598d3a511e66::getLoader();
     ```
+    
+    `ComposerAutoloaderInit9830e50881e975b6d46e598d3a511e66`是上面一行引入的autoload_real.php中正在的类名,用于调用静态方法`getLoader`
+    
+    
