@@ -32,3 +32,39 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.nat NAT -
 ```
 
 估计是我之前手抖动...设置错了..
+
+原因比较奇怪,这个文件好像不能手动改,
+
+必须上文的命令行
+
+现在设置成了
+
+```shell
+ 42         <key>SharingNetworkMask</key>
+ 43         <string>255.255.255.0</string>
+ 44         <key>SharingNetworkNumberEnd</key>
+ 45         <string>192.168.2.20</string>
+ 46         <key>SharingNetworkNumberStart</key>
+ 47         <string>192.168.2.1</string>
+```
+
+bridge100也出来了
+
+
+```shell
+bridge100: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=3<RXCSUM,TXCSUM>
+	ether 82:e6:50:80:47:64
+	inet 192.168.2.1 netmask 0xffffff00 broadcast 192.168.2.255
+	inet6 fe80::80e6:50ff:fe80:4764%bridge100 prefixlen 64 scopeid 0xb
+	Configuration:
+		id 0:0:0:0:0:0 priority 0 hellotime 0 fwddelay 0
+		maxage 0 holdcnt 0 proto stp maxaddr 100 timeout 1200
+		root id 0:0:0:0:0:0 priority 0 ifcost 0 port 0
+		ipfilter disabled flags 0x2
+	member: en0 flags=3<LEARNING,DISCOVER>
+	        ifmaxaddr 0 port 4 priority 0 path cost 0
+	nd6 options=1<PERFORMNUD>
+	media: autoselect
+	status: active
+```
