@@ -87,3 +87,18 @@ function composerRequire9830e50881e975b6d46e598d3a511e66($fileIdentifier, $file)
 }
 
 ```
+
+这里主要理解一下`spl_autoload_register`方法
+
+`spl_autoload_register`简单来说就是当准备触发__autoload()方法的时候,会被`spl_autoload_register`给拦截住,直接执行`spl_autoload_register`方法
+
+```php
+bool spl_autoload_register ([ callable $autoload_function [, bool $throw = true [, bool $prepend = false ]]] )
+```
+
+最后一个参数为true时,spl_autoload_register会添加到队列之首,而不是尾部
+
+例如这里并没有引用`\Composer\Autoload\ClassLoader`
+
+而在new \Composer\Autoload\ClassLoader之前先spl_autoload_register给自己的loadClassLoader方法
+
