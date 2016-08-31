@@ -127,7 +127,7 @@
        * [常见配置](chang_jian_pei_zhi.md)
    * [Mac](mac.md)
        * [共享wifi](gong_xiang_wifi.md)
-           * 接收方无法获取IP
+           * [接收方无法获取IP](jie_shou_fang_wu_fa_huo_qu_ip.md)
 * [单元测试](dan_yuan_ce_shi.md)
    * [常见问题](phpunit_chang_jian_wen_ti.md)
 * [重构](zhong_gou.md)
