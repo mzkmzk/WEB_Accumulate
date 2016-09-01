@@ -4,6 +4,7 @@ http://my.oschina.net/assange/blog/520028
 # 入门资料
 
 1. webvr官网: https://webvr.info/
+2. w3c关于webvr: https://w3c.github.io/webvr/
 
 # 相关库
 
