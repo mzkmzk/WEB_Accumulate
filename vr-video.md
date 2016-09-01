@@ -42,6 +42,11 @@ http://blog.tojicode.com/
 3. 游戏
 4. 照片
 
+# 相关作品
+
+1. http://720yun.com/video
+
 # flash实现
 
 1. http://www.ryubin.com/panolab/panoflash/index.html#
+2. http://www.utovr.com/
