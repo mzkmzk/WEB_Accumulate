@@ -41,3 +41,7 @@ http://blog.tojicode.com/
 2. 视频
 3. 游戏
 4. 照片
+
+# flash实现
+
+1. http://www.ryubin.com/panolab/panoflash/index.html#
