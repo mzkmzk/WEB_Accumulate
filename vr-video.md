@@ -20,6 +20,8 @@ webvr的demo: https://webvr.info/samples/
 
 http://blog.tojicode.com/
 
+火狐VR博客: https://blog.mozvr.com/
+
 # 前景
 
 个人感觉VR的前景
