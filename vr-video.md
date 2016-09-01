@@ -22,3 +22,4 @@ http://blog.tojicode.com/
 1. 购物
 2. 视频
 3. 游戏
+4. 照片
