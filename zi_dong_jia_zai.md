@@ -153,5 +153,23 @@ return [
     {
         spl_autoload_register(array($this, 'loadClass'), true, $prepend);
     }
+    
+     public function loadClass($class)
+    {
+        if ($file = $this->findFile($class)) {
+            includeFile($file);
+
+            return true;
+        }
+    }
+    
+    function includeFile($file)
+    {
+        include $file;
+    }
 
 ```
+
+就是把需要用psr0 psr4 classmap的时候,就会执行这个loadClass的方法加载
+
+
