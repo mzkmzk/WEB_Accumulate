@@ -4,6 +4,11 @@ http://my.oschina.net/assange/blog/520028
 # 入门资料
 
 
+# 相关插件
+
+1. aframe: https://github.com/aframevr/aframe
+2. 
+
 # 相关demo
 
 https://aframe.io/
