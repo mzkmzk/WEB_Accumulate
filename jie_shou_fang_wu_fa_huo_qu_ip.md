@@ -68,3 +68,7 @@ bridge100: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
 	media: autoselect
 	status: active
 ```
+
+# 参考
+
+http://ju.outofmemory.cn/entry/200076
