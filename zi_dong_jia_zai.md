@@ -131,3 +131,27 @@ return [
   ...
 ];
 ```
+
+这里配置的路径用于ClassLoader的查找,
+
+把所有预加载的php文件都放在spl_autoload_register函数中
+
+核心的代码有
+
+在autoload_real.php中加载完
+
+1. autoload_namespaces.php
+2. autoload_psr4.php
+3. autoload_classmap.php
+
+后就会执行ClassLoader的register方法: `$loader->register(true);`
+
+
+```php
+    //
+    public function register($prepend = false)
+    {
+        spl_autoload_register(array($this, 'loadClass'), true, $prepend);
+    }
+
+```
