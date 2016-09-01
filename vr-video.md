@@ -3,6 +3,7 @@
 http://my.oschina.net/assange/blog/520028
 # 入门资料
 
+1. webvr官网: https://webvr.info/
 
 # 相关库
 
@@ -12,6 +13,8 @@ http://my.oschina.net/assange/blog/520028
 # 相关插件
 
 1. Chrome螺旋仪: Chrome Extension
+
+
 # 相关demo
 
 https://aframe.io/
