@@ -23,7 +23,7 @@
     
 4. 通过上一部的getLoader,整个程序会得到一个加载器`Composer\Autoload\ClassLoader`,ClassLoader主要用来加载PSR0、PSR4和classmap
 
-# 加载过程
+# 加载加载器过程
 
 核心的加载在ClassLoader,autoload_real.php如何通过getLoader获得加载器
 
@@ -102,3 +102,32 @@ bool spl_autoload_register ([ callable $autoload_function [, bool $throw = true 
 
 而在new \Composer\Autoload\ClassLoader之前先spl_autoload_register给自己的loadClassLoader方法
 
+这里列举下各种加载文件的内容,返回的都是一个数组
+
+```php
+$vendorDir = dirname(dirname(__FILE__));
+$baseDir = dirname($vendorDir);
+
+///autoload_namespaces.php
+return [
+  '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
+  ...
+];
+
+//autoload_psr4.php
+return [
+  'XdgBaseDir\\' => array($vendorDir . '/dnoegel/php-xdg-base-dir/src'),
+  ...
+];
+
+//autoload_classmap.php
+return [
+  'CreateActivity' => $baseDir . '/database/migrations/2016_03_29_676568_Create_Activity.php',
+  ...
+];
+//autoload_files.php
+return [
+  '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
+  ...
+];
+```
