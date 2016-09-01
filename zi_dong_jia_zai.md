@@ -172,4 +172,18 @@ return [
 
 就是把需要用psr0 psr4 classmap的时候,就会执行这个loadClass的方法加载
 
+而最后的`autoload_files.php`文件为一般的全局文件
 
+会放在`$GLOBALS`中
+
+```php
+function composerRequire9830e50881e975b6d46e598d3a511e66($fileIdentifier, $file)
+{
+    if (empty($GLOBALS['__composer_autoload_files'][$fileIdentifier])) {
+        require $file;
+
+        $GLOBALS['__composer_autoload_files'][$fileIdentifier] = true;
+    }
+}
+
+```
