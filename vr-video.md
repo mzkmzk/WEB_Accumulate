@@ -9,7 +9,7 @@ http://my.oschina.net/assange/blog/520028
 # 相关库
 
 1. aframe: https://github.com/aframevr/aframe
-2. 
+2. 火狐的相关库: https://github.com/MozVR/
 
 # 相关插件
 
