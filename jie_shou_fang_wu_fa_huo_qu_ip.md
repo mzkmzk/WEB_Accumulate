@@ -71,4 +71,5 @@ bridge100: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
 
 # 参考
 
-http://ju.outofmemory.cn/entry/200076
+1. 思路: http://ju.outofmemory.cn/entry/200076
+2. 设置IP池: http://bbs.feng.com/read-htm-tid-10079720.html
