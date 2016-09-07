@@ -9,6 +9,7 @@
            * [获取方向键keyCode问题](keycodewen_ti.md)
            * [原型链](yuan_xing_lian.md)
            * [题目原理](ti_mu_yuan_li.md)
+           * 事件管理
        * [npm](npm.md)
            * [Package.json](packagejson.md)
            * [项目安装失败经验](xiang_mu_an_zhuang_shi_bai_jing_yan.md)
