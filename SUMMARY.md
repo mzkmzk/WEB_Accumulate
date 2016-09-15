@@ -18,6 +18,7 @@
            * [插件](cha_jian.md)
                * [Try_JS_Error](tryjs_info.md)
                * [JavaScript_Utils](javascriptutils.md)
+           * 第一次发布自己的npm插件
        * [Canvas](canvas.md)
            * [shoot\_game制作过程](shootgame_zhi_zuo_guo_cheng.md)
            * [shoot\_game](shootgame.md)
