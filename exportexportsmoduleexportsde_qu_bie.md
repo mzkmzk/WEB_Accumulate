@@ -36,8 +36,6 @@ export var firstName = 'K';
 
 var firstName = exports.firstName = 'K';
 
-
-
 ```
 
 # 参考链接
