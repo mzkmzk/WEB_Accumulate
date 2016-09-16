@@ -23,6 +23,19 @@ export default {
 
 转换成
 
+exports.default = {
+    Ajax: _Ajax2.default,
+    Brower: _Brower2.default,
+    Cookie: _Cookie2.default,
+    Event: _Event2.default
+};
+
+export var firstName = 'K';
+
+转换成
+
+var firstName = exports.firstName = 'K';
+
 
 
 ```
