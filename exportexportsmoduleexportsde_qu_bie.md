@@ -42,3 +42,4 @@ var firstName = exports.firstName = 'K';
 
 1. https://cnodejs.org/topic/52308842101e574521c16e06
 2. https://cnodejs.org/topic/4faf88ee9f281d96650030aa
+3. http://es6.ruanyifeng.com/#docs/module#export命令
