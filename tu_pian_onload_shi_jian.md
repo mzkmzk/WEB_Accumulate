@@ -10,7 +10,7 @@ video和audio等多媒体也有类似的问题
 2. 如果被设置图片的src和之前的src相同，在WebKit中，该事件不能正常触发(需要先绑定onload,然后改变src)
 3. 不能正常在DOM上冒泡
 4. 如果图片已经换成,将停止触发
-
+5. 奇怪未解决,如果onload在img的DOM0上,event的target为null
 # 解决办法
 
 ## 用捕抓
