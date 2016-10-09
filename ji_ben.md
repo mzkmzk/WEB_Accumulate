@@ -153,3 +153,15 @@ Margin参考线和参考物分两类
 ```html
  <meta name="viewport" content="width=device-width,initial-scale=1">
 ```
+
+###8. CSS实现正方形
+
+最后我采用的是
+
+padding-bottom实现,因为padding算百分比是根据父元素的宽度计算的
+
+所以只要width和padding-bottom设置为一样的百分比,就能实现正方形
+
+更具体可以参考
+
+<https://idiotwu.me/css-responsive-square/>
