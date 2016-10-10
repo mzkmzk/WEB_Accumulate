@@ -7,4 +7,4 @@ https://github.com/mzkmzk/qiniu-plugin
 
 ## 参考资料
 
-<http://www.alloyteam.com/2016/01/webpack-use-optimization/#prettyPhoto>
+1. AlloyTeam干货: <http://www.alloyteam.com/2016/01/webpack-use-optimization/#prettyPhoto>
