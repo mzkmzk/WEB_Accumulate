@@ -1,5 +1,14 @@
 # Webpack
 
+1. react-router
+2. 热更新
+3. html模板
+4. 公共模块抽离
+5. css抽离
+6. 生产和测试分开
+7. redux调试
+
+
 ## 区分开发和生产环境
 
 ```javascript
