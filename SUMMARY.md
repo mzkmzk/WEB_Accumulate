@@ -118,7 +118,7 @@
        * [Laravel](laravel.md)
            * [自动加载](zi_dong_jia_zai.md)
            * [未理解](wei_li_jie.md)
-           * 禁用Session
+           * [禁用Session](jin_yong_session.md)
    * [Nginx](nginx.md)
        * [基本命令](ji_ben_ming_ling.md)
        * [更改301定向](geng_gai_301_ding_xiang.md)
