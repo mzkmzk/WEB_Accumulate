@@ -24,5 +24,10 @@ gpg: Total number processed: 1
 gpg:               imported: 1  (RSA: 1)
 work@iZ94fnej0x9Z:~$ sudo apt-get update
 ...
+work@iZ94fnej0x9Z:~$ sudo apt-get install -y deepstream.io
 ```
+
+到这里,基本就按照完成了,目前体验良好
+
+本身提供一个cli,相关命令见<https://deepstream.io/docs/server/command-line-interface/>
 
