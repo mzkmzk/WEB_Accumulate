@@ -35,5 +35,13 @@ work@iZ94fnej0x9Z:~$ deepstream start
 
 本身提供一个cli,相关命令见<https://deepstream.io/docs/server/command-line-interface/>
 
+你可以更改一下你的配置
 
+```shell
+$ cd ~
+$ cp /etc/deepstream/* .
+$ ls
+config.yml  permissions.yml  users.yml
+$ deepstream start -c config.yml
+```
 
