@@ -91,3 +91,7 @@ deepstram源码地址<https://github.com/deepstreamIO/deepstream.io/releases>
   </body>
 </html>
 ```
+
+#demo展示
+
+![deepstramDemo](deepstramDemo.gif)
