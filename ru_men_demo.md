@@ -45,3 +45,4 @@ config.yml  permissions.yml  users.yml
 $ deepstream start -c config.yml
 ```
 
+deepstram源码地址<https://github.com/deepstreamIO/deepstream.io/releases>
