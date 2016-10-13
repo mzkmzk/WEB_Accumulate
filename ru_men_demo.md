@@ -50,4 +50,44 @@ deepstram源码地址<https://github.com/deepstreamIO/deepstream.io/releases>
 这个README.mk也是非常炫酷....
 
 # client
+```html
+#index.html
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.rawgit.com/deepstreamIO/deepstream.io-client-js/master/dist/deepstream.min.js"></script>
+  </head>
+  <body>
+    <input type="text" />
+    <script type="text/javascript">
+     var client = deepstream('localhost:6020').login()
+     var record = client.record.getRecord('some-name')
+     var input = document.querySelector('input')
 
+      input.onkeyup = (function() {
+          record.set('firstname', input.value)
+        })
+    </script>
+  </body>
+</html>
+
+#website.html
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.rawgit.com/deepstreamIO/deepstream.io-client-js/master/dist/deepstream.min.js"></script>
+  </head>
+  <body>
+    <input type="text" />
+    <script type="text/javascript">
+    var client = deepstream('120.24.37.206:6020').login()
+    var record = client.record.getRecord('some-name')
+    var input = document.querySelector('input')
+
+     record.subscribe('firstname', function(value) {
+        input.value = value
+     })
+    </script>
+  </body>
+</html>
+```
