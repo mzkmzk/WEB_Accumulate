@@ -4,7 +4,7 @@
 
 通过在一个浏览器打log,输出到别的浏览器中
 
-# 开始
+# 准备Serve
 
 文档第一眼看起来写得不错
 
@@ -48,3 +48,6 @@ $ deepstream start -c config.yml
 deepstram源码地址<https://github.com/deepstreamIO/deepstream.io/releases>
 
 这个README.mk也是非常炫酷....
+
+准备client
+
