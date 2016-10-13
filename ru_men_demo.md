@@ -25,7 +25,11 @@ gpg:               imported: 1  (RSA: 1)
 work@iZ94fnej0x9Z:~$ sudo apt-get update
 ...
 work@iZ94fnej0x9Z:~$ sudo apt-get install -y deepstream.io
+# 启动deepstram
+work@iZ94fnej0x9Z:~$ deepstream start
 ```
+
+![deepstream按照成功](QQ20161013-0.png)
 
 到这里,基本就按照完成了,目前体验良好
 
