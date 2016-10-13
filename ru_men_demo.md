@@ -2,7 +2,7 @@
 
 # 目的
 
-通过在一个浏览器打log,输出到别的浏览器中
+在index.html页面input输入任何东西,在website.html页面会有一个对应的input自动更着修改
 
 # 准备Serve
 
@@ -49,5 +49,5 @@ deepstram源码地址<https://github.com/deepstreamIO/deepstream.io/releases>
 
 这个README.mk也是非常炫酷....
 
-准备client
+# client
 
