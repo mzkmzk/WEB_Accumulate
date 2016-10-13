@@ -104,7 +104,7 @@
        * [Common](common.md)
        * [基本命令](linuxji_ben_ming_ling.md)
            * [top](linuxtop.md)
-       * 常用技巧
+       * [常用技巧](chang_yong_ji_qiao.md)
    * [PHP](php.md)
        * [常见知识](chang_jian_zhi_shi.md)
        * [PHPUnit](phpunit.md)
