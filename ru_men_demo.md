@@ -95,3 +95,7 @@ deepstram源码地址<https://github.com/deepstreamIO/deepstream.io/releases>
 #demo展示
 
 ![deepstramDemo](deepstramDemo.gif)
+
+# 参考链接
+
+<https://deepstream.io/tutorials/core/getting-started-quickstart/>
