@@ -7,11 +7,15 @@
 
 # 1. nohup
 
+直接 nobup 命令 & 
 
+`&`用来把命令放在后台接着把控制器交给用户
+
+会默认把命令的输出放到`nohup.out`里
 
 
 
 
 # 参考链接
 
-1. <https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/>
+1. 后台不关闭使用: <https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/>
