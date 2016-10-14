@@ -48,7 +48,12 @@ sysv-rc-conf是Ubuntu用于替代chkconfig
 
 ![sysv-rc-conf](QQ20161014-1.png)
 
+命令
 
+```shell
+sysv-rc-conf --list apache2
+sysv-rc-conf apache2 on
+```
 
 
 
