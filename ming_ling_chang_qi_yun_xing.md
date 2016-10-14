@@ -31,7 +31,7 @@ work     11198     1  0 Oct13 ?        00:00:04 ping baidu.com
 work     11259     1  0 Oct13 ?        00:00:05 ping baidu.com
 ...
 #然后逐个kill掉.....
-
+kill -9 11259
 ```
 
 
