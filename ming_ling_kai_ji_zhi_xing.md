@@ -46,6 +46,7 @@ K开头的脚本文件表示运行级别加载时要关闭的,S开头是需要�
 
 sysv-rc-conf是Ubuntu用于替代chkconfig
 
+![sysv-rc-conf](QQ20161014-1.png)
 
 
 
