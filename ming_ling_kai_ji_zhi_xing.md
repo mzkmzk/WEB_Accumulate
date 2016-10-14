@@ -42,6 +42,13 @@ lrwxrwxrwx  1 root root   14 Aug 11  2014 S90halt -> ../init.d/halt*
 
 K开头的脚本文件表示运行级别加载时要关闭的,S开头是需要执行的
 
+# sysv-rc-conf
+
+sysv-rc-conf是Ubuntu用于替代chkconfig
+
+
+
+
 
 
 # 参考链接
