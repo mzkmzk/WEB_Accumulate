@@ -19,6 +19,21 @@ tips:
 
 可以通过` nohup  ping grouplus.com  > pso.file 2>&1 &`来更改输出文件
 
+ok但是我们怎么关闭呢....?
+
+```shell
+work@iZ94fnej0x9Z:~$ ps -ef
+...
+work     11177     1  0 Oct13 ?        00:00:05 ping baidu.com
+work     11179     1  0 Oct13 ?        00:00:05 ping baidu.com
+work     11187     1  0 Oct13 ?        00:00:04 ping baidu.com
+work     11198     1  0 Oct13 ?        00:00:04 ping baidu.com
+work     11259     1  0 Oct13 ?        00:00:05 ping baidu.com
+...
+#然后逐个kill掉.....
+
+```
+
 
 
 
