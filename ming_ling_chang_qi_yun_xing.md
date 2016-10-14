@@ -109,9 +109,62 @@ root      4853   968  0 09:46 pts/4    00:00:00 grep largeFile
   [root@pvcent107 build]# 
    ```
 
+# screen
 
+当有大量命令要执行后台的话,如何避免每条命令都这样处理呢
 
+screen 提供了 ANSI/VT100 的终端模拟器，使它能够在一个真实终端下运行多个全屏的伪终端。
 
+基本参数
+
+```shell
+用screen -dmS session name来建立一个处于断开模式下的会话（并指定其会话名）。
+用screen -list 来列出所有会话。
+用screen -r session name来重新连接指定会话。
+用快捷键CTRL-a d 来暂时断开当前会话。
+```
+
+使用方法
+
+```shell
+[root@pvcent107 ~]# screen -dmS Urumchi
+[root@pvcent107 ~]# screen -list
+There is a screen on:
+        12842.Urumchi   (Detached)
+1 Socket in /tmp/screens/S-root.
+
+[root@pvcent107 ~]# screen -r Urumchi
+#然后就可以为所欲为了
+```
+
+为什么会有这样的效果,跟进程数有关系
+
+1. 未使用screen
+
+    ```shell
+    [root@pvcent107 ~]# ping www.google.com &
+    [1] 9499
+    [root@pvcent107 ~]# pstree -H 9499
+    init─┬─Xvnc
+         ├─acpid
+         ├─atd
+         ├─2*[sendmail]	
+         ├─sshd─┬─sshd───bash───pstree
+         │       └─sshd───bash───ping
+    ```
+2. 使用screen
+
+    ```shell
+      [root@pvcent107 ~]# screen -r Urumchi
+      [root@pvcent107 ~]# ping www.ibm.com &
+      [1] 9488
+      [root@pvcent107 ~]# pstree -H 9488
+      init─┬─Xvnc
+           ├─acpid
+           ├─atd
+           ├─screen───bash───ping
+           ├─2*[sendmail]
+    ```
 
 
 
