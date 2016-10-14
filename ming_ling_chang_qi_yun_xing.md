@@ -13,6 +13,8 @@
 
 会默认把命令的输出放到`nohup.out`里
 
+可以通过` nohup  ping grouplus.com  > pso.file 2>&1 &`来更改输出文件
+
 
 
 
