@@ -172,8 +172,6 @@ There is a screen on:
 
 而 screen 是 init（PID为1）的子进程
 
-
-
 # 参考链接
 
 1. 后台不关闭使用: <https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/>
