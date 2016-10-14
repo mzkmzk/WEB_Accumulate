@@ -106,6 +106,7 @@
            * [top](linuxtop.md)
        * [常用技巧](chang_yong_ji_qiao.md)
            * [命令长期运行](ming_ling_chang_qi_yun_xing.md)
+           * 命令开机执行
    * [PHP](php.md)
        * [常见知识](chang_jian_zhi_shi.md)
        * [PHPUnit](phpunit.md)
