@@ -55,6 +55,14 @@ sysv-rc-conf --list apache2
 sysv-rc-conf apache2 on
 ```
 
+# 开机执行自己的命令
+
+sudo vim /etc/rc.local
+
+在exit前写下你要执行的命令即可
+
+不过这样执行的用户是谁 root吗?
+
 
 
 # 参考链接
