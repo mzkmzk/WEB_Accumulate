@@ -166,7 +166,11 @@ There is a screen on:
            ├─2*[sendmail]
     ```
 
+原因就是因为未使用screen的话,bash为sshd
 
+而使用了screen,bash为screen
+
+而 screen 是 init（PID为1）的子进程
 
 
 
