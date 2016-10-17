@@ -11,7 +11,7 @@ travis-ci.org会把你的responsitory全都显示出来,把你想进行自动构
 
 > tips: travis会让构建需要时长超过20分钟的项目自动失败
 
-
+然后travis-ci就会自动寻找你项目根目录下的.travis.yml进行构建
 
 # travis.yml
 
@@ -44,6 +44,8 @@ before_install:
 ```
 
 其实这样的构建基本是百分百pass的,因为没有进行test,而只是进行了npm install了而已
+
+![自动构建](QQ20161017-1.png)
 
 
 
