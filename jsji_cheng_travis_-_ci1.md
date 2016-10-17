@@ -26,6 +26,11 @@
 ```
 即可
 
+例如我的<https://github.com/mzkmzk/K-Logging>
+
+就写的是`[![Build Status](https://travis-ci.org/[mzkmzk]/[K-Logging].png)](https://travis-ci.org/[mzkmzk]/[K-Logging])`
+
+
 
 # 参考链接
 
