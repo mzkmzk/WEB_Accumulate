@@ -47,7 +47,7 @@ before_install:
 
 ![自动构建](QQ20161017-1.png)
 
-
+但其实traivsu也识别出了执行npm test是没有测试的
 
 
 # 在github上引用标识
@@ -64,9 +64,9 @@ before_install:
 就写的是`[![Build Status](https://travis-ci.org/mzkmzk/K-Logging.png)](https://travis-ci.org/mzkmzk/K-Logging)
 `
 
+这里就把travis引入到js的github代码库上进行了讲解
 
-
-
+本文没说到,但也是自动集成最重要的自动画测试,敬请期待
 
 # 参考链接
 
