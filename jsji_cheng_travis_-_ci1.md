@@ -15,6 +15,8 @@
 9. OPTIONAL after_deploy
 10. after_script
 
+可以在这里选择自己的语言进行了解<https://docs.travis-ci.com/user/customizing-the-build/#Specifying-Runtime-Versions>
+
 
 
 # 参考链接
