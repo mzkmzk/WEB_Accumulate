@@ -38,6 +38,28 @@ cd AwesomeProject
 react-native run-ios
 ```
 
+# 运行第一个APP
+
+我在这里直接运行 react-native run-ios是会报错的...
+```shell
+ ~/Learning/ReactNative/AwesomeProject:  react-native run-ios
+Found Xcode project AwesomeProject.xcodeproj
+xcrun: error: unable to find utility "instruments", not a developer tool or in PATH
+
+Command failed: xcrun instruments -s
+xcrun: error: unable to find utility "instruments", not a developer tool or in PATH
+```
+
+我只有通过xcode打开`AwesomeProject.xcodeproj`
+
+然后运行一下...有了编译错误
+
+```shell
+Property 'force' not found on object of type 'UITouch'
+```
+
+
+
 # 参考文档
 
 1. <https://facebook.github.io/react-native/>
