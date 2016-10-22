@@ -1,4 +1,4 @@
-# 入门
+ # 入门
 
 # 环境搭建
 
@@ -15,9 +15,14 @@ undefined
   //设置
   npm config set registry https://registry.npm.taobao.org --global
 npm config set disturl https://npm.taobao.org/dist --global
-
   ```
-# 第一个
+  
+# 第一个ReactNative iOS App
+
+```shell
+react-native init AwesomeProject
+
+```
 
 # 参考文档
 
