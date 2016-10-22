@@ -21,6 +21,19 @@ npm config set disturl https://npm.taobao.org/dist --global
 
 ```shell
 react-native init AwesomeProject
+...
+To run your app on iOS:
+   cd /Users/maizhikun/Learning/iOS_APP/AwesomeProject
+   react-native run-ios
+   - or -
+   Open /Users/maizhikun/Learning/iOS_APP/AwesomeProject/ios/AwesomeProject.xcodeproj in Xcode
+   Hit the Run button
+To run your app on Android:
+   Have an Android emulator running (quickest way to get started), or a device connected
+   cd /Users/maizhikun/Learning/iOS_APP/AwesomeProject
+   react-native run-android
+   
+   
 cd AwesomeProject
 react-native run-ios
 ```
