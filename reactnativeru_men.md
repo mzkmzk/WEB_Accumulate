@@ -50,9 +50,13 @@ Command failed: xcrun instruments -s
 xcrun: error: unable to find utility "instruments", not a developer tool or in PATH
 ```
 
-我只有通过xcode打开`AwesomeProject.xcodeproj`
+然后参考<http://bbs.reactnative.cn/topic/2768/xcrun-error-unable-to-find-utility-instruments-not-a-developer-tool-or-in-path>
 
-然后运行一下...有了编译错误
+输入`sudo xcode-select -s /Applications/Xcode.app/Contents/Developer/`然后就可以运行react-native run-ios了
+
+或者通过xcode打开`AwesomeProject.xcodeproj`
+
+但是上诉两种方式都会有编译错误
 
 ```shell
 Property 'force' not found on object of type 'UITouch'
