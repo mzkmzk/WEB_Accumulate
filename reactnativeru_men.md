@@ -21,7 +21,8 @@ npm config set disturl https://npm.taobao.org/dist --global
 
 ```shell
 react-native init AwesomeProject
-
+cd AwesomeProject
+react-native run-ios
 ```
 
 # 参考文档
