@@ -3,6 +3,7 @@
 # 环境搭建
 
 1. sudo npm install -g react-native-cli
+2. 安装好Xcode
 
 # 参考文档
 
