@@ -62,6 +62,10 @@ xcrun: error: unable to find utility "instruments", not a developer tool or in P
 Property 'force' not found on object of type 'UITouch'
 ```
 
+解决方案: 升级Xcode,之前失败时的版本忘了,现在升级到了`Version 7.2.1 (7C1002)`,就行了,应该是组件应该包含到iOS9.0 Simulator
+
+
+
 
 
 # 参考文档
