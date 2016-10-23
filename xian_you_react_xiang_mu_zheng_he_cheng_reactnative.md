@@ -1,8 +1,14 @@
 # 现有React项目整合成ReactNative
 
+# 需要准备的工具(iOS)
+
+1. xcode
+2. cocoapods: `sudo gem install cocoapods`
+
 # 创建iOS项目
 
 就是xcode新建一个项目
 
 # 将react整合进iOS中
 
+w
