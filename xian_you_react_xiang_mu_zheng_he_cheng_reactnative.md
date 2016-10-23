@@ -11,4 +11,6 @@
 
 # 将react整合进iOS中
 
-w
+# 参考文章
+
+1. http://www.lcode.org/react-native-%E7%A7%BB%E6%A4%8D%E5%8E%9F%E7%94%9Fios%E9%A1%B9%E7%9B%AE57/
