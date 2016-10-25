@@ -1,4 +1,4 @@
-# Mac常用插件
+ongfangfa1# Ma# Mashi'yc常用yong1# Ma# Mashi'yc常用插件
 
 # 1. 一键保存当前打开所有的标签页面
 
@@ -16,6 +16,10 @@ OneTab
 
 ![OneTab](QQ20161025-0.png)
 
+> 使用方法
 
+当做A事情到一半,要做B事情,就点击一下OneTab,它会把你A事情的网页都关闭掉,然后保存在OneTab,
+
+当你想继续A事情时,点开OneTab,选择上次A事情关闭的标签即可
 
 安装地址: https://www.one-tab.com/
