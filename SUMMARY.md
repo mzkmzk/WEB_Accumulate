@@ -152,6 +152,7 @@
    * [Mac](mac.md)
        * [共享wifi](gong_xiang_wifi.md)
            * [接收方无法获取IP](jie_shou_fang_wu_fa_huo_qu_ip.md)
+       * Mac常用插件
    * [自动集成](zi_dong_ji_cheng.md)
        * [JS集成travis-ci](jsji_cheng_travis_-_ci1.md)
            * [入门DEMO](traviis_js_ru_men_demo.md)
