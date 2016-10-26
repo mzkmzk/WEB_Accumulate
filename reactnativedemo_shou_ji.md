@@ -2,7 +2,8 @@
 
 # 学习资源
 
-
+1. http://www.jianshu.com/p/5b185df2d11a
+2. 
 
 # DEMO
 1. 厕所去哪里: 整体可以看看,主要都是在view操作,https://github.com/vczero/toilet
