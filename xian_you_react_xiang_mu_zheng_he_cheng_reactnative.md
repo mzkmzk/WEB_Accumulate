@@ -84,23 +84,26 @@ The dependency `React/RCTWebSocket (from `/Users/maizhikun/Learning/apache_sites
 这个原因是因为刚开始的podfile文件是我自己在网上粘贴的
 
 ```shell
-pod install
+platform :ios, “7.0”
 
-/*
-以下是失败情况的处理
-*/
-//  pod命令过慢则可尝试下面命令
-pod install --verbose --no-repo-update
-
-//  其中无法正常下载pod install的解决方法：
-（or更新最新的CocoaPods version: 0.39.0  查看方法 pod --version）
-gem sources --remove https://rubygems.org/
-gem sources -a 
-gem sources -l 
-
-# 注意 taobao 是 https; 
-# gem如果版本太老可以更新：sudo gem update --system; 
-# 更新pod repo：pod repo update
+# 取决于你的工程如何组织，你的node_modules文件夹可能会在别的地方。
+# 请将:path后面的内容修改为正确的路径（一定要确保正确～～）。
+pod 'React', :path => ‘./ReactComponent/node_modules/react-native', :subspecs => [
+ 'Core',
+  'ART',
+  'RCTActionSheet',
+  'RCTAdSupport',
+  'RCTGeolocation',
+  'RCTImage',
+  'RCTNetwork',
+  'RCTPushNotification',
+  'RCTSettings',
+  'RCTText',
+  'RCTVibration',
+  'RCTWebSocket',
+  'RCTLinkingIOS',
+]
+#需要的模块依赖进来便可，这里是为了举例子，列举所有的模块
 ```
 
 所以错误信息都说了` is not used in any concrete target`
