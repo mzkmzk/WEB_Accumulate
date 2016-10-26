@@ -103,7 +103,11 @@ gem sources -l
 # 更新pod repo：pod repo update
 ```
 
-所以说
+所以错误信息都说了` is not used in any concrete target`
+
+而我自己通过pod init发现的确比网上粘贴的多了target ..do 这一部分
+
+所以最后pod init 然后再修改 podfile,发现真的ok了
 
 # 参考文章
 
