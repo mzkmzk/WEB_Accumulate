@@ -4,7 +4,14 @@
 
 1. xcode
 2. cocoapods: `sudo gem install cocoapods` (附录错误1)
-3. Cocoapods集成React Native
+
+# 创建iOS项目
+
+就是xcode新建一个项目
+
+# 将react整合进iOS中
+
+1. Cocoapods集成React Native
 
   在`.xcodeproj`的统计目录下输入
   
@@ -40,12 +47,8 @@
         ```
         其实最重要的是`target 'Journey' do`里面的代码,其他都是pod init自动生成的,这里其中经历了些波折,见附录错误2
         
+2. 
 
-# 创建iOS项目
-
-就是xcode新建一个项目
-
-# 将react整合进iOS中
 
 # 附录错误1
 
