@@ -57,7 +57,7 @@
                * [ReactNative_原理](reactnativeyuan_li.md)
                * [现有React项目整合成ReactNative](xian_you_react_xiang_mu_zheng_he_cheng_reactnative.md)
                * [ReactNative_学习资源](reactnativedemo_shou_ji.md)
-               * 常见错误
+               * [常见错误](react_native_chang_jian_cuo_wu.md)
        * [ESLint](eslint.md)
            * [错误收集](cuo_wu_shou_ji.md)
        * [WebGL](webgl.md)
