@@ -1,12 +1,16 @@
 # 常见错误
 
-# {"code":"EMFILE","errno":"EMFILE","syscall":"watch null","filename":null}
+# 内核文件最大大小不足
+
+```
+{"code":"EMFILE","errno":"EMFILE","syscall":"watch null","filename":null}
+```
 
 解决方案
 
 https://github.com/facebook/react-native/issues/9309
 
-# 
+# IP出错
 
 报错信息
 
