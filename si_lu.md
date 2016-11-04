@@ -24,7 +24,9 @@ lookup、connecting、sending、waiting`
 
 1. 首字节时间: `HTML5 performance API`提供
 2. 开始渲染时间: 这个是解析完毕head或刚开始解析body开始,这个需要在标签里主动去埋
-3. 
+3. 首屏栈: 
+
+  1. 自己主动去在自己认为大多数用户的首批中划分div,做好标记
 
 
 
