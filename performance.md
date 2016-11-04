@@ -9,4 +9,11 @@ IE9+才支持,http://caniuse.com/#feat=nav-timing
 1. 了解大概有的属性: performance
 2. 网页加载的时间: performance.timing
 3. 每个请求所耗费的事件: performance.getEntries()
-4. 
+
+
+
+# tips
+
+使用的时候需要注意的点
+
+
