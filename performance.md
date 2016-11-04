@@ -10,6 +10,13 @@ IE9+才支持,http://caniuse.com/#feat=nav-timing
 2. 网页加载的时间: performance.timing
 3. 每个请求所耗费的事件: performance.getEntries()
 
+# 通用的时间流程
+
+timing和getEntries其实都有主要的加载属性
+
+网上被复用了很多次的图
+
+![时间加载](072455NuJ.png)
 
 
 # tips
