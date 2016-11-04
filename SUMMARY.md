@@ -106,7 +106,7 @@
        * [七牛](七牛.md)
            * [常见问题](常见问题.md)
    * [自制插件](zi_zhi_cha_jian.md)
-       * K-Report
+       * [K-Report](k-report.md)
 * [服务器](fu_wu_qi.md)
    * [Linux](linux.md)
        * [Common](common.md)
