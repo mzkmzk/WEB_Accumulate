@@ -67,6 +67,8 @@ timing和getEntries有很多一样的属性,但是还是有些不一样的
 19. loadEventStart
 20. loadEventEnd
 
+# 其他API
+
 
 
 # tips
