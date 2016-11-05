@@ -96,19 +96,10 @@ performance.getEntriesByType('measure')获取
 1. 资源如果是第三方加载的话,若没加上`Timing-Allow-Origin: *`头们只能获取持续时间(但是笔者亲测好像没这个问题)
 2. performance和performance.getEntriesByType的兼容性不是同步的
 3. 用完了也可以清除一下mark和measures
-  ```
-    // 清除指定标记
-  window.performance.clearMarks('markStart888');  
-  // 清除所有标记
-  window.performance.clearMarks();
-
-  // 清除指定测量
-  window.performance.clearMeasures('measureRandomFunc');  
-  // 清除所有测量
-  window.performance.clearMeasures();  
-  ```
-
-
+    1. 清除指定标记performance.clearMarks(唯一标识)
+    2. 清除所有标记performance.clearMarks()
+    3. 清除指定测量performance.clearMeasures(唯一标识)
+    4. 清除所以测量performance.clearMeasures()
 # 参考链接
 
 1. http://www.alloyteam.com/2015/09/explore-performance/
