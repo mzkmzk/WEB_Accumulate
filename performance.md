@@ -67,7 +67,15 @@ timing和getEntries有很多一样的属性,但是还是有些不一样的
 19. loadEventStart
 20. loadEventEnd
 
-# 其他API
+# 更精确的计算程序运行时间
+
+如果要统计两个点之间的时间间距
+
+这种做法和一般两个Date.now(),然后相减得出结果的区别是
+
+1. Date.now返回到毫秒,而performance.mark|performance.now()是计算到百万分之一秒的
+2. Date.now会受系统程序阻塞,而performance.now()是以恒定速率递增,不受系统时间或阻塞影响
+3. 获得结果,一般相见后的结果要主动的报错,而performance.measure,会保存到performance里
 
 
 
