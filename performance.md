@@ -25,14 +25,33 @@ timing和getEntries有很多一样的属性,但是还是有些不一样的
 9. loadEventStart: load事件传送给文档,也是load回调函数执行的时间,若无load事件,则为0
 10. loadEventEnd: load事件回调函数执行完毕的时间
 
+# getEntries返回对象的专属属性
 
+1. name: 资源绝对路径
+2. entrtType: 表名在哪个performance对象中获取的(未成熟),这个属性参考https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/entryType
+3. initiatorType: 谁发起的请求,link|script|redirect
+4. duration: 加载时间
+
+# 资源请求类型
+
+这里以timing举例,说明下整个timing下来可以获得的时间戳
 
 网上被复用了很多次的图
 
 ![时间加载](072455NuJ.png)
 
 
-1. 
+这个图没有举出timing有关DOM的时间,而是把网络相关的时间戳举了出来
+
+这里把dom和网络相关的时间戳都排下序
+
+1. navigationStart
+2. unloadEventStart
+3. unloadEventEnd
+4. redirectStart: 第一个重定向发生的时间,有跳转且同域才算,否则为0
+5. redirectEnd: 最后一个重定向完成的时间,有跳转且同域才算,否则为0
+6. fetchStart: 浏览器准备好使用HTTP请求抓取文档的时间,发生在检查本地缓存之前
+7. 
 
 
 
