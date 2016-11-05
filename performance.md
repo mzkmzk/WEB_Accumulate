@@ -51,7 +51,21 @@ timing和getEntries有很多一样的属性,但是还是有些不一样的
 4. redirectStart: 第一个重定向发生的时间,有跳转且同域才算,否则为0
 5. redirectEnd: 最后一个重定向完成的时间,有跳转且同域才算,否则为0
 6. fetchStart: 浏览器准备好使用HTTP请求抓取文档的时间,发生在检查本地缓存之前
-7. 
+7. domainLookupStart: DNS域名开始查询的时间,如果使用了本地缓存(无DNS查询)或持久连接,值与fetchStart一样
+8. domainLookupEnd: DNS域名查询结束的时间,如果使用了本地缓存(无DNS查询)或持久连接,值与fetchStart一样
+9. connectStart: TCP开始建立连接时间,若为持久连接,则与fetchStart一样,
+10. secureConnectionStart: HTTPS开始连接的事件,若不是安全连接,值为0
+11. connectEnd:TCP连接完成,这里握手结束、安全链接建立完成,SOCKS授权通过,若为持久连接,则与fetchStart一样
+11. requestStart: HTTP开始读取真实文档的时间
+12. requestEnd: Http开始接受响应的开始时间
+13. responseEnd: HTTP接受响应文档完成
+14. domLoading
+15. domInteractive
+16. domContentLoadedEventStart
+17. domContentLoadedEventEnd
+18. dpmComplete
+19. loadEventStart
+20. loadEventEnd
 
 
 
