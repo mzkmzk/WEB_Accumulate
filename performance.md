@@ -10,13 +10,30 @@ IE9+才支持,http://caniuse.com/#feat=nav-timing
 2. 网页加载的时间: performance.timing
 3. 每个请求所耗费的事件: performance.getEntries()
 
-# 通用的时间流程
+timing和getEntries有很多一样的属性,但是还是有些不一样的
 
-timing和getEntries其实都有主要的加载属性
+# timing专属属性
+
+1. navigationStart: 前一个页面(不一定同域)unload的时间戳,若无前一页,则与fetchStart值相等
+2. unloadEventStart: 前一个页面(同域)unload回调开始的时间戳,若无前一页,则值为0
+3. unloadEventEnd: 前一个页面(同域)unload回调结束的时间戳,若无前一页,则值为0
+4. domLoading: 
+domInteractive
+domContentLoadedEventStart
+domContentLoadedEventEnd
+domComplete
+loadEventStart
+loadEventEnd
+
+
 
 网上被复用了很多次的图
 
 ![时间加载](072455NuJ.png)
+
+
+1. 
+
 
 
 # tips
