@@ -71,19 +71,30 @@ timing和getEntries有很多一样的属性,但是还是有些不一样的
 
 如果要统计两个点之间的时间间距
 
+可以使用下performance.mark和performance.measure
+
+每执行一次mark(唯一标识),
+
+都可以通过performance.getEntriesByType('mark')获取所有的mark点
+
+同理,measure是计算两个mark点之间的消耗时间
+
+performance.getEntriesByType('measure')获取
+
+使用方法: performance.measure(measure唯一标识,mark开始点唯一标识,mark点结束唯一标识)
+
 这种做法和一般两个Date.now(),然后相减得出结果的区别是
 
 1. Date.now返回到毫秒,而performance.mark|performance.now()是计算到百万分之一秒的
 2. Date.now会受系统程序阻塞,而performance.now()是以恒定速率递增,不受系统时间或阻塞影响
 3. 获得结果,一般相见后的结果要主动的报错,而performance.measure,会保存到performance里
 
-
-
 # tips
 
 使用的时候需要注意的点
 
 1. 资源如果是第三方加载的话,若没加上`Timing-Allow-Origin: *`头们只能获取持续时间(但是笔者亲测好像没这个问题)
+2. performance和performance.getEntriesByType的兼容性不是同步的
 
 
 # 参考链接
