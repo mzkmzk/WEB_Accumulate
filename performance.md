@@ -21,8 +21,8 @@ timing和getEntries有很多一样的属性,但是还是有些不一样的
 5. domInteractive: 完成解析DOM树的时间,此时document.readyState变成Interactive(抛出readystatechange事件),(此时还没开始加载网页内的资源)
 6. domContentLoadedEventStart: DOM解析完成后,网页内资源开始加载的时间
 7. domContentLoadedEventEnd: DOM解析完毕并且网页内资源加载完毕
-8. domComplete: don解析完成,资源也准备就绪的时间,document.readystate变成complete
-9. loadEventStart: load事件传送给文档,也是load回调函数执行的时间,若无load事件,则为0
+8. domComplete: dom解析完成,资源也准备就绪的时间,document.readystate变成complete,和监听(window.onload捕抓到的时间)
+9. loadEventStart: load事件传送给文档,也是load回调函数执行的时间,若无load事件,则为0,
 10. loadEventEnd: load事件回调函数执行完毕的时间
 
 # getEntries返回对象的专属属性
@@ -100,6 +100,7 @@ performance.getEntriesByType('measure')获取
     2. 清除所有标记performance.clearMarks()
     3. 清除指定测量performance.clearMeasures(唯一标识)
     4. 清除所以测量performance.clearMeasures()
+4. 当你在获取timin属性时,这个阶段还没完成,值为0 
 # 参考链接
 
 1. http://www.alloyteam.com/2015/09/explore-performance/
