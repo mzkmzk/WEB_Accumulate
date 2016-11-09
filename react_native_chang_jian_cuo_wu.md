@@ -36,4 +36,12 @@ https://github.com/facebook/react-native/issues/9309
  
  就可以了
  
+ ---
+ 
+ 后来...又遇到了....
+ 
+ 原版的babelrc是有react,es2015和react-native
+ 
+ 后面把react和es2015去掉就ok了
+ 
  参考<http://stackoverflow.com/questions/35563025/new-react-native-app-has-typeerror-babelhelpers-typeof-is-not-a-function-ios>
