@@ -102,6 +102,7 @@ performance.getEntriesByType('measure')获取
     4. 清除所以测量performance.clearMeasures()
 4. 当你在获取timin属性时,这个阶段还没完成,值为0 
 5. 当在file://下,performance.getEntries()不会捕抓到任何内容
+6. performance.getEntries()只能捕抓到类型和url还有加载相关的时间,无法知道是哪个dom的
 # 参考链接
 
 1. http://www.alloyteam.com/2015/09/explore-performance/
