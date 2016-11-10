@@ -101,6 +101,7 @@ performance.getEntriesByType('measure')获取
     3. 清除指定测量performance.clearMeasures(唯一标识)
     4. 清除所以测量performance.clearMeasures()
 4. 当你在获取timin属性时,这个阶段还没完成,值为0 
+5. 当在file://下,performance.getEntries()不会捕抓到任何内容
 # 参考链接
 
 1. http://www.alloyteam.com/2015/09/explore-performance/
