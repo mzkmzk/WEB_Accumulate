@@ -28,7 +28,8 @@ lookup、connecting、sending、waiting`
 2. 开始渲染时间: 这个是解析完毕head或刚开始解析body开始,这个需要在标签里主动去埋
 3. 首屏栈: 
 
-  1. phantomjs、berserkjs这些都相当于测试自己网页首屏时间,无法抓我们现实用户的时间
+  1. 绑定class,因为background-img这里load事件是无法捕抓的,所以绑定好class,我们主动搜索它包含的资源,然后获取url和performance的资源url比较
+  2. 不绑定class,我们只能保守的遍历所有有可能在首屏的元素,然后逐一判断资源类型
 
 
 
