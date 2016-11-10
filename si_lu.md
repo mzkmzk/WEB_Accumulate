@@ -29,7 +29,7 @@ lookup、connecting、sending、waiting`
 3. 首屏栈: 
 
   1. 绑定class,因为background-img这里load事件是无法捕抓的,所以绑定好class,我们主动搜索它包含的资源,然后获取url和performance的资源url比较
-  2. 不绑定class,我们只能保守的遍历所有有可能在首屏的元素,然后逐一判断资源类型
+  2. 不绑定class,我们只能保守的遍历所有有可能在首屏的元素,然后逐一判断资源url
 
 
 
