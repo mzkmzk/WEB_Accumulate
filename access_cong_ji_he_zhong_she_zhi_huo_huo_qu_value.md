@@ -51,5 +51,5 @@ jQuery.fn.extend( {
 3. key: object|string 当object就是同时设置多个key value的Object
 4. value: string 需要设置的值
 5. chainable: 是否支持链式调用,如果是则返回集合
-6. emptyGet: 
-7. raw:
+6. emptyGet: 当get值时,elems长度为0时,默认的返回值
+7. raw: 
