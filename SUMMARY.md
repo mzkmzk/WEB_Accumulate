@@ -109,6 +109,7 @@
    * [自制插件](zi_zhi_cha_jian.md)
        * [K-Report](k-report.md)
            * [思路](si_lu.md)
+   * 插件
 * [服务器](fu_wu_qi.md)
    * [Linux](linux.md)
        * [Common](common.md)
