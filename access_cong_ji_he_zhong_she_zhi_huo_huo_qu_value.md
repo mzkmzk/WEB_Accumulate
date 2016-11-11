@@ -81,6 +81,24 @@ jQuery.fn.extend( {
 
 而get时 返回第一个元素匹配到的key
 
+# 过程
+
+1. 当key为object时,表明要同时set多个值,循环回调
+2. 当value不为空,证明要set值,
+
+    1. 当key为空时
+         1. 并且value不是函数时,证明类似text(value)的时候,函数进行自行设置固定的key
+         2. 当value为函数时,类似html(function()),需要把fn重新改成在,经过了value的函数处理的fn
+       
+   1. 对elmens进行循环赋值
+3. 如果是链式就直接返回当前的elems
+4. 当key为空时,类似text的情况,自行处理fn然后返回值
+5. 有key则返回第一个elems的key
+
+tips:
+
+set都为链式返回
+
 # 代码
 
 ```javascript
@@ -127,7 +145,8 @@ var access = function( elems, fn, key, value, chainable, emptyGet, raw ) {
 				fn(
 					elems[ i ], key, raw ?
 					value :
-					value.call( elems[ i ], i, fn( elems[ i ], key ) )
+					value.call( elems[ i ], i, fn( elems[ i ], key ) //这里就是html()的情况,但value同时又是回调函数,需要先执行
+                    )
 				);
 			}
 		}
