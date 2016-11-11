@@ -111,7 +111,7 @@
            * [思路](si_lu.md)
    * [插件](othercha_jian.md)
        * [jQuery](jquery.md)
-           * 偷点东西
+           * [偷点东西](tou_dian_dong_xi.md)
 * [服务器](fu_wu_qi.md)
    * [Linux](linux.md)
        * [Common](common.md)
