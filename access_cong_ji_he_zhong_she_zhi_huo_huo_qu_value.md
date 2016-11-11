@@ -104,16 +104,17 @@ var access = function( elems, fn, key, value, chainable, emptyGet, raw ) {
 		if ( !jQuery.isFunction( value ) ) {
 			raw = true;
 		}
-        
+        //当key为null|undefined时
 		if ( bulk ) {
 
 			// Bulk operations run against the entire set
+            //例如text(),key为null,所以elems自行each处理
 			if ( raw ) {
 				fn.call( elems, value );
 				fn = null;
 
 			// ...except when executing function values
-			} else {
+			} else { //例如.html(function)时
 				bulk = fn;
 				fn = function( elem, key, value ) {
 					return bulk.call( jQuery( elem ), value );
