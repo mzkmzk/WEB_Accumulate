@@ -8,6 +8,10 @@
 
 所以需要获取elem距离左上角的top和left
 
+# 需要理解的api
+
+1. Element.getBoundingClientRect(): 获取距离浏览器窗口左上角和右上角的距离.
+2. window.pageYOffset() : 获取垂直距离已经滚动了的距离
 
 # 思路
 
@@ -17,7 +21,8 @@
 2. 如果elem是隐藏的,直接返回elem.getBundingClientRect
 3. 获取最终值
 
-    1. top:rect.top+
+    1. top:rect.top+win.pageYOffset
+    2. left: rect.left+win.pageXOffset
 # 代码
 
 ```javascript
@@ -41,7 +46,7 @@ if ( !elem ) {
 			docElem = doc.documentElement;//获取到当前顶级元素的html标签
 
 			return {
-				top: rect.top + win.pageYOffset - docElem.clientTop,
+				top: rect.top + win.pageYOffset - docElem.clientTop, //最后减的html标签clientTop一般为0,可能有的浏览器需要
 				left: rect.left + win.pageXOffset - docElem.clientLeft
 			};
 		}
