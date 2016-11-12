@@ -91,8 +91,8 @@ jQuery.fn.extend( {
          2. 当value为函数时,类似html(function()),需要把fn重新改成在,经过了value的函数处理的fn
        
    1. 对elmens进行循环赋值
-3. 如果是链式就直接返回当前的elems
-4. 当key为空时,类似text的情况,自行处理fn然后返回值
+3. 如果是链式就直接返回当前的elems,set到这里处理完毕
+4. 当key为空时,证明要get,类似text()的情况,自行处理fn然后返回值
 5. 有key则返回第一个elems的key
 
 tips:
@@ -155,7 +155,7 @@ var access = function( elems, fn, key, value, chainable, emptyGet, raw ) {
 	if ( chainable ) {
 		return elems;
 	}
-
+//以上是set的情况
 	// Gets
 	if ( bulk ) {
 		return fn.call( elems );
