@@ -23,6 +23,7 @@
 
     1. top:rect.top+win.pageYOffset
     2. left: rect.left+win.pageXOffset
+    
 # 代码
 
 ```javascript
@@ -54,3 +55,7 @@ if ( !elem ) {
 		// Return zeros for disconnected and hidden elements (gh-2310)
 		return rect;
 ```
+
+# 其他方案
+
+1. https://my.oschina.net/xpbug/blog/212094: 比较详细介绍计算top的方案
