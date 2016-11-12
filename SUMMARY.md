@@ -114,7 +114,7 @@
            * [偷点东西](tou_dian_dong_xi.md)
                * [access: 从集合中设置或获取value](access_cong_ji_he_zhong_she_zhi_huo_huo_qu_value.md)
                * 小功能点
-               * 获取离浏览器左上角的距离
+               * [获取离浏览器左上角的距离](huo_qu_li_liu_lan_qi_zuo_shang_jiao_de_ju_li.md)
 * [服务器](fu_wu_qi.md)
    * [Linux](linux.md)
        * [Common](common.md)
