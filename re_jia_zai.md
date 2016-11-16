@@ -38,7 +38,7 @@
      
 # 过程中遇到的问题
 
-## 1.1 loaders中不要放react-hot
+## 1 loaders中不要放react-hot
 
 一开始参考链接1中是写
 
@@ -67,7 +67,25 @@ Module build failed: Error: React Hot Loader: The Webpack loader is now exported
 
 .babelrc的plugins加上`react-hot-loader/babel`即可
 
+## 2. 不要按正常的webpack打包访问
 
+之前没用热加载的时候,直接webpack -w 就可以打包了
+
+但是这样是没有应用上热加载的
+
+这样会报错
+
+```javascript
+index.bundle.js:116 Uncaught Error: [HMR] Hot Module Replacement is disabled.
+```
+
+解决方案:
+
+用webpack-dev-server启动热加载服务
+
+```javascript
+webpack-dev-server --hot --inline
+```
 
 # 参考链接
 
