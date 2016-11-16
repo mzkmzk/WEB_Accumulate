@@ -38,7 +38,28 @@
      
 # 过程中遇到的问题
 
-## 1.1 
+## 1.1 laders中不要放react-hot
+
+一开始参考链接1中是写
+
+```javascript
+    loaders: [{
+      test: /\.js$/,
+
+      // Use the property "loaders" instead of "loader" and 
+      // add "react-hot" in front of your existing "jsx" loader
+      // 使用 "loaders" 属性代替 "loader"
+      // 然后在 "jsx" 加载器之前添加 "react-hot" 
+      loaders: ['react-hot', 'babel']
+```
+
+而不是在babel中添加plugins的
+
+但是这样会报错
+
+```javascript
+Module build failed: Error: React Hot Loader: The Webpack loader is now exported separately. If you use Babel, we recommend that you remove "react-hot-loader" from the "loaders" section of your Webpack configuration altogether, and instead add "react-hot-loader/babel" to the "plugins" section of your .babelrc file. If you prefer not to use Babel, replace "react-hot-loader" or "react-hot" with "react-hot-loader/webpack" in the "loaders" section of your Webpack configuration.
+```
 
 # 参考链接
 
