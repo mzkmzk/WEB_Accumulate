@@ -38,7 +38,7 @@
      
 # 过程中遇到的问题
 
-## 1.1 laders中不要放react-hot
+## 1.1 loaders中不要放react-hot
 
 一开始参考链接1中是写
 
@@ -61,7 +61,13 @@
 Module build failed: Error: React Hot Loader: The Webpack loader is now exported separately. If you use Babel, we recommend that you remove "react-hot-loader" from the "loaders" section of your Webpack configuration altogether, and instead add "react-hot-loader/babel" to the "plugins" section of your .babelrc file. If you prefer not to use Babel, replace "react-hot-loader" or "react-hot" with "react-hot-loader/webpack" in the "loaders" section of your Webpack configuration.
 ```
 
-r'a
+然后参考链接2
+
+把loaders的react-hot改为
+
+.babelrc的plugins加上`react-hot-loader/babel`即可
+
+
 
 # 参考链接
 
