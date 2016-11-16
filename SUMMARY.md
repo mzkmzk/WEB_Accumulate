@@ -61,6 +61,7 @@
                * [常见错误](react_native_chang_jian_cuo_wu.md)
            * [问题](wen_ti.md)
                * [由于标签没闭合引发的各种奇怪问题](you_yu_biao_qian_mei_bi_he_yin_fa_de_ge_zhong_qi_g.md)
+           * 引入的component必须使用大写开头
        * [ESLint](eslint.md)
            * [错误收集](cuo_wu_shou_ji.md)
        * [WebGL](webgl.md)
