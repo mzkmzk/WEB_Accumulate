@@ -35,6 +35,9 @@
     }
 
       ```
+5. 启动热加载
+
+       webpack-dev-server --hot --inline
      
 # 过程中遇到的问题
 
