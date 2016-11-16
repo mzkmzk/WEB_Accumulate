@@ -86,10 +86,38 @@ index.bundle.js:116 Uncaught Error: [HMR] Hot Module Replacement is disabled.
 ```javascript
 webpack-dev-server --hot --inline
 ```
-
+ 
 # 疑问
 
+## 1. 无法帮助找到跟节点
 
+```javascript
+if (module.hot) {
+  require('react-hot-loader/Injection').RootInstanceProvider.injectProvider({
+    getRootInstances: function () {
+      // Help React Hot Loader figure out the root component instances on the page:
+      // 帮助 React Hot Loader 识别出页面中的根组件
+      return [rootInstance];
+    }
+  });
+}
+```
+
+这里是参考链接1的代码,是用来帮助找到根节点的
+
+但是我执行这段代码的时候
+
+```
+Cannot resolve module 'react-hot-loader/Injection'
+```
+
+我来回换了基本react-hot-loader的版本还是有这个问题...
+
+但是其实这段代码去掉 是没有太影响热加载的
+
+所以暂时也没有解决..就直接用加这段代码,热加载还是能跑的通的
+
+后面遇到与之有关的问题再来解吧
 
 # 参考链接
 
