@@ -43,6 +43,7 @@
                * [ReduxDevtool](reduxdevtool.md)
                * [基础API](ji_chu_api.md)
                * [热加载](re_jia_zai.md)
+               * 参考资源
            * [Redux](redux.md)
                * [API](api.md)
                    * [基础API](redux_ji_chu_api.md)
