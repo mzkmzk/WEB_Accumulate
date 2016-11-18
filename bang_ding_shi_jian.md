@@ -21,11 +21,41 @@ react绑定事件,其实和普通DOM差不多.
   render() {
     var a = 1
     return (
-      <div onScroll={(e) => _handleScroll(e,a)} 
+      <div onScroll={(e,a) => _handleScroll(e,a)} 
     )
   }
   
-  
-  
-  
-```
+ ```
+ 
+ # DOM2
+ 
+ 在以前的写法,一般标签写个id,然后就绑定了
+ 
+ 但在react里最好使用ref
+ 
+ ```javascript
+ 
+ import ReactDOM , { render } from 'react-dom'
+ 
+  _handleScroll(ev,a) {
+        console.log('Scrolling!')
+         console.log(a)
+    }
+    componentDidMount() {
+        const list = ReactDOM.findDOMNode(this.refs.div_tasks)
+        console.log(list)
+        list.addEventListener('scroll', this._handleScroll)
+    }
+    componentWillUnmount() {
+        const list = ReactDOM.findDOMNode(this.refs.div_tasks)
+        list.removeEventListener('scroll', this._handleScroll)
+    }
+    
+render() {
+  return (
+     <div ref="div_tasks"
+  )
+} 
+
+ ```
+ 
