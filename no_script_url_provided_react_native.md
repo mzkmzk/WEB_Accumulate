@@ -12,7 +12,7 @@ No script URL provided. Make sure the packager is running or you have embedded a
     ```shell
      curl 'http://localhost:8081/Examples/UIExplorer/UIExplorerApp.ios.bundle?platform=ios' -o main.jsbundle
     ```
-    
+3. 将product->scheme->edit scheme->replece   
 # 参考链接
 
 https://github.com/facebook/react-native/issues/6458
