@@ -29,8 +29,8 @@ if (target.scrollTop + target.clientHeight + 300 >= target.scrollHeight) {
 
 ```javascript
  function throttle(method, context) {
-     clearTimeout(methor.tId);
-     method.tId = setTimeout(function(){
+     if(method._throttleID !== undefined)  clearTimeout(methor._throttleID);
+     method._throttleID = setTimeout(function(){
          method.call(context);
      }， 100);
  }
