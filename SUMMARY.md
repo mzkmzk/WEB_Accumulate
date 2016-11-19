@@ -14,7 +14,7 @@
                * [图片Onload事件](tu_pian_onload_shi_jian.md)
            * [使用fetch](shi_yong_fetch.md)
            * [performance](performance.md)
-           * 函数节流
+           * [函数节流](han_shu_jie_liu.md)
        * [npm](npm.md)
            * [Package.json](packagejson.md)
            * [项目安装失败经验](xiang_mu_an_zhuang_shi_bai_jing_yan.md)
