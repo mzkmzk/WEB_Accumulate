@@ -85,3 +85,4 @@ window.onresize = function(){
 # 参考链接
 
 1. http://www.alloyteam.com/2012/11/javascript-throttle/
+2. underscore的做法: http://www.qdfuns.com/notes/17398/93ec1a3c4cf2a1ecd5f8ff1a905f2d03
