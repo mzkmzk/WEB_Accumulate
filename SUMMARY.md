@@ -129,6 +129,7 @@
                * [获取离浏览器左上角的距离](huo_qu_li_liu_lan_qi_zuo_shang_jiao_de_ju_li.md)
        * [Underscore](underscore.md)
            * [偷点东西](underscore_tou_dian_dong_xi.md)
+               * 函数节流: throttle
 * [服务器](fu_wu_qi.md)
    * [Linux](linux.md)
        * [Common](common.md)
