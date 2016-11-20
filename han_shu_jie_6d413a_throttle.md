@@ -34,7 +34,7 @@
     };
     return function() {
       var now = _.now();
-      if (!previous && options.leading === false) previous = now;
+      if (!previous && options.leading === false) previous = now;//当
       var remaining = wait - (now - previous);
       context = this;
       args = arguments;
