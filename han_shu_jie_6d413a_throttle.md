@@ -45,7 +45,7 @@
         }
         previous = now;
         result = func.apply(context, args);
-        if (!timeout) context = args = null;
+        if (!timeout) context = args = null; //这里其实不是太明白,上面的if已经把timeout弄成null了,这里应该是永真的啊?.
       } else if (!timeout && options.trailing !== false) {
         timeout = setTimeout(later, remaining);
       }
