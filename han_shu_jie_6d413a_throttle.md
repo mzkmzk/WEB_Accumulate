@@ -20,8 +20,6 @@
 
 # 源码
 
-
-
 ```javascript
  _.throttle = function(func, wait, options) {
     var context, args, result;
