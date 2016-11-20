@@ -14,8 +14,8 @@
 2. wait: 至少每隔wait毫秒执行一次func
 3. options: 
 
-    1. leading: false 禁用第一次的执行
-    2. trailing: false 禁止最后一次的执行
+    1. leading: false 禁用第一次的执行,默认true
+    2. trailing: false 禁止最后一次的执行,默认true
 
 
 # 源码
