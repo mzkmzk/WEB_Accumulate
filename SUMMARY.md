@@ -130,6 +130,7 @@
        * [Underscore](underscore.md)
            * [偷点东西](underscore_tou_dian_dong_xi.md)
                * [函数节流: throttle](han_shu_jie_6d413a_throttle.md)
+   * 小实验室
 * [服务器](fu_wu_qi.md)
    * [Linux](linux.md)
        * [Common](common.md)
