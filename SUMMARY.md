@@ -132,6 +132,7 @@
                * [函数节流: throttle](han_shu_jie_6d413a_throttle.md)
    * [小实验室](xiao_shi_yan_shi.md)
        * [JavaScript](javascript.md)
+           * scroll和resize的监听是否并发的
 * [服务器](fu_wu_qi.md)
    * [Linux](linux.md)
        * [Common](common.md)
