@@ -24,15 +24,22 @@ var myScroll = function(){
 window.onscroll = myScroll
 ```
 
-假设1: 串行
+假设一: 串行
 
 1. go myScroll输出一次
 2. 然后后面都是111
 3. 直到浏览器卡死
 
-假设2: 并行
+假设二: 并行
 
 1. go myScroll和111交替发出
 2. 浏览器卡死
 
 # 结果
+
+```javascript
+go myScroll
+(110040)111
+```
+
+假设一 串行
