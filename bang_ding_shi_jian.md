@@ -61,6 +61,35 @@ render() {
  
  # 点击事件传参
  
+ 问题是这样的..我在map一个数组生成列表,然后点击某行需要获取当行的数据
+ 
+ ```javascript
+<button onClick={this.handleClick.bind(obj, props0, props1, ...}></button>
+
+handleClick(porps0, props1, ..., event) {
+    // your code here
+}
+ ```
+ 
+ 注意这里的obj就是后面props0所在的对象
+ 
+ 而被绑定的事件handleClick最后一个参数是event,obj是不会放在参数里的
+ 
+ 但是我现在就是想整个obj都传过去
+ 
+ ```javascript
+ 
+  tasks.data.map((data_one) =>
+   <div key={data_one.task_id} >
+   
+      <div className="file_opt">
+          <a  onClick={ this.deleteTask.bind({},data_one) } href="javascript:;" title="删除" className="ico_file ico_f_del"></a>
+
+      </div>
+ ```
+ 
+ 以上的代码中我可以在第一个参数里获取到data_one,但是这不科学,因为我的第一个参数是{},照理第二个参数要是第一个参数的属性,但是我这样就ok了..奇怪....
+ 
  # 参考链接
  
  1. react点击穿参: http://www.jianshu.com/p/d745514e547b
