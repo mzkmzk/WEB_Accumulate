@@ -59,3 +59,9 @@ render() {
 
  ```
  
+ # 点击事件传参
+ 
+ # 参考链接
+ 
+ 1. react点击穿参: http://www.jianshu.com/p/d745514e547b
+ 
