@@ -90,6 +90,24 @@ handleClick(porps0, props1, ..., event) {
  
  以上的代码中我可以在第一个参数里获取到data_one,但是这不科学,因为我的第一个参数是{},照理第二个参数要是第一个参数的属性,但是我这样就ok了..奇怪....
  
+ 而且虽然说的是最后一个参数是event其实是个react定义PROXY,而不是元素的Event,原生的Event,可以在真正proxy的后面第二个参数,真正的Event就出来了......
+ 
+ ```javascript
+     deleteTask(a,b,c,d,e,f){
+     
+         //a: data_one
+         //b: PROXY
+         //c undeifned
+         //d Event
+         //e undefined
+         //f undefined
+    }
+    
+    <a  onClick={ this.deleteTask.bind({},data_one) }
+ ```
+ 
+ 
+ 
  # 参考链接
  
  1. react点击穿参: http://www.jianshu.com/p/d745514e547b
