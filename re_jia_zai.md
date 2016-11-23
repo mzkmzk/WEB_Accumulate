@@ -38,7 +38,36 @@
 5. 启动热加载
 
        webpack-dev-server --hot --inline
-     
+
+# 如何配置成特定域名
+
+因为默认是localhost:3000的
+
+我现在想配置成
+
+http://404mzk.com/a/b
+
+如何配置
+
+1. 配置域名: `--host 404mzk.com`
+2. 配置端口: `--port 80`
+3. 配置路径: 在webpack.config.js里,
+
+    ```javascript
+      output: {
+		...
+        publicPath: '/a/b'
+	},
+    ```
+4. 记得如果报错,就加sudo哦
+
+最终命令
+
+```javascript
+  sudo webpack-dev-server --hot --inline --host 404mzk.com --port 80
+```
+
+
 # 过程中遇到的问题
 
 ## 1 loaders中不要放react-hot
