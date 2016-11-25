@@ -30,7 +30,7 @@ react因为防止xss
 
 tips
 
-1. 这样html_string的里面的class不要转化成className
+1. 这样html_string的里面的class不要转化成className,
 
 这个dangerouslySetInnerHTML的用法,内部不能有元素,不然react会报错
 
