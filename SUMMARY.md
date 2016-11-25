@@ -46,6 +46,7 @@
                * [热加载](re_jia_zai.md)
                * [参考资源](can_kao_zi_yuan.md)
                * [绑定事件](bang_ding_shi_jian.md)
+               * react插入html标签字符串
            * [Redux](redux.md)
                * [API](api.md)
                    * [基础API](redux_ji_chu_api.md)
