@@ -62,3 +62,9 @@ require是CommonJS的一部分
 虽然http://es6.ruanyifeng.com/#docs/module中说加载方式和import 和require不一样 前者为索引,后者为拷贝
 
 但笔者觉得这个export货module.exports有关系而已,和这个是没关系的
+
+当然,我和阮一峰老师说的环境不一样
+
+他是站着ES6的角度上看的
+
+而我是站着编译可运行在浏览器的ES6说的
