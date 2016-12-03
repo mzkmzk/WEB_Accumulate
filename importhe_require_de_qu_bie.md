@@ -54,5 +54,11 @@ require是CommonJS的一部分
 
 ```
 
+这两个其实使用差不多
 
 
+# 循环加载相关
+
+虽然http://es6.ruanyifeng.com/#docs/module中说加载方式和import 和require不一样 前者为索引,后者为拷贝
+
+但笔者觉得这个export货modules.export有关系而已,和这个是没关系的
