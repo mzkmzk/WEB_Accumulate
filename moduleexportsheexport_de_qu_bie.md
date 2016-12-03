@@ -31,7 +31,7 @@ module.exports.default = ...
 假如 index -> b -> c
              b <- c
 ```
-
+以下是module.exports
 b文件
 ```javascript
 	var _c = __webpack_require__(9);
@@ -46,8 +46,11 @@ b文件
 	        _c2.default.a();
 	    }
 	};
-
+    //如果是module.exports
 	module.exports = b;
+   //如果是export default
+   exports.default = b;
+   
 ```
 
 c文件
@@ -68,42 +71,33 @@ c文件
 	        _b2.default.a();
 	    }
 	};
-
+     //如果是module.exports
 	module.exports = c;
+   //如果是export default
+    exports.default = b;
 ```
 
-在c文件里的c.a()是永远找不到的,因为c只是一个空的object
+如果是module.exports的方式
 
-为什么是空object?
+在c引入b时候
 
-# webpack加载机制
-
-```javascript
-/******/ 	function __webpack_require__(moduleId) {
-
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
-/******/ 			return installedModules[moduleId].exports;
-
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			exports: {},
-/******/ 			id: moduleId,
-/******/ 			loaded: false
-/******/ 		};
-
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-
-/******/ 		// Flag the module as loaded
-/******/ 		module.loaded = true;
-
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
 ```
+var _b = __webpack_require__(8);
+```
+就会把b当时的exports空对象给引过来
 
-先加载b模块,然后b的exports还是空时候,就要去加载c文件
+而后面当c加载完,到b加载的时候
 
-c文件里放着的是b,exports 为空
+b的module.exports = b是`不会去关联到c文件去的`
+
+因为整个module.exports都被换掉了!!!(重点)
+
+b中如果是export default 会转化成 export.default = b
+
+此时c中引用的是b的module.exports,而此时是多了个属性,索引关联还是在的,没有去掉,所以就有了c文件自动再用到
+b时,就能找到b刚export default的东西
+
+# 参考链接
+
+
 
