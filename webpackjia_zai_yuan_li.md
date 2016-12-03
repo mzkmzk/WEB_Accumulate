@@ -6,7 +6,7 @@
 //开头代码
 
 /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
+/******/ 	// The module cache 已经注册(可能还在load当中)完毕的module
 /******/ 	var installedModules = {};
 
 /******/ 	// The require function
@@ -32,12 +32,11 @@
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-
-
-/******/ 	// expose the modules object (__webpack_modules__)
+      
+/******/ 	// 所有的modules包装在m中,expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
 
-/******/ 	// expose the module cache
+/******/ 	// 已经加载完毕的modules  expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
