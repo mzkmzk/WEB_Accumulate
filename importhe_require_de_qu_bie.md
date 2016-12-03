@@ -47,7 +47,7 @@ require是CommonJS的一部分
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
     
-如果使用require的话就只有
+//如果使用require的话就只有
 
 	var _test = __webpack_require__(6);
 
