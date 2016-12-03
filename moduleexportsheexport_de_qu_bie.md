@@ -99,5 +99,8 @@ b时,就能找到b刚export default的东西
 
 # 参考链接
 
-
+1. https://cnodejs.org/topic/52308842101e574521c16e06
+2. http://es6.ruanyifeng.com/#docs/module
+3. https://cnodejs.org/topic/4f16442ccae1f4aa27001045
+4. https://cnodejs.org/topic/5231a630101e574521e45ef8
 
