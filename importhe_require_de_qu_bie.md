@@ -10,7 +10,8 @@ require是CommonJS的一部分
 
 首先说说webpack通过babel转义这两个东西后的语法
 
-# 转义中和这两有关系的
+
+# babel转义区别
 
 ```javascript
 	Object.defineProperty(exports, "__esModule", {
@@ -52,3 +53,6 @@ require是CommonJS的一部分
 	var _test = __webpack_require__(6);
 
 ```
+
+
+
