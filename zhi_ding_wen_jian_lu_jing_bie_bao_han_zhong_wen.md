@@ -14,6 +14,6 @@
 
 
 ```shell
-[Sat Dec 03 16:27:19.300954 2016] [:error] [pid 65637] [client 127.0.0.1:63484] mod_hfs_apple: Mis-cased URI or unacceptable Unicode in URI: /Users/maizhikun/Project/\xe8\xbf\x85\xe9\x9b\xb7/\xe5\xbf\xab\xe9\xb8\x9f\xe6\x8f\x92\xe4\xbb\xb6/code/speed-mini-xl9/index.html, wants: /Users/maizhikun/Project/thunder/LiXianSpace/code/
+[Sat Dec 03 16:27:19.300954 2016] [:error] [pid 65637] [client 127.0.0.1:63484] mod_hfs_apple: Mis-cased URI or unacceptable Unicode in URI: /Users/maizhikun/Project/\xe8\xbf\x85\xe9\x9b\xb7/\xe5\xbf\xab\xe9\xb8\x9f\xe6\x8f\x92\xe4\xbb\xb6/code/speed-mini-xl9/index.html, wants: /Users/maizhikun/Project/maizhikun/LiXianSpace/code/
 [Sat Dec 03 16:27:19.368695 2016] [:error] [pid 65637] [client 127.0.0.1:63484] mod_hfs_apple: Mis-cased URI or unacceptable Unicode in URI: /Users/maizhikun/Project/\xe8\xbf\x85\xe9\x9b\xb7/\xe5\xbf\xab\xe9\xb8\x9f\xe6\x8f\x92\xe4\xbb\xb6/code/favicon.ico, wants: /Users/maizhikun/Project/maizhikun/LiXianSpace/code/, referer: http://k.maizhikun.com/speed-mini-xl9/index.html?dnbandwidth=2&maxdnbandwidth=50&usertype=6
 ```
