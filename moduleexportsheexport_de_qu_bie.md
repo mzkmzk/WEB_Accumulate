@@ -27,6 +27,13 @@ module.exports.default = ...
 这样其实大多数情况也差不多
 
 但是循环依赖就不一样了
+```
+假如 index -> test -> test2
+             test <- test2
+```
 
+b文件
+```javascript
 
+```
 
