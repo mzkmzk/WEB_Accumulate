@@ -7,7 +7,14 @@
 ```javascript
 (function(modules){
   加载模块核心代码
-})([])
+})([
+  function(module, exports,__webpack_require__) {
+    模块0的代码
+  },
+  function(module, exports,__webpack_require__) {
+    模块1的代码
+  },
+])
 ```
 
 # 代码
