@@ -37,3 +37,18 @@ require是CommonJS的一部分
 	    value: true
 	});
 ```
+
+而如果使用import 而非 require的话就会有了
+
+```javascript
+	var _test = __webpack_require__(6);
+
+	var _test2 = _interopRequireDefault(_test);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+    
+如果使用require的话就只有
+
+	var _test = __webpack_require__(6);
+
+```
