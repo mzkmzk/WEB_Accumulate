@@ -22,3 +22,11 @@ exports.default = ...
 module.exports.default = ...
 ```
 
+# 不同
+
+这样其实大多数情况也差不多
+
+但是循环依赖就不一样了
+
+
+
