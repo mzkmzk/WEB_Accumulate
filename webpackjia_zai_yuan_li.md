@@ -1,5 +1,15 @@
 # webpack加载原理
 
+# 思路
+
+在最终的js头部放了一个自执行函数
+
+```javascript
+(function(modules){
+  加载模块核心代码
+})([])
+```
+
 # 代码
 
 ```javascript
