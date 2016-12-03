@@ -31,6 +31,7 @@
        * [ES6](es6.md)
            * [ES6学习](es6xue_xi.md)
            * [import和require的区别](importhe_require_de_qu_bie.md)
+           * module.exports和export的区别
        * [兼容问题](_jian_rong_wen_ti.md)
            * [基础](jichu_js.md)
        * [黑魔法](_hei_mo_fa.md)
