@@ -17,6 +17,42 @@
 ])
 ```
 
+会把你写的所有模块都当成一个数组传递到modules中
+
+然后看着webpack如何把你的代码一个个关联起来
+
+化整为0,其实只要理解webpack怎么整合第0个模块和第1个模块,也就基本能理解webpack加载思路
+
+```javascript
+(function(modules) {
+    var installedModules = {};
+    function __webpack_require__(moduleId) {
+
+      // Check if module is in cache
+        if(installedModules[moduleId])
+            return installedModules[moduleId].exports;
+
+        
+        var module = installedModules[moduleId] = {
+ 			exports: {},
+ 			id: moduleId,
+ 			loaded: false
+ 		};
+
+        modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+
+ 		module.loaded = true;
+
+		return module.exports;
+ 	}
+    ...
+    return __webpack_require__(0);
+})()
+
+```
+
+
 # 代码
 
 ```javascript
