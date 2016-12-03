@@ -25,25 +25,25 @@
 
 ```javascript
 (function(modules) {
+    //注册完毕的module (注册过不一定加载完成)
     var installedModules = {};
     function __webpack_require__(moduleId) {
-
-      // Check if module is in cache
+         //检查改module是否已经注册过
         if(installedModules[moduleId])
             return installedModules[moduleId].exports;
-
-        
+        //若没注册过,就新建立一个
         var module = installedModules[moduleId] = {
  			exports: {},
  			id: moduleId,
  			loaded: false
  		};
-
+ 
+       //绑定this,将module和其引用出去的对象暴露出来,__webpack_require__就是加载其他模块的方法
         modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 
-
+        //注册成功
  		module.loaded = true;
-
+        //返回其暴露的对象
 		return module.exports;
  	}
     ...
@@ -104,3 +104,5 @@
 /***/ function(module, exports, __webpack_require__) {
 
 ```
+
+# 
