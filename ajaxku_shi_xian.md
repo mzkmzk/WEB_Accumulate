@@ -8,3 +8,6 @@
 
 `If-Modified-Since:Thu, 01 Dec 2016 04:30:16 GMT`
 
+在响应头首部字段会有
+
+`Last-Modified:Wed, 07 Dec 2016 08:07:22 GMT`
