@@ -8,3 +8,16 @@
 
 ## application/x-www-form-urlencoded
 
+一般的提交内容格式为title=test&sub%5B%5D=1&sub%5B%5D=2&sub%5B%5D=3
+
+jquery默认的post提交默认是application/x-www-form-urlencoded
+
+## application/json
+
+当社长成这个头的时候
+
+safari为默认把post改为options请求,导致有些服务器没有支持这个options,就会导致400bad request
+
+## multipart/form-data
+
+在from表单并且enctype等于 multipart/form-data时
