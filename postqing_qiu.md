@@ -42,3 +42,7 @@ Content-Type: application/octet-stream
 chrome的默认Content-Type
 
 这个就是纯文本的方式提交
+
+# 参考链接
+
+1. 四种常见的 POST 提交数据方式: https://imququ.com/post/four-ways-to-post-data-in-http.html
