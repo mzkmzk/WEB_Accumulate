@@ -24,6 +24,19 @@ safari为默认把post改为options请求,导致有些服务器没有支持这�
 
 在from表单并且enctype等于 multipart/form-data时
 
+```shell
+------WebKitFormBoundarybUB4deZjYLxS31hM
+Content-Disposition: form-data; name="filepath"; filename="中二病也要谈恋爱136c06c5e486d2531439acb9e362f307c93d74a9.torrent"
+Content-Type: application/octet-stream
+
+
+------WebKitFormBoundarybUB4deZjYLxS31hM--
+```
+
+当如果没有文件效果和`application/x-www-form-urlencoded`一样,
+
+当有文件时候,就会有这些---Webkit的头
+
 ##text/plain
 
 chrome的默认Content-Type
