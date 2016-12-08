@@ -14,10 +14,18 @@ jquery默认的post提交默认是application/x-www-form-urlencoded
 
 ## application/json
 
-当社长成这个头的时候
+当设置成这个头的时候
+
+Safari的默认Content-Type是application/json
 
 safari为默认把post改为options请求,导致有些服务器没有支持这个options,就会导致400bad request
 
 ## multipart/form-data
 
 在from表单并且enctype等于 multipart/form-data时
+
+##text/plain
+
+chrome的默认Content-Type
+
+这个就是纯文本的方式提交
