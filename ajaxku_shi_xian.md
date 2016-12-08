@@ -30,3 +30,4 @@
 # 参考资源
 
 1. if-modified-since: http://www.cnblogs.com/zh2000g/archive/2010/03/22/1692002.html
+2. If-None-Match: http://www.cnblogs.com/czh-liyu/archive/2011/06/22/2087113.html
