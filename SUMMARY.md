@@ -17,7 +17,7 @@
            * [函数节流与反抖](han_shu_jie_liu.md)
            * [小型bug](xiao_xing_bug.md)
            * [POST请求](postqing_qiu.md)
-           * XMLHttpRequest属性
+           * [XMLHttpRequest属性](xmlhttprequestshu_xing.md)
        * [npm](npm.md)
            * [Package.json](packagejson.md)
            * [项目安装失败经验](xiang_mu_an_zhuang_shi_bai_jing_yan.md)
