@@ -1,5 +1,9 @@
 # XMLHttpRequest属性
 
+# 简介
+
+![XMLHttpRequest](QQ20161209-0.png)
+
 ## 方法
 
 ### 
