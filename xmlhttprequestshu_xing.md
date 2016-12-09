@@ -1,0 +1,2 @@
+# XMLHttpRequest属性
+
