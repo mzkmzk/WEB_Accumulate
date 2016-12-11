@@ -12,10 +12,18 @@
 2. onloadstart: 在xhr.send()之后立即触发
 3. onprogress: 一般每50ms触发一次,在HEADERS_ERCEIVED和LOADING过程中
 4. onload: 请求完成(超时,错误,timeout不会触发此事件)
-5. onabort: xhr.abort()后触发
+5. onabort: 仅当xhr.abort()后触发
+6. ontimeout: 当超过设置timeout触发,但是会在改变readystatechange后触发,
+7. onerror: (4xx,5xx,网络中断)都会触发,但(abort和timeout不会触发)
 5. onloadend: 请求结束(包括成功,超时,错误,timeout等事件)
 
+但出现abort timeout error时,
 
+都会
+
+1. 把readystate设置为4并触发onreadystatechange
+2. 然后执行对应的onaobrt ontimeout onerror
+3. 触发onloadend
 
 ### 
 
