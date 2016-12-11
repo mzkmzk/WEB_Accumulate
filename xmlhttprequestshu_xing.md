@@ -30,3 +30,4 @@
 # 参考资料
 
 1. ajax比较详细的讲解: http://coderlt.coding.me/2016/11/20/js-ajax/
+2. 属性说明: http://www.html5plus.org/doc/zh_cn/xhr.html
