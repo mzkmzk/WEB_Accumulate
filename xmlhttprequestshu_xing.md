@@ -25,8 +25,6 @@
 2. 然后执行对应的onaobrt ontimeout onerror
 3. 触发onloadend
 
-### 
-
 # 参考资料
 
 1. ajax比较详细的讲解: http://coderlt.coding.me/2016/11/20/js-ajax/
