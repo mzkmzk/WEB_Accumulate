@@ -1,0 +1,34 @@
+{
+  "title": "blog",
+  "description": "404mzk blog",
+  "language": "zh",
+  "plugins": [
+    "duoshuo",
+    "baidu",
+    "tbfed-pagefooter",
+    "github-buttons"
+  ],
+  "pluginsConfig": {
+    "duoshuo": {
+      "short_name": "blog404mzk",
+      "theme": "default"
+    },
+   "baidu":{
+      "token": "28e4de852c4a19da042c4c580c79e556"
+    },
+    "tbfed-pagefooter": {
+      "copyright":"&copy 404mzk",
+      "modify_label": "该文件修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "github-buttons": {
+      "repo": "mzkmzk/WEB_Accumulate",
+      "types": [
+        "star",
+        "watch"
+      ],
+      "size": "small"
+    }
+
+  }
+}
