@@ -21,10 +21,10 @@ var config = {
     },
     ...
      plugins: [
-            new webpack.optimize.CommonsChunkPlugin({
-                name: "common",
-                filename: "common.js",
-                chunks: ['index'],
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "common",
+            filename: "common.js",
+            chunks: ['index'],
         }),
     ]
 ```
