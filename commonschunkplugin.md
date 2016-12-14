@@ -22,11 +22,23 @@ var config = {
     ...
      plugins: [
         new webpack.optimize.CommonsChunkPlugin({
-            name: "common",
+            name: "common", //名字会被filename覆盖
             filename: "common.js",
             chunks: ['index'],
         }),
     ]
 ```
+
+结果
+```shell
+//未压缩
+common.js    1.11 MB       0  [emitted]  common
+index.bundle.js     316 kB       1  [emitted]  index
+```
+
+在entry中的common里写需要写上第三方的库
+
+注意要在chunks上写上包含此common的入口文件
+
 
 
