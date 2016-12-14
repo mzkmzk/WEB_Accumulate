@@ -11,7 +11,6 @@
 #DEMO
 
 ```javascript
-
 var config = {
 	entry:{ 
         index : [
