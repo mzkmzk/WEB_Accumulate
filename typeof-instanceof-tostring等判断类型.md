@@ -23,5 +23,10 @@ console.log(typeof new RegExp()) //object
 
 # instanceof 
 
+instanceof不仅检验构造这个对象的构造器,还检验原型链上的构造器
+
+所以 所有非基本类型 & undefined & null, instanceof Object都是true
+
+
 
 
