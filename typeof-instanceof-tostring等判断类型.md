@@ -21,4 +21,7 @@ console.log(typeof new Date()) //object
 console.log(typeof new RegExp()) //object
 ```
 
+# instanceof 
+
+
 
