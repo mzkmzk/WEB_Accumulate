@@ -18,6 +18,7 @@
             * [小型bug](xiao_xing_bug.md)
             * [POST请求](postqing_qiu.md)
             * [XMLHttpRequest属性](xmlhttprequestshu_xing.md)
+            * [typeof instanceof toString等判断类型](typeof-instanceof-tostring等判断类型.md)
         * [npm](npm.md)
             * [Package.json](packagejson.md)
             * [项目安装失败经验](xiang_mu_an_zhuang_shi_bai_jing_yan.md)
