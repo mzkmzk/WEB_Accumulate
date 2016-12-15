@@ -20,7 +20,9 @@ console.log(typeof []) //object
 console.log(typeof {}) //object
 console.log(typeof new Date()) //object
 console.log(typeof new RegExp()) //object
-console.log(typeof document.getElementById) // 高级浏览器 function ,IE8及其以下 object
+// 高级浏览器 function ,IE8及其以下 object
+//所以判断document里的一些方法是否存在的话 可以if('getElementById' in document)
+console.log(typeof document.getElementById) 
 
 ```
 
