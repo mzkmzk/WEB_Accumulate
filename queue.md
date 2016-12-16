@@ -20,3 +20,8 @@ callback: :function
 
 作用: 执行下一个队列函数,并执行出列
 
+```javascript
+.queue([queueName])
+
+queueName: 默认'fx':String
+```
