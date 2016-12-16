@@ -19,6 +19,7 @@
             * [POST请求](postqing_qiu.md)
             * [XMLHttpRequest属性](xmlhttprequestshu_xing.md)
             * [typeof instanceof toString等判断类型](typeof-instanceof-tostring等判断类型.md)
+            * [奇淫怪技](奇淫怪技.md)
         * [npm](npm.md)
             * [Package.json](packagejson.md)
             * [项目安装失败经验](xiang_mu_an_zhuang_shi_bai_jing_yan.md)
@@ -139,7 +140,7 @@
         * [jQuery](jquery.md)
             * [偷点东西](tou_dian_dong_xi.md)
                 * [access: 从集合中设置或获取value](access_cong_ji_he_zhong_she_zhi_huo_huo_qu_value.md)
-                * 小功能点
+                * [小功能点](小功能点.md)
                 * [获取离浏览器左上角的距离](huo_qu_li_liu_lan_qi_zuo_shang_jiao_de_ju_li.md)
                 * [ajax库实现](ajaxku_shi_xian.md)
                 * [queue](queue.md)
