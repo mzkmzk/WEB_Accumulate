@@ -68,5 +68,11 @@ console.log(typeof function a(){} ) //function
 
 因为B的Function 不等于A的Function
 
+# 总结
+
+1. typeof: 判断基本类型和function时用
+2. instanceof: 判断自定义对象时用
+3. toString: 判断浏览器内置对象时用
+
 
 
