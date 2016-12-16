@@ -18,4 +18,5 @@ callback: :function
 
 ## .dequeue
 
-作用: 执行下一个队列
+作用: 执行下一个队列函数,并执行出列
+
