@@ -25,3 +25,6 @@ callback: :function
 
 queueName: 默认'fx':String
 ```
+
+## .clearQueue
+
