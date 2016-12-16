@@ -9,7 +9,7 @@
 .queue([queueName],newQueue)
 .queue([queueName],callback)
 
-queueName: 默认fx:String
+queueName: 默认'fx':String
 newQueue: :Array
 callback: :function
 ```
