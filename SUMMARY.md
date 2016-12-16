@@ -21,6 +21,7 @@
             * [typeof instanceof toString等判断类型](typeof-instanceof-tostring等判断类型.md)
             * [奇淫怪技](奇淫怪技.md)
             * [nodeType](nodetype.md)
+            * [Object.defineProperty](objectdefineproperty.md)
         * [npm](npm.md)
             * [Package.json](packagejson.md)
             * [项目安装失败经验](xiang_mu_an_zhuang_shi_bai_jing_yan.md)
