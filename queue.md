@@ -28,3 +28,12 @@ queueName: 默认'fx':String
 
 ## .clearQueue
 
+作用: 清除队列
+
+```javascript
+.clearQueue([queueName])
+
+queueName: 默认'fx':String
+```
+
+
