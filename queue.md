@@ -1,5 +1,9 @@
 # queue
 
+# 简介
+
+队列,就是当一坨函数要顺序执行要用到的东西
+
 # API
 
 ## .queue
@@ -35,5 +39,6 @@ queueName: 默认'fx':String
 
 queueName: 默认'fx':String
 ```
+
 
 
