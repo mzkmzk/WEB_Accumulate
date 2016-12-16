@@ -2,7 +2,9 @@
 
 # API
 
-## queue
+## .queue
+
+作用: 放入队列
 
 ```javascript
 .queue([queueName])
@@ -13,3 +15,6 @@ queueName: 默认'fx':String
 newQueue: :Array
 callback: :function
 ```
+
+## .dequeue
+
