@@ -18,3 +18,4 @@ callback: :function
 
 ## .dequeue
 
+作用: 执行下一个队列
