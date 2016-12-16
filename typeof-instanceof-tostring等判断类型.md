@@ -32,6 +32,22 @@ instanceof不仅检验构造这个对象的构造器,还检验原型链上的构
 
 所以 所有非基本类型 & undefined & null, instanceof Object都是true
 
+
+# toString
+
+如何判断数组
+
+```javascript
+console.log(typeof [] ) //object
+[].toString() // ''
+Object.prototype.toString.call([]) //"[object Array]"
+
+而instanceof Array在跨iframe是不好使的
+```
+而在ES5中,引入了Array.isArray()
+
+
+
 # 为何判断是否为函数不用instanceof
 
 ```javascript
