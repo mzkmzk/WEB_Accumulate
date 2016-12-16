@@ -46,7 +46,7 @@ Object.prototype.toString.call([]) //"[object Array]"
 ```
 而在ES5中,引入了Array.isArray()
 
-
+toString啥时候用: 判断浏览器内置对象时
 
 # 为何判断是否为函数不用instanceof
 
