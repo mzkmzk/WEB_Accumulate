@@ -43,6 +43,10 @@ queueName: 默认'fx':String
 # 结构
 
 ```javascript
+jQuery.extend({
+    queue( elem, type, data ) // 
+    dequeue( elem, type ) //
+})
 
 ```
 
