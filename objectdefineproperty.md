@@ -11,7 +11,12 @@ descriptor 属性:
 3. value: 值
 4. writable: 是否可写,默认false
 
-注意当如果writable即使是false,你去改变prop,它居然不会报错,而只是改变无效而已
+# 注意点
+
+1. 当如果writable即使是false,你去改变prop,它居然不会报错,而只是改变无效而已
+2. 当configurable为false时,其他都设置都无效
+
+
 
 # 相关应用
 
@@ -35,8 +40,8 @@ if ( owner.nodeType ) {
 Object.defineProperty( owner, this.expando, { 
         value: value,
         configurable: true,
-        writable: false,
-        enumerable: false
+        writable: false, //默认
+        enumerable: false //默认
     } );
 
 ```
