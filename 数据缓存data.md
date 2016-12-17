@@ -36,6 +36,11 @@ Data.prototype = {
 
 因为uid是用来区分唯一标识expando的,但无需被实例知道,只需要知道最终的expando即可
 
+但是在jquery里只会被new两次,
+
+一个是src/data/var/dataPriv里用 是jquery内部使用的
+
+另一个是src/data/var/dataUser里用的,专门给用户调用缓存
 
 
 
