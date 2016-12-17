@@ -4,7 +4,7 @@
 
 ```javascript
 jQuery.extend( {
-    type(obj) //判断obj的类型
+    type(obj) //判断obj类型
     makeArray(arr, results)//
 })
 
