@@ -47,6 +47,5 @@ jQuery.extend({
     queue( elem, type, data ) // 
     dequeue( elem, type ) //
 })
-
 ```
 
