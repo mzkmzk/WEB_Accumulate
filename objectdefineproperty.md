@@ -1,4 +1,4 @@
-# Object.defineProperty 
+首先是安抚# Object.defineProperty 
 
 # API
 
