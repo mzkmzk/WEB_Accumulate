@@ -20,10 +20,10 @@ Data.uid = 1;
 
 Data.prototype = {
     cache: function(owner) // 获取owner的cache对象
-    set: function(owner, data, value) {return 缓存值}
-    get: function(owner, key) {return 缓存值}
-    access: function(owner, key, value) {return 缓存值}
-    remove: function(owner, key) {return 缓存值}
-    hasData: function(owner) {return 缓存值}
+    set: function(owner, data, value) //设置缓存值
+    get: function(owner, key) {return 缓存值} //获取缓存值
+    access: function(owner, key, value) {return 缓存值}//设置或获取缓存值
+    remove: function(owner, key) {return 缓存值} //移除key
+    hasData: function(owner) {return 缓存值} //判断是否含有key值
 }
 ```
