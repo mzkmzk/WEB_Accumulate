@@ -27,3 +27,14 @@ Data.prototype = {
     hasData: function(owner) {return 缓存值} //判断是否含有key值
 }
 ```
+
+这样别的地方new Data(),就能
+
+1. 分别占用this.expando属性值
+2. 没被获取的uid
+3. 共享Data.prototype的方法
+
+因为uid是用来区分唯一标识expando的,但无需被实例知道,只需要知道最终的expando即可
+
+
+
