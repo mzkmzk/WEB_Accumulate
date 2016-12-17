@@ -25,10 +25,22 @@ type: function( obj ) {
 
     // Support: Android <=2.3 only (functionish RegExp)
     return typeof obj === "object" || typeof obj === "function" ?
-        class2type[ toString.call( obj ) ] || "object" :
+        class2type[ Object.prototype.toString.call( obj ) ] || "object" :
         typeof obj;
 },
+...
+// Populate the class2type map
+class2type = {}
+jQuery.each( "Boolean Number String Function Array Date RegExp Object Error Symbol".split( " " ),
+function( i, name ) {
+	class2type[ "[object " + name + "]" ] = name.toLowerCase();
+} );
 ```
+其实原理比较简单
+
+1. 基本类型交给typeof
+2. null和undefined,分别转换为null和undefined
+3. object类型的交给Object.prototype.toString去处理
 
 
 ## 判断类数组
