@@ -147,6 +147,7 @@
                 * [ajax库实现](ajaxku_shi_xian.md)
                 * [queue](queue.md)
                 * [数据缓存Data](数据缓存data.md)
+                * [core](core.md)
         * [Underscore](underscore.md)
             * [偷点东西](underscore_tou_dian_dong_xi.md)
                 * [函数节流: throttle](han_shu_jie_6d413a_throttle.md)
