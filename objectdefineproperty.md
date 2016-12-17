@@ -1,4 +1,4 @@
-首先是安抚# Object.defineProperty 
+# Object.defineProperty 
 
 # API
 
@@ -29,7 +29,19 @@ if ( owner.nodeType ) {
 }
 ```
 
+如果是普通node对象,就直接添加属性,如果是其他,则设置了一个相当于
 
+```javascript
+Object.defineProperty( owner, this.expando, { 
+        value: value,
+        configurable: true,
+        writable: false,
+        enumerable: false
+    } );
+
+```
+
+的对象,这个只能delete掉,而不可学不可枚举
    
 
 
