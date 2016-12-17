@@ -59,4 +59,7 @@ function isArrayLike( obj ) {
 }
 ```
 
+1. 排除函数和window
+2. 本身就是判断类型是array和length为有效数字
+
 
