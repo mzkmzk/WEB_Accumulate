@@ -40,5 +40,9 @@ queueName: 默认'fx':String
 queueName: 默认'fx':String
 ```
 
+# 结构
 
+```javascript
+
+```
 
