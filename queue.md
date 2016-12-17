@@ -45,7 +45,9 @@ queueName: 默认'fx':String
 ```javascript
 jQuery.extend({
     queue( elem, type, data ) // 
-    dequeue( elem, type ) //
+    dequeue( elem, type ) // 
 })
 ```
+
+
 
