@@ -16,4 +16,4 @@ descriptor 属性:
 # 相关的接口
 
 1. Object.getOwnPropertyDescriptors(object): 返回所有非继承的每个属性都带有descriptor相关属性
-2. Object.getOwnPropertyDescriptor(object,prop): 返回制定的非继承的属性都带有descriptor相关属性
+2. Object.getOwnPropertyDescriptor(object,prop): 返回指定的非继承的属性都带有descriptor相关属性
