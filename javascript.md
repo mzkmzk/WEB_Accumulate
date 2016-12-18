@@ -14,4 +14,9 @@ function createOptions( options ) {
 	} );
 	return object;
 }
+
+//使用
+'a b c'.match(/[^\x20\t\r\n\f]+/g) //["a", "b", "c"]
+'a b c'.split('')
 ```
+
