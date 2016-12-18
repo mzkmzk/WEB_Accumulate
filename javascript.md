@@ -31,5 +31,5 @@ function createOptions( options ) {
 [^aeiou]	匹配除了aeiou这几个字母以外的任意字符
 ```
 
-[^x] 排除了空格和换行符等东西
+`[^x]` 排除了空格和换行符等东西
 
