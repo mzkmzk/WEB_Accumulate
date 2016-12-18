@@ -54,6 +54,19 @@ jQuery.extend({
 
 ## 出列操作
 
+## 生成钩子
+
+```javascript
+_queueHooks: function( elem, type ) {
+    var key = type + "queueHooks";
+    return dataPriv.get( elem, key ) || dataPriv.access( elem, key, {
+        empty: jQuery.Callbacks( "once memory" ).add( function() {
+            dataPriv.remove( elem, [ type + "queue", key ] );
+        } )
+    } );
+}
+```
+
 
 
 
