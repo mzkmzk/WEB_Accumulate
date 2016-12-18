@@ -44,10 +44,16 @@ queueName: 默认'fx':String
 
 ```javascript
 jQuery.extend({
-    queue( elem, type, data ) // 
-    dequeue( elem, type ) // 
+    queue( elem, type, data ) //对elem进行存储key为type,value为data,并返回最终的队列data
+    dequeue( elem, type ) //出列
+    _queueHooks(elem, type)//生成或返回当前执行函数的队列钩子
 })
 ```
+
+# 注意点
+
+## 出列操作
+
 
 
 
