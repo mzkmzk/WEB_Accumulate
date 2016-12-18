@@ -225,6 +225,7 @@
         * [入门了解](入门了解.md)
 * [正则表达式](zheng_ze_biao_da_shi.md)
     * [入门](regular_ru_men.md)
+    * [JavaScript](javascript.md)
 * [Git](git.md)
     * [常用知识](chang_yong_zhi_shi.md)
 * [其他](qi_ta.md)
