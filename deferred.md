@@ -53,3 +53,11 @@ filtered.done(function( value ) {
   alert( "Value is ( 2*5 = ) 10: " + value );
 });
 ```
+
+## deferred.resolve
+
+使用指定的参数调用所有成功回调函数,异步队列进入成功状态
+
+`deferred.resolve( [args ] )`
+
+类似的`deferred.rejectWith( context [, args ] )`
