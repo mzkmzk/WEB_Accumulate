@@ -14,5 +14,7 @@
 
 `deferred.fail(doneCallbacks)`
 
+## deferred.pipe()
+
 
 
