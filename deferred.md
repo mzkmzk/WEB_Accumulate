@@ -2,23 +2,35 @@
 
 # API
 
-## deferred.done
+### deferred.done
 
 当deferred.resolve被触发的时候,就会通知注册在done里面的事件触发
 
-`deferred.done(doneCallbacks)`
+`deferred.done( doneCallbacks [, doneCallbacks ] )`
 
 ## deferred.fail
 
 当deferred.reject被触发的时候,就会通知注册在done里面的事件触发
 
-`deferred.fail(doneCallbacks)`
+`deferred.fail( failCallbacks [, failCallbacks ] )`
 
 ## deferred.progress
 
+添加消息回调函数
+
 `deferred.progress( progressCallbacks [, progressCallbacks ] )`
 
-添加消息回调函数
+## deferred.then
+
+同时添加到成功回调,失败回调,消息回调函数
+
+deferred.then( doneFilter [, failFilter ] [, progressFilter ] )
+
+## deferred.always
+
+添加回调函数,当异步队列处于成功或失败状态时被调用
+
+deferred.always( alwaysCallbacks [, alwaysCallbacks ] )
 
 ## deferred.pipe
 
