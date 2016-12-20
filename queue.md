@@ -6,6 +6,14 @@
 
 # API
 
+## jQuery.queue(elem, type, data)
+
+返回或修改匹配元素关联的函数队列
+
+## jQuery.dequeue(elem, type)
+
+出队并执行匹配元素关联的函数队列中下一个函数
+
 ## .queue
 
 作用: 放入队列
@@ -39,6 +47,11 @@ queueName: 默认'fx':String
 
 queueName: 默认'fx':String
 ```
+
+## .promise(type, object)
+
+返回一个队列的只读副本,观察每个匹配元素关联的某个类型的函数队列和计数器是否完成
+
 
 # 结构
 
