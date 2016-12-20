@@ -86,6 +86,8 @@ _queueHooks: function( elem, type ) {
 }
 ```
 
+可在elem添加empty属性,方便去掉队列里的缓存数据
+
 
 
 
