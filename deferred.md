@@ -125,7 +125,12 @@ jQuery.exted({
                state(),//返回当前state
                always(),//成功or失败都执行
                pipe(),//不建议使用
-               then(),
+               then: function( onFulfilled, onRejected, onProgress ) {
+                   function resolve( depth, deferred, handler, special ) {
+                       mightThrow = function() {}
+                       process = mightThrow;
+                   }
+               },
                promise()
             },
         jQuery.each( tuples, function( i, tuple ) {
@@ -168,7 +173,7 @@ jQuery.exted({
 0. `resolve`: 提供执行成功回调的方法名.resolve()
 1. `done`: 提供添加成功回调的方法名 .done()
 2. `jQuery.Callbacks( "once memory" )`: 在.done时,相当于执行callbacks.add,在.resolve时相当于执行这个callbacks.fireWith
-3. `jQuery.Callbacks( "once memory" )`
+3. `jQuery.Callbacks( "once memory" )`: 在只读副本上,存储内部要触发的回调列表
 4. `0`: 仅在`pipe()`方法使用
 5. `resolved` //表示成功状态对应的名称
 ```
