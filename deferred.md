@@ -173,7 +173,7 @@ jQuery.exted({
 拿tuples[1] 即成功举例
 
 ```javascript
-0. `resolve`
+0. `resolve`: 提供方法名.resolve()
 1. `done`
 2. `jQuery.Callbacks( "once memory" )`
 3. `jQuery.Callbacks( "once memory" )`
