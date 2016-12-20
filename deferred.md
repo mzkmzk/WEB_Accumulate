@@ -125,5 +125,5 @@ jQuery.exted({
 
 # 疑问
 
-## 为什么只有notify的回调队列不同于resolve和reject
+## tuples的定义
 
