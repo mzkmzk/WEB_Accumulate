@@ -146,12 +146,12 @@ jQuery.exted({
 
                 list.add( tuple[ 3 ].fire );
 
-                deferred[ tuple[ 0 ] ] = function() { //对withapi进行封装
+                deferred[ tuple[ 0 ] ] = function() { //对.notify() .resolve() .reject()进行封装
                     deferred[ tuple[ 0 ] + "With" ]( this === deferred ? undefined : this, arguments );
                     return this;
                 };
 
-                deferred[ tuple[ 0 ] + "With" ] = list.fireWith; //对withapi进行封装
+                deferred[ tuple[ 0 ] + "With" ] = list.fireWith; //对.notifyWith() .resolveWith()  .rejectWith()进行封装
             } );
 
             promise.promise( deferred );
