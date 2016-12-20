@@ -147,6 +147,7 @@
                 * [ajax库实现](ajaxku_shi_xian.md)
                 * [Callbacks](异步队列.md)
                 * [Deferred](deferred.md)
+                * [when](when.md)
                 * [queue](queue.md)
                 * [数据缓存Data](数据缓存data.md)
                 * [core](core.md)
