@@ -20,7 +20,7 @@ $.when(
 
 # 结构
 
-
+这个的代码相对好理解.
 ```javascript
 function adoptValue( value, resolve, reject ) {
     var method;
