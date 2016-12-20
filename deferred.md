@@ -131,7 +131,7 @@ jQuery.exted({
                        process = mightThrow;
                        process();
                    }
-                   return return jQuery.Deferred( function( newDefer ) {
+                   return jQuery.Deferred( function( newDefer ) {
                        ...
                        tuples[ 1 ][ 3 ].add(
 							resolve(
