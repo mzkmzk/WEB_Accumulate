@@ -129,6 +129,20 @@ jQuery.exted({
                    function resolve( depth, deferred, handler, special ) {
                        mightThrow = function() {}
                        process = mightThrow;
+                       process();
+                   }
+                   return return jQuery.Deferred( function( newDefer ) {
+                       ...
+                       tuples[ 1 ][ 3 ].add(
+							resolve(
+								0,
+								newDefer,
+								jQuery.isFunction( onFulfilled ) ?
+									onFulfilled :
+									Identity
+							)
+						);
+						...
                    }
                },
                promise()
