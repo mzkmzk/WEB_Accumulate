@@ -73,7 +73,7 @@ jQuery.fn.extend( {
 
 ## 出列操作
 
-## 去除缓存
+## 设置去除缓存函数
 
 ```javascript
 _queueHooks: function( elem, type ) {
