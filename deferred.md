@@ -113,11 +113,11 @@ jQuery.exted({
     Deferred: function( func ) {
         var tuples = [
             	[ "notify", "progress", jQuery.Callbacks( "memory" ),
-					jQuery.Callbacks( "memory" ), 2 ], //通知回调
+					jQuery.Callbacks( "memory" ), 2 ], //通知回调列表
 				[ "resolve", "done", jQuery.Callbacks( "once memory" ),
-					jQuery.Callbacks( "once memory" ), 0, "resolved" ],
+					jQuery.Callbacks( "once memory" ), 0, "resolved" ], //成功回调列表
 				[ "reject", "fail", jQuery.Callbacks( "once memory" ),
-					jQuery.Callbacks( "once memory" ), 1, "rejected" ]
+					jQuery.Callbacks( "once memory" ), 1, "rejected" ] // 失败回调列表
         ],
     }
 })
