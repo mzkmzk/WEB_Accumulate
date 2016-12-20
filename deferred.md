@@ -178,5 +178,5 @@ jQuery.exted({
 2. `jQuery.Callbacks( "once memory" )`: 在.done时,相当于执行callbacks.add,在.resolve时相当于执行这个callbacks.fireWith
 3. `jQuery.Callbacks( "once memory" )`
 4. `0`: 仅在`pipe()`方法使用
-5. `resolved` //表示异步回调的状态名称
+5. `resolved` //表示成功状态对应的名称
 ```
