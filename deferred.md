@@ -119,12 +119,15 @@ jQuery.exted({
 				[ "reject", "fail", jQuery.Callbacks( "once memory" ),
 					jQuery.Callbacks( "once memory" ), 1, "rejected" ] // 失败回调列表
         ],
-        state = 'pending',//初始化为 待定状态
-        deferred = {},//
-        promise = {
-           state(),//返回当前state
-           always(),//
-        },
+            state = 'pending',//初始化为 待定状态
+            deferred = {},//
+            promise = {
+               state(),//返回当前state
+               always(),//
+            },
+        jQuery.each( tuples, function( i, tuple ) {
+            
+        });
     }
 })
 ```
