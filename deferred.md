@@ -173,8 +173,8 @@ jQuery.exted({
 拿tuples[1] 即成功举例
 
 ```javascript
-0. `resolve`: 提供方法名.resolve()
-1. `done`
+0. `resolve`: 提供执行成功回调的方法名.resolve()
+1. `done`: 提供添加成功回调的方法名 .done()
 2. `jQuery.Callbacks( "once memory" )`: 在resolve时相当于执行这个callbacks.fireWith
 3. `jQuery.Callbacks( "once memory" )`
 4. `0`: 仅在`pipe()`方法使用
