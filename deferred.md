@@ -109,6 +109,7 @@ filtered.done(function( value ) {
 # 结构
 
 ```javascript
+//以下代码被我简化过,很多判断条件去掉,方便阅读
 jQuery.exted({
     Deferred: function( func ) {
         var tuples = [
