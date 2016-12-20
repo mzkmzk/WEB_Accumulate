@@ -126,7 +126,41 @@ jQuery.exted({
                always(),//
             },
         jQuery.each( tuples, function( i, tuple ) {
-            
+            var list = tuple[ 2 ], //回调队列 
+                    stateString = tuple[ 5 ]; //状态对应的string名称 
+
+                promise[ tuple[ 1 ] ] = list.add; //把callback.add给到对应的progress done fail 
+
+                if ( stateString ) { //成功/失败的回调队列,消息队列不在这循环里
+                    list.add(
+                        function() {
+                            state = stateString;
+                        },
+
+                        tuples[ 3 - i ][ 2 ].disable, //不能使用add和fire 当成功时disable掉失败的 当失败时disable掉成功的
+
+                        // progress_callbacks.lock
+                        tuples[ 0 ][ 2 ].lock //不能使用add  锁定消息队列 
+                    );
+                }
+
+                list.add( tuple[ 3 ].fire );
+
+                deferred[ tuple[ 0 ] ] = function() { //对withapi进行封装
+                    deferred[ tuple[ 0 ] + "With" ]( this === deferred ? undefined : this, arguments );
+                    return this;
+                };
+
+                deferred[ tuple[ 0 ] + "With" ] = list.fireWith; //对withapi进行封装
+            } );
+
+            promise.promise( deferred );
+
+            if ( func ) {
+                func.call( deferred, deferred );
+            }
+
+            return deferred;            
         });
     }
 })
@@ -135,4 +169,6 @@ jQuery.exted({
 # 疑问
 
 ## tuples的定义
+
+
 
