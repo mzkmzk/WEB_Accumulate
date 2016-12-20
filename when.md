@@ -14,4 +14,6 @@ $.when(
    $.ajax(),
    $.ajax(),
 ).done(whenDone).fail(whenFail)
+
+//whenDone里得到的数组是ajax里全部success时的得到的参数
 ```
