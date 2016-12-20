@@ -123,7 +123,10 @@ jQuery.exted({
             deferred = {},//
             promise = {
                state(),//返回当前state
-               always(),//
+               always(),//成功or失败都执行
+               pipe(),//不建议使用
+               then(),
+               promise()
             },
         jQuery.each( tuples, function( i, tuple ) {
             var list = tuple[ 2 ], //回调队列 
