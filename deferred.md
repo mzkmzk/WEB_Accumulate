@@ -121,7 +121,6 @@ jQuery.exted({
 					jQuery.Callbacks( "once memory" ), 1, "rejected" ] // 失败回调列表
         ],
             state = 'pending',//初始化为 待定状态
-            deferred = {},//
             promise = {
                state(),//返回当前state
                always(),//成功or失败都执行
@@ -149,6 +148,7 @@ jQuery.exted({
                },
                promise()
             },
+            deferred = {},// 最终返回的对象
         jQuery.each( tuples, function( i, tuple ) {
             var list = tuple[ 2 ], //回调队列 
                     stateString = tuple[ 5 ]; //状态对应的string名称 
