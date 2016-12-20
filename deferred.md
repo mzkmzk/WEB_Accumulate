@@ -179,7 +179,8 @@ jQuery.exted({
 })
 ```
 
-在then方法里,主要模仿https://promisesaplus.com,支持接口
+在then方法里,主要模仿https://promisesaplus.com
+支持接口
 
 # 疑问
 
