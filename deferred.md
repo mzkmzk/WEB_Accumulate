@@ -122,9 +122,9 @@ jQuery.exted({
         ],
             state = 'pending',//初始化为 待定状态
             promise = {
-               state(),//返回当前state
-               always(),//成功or失败都执行
-               pipe(),//不建议使用
+               state: function(),//返回当前state
+               always: function(),//成功or失败都执行
+               pipe: function(),//不建议使用
                then: function( onFulfilled, onRejected, onProgress ) {
                    function resolve( depth, deferred, handler, special ) {
                        mightThrow = function() {}
@@ -146,7 +146,7 @@ jQuery.exted({
 						...
                    }
                },
-               promise()
+               promise: function()//提供
             },
             deferred = {},// 最终返回的对象
         jQuery.each( tuples, function( i, tuple ) {
