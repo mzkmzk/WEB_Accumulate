@@ -170,5 +170,11 @@ jQuery.exted({
 
 ## tuples的定义
 
+拿tuples[1] 即成功举例
 
-
+1. `resolve`
+2. `done`
+3. `jQuery.Callbacks( "once memory" )`
+4. `jQuery.Callbacks( "once memory" )`
+5. `0`: 
+6. `resolved`
