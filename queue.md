@@ -73,7 +73,7 @@ jQuery.fn.extend( {
 
 ## 出列操作
 
-## 生成钩子
+## 去除缓存
 
 ```javascript
 _queueHooks: function( elem, type ) {
