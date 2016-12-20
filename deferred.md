@@ -62,6 +62,24 @@ deferred.always( alwaysCallbacks [, alwaysCallbacks ] )
 
 `deferred.state()`
 
+## deferred.catch
+
+`注意: 在jquery3.0版本才引入该api`
+
+deferred.catch( fn )的作用和deferred.then(nulll, fn)作用一样
+
+example
+
+```javascript
+$.get( "test.php" )
+  .then( function() {
+    alert( "$.get succeeded" );
+  } )
+  .catch( function() {
+    alert( "$.get failed!" );
+  } );
+```
+
 ## deferred.pipe
 
 `不建议使用`
