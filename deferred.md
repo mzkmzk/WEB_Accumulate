@@ -113,7 +113,7 @@ jQuery.exted({
     Deferred: function( func ) {
         var tuples = [
             	[ "notify", "progress", jQuery.Callbacks( "memory" ),
-					jQuery.Callbacks( "memory" ), 2 ],
+					jQuery.Callbacks( "memory" ), 2 ], //通知回调
 				[ "resolve", "done", jQuery.Callbacks( "once memory" ),
 					jQuery.Callbacks( "once memory" ), 0, "resolved" ],
 				[ "reject", "fail", jQuery.Callbacks( "once memory" ),
@@ -123,5 +123,7 @@ jQuery.exted({
 })
 ```
 
+# 疑问
 
+## 为什么只有notify的回调队列不同于resolve和reject
 
