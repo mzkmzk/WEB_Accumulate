@@ -32,28 +32,6 @@ deferred.then( doneFilter [, failFilter ] [, progressFilter ] )
 
 deferred.always( alwaysCallbacks [, alwaysCallbacks ] )
 
-## deferred.pipe
-
-`不建议使用`
-
-提供链式使用或过滤一下函数
-
-`deferred.pipe( [doneFilter ] [, failFilter ] [, progressFilter ] )`
-
-过滤的demo
-
-```javascript
-var defer = $.Deferred(),
-  filtered = defer.pipe(function( value ) {
-    return value * 2;
-  });
- 
-defer.resolve( 5 );
-filtered.done(function( value ) {
-  alert( "Value is ( 2*5 = ) 10: " + value );
-});
-```
-
 ## deferred.resolve
 
 使用指定的参数调用所有成功回调函数,异步队列进入成功状态
@@ -83,6 +61,32 @@ filtered.done(function( value ) {
 判断异步队列当前的状态
 
 `deferred.state()`
+
+## deferred.pipe
+
+`不建议使用`
+
+提供链式使用或过滤一下函数
+
+`deferred.pipe( [doneFilter ] [, failFilter ] [, progressFilter ] )`
+
+过滤的demo
+
+```javascript
+var defer = $.Deferred(),
+  filtered = defer.pipe(function( value ) {
+    return value * 2;
+  });
+ 
+defer.resolve( 5 );
+filtered.done(function( value ) {
+  alert( "Value is ( 2*5 = ) 10: " + value );
+});
+```
+
+## deferred.promise
+
+返回当前Deferred对象的只读副本,或者为普通对象增加异步队列的功能
 
 
 
