@@ -60,4 +60,31 @@ filtered.done(function( value ) {
 
 `deferred.resolve( [args ] )`
 
+类似的`deferred.resolveWith( context [, args ] )`
+
+## deferred.reject
+
+使用指定的参数调用所有失败回调函数,异步队列进入失败状态
+
+`deferred.reject( [args] )`
+
 类似的`deferred.rejectWith( context [, args ] )`
+
+## deferred.notify
+
+使用指定的参数调用消息回调函数
+
+`deferred.notify ( [args] )`
+
+类似的`deferred.notifyWith( context, [args] )`
+
+## deferred.state
+
+判断异步队列当前的状态
+
+`deferred.state()`
+
+
+
+
+
