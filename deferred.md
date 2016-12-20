@@ -132,7 +132,8 @@ jQuery.exted({
                        process();
                    }
                    return jQuery.Deferred( function( newDefer ) {
-                       ...
+                       ...//tuples[ 0 ][ 3 ]
+                       ...//tuples[ 2 ][ 3 ]
                        tuples[ 1 ][ 3 ].add(
 							resolve(
 								0,
