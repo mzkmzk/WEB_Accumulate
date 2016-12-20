@@ -48,6 +48,13 @@ jQuery.extend({
     dequeue( elem, type ) //出列
     _queueHooks(elem, type)//生成或返回当前执行函数的队列钩子
 })
+
+jQuery.fn.extend( {
+    queue: function( type, data){},
+    dequeue: function( type ){},
+    cleaQueue: function( type ){},
+    promise: function( type, obj ){}
+})
 ```
 
 # 注意点
