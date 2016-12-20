@@ -106,7 +106,22 @@ filtered.done(function( value ) {
 
 返回当前Deferred对象的只读副本,或者为普通对象增加异步队列的功能
 
+# 结构
 
+```javascript
+jQuery.exted({
+    Deferred: function( func ) {
+        var tuples = [
+            	[ "notify", "progress", jQuery.Callbacks( "memory" ),
+					jQuery.Callbacks( "memory" ), 2 ],
+				[ "resolve", "done", jQuery.Callbacks( "once memory" ),
+					jQuery.Callbacks( "once memory" ), 0, "resolved" ],
+				[ "reject", "fail", jQuery.Callbacks( "once memory" ),
+					jQuery.Callbacks( "once memory" ), 1, "rejected" ]
+        ],
+    }
+})
+```
 
 
 
