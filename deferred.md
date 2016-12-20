@@ -177,6 +177,6 @@ jQuery.exted({
 1. `done`
 2. `jQuery.Callbacks( "once memory" )`
 3. `jQuery.Callbacks( "once memory" )`
-4. `0`: 
-5. `resolved`
+4. `0`: 仅在`pipe()`方法使用
+5. `resolved` //表示异步回调的状态名称
 ```
