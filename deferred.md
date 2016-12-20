@@ -175,7 +175,7 @@ jQuery.exted({
 ```javascript
 0. `resolve`: 提供执行成功回调的方法名.resolve()
 1. `done`: 提供添加成功回调的方法名 .done()
-2. `jQuery.Callbacks( "once memory" )`: 在resolve时相当于执行这个callbacks.fireWith
+2. `jQuery.Callbacks( "once memory" )`: 在.done时,相当于执行callbacks.add,在.resolve时相当于执行这个callbacks.fireWith
 3. `jQuery.Callbacks( "once memory" )`
 4. `0`: 仅在`pipe()`方法使用
 5. `resolved` //表示异步回调的状态名称
