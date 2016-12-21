@@ -12,6 +12,25 @@ jQuery.event = {
     dispatch: function ( nativeEvent) {},//
     handlers: function( event, handles) {},//
     addProp: function( name, hook){},//
+    fix: function( originalEvent ){},//
+    special: {
+        load: {},//
+        focus: {
+            tirgger: function(){},
+            delegateType: "focusin"
+        },//
+        blur: {
+            tirgger: function(){},
+            delegateType: "focusout"
+        },
+        click: {
+            trigger: function(){},
+            _default: function ( event ){}
+        },
+        beforeunload: {
+            postDispatch: function( event ){}
+        }
+    }
 }
 
 
