@@ -11,9 +11,9 @@
 .click() //点击
 .contextmenu() //右键
 .dbclick() //双击
-.delegate() // 弃用
-.die()
-.error()
+.delegate() // 弃用 和on类似
+.die() //弃用 移除了用live绑定的事件
+.error()//
 event.currentTarget
 event.data
 event.delegateTarget
