@@ -6,8 +6,8 @@
 
 ```javascript
 .bind() //不建议使用 和.on类似
-.blur()
-.change()
+.blur() //绑定或触发失去焦点
+.change() //
 .click()
 .contextmenu()
 .dbclick()

@@ -12,6 +12,7 @@
             * [事件管理](shi_jian_guan_li.md)
                 * [K\_Event\_Plugin](kevent_plugin.md)
                 * [图片Onload事件](tu_pian_onload_shi_jian.md)
+                * [onchange](onchange.md)
             * [使用fetch](shi_yong_fetch.md)
             * [performance](performance.md)
             * [函数节流与反抖](han_shu_jie_liu.md)
