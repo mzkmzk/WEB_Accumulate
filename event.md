@@ -59,7 +59,7 @@ jQuery.proxy()
 .trigger()//主动触发
 .triggerHandler()//和tirgger,但不会触发浏览器的默认行为
 .unbind()//取消绑定
-.undelegate()
+.undelegate()//和unbind类似
 
 ```
 
