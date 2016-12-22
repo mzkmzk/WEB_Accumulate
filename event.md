@@ -14,7 +14,7 @@
 .delegate() // 弃用 和on类似
 .die() //弃用 移除了用live绑定的事件
 .error()// 一般用于img的error
-event.currentTarget //和 this一样
+event.currentTarget //和 this一样 绑定时匹配的元素
 event.data //给event绑定data
 event.delegateTarget //$( ".box" ).on( "click", "button" 中匹配到的`.box`
 event.isDefaultPrevented()//是否执行了preventDefault
@@ -29,7 +29,7 @@ event.relatedTarget //刚有关的target,现在已经被更新
 event.result // 同一元素,同一触发类型,的之前一个被触发时,return的值
 event.stopImmediatePropagation()//stopPropagation+阻止同级的事件
 event.stopPropagation()//阻止冒泡
-event.target 
+event.target //真正被点击的元素
 event.timeStamp
 event.type
 event.which
