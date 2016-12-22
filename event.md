@@ -48,17 +48,16 @@ jQuery.proxy()
 .mouseout()//设置或触发鼠标离开区域
 .mouseover()//设置或触发鼠标进入区域
 .mouseup() //设置或触发鼠标右键松开
-.off()
-.on()
-.one()
-.ready()
-.resize()
-.scroll()
-.select()
-.submit()
-.toggle()
-.trigger()
-.triggerHandler()
+.off()//清除事件
+.on()//绑定事件
+.one()//对同一元素,只触发一次
+.ready()//DOM加载完成时
+.resize()//当窗口发生大小变化时
+.scroll()//滚轮滚时
+.select()//选择上内容时
+.submit()//表单提交
+.trigger()//主动触发
+.triggerHandler()//执行匹配元素所有符合type的事件
 .unbind()
 .undelegate()
 
