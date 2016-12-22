@@ -36,7 +36,7 @@ event.which //监听键盘或鼠标具体的操作值
 .focus() //绑定或触发 获取焦点
 .focusin() //绑定或触发 获取焦点
 .focusout() //绑定或触发 失去焦点
-.hover() //悬浮在上面时 ,不支持主动触发
+.hover() // 绑定或触发 悬浮
 jQuery.proxy()
 .keydown()
 .keypress()
