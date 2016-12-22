@@ -5,7 +5,7 @@
 和Event相关的API巨多
 
 ```javascript
-.bind()
+.bind() //不建议使用 和.on类似
 .blur()
 .change()
 .click()
