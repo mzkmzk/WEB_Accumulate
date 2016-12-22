@@ -42,12 +42,12 @@ jQuery.proxy()
 .keypress()//设置或触发键盘按住
 .keyup()//设置或触发键盘松开
 .mousedown() //设置或触发鼠标左键按下
-.mouseenter()//设置或触发键盘按住
-.mouseleave()//设置或触发键盘松开
-.mousemove()//设置或触发进入区域
+.mouseenter()//设置或触发鼠标左键按住,类似mouseover,但不冒泡
+.mouseleave()//设置或触发鼠标左键松开,类似mouseout,但不冒泡
+.mousemove()//设置或触发鼠标移动
 .mouseout()//设置或触发鼠标离开区域
-.mouseover()
-.mouseup()
+.mouseover()//设置或触发鼠标进入区域
+.mouseup() //设置或触发鼠标右键松开
 .off()
 .on()
 .one()
