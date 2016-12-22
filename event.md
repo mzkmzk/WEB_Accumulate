@@ -20,7 +20,7 @@ event.delegateTarget //$( ".box" ).on( "click", "button" 中匹配到的`.box`
 event.isDefaultPrevented()//是否执行了preventDefault
 event.isImmediatePropagationStopped()//是否执行了stopImmediatePropagation 
 event.isPropagationStopped() //是否阻止了事件冒泡
-event.metaKey
+event.metaKey//boolean 是否按住了win/command
 event.namespace
 event.pageX
 event.pageY
