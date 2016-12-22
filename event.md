@@ -16,7 +16,7 @@
 .error()// 一般用于img的error
 event.currentTarget //和 this一样
 event.data //给event绑定data
-event.delegateTarget //
+event.delegateTarget //$( ".box" ).on( "click", "button" 中匹配到的`.box`
 event.isDefaultPrevented()
 event.isImmediatePropagationStopped()
 event.isPropagationStopped()
