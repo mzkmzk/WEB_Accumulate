@@ -71,14 +71,21 @@ function on ( elem, types, selector, data, fn, one){}
 
 jQuery.event = {
     global: {},
-    add: function( elem, types, handler, data, selector ) {},//
-    remove: function (elem, types, handler, selector, mappedTypes){},//
-    dispatch: function ( nativeEvent) {},//
-    handlers: function( event, handles) {},//
-    addProp: function( name, hook){},//
-    fix: function( originalEvent ){},//
+    //绑定一个或多个类型的事件监听函数
+    add: function( elem, types, handler, data, selector ) {},
+    //移除一个或多个类型的事件监听函数
+    remove: function (elem, types, handler, selector, mappedTypes){},
+    //分法事件,执行事件监听函数
+    dispatch: function ( nativeEvent) {},
+    //
+    handlers: function( event, handles) {},
+    //添加事件对象的公共属性
+    addProp: function( name, hook){},
+    //事件属性修正对象集
+    fix: function( originalEvent ){},
+    //事件修正对象集
     special: {
-        load: {},//
+        load: {},
         focus: {
             tirgger: function(){},
             delegateType: "focusin"
