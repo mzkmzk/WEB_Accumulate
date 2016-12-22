@@ -7,11 +7,11 @@
 ```javascript
 .bind() //不建议使用 和.on类似
 .blur() //绑定或触发失去焦点
-.change() //
-.click()
-.contextmenu()
-.dbclick()
-.delegate()
+.change() //改变值事件
+.click() //点击
+.contextmenu() //右键
+.dbclick() //双击
+.delegate() //
 .die()
 .error()
 event.currentTarget
