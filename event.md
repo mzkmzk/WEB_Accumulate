@@ -17,8 +17,8 @@
 event.currentTarget //和 this一样
 event.data //给event绑定data
 event.delegateTarget //$( ".box" ).on( "click", "button" 中匹配到的`.box`
-event.isDefaultPrevented()
-event.isImmediatePropagationStopped()
+event.isDefaultPrevented()//是否执行了preventDefault
+event.isImmediatePropagationStopped()//是否执行了stopImmediatePropagation
 event.isPropagationStopped()
 event.metaKey
 event.namespace
