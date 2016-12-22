@@ -57,7 +57,7 @@ jQuery.proxy()
 .select()//选择上内容时
 .submit()//表单提交
 .trigger()//主动触发
-.triggerHandler()//执行匹配元素所有符合type的事件
+.triggerHandler()//和tirgger,但不会触发浏览器的默认行为
 .unbind()
 .undelegate()
 
