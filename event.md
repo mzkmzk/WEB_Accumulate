@@ -188,7 +188,7 @@ jQuery.fn.extend( {
 	},
 	off: function( types, selector, fn ) {
 	    ....
-	return this.each( function() {
+	    return this.each( function() {
 			jQuery.event.remove( this, types, fn, selector );
 		} );
 	}
