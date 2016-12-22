@@ -66,7 +66,12 @@ jQuery.proxy()
 # 结构
 
 ```javascript
-function on ( elem, types, selector, data, fn, one){}
+function on ( elem, types, selector, data, fn, one){
+    ...
+    return elem.each( function() {
+		jQuery.event.add( this, types, fn, data, selector );
+	} );
+}
 
 jQuery.event = {
     global: {},
