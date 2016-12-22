@@ -200,7 +200,22 @@ jQuery.fn.extend( {
 ```javascript
 jQuery.event = {
     add: function( elem, types, handler, data, selector ) {
-        
+        ...
+        elemData = dataPriv.get( elem )//获取缓存对象
+        ...
+        if ( !( events = elemData.events ) ) {
+			events = elemData.events = {};
+		}
+		if ( !( eventHandle = elemData.handle ) ) {
+			eventHandle = elemData.handle = function( e ) {
+				return typeof jQuery !== "undefined" && jQuery.event.triggered !== e.type ?
+					jQuery.event.dispatch.apply( elem, arguments ) : undefined;
+			};
+		}
+	...
+        elem.addEventListener( type, eventHandle );
     }
 }
 ```
+
+其实原理是这样的,原理还是通过addEventListener,但是其引用了数据缓存,缓存了handler
