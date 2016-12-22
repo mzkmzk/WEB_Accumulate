@@ -44,8 +44,8 @@ jQuery.proxy()
 .mousedown() //设置或触发鼠标左键按下
 .mouseenter()//设置或触发键盘按住
 .mouseleave()//设置或触发键盘松开
-.mousemove()//设置或触发键盘进入区域
-.mouseout()//设置或c触
+.mousemove()//设置或触发进入区域
+.mouseout()//设置或触发鼠标离开区域
 .mouseover()
 .mouseup()
 .off()
