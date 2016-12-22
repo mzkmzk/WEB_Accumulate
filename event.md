@@ -11,7 +11,7 @@
 .click() //点击
 .contextmenu() //右键
 .dbclick() //双击
-.delegate() //
+.delegate() // 弃用
 .die()
 .error()
 event.currentTarget
