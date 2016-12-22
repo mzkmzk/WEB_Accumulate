@@ -30,10 +30,10 @@ event.result // 同一元素,同一触发类型,的之前一个被触发时,retu
 event.stopImmediatePropagation()//stopPropagation+阻止同级的事件
 event.stopPropagation()//阻止冒泡
 event.target //真正被点击的元素
-event.timeStamp
-event.type
-event.which
-.focus()
+event.timeStamp //点击的时间戳
+event.type //绑定时1类型
+event.which //监听键盘或鼠标具体的操作值
+.focus() //
 .focusin()
 .focusout()
 .hover()
