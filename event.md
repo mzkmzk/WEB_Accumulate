@@ -195,3 +195,12 @@ jQuery.fn.extend( {
 	}
 } );
 ```
+# 添加事件
+
+```javascript
+jQuery.event = {
+    add: function( elem, types, handler, data, selector ) {
+        
+    }
+}
+```
