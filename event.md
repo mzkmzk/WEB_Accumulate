@@ -38,14 +38,14 @@ event.which //监听键盘或鼠标具体的操作值
 .focusout() //绑定或触发 失去焦点
 .hover() // 绑定或触发 悬浮
 jQuery.proxy()
-.keydown()
-.keypress()
-.keyup()
-.mousedown()
-.mouseenter()
-.mouseleave()
-.mousemove()
-.mouseout()
+.keydown()//设置或触发键盘按下
+.keypress()//设置或触发键盘按住
+.keyup()//设置或触发键盘松开
+.mousedown() //设置或触发鼠标左键按下
+.mouseenter()//设置或触发键盘按住
+.mouseleave()//设置或触发键盘松开
+.mousemove()//设置或触发键盘进入区域
+.mouseout()//设置或c触
 .mouseover()
 .mouseup()
 .off()
