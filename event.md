@@ -33,7 +33,7 @@ event.target //真正被点击的元素
 event.timeStamp //点击的时间戳
 event.type //绑定时1类型
 event.which //监听键盘或鼠标具体的操作值
-.focus() //
+.focus() //绑定或触发获取
 .focusin()
 .focusout()
 .hover()
