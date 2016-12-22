@@ -81,7 +81,7 @@ jQuery.event = {
     handlers: function( event, handles) {},
     //添加事件对象的公共属性
     addProp: function( name, hook){},
-    //事件属性修正对象集
+    //把原生的事件对象封装成jQuery对象,并修正不兼容属性
     fix: function( originalEvent ){},
     //事件修正对象集
     special: {
@@ -104,10 +104,13 @@ jQuery.event = {
     }
 }
 
+//移除监听函数
 jQuery.removeEvent = function( elem, type, handle ) {}
 
+//事件对象
 jQuery.Event = function( src, props ) {}
 
+//原型对象
 jQuery.Event.prototype = {
 	constructor: jQuery.Event,
 	isDefaultPrevented: returnFalse,
