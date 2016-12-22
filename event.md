@@ -21,15 +21,15 @@ event.isDefaultPrevented()//是否执行了preventDefault
 event.isImmediatePropagationStopped()//是否执行了stopImmediatePropagation 
 event.isPropagationStopped() //是否阻止了事件冒泡
 event.metaKey//boolean 是否按住了win/command
-event.namespace
-event.pageX
-event.pageY
-event.preventDefault()
-event.relatedTarget
-event.result
-event.stopImmediatePropagation()
-event.stopPropagation()
-event.target
+event.namespace //返回定义的命名空间
+event.pageX // 距离document边缘的X轴距离
+event.pageY // 距离document边缘的Y轴距离
+event.preventDefault() //阻止默认事件
+event.relatedTarget //刚有关的target,现在已经被更新
+event.result // 同一元素,同一触发类型,的之前一个被触发时,return的值
+event.stopImmediatePropagation()//stopPropagation+阻止同级的事件
+event.stopPropagation()//阻止冒泡
+event.target 
 event.timeStamp
 event.type
 event.which
