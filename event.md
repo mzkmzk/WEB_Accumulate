@@ -58,7 +58,7 @@ jQuery.proxy()
 .submit()//表单提交
 .trigger()//主动触发
 .triggerHandler()//和tirgger,但不会触发浏览器的默认行为
-.unbind()
+.unbind()//取消绑定
 .undelegate()
 
 ```
