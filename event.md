@@ -186,7 +186,12 @@ jQuery.fn.extend( {
 	one: function( types, selector, data, fn ) {
 		return on( this, types, selector, data, fn, 1 );
 	},
-	off: function( types, selector, fn ) {}
+	off: function( types, selector, fn ) {
+	    ....
+	return this.each( function() {
+			jQuery.event.remove( this, types, fn, selector );
+		} );
+	}
 	}
 } );
 ```
