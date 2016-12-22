@@ -18,8 +18,8 @@ event.currentTarget //和 this一样
 event.data //给event绑定data
 event.delegateTarget //$( ".box" ).on( "click", "button" 中匹配到的`.box`
 event.isDefaultPrevented()//是否执行了preventDefault
-event.isImmediatePropagationStopped()//是否执行了stopImmediatePropagation
-event.isPropagationStopped()
+event.isImmediatePropagationStopped()//是否执行了stopImmediatePropagation 
+event.isPropagationStopped() //是否阻止了事件冒泡
 event.metaKey
 event.namespace
 event.pageX
