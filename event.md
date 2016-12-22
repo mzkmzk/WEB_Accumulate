@@ -13,10 +13,10 @@
 .dbclick() //双击
 .delegate() // 弃用 和on类似
 .die() //弃用 移除了用live绑定的事件
-.error()//
-event.currentTarget
-event.data
-event.delegateTarget
+.error()// 一般用于img的error
+event.currentTarget //和 this一样
+event.data //给event绑定data
+event.delegateTarget //
 event.isDefaultPrevented()
 event.isImmediatePropagationStopped()
 event.isPropagationStopped()
