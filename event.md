@@ -195,6 +195,11 @@ jQuery.fn.extend( {
 	}
 } );
 ```
+
+# 触发顺序
+
+1. 浏览器触发事件: 主监听函数->jQuery.event.dispatch()->jQuery.exvent.fix()->jQuery.Event()
+
 # 添加事件
 
 ```javascript
