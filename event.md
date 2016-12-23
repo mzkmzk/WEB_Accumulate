@@ -275,11 +275,6 @@ jQuery.event = {
 
 其实这里的off方法,就是add的反过来,就不说明了.
 
-# 获取回调列表
-
-
-
-
 # 执行监听
 
 jQuery.event.dispath
