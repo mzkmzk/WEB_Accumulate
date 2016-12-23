@@ -273,3 +273,6 @@ jQuery.event = {
 
 .off()->jQuery.event.remove()->removeEventListener()
 
+其实这里的off方法,就是add的反过来,就不说明了.
+
+
