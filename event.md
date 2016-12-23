@@ -198,7 +198,8 @@ jQuery.fn.extend( {
 
 # 触发顺序
 
-1. 浏览器触发事件: 主监听函数->jQuery.event.dispatch()->jQuery.exvent.fix()->jQuery.Event()
+1. 浏览器触发事件: 主监听函数-> jQuery.event.dispatch()-> jQuery.exvent.fix()-> jQuery.Event()
+2. 手动触发: 事件便捷方法()-> tigger()/triggerHandler-> Jquery.Event()
 
 # 添加事件
 
