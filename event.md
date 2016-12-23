@@ -209,17 +209,23 @@ jQuery.event = {
         ...
         elemData = dataPriv.get( elem )//获取缓存对象
         ...
+        
         if ( !( events = elemData.events ) ) {
 			events = elemData.events = {};
 		}
+		//取出或初始化监听函数
 		if ( !( eventHandle = elemData.handle ) ) {
 			eventHandle = elemData.handle = function( e ) {
 				return typeof jQuery !== "undefined" && jQuery.event.triggered !== e.type ?
 					jQuery.event.dispatch.apply( elem, arguments ) : undefined;
 			};
 		}
-	...
-        elem.addEventListener( type, eventHandle );
+	    ...
+	    types = ( types || "" ).match( rnothtmlwhite ) || [ "" ];
+		t = types.length;
+		while ( t-- ) {
+            elem.addEventListener( type, eventHandle );
+        }
     }
 }
 ```
