@@ -126,7 +126,7 @@ jQuery.Event.prototype = {
 	stopImmediatePropagation: function() {}
 }
 
-// Includes all common event props including KeyEvent and MouseEvent specific props
+// 把所有有可能的原生event属性放到jquery.event中
 jQuery.each( {
 	altKey: true,
 	bubbles: true,
