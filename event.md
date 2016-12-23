@@ -269,3 +269,7 @@ jQuery.event = {
 
 # 移除事件
 
+方法调用链
+
+.off()->jQuery.event.remove()->removeEventListener()
+
