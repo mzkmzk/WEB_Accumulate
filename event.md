@@ -284,5 +284,39 @@ jQuery.event.dispath
 3. 执行后代元素匹配的代理监听对象数组和代理元素上绑定的普通监听对象数组
 4. 返回最后一个有返回值的监听函数的返回值
 
+```javascript
+dispatch: function( nativeEvent ) {
+    //获取回调队列
+    handlerQueue = jQuery.event.handlers.call( this, event, handlers );
+    //执行回调函数
+    while ( ( matched = handlerQueue[ i++ ] ) && !event.isPropagationStopped() ) {
+			event.currentTarget = matched.elem;
 
+			j = 0;
+			while ( ( handleObj = matched.handlers[ j++ ] ) &&
+				!event.isImmediatePropagationStopped() ) {
+
+				// Triggered event must either 1) have no namespace, or 2) have namespace(s)
+				// a subset or equal to those in the bound event (both can have no namespace).
+				if ( !event.rnamespace || event.rnamespace.test( handleObj.namespace ) ) {
+
+					event.handleObj = handleObj;
+					event.data = handleObj.data;
+
+					ret = ( ( jQuery.event.special[ handleObj.origType ] || {} ).handle ||
+						handleObj.handler ).apply( matched.elem, args );
+
+					if ( ret !== undefined ) {
+						if ( ( event.result = ret ) === false ) {
+							event.preventDefault();
+							event.stopPropagation();
+						}
+					}
+				}
+			}
+		}
+    
+}
+
+```
 
