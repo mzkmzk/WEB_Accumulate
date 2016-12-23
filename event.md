@@ -111,10 +111,10 @@ jQuery.event = {
 //移除监听函数
 jQuery.removeEvent = function( elem, type, handle ) {}
 
-//事件对象
+//事件对象 创建jQuery自己的Event
 jQuery.Event = function( src, props ) {}
 
-//原型对象
+//jQuery自己的事件对象进行扩展
 jQuery.Event.prototype = {
 	constructor: jQuery.Event,
 	isDefaultPrevented: returnFalse,
