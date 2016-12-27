@@ -6,7 +6,7 @@
 
 # how
 
-1. npm install --save-dev react-hot-loade
+1. npm install --save-dev react-hot-loader
 2. npm install -g webpack-dev-serve
 3. 修改webpack.config.js
 
