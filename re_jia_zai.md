@@ -7,7 +7,7 @@
 # how
 
 1. npm install --save-dev react-hot-loader
-2. npm install --save-dev webpack-dev-server
+2. npm install -g webpack-dev-server
 3. 修改webpack.config.js
 
   ```javascript
