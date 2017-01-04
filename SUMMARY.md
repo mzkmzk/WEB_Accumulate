@@ -97,6 +97,7 @@
             * [webpack使用优化](webpack使用优化.md)
             * [区分测试和正式环境](区分测试和正式环境.md)
             * [CommonsChunkPlugin](commonschunkplugin.md)
+            * [webpack打包插件](webpack打包插件.md)
         * [Node](node.md)
         * [基础文章](基础文章.md)
             * [process对象](process对象.md)
