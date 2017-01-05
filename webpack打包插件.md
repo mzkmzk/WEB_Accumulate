@@ -51,3 +51,5 @@ return /******/ (function(modules) { // webpackBootstrap
 ```
 
 第二种是只babel模块,不打包,由引入方打包,这种是最好的
+
+一般直接babel Src --out-dir Lib即可(先`sudo npm install --global babel-cli`)
