@@ -10,6 +10,8 @@
 
 但是原来是可以的.....
 
+因为之所以.json的文件可以直接require。它的内部就是JSON.parse(readFileSync(json))。
+
 ```javascript
 var package = require("./package.json");
 
