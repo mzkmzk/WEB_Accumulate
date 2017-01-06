@@ -102,6 +102,7 @@
             * [常见错误](常见错误.md)
         * [Node](node.md)
             * [读取package.json](读取packagejson.md)
+            * [常用库](常用库.md)
         * [基础文章](基础文章.md)
             * [process对象](process对象.md)
         * [deepstream.io](deepstreamio.md)
