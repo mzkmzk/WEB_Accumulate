@@ -13,3 +13,4 @@ border-radius设置成正方形的边长即可
 # 参考链接
 
 1. http://www.w3school.com.cn/cssref/pr_border-radius.asp
+2. https://www.w3.org/TR/css3-background/#the-border-radius
