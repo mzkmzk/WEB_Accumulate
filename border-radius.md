@@ -23,7 +23,16 @@
 
 上面就相当于`border-radius: 55pt 25pt`
 
+然后`55和25`就确定了一个椭圆的原点还有x轴(55),y轴(25)的长
+
+得出椭圆公式
+
+$$\frac{x^2}{55^2}+\frac{x^2}{25^2} = 1$$
+
+
+
 # 参考链接
 
 1. http://www.w3school.com.cn/cssref/pr_border-radius.asp
 2. https://www.w3.org/TR/css3-background/#the-border-radius
+3. https://zh.wikipedia.org/wiki/%E6%A4%AD%E5%9C%86
