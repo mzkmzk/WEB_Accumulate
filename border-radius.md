@@ -10,6 +10,12 @@ border-radius设置成正方形的边长即可
 
 * border-radius 属性是一个简写属性，用于设置四个 border-*-radius 属性。
 
+# border-radius设置的值
+
+可以设成px或百分比,但是设的到底是什么?
+
+
+
 # 参考链接
 
 1. http://www.w3school.com.cn/cssref/pr_border-radius.asp
