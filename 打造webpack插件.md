@@ -58,6 +58,14 @@ webpack概念基于
 1. make: w1
 2. compiler.plugin('done', function(){})
 
+# Compiler and Compilation
+
+## Compiler
+
+Compiler对象是webpack环境的配置对象,
+
+compilation是创建assets的,并给大家提供了很多钩子,在中途可以改变assets
+
 # 参考链接
 
 1. https://webpack.github.io/docs/how-to-write-a-plugin.html
