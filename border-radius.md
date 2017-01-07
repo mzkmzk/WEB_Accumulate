@@ -11,9 +11,8 @@
 3. 如果省略 bottom-right，则与 top-left 相同。
 4. 如果省略 top-right，则与 top-left 相同。
 5. 不可能省略top-left的
-
-
-* border-radius 属性是一个简写属性，用于设置四个 border-*-radius 属性。
+6.  
+7.  border-radius 属性是一个简写属性，用于设置四个 border-*-radius 属性。
 
 # border-radius设置的值
 
@@ -30,6 +29,12 @@
 $$\frac{x^2}{55^2}+\frac{x^2}{25^2} = 1$$
 
 ![化椭圆](/assets/200px-Parametric_ellipse.gif)
+
+# 如何画圆
+
+就是四个角都是一个圆,然后就能得出正方形显示成圆形
+
+`border-radius: 50%`(百分比是根据自身的border-box计算的)
 
 # 参考链接
 
