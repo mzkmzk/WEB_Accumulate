@@ -21,7 +21,7 @@
 
 ![border-radius设置](/assets/corner.png)
 
-
+上面左上角就相当于`border-top-left-radius: 55pt 25pt`
 
 # 参考链接
 
