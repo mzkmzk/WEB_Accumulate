@@ -54,6 +54,22 @@ $$\frac{x^2}{55^2}+\frac{x^2}{25^2} = 1$$
 
 这个其实懂个四个原理后,很容易躲避
 
+# 最大能隐藏的面积
+
+根据前面的结论
+
+圆是可以隐藏最多的情况
+
+还有相邻防重叠原因,只设置左上和右下的
+
+例子
+
+![radius最小面积](/assets/QQ20170107-1.png)
+
+https://jsfiddle.net/404_K/6edc5ja0/3/
+
+
+
 # 参考链接
 
 1. http://www.w3school.com.cn/cssref/pr_border-radius.asp
