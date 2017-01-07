@@ -6,5 +6,7 @@
 
 border-radius设置成正方形的边长即可
 
+语法: `border-radius: 1-4 length|% / 1-4 length|%;`
+
 * border-radius 属性是一个简写属性，用于设置四个 border-*-radius 属性。
 
