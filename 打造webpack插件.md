@@ -60,4 +60,5 @@ webpack概念基于
 
 # 参考链接
 
-1. https://webpack.github.io/docs/plugins.html#the-compiler-instance
+1. https://webpack.github.io/docs/how-to-write-a-plugin.html
+2. https://webpack.github.io/docs/plugins.html#the-compiler-instance
