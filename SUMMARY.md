@@ -124,6 +124,7 @@
             * [图片正方形弄成圆形居中](图片正方形弄成圆形居中.md)
         * [常用API](常用api.md)
             * [border-radius](border-radius.md)
+            * [clip-path](clip-path.md)
     * [HTML](_html.md)
         * [兼容问题](__jian_rong_wen_ti.md)
             * [基本](jiben__.md)
