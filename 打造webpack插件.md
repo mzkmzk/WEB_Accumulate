@@ -73,6 +73,7 @@ compiler.plugin("compilation", function(compilation) {
 
 compilation是创建assets的,并给大家提供了很多钩子,在中途可以改变assets
 
+这里....太多了..还有`MAINTEMPLATE`和`PARSER`..钩子太多了......笔者也没用到......可以参考参考链接2细看...
 生命周期
 
 # 参考链接
