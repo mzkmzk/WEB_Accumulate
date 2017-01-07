@@ -56,6 +56,11 @@ webpack概念基于
 打包过程
 
 1. make: w1
+2. complie(编译任务):
+3. after-complie(编译完成):
+4. emit(即将生成文件)
+5. after-emit(生成文件之后)
+6. ...其他任务
 2. compiler.plugin('done', function(){})
 
 # Compiler and Compilation
