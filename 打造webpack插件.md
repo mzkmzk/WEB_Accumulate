@@ -59,13 +59,13 @@ Compiler对象是webpack环境的配置对象
 13. after-plugins()
 14. after-resolvers()
 
-其实前个一般是webpack处理,后面的才会有钩子
+其实前两个个一般是webpack处理,后面的才会有钩子
 
 引用方法
 
 ```javascript
-compiler.plugin("compile", function(params) {
-    //you are now in the "compile" phase
+compiler.plugin("compilation", function(compilation) {
+    //you are now in the "compilation" phase
 });
 ```
 
