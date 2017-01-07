@@ -36,6 +36,16 @@ $$\frac{x^2}{55^2}+\frac{x^2}{25^2} = 1$$
 
 `border-radius: 50%`(百分比是根据自身的border-box计算的)
 
+# 椭圆能影响的部分
+
+如果四个角都设置了radius
+
+会形成内部四个椭圆,但每个椭圆只能影响自己所在的角的部分
+
+例如`border-top-left-radius`只能影响左上部分
+
+
+
 # 参考链接
 
 1. http://www.w3school.com.cn/cssref/pr_border-radius.asp
