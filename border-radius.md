@@ -29,7 +29,7 @@
 
 $$\frac{x^2}{55^2}+\frac{x^2}{25^2} = 1$$
 
-
+![化椭圆](/assets/200px-Parametric_ellipse.gif)
 
 # 参考链接
 
