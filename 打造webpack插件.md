@@ -35,41 +35,45 @@ var webpackConfig = {
 };
 ```
 
-# webpack打包流程
-
-首先webpack的作用是?
-
-1. 打包
-2. 对文件进行特殊编译
-
-其实是一个的输入和输出的过程
-
-输入当然就是我们设置的webpack.config.js和源代码
-
-而webpack就是通过其自身和插件,处理并帮助我们完成任务
-
-webpack概念基于
-
-1. chunks: 在webpack中你所定义的模块
-2. assets 输出的文件
-
-打包过程
-
-1. make: w1
-2. complie(编译任务):
-3. after-complie(编译完成):
-4. emit(即将生成文件)
-5. after-emit(生成文件之后)
-6. ...其他任务
-2. compiler.plugin('done', function(){})
 
 # Compiler and Compilation
 
 ## Compiler
 
-Compiler对象是webpack环境的配置对象,
+Compiler对象是webpack环境的配置对象
+
+生命周期
+
+1. run(compiler: Compiler) async
+2. watch-run(watching: Watching) async
+3. compilation(c: Compilation, params: Object)
+4. context-module-factory(cmf: ContextModuleFactory)
+5. compile(params)
+6. make(c: Compilation) parallel
+7. after-compile(c: Compilation) async
+8. emit(c: Compilation) async
+9. after-emit(c: Compilation) async
+10. done(stats: Stats)
+11. failed(err: Error)
+12. invalid()
+13. after-plugins()
+14. after-resolvers()
+
+其实前个一般是webpack处理,后面的才会有钩子
+
+引用方法
+
+```javascript
+compiler.plugin("compile", function(params) {
+    //you are now in the "compile" phase
+});
+```
+
+## Compilation
 
 compilation是创建assets的,并给大家提供了很多钩子,在中途可以改变assets
+
+生命周期
 
 # 参考链接
 
