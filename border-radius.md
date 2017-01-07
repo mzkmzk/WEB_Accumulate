@@ -11,7 +11,7 @@
 3. 如果省略 bottom-right，则与 top-left 相同。
 4. 如果省略 top-right，则与 top-left 相同。
 5. 不可能省略top-left的
-6.  
+6.  当任意两个相邻椭圆的半径纸盒超过了border-box的尺寸时,浏览器会按比例减少各个边框半径所使的值,直到他们不会相互重叠位置
 7.  border-radius 属性是一个简写属性，用于设置四个 border-*-radius 属性。
 
 # border-radius设置的值
