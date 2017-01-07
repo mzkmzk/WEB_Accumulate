@@ -14,7 +14,7 @@ border-radius设置成正方形的边长即可
 
 可以设成px或百分比,但是设的到底是什么?
 
-
+![border-radius设置](/assets/corner.png)
 
 # 参考链接
 
