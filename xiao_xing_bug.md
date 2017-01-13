@@ -34,8 +34,11 @@ case 'ADD_DATA_ADD_TASK_DIALOG':
 Global_Data.bullets.forEach(function(element, index){
     if (element.lead_guid === leader.guid) {
         remove_bullets_total++;
-        console.log(Global_Data.bullets);
         Global_Data.bullets.splice(index,1);
     }
 })
 ```
+
+其实这样是一个循环,因为是顺序执行,所以这里的foreach其实跟数组长度,然后和i++循环没有太大差别,因为循环中删除了一些元素,所以影响其原本的长度,会导致其忽略最后一些元素没进入循环
+
+解决方案是用倒序
