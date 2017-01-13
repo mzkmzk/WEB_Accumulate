@@ -27,3 +27,15 @@ case 'ADD_DATA_ADD_TASK_DIALOG':
 ```
 
 一开始本来想 先后面判断, 然后再?号.结果是先+再? ....
+
+# foreach
+
+```javascript
+Global_Data.bullets.forEach(function(element, index){
+    if (element.lead_guid === leader.guid) {
+        remove_bullets_total++;
+        console.log(Global_Data.bullets);
+        Global_Data.bullets.splice(index,1);
+    }
+})
+```
