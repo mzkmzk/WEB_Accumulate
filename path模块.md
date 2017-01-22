@@ -34,3 +34,16 @@ path.basename('/foo/bar/baz/asdf/quux.html')
 path.basename('/foo/bar/baz/asdf/quux.html', '.html')
 // Returns: 'quux'
 ```
+
+## 相对路径变绝对路径 path.normalize(path)
+
+path.normalize(),主要解决..和.的问题
+
+```javascript
+path.normalize('/foo/bar//baz/asdf/quux/..')
+// Returns: '/foo/bar/baz/asdf'
+On Windows:
+
+path.normalize('C:\\temp\\\\foo\\bar\\..\\');
+// Returns: 'C:\\temp\\foo\\'
+```
