@@ -24,3 +24,6 @@ path.extname('index')
 path.extname('.index')
 // Returns: ''
 ```
+
+## 获取文件基本名称 path.basename(path[, ext])
+
