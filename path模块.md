@@ -52,3 +52,7 @@ path.normalize('C:\\temp\\\\foo\\bar\\..\\');
 
 这样用于链接各路径,其实就是字符串链接后,然后调用path.normalize(path)
 
+```javascript
+path.join('/foo', 'bar', 'baz/asdf', 'quux', '..')
+// Returns: '/foo/bar/baz/asdf'
+```
