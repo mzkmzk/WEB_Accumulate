@@ -37,7 +37,7 @@ path.basename('/foo/bar/baz/asdf/quux.html', '.html')
 
 ## 相对路径变绝对路径 path.normalize(path)
 
-path.normalize(),主要解决..和.的问题
+path.normalize,主要解决..和.的问题
 
 ```javascript
 path.normalize('/foo/bar//baz/asdf/quux/..')
@@ -47,3 +47,8 @@ On Windows:
 path.normalize('C:\\temp\\\\foo\\bar\\..\\');
 // Returns: 'C:\\temp\\foo\\'
 ```
+
+## 路径连接 path.join([...paths])
+
+这样用于链接各路径,其实就是字符串链接后,然后调用path.normalize(path)
+
