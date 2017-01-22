@@ -27,3 +27,10 @@ path.extname('.index')
 
 ## 获取文件基本名称 path.basename(path[, ext])
 
+```javascript
+path.basename('/foo/bar/baz/asdf/quux.html')
+// Returns: 'quux.html'
+
+path.basename('/foo/bar/baz/asdf/quux.html', '.html')
+// Returns: 'quux'
+```
