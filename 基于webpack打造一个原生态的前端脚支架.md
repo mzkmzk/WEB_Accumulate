@@ -60,7 +60,13 @@ var config = {
 
 由于css压缩包,一般比较小,所以仅一个css包
 
+css主要的就是在index.js里面import进去,避免写在html里,
+
+
+
+
 tips: 可能有使用bootstrap的出来说了,如果类似使用css组件的话,其实css也应该分为index.css和lib.css,但是由于本人最近待的公司都没有用这些组件了,所以暂不做此需求
+
 
 # html打包
 
