@@ -8,4 +8,19 @@
 
 我们常用的操作,只需npm install一个库,然后import不同部分的组件
 
+# 问题分析和解决
+
+## 按需加载
+
+例如我们只需要操作cookie的库
+
+```
+import Cookie from 'K_Utils/Cookie'
+```
+
+即可,这样只会引入和Cookie相关的库
+
+我们拒绝引入一小部分就来一大坨代码的库
+
+这里主要参考到了`https://github.com/callemall/material-ui`
 
