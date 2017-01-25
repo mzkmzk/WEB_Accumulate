@@ -98,6 +98,8 @@ pages.forEach(function(pathname) {
 
 例如index.html会找入口js的index.js
 
+# 其余问题
+
 
 
 
