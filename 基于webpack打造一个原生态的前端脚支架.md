@@ -76,6 +76,30 @@ tips: 可能有使用bootstrap的出来说了,如果类似使用css组件的话,
 
 思路是依靠HtmlWebpackPlugin插件进行打包,还是用glob遍历所有html
 
+```javascript
+var pages = Object.keys(getEntry('src/**/*.html')); //entries: {"index":["./src/index.html"]}
+pages.forEach(function(pathname) {
+    var conf = {
+        filename: '' + pathname + '.html', //生成的html存放路径，相对于path
+        template: 'src/' + pathname + '.html', //html模板路径
+        inject: false, //js插入的位置，true/'head'/'body'/false
+    };
+    if (pathname in config.entry) {
+        //conf.favicon = path.resolve(__dirname, 'src/imgs/favicon.ico');
+        conf.inject = 'body';
+        conf.chunks = ['lib', pathname];
+        conf.hash = true;
+    }
+    config.plugins.push(new HtmlWebpackPlugin(conf));
+});
+```
+
+这里的疑问是html如何和js对应是,其实是根据文件的基础名称
+
+例如index.html会找入口js的index.js
+
+
+
 
 
 
