@@ -26,8 +26,7 @@ function getEntry(globPath, pathDir) {
 	var files = glob.sync(globPath);
 	var entries = {},
 		entry, dirname, basename, extname;
-	//debugger;
-	console.log("files: "+ JSON.stringify(files));
+ 
 	for (var i = 0; i < files.length; i++) {
 		entry = files[i];
 
