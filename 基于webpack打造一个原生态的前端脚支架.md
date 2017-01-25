@@ -22,7 +22,7 @@
 注意利用glob,遍历js
 
 ```javascript
-var entries = getEntry('src/js/**/*.js');
+var entries = getEntry('src/js/index.js');//搜索主js
 function getEntry(globPath, pathDir) {
 	var files = glob.sync(globPath);
 	var entries = {},
@@ -55,8 +55,6 @@ var config = {
 ```
 
 这样就可以打包出单独的index和lib的js文件啦.
-
-
 
 # css打包
 
