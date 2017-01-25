@@ -100,7 +100,12 @@ pages.forEach(function(pathname) {
 
 # 其余问题
 
+## HtmlWebpackPlugin不解析的路径
 
+例如
+
+1. video标签的src
+2. img标签的srcset属性,都是不解析的
 
 
 
