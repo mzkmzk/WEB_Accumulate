@@ -106,6 +106,7 @@ pages.forEach(function(pathname) {
 
 1. video标签的src
 2. img标签的srcset属性,都是不解析的
+3. html解析的不带版本号
 
 
 
