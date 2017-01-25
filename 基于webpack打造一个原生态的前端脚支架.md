@@ -22,6 +22,7 @@
 注意利用glob,遍历js
 
 ```javascript
+var entries = getEntry('src/js/**/*.js');
 function getEntry(globPath, pathDir) {
 	var files = glob.sync(globPath);
 	var entries = {},
@@ -38,7 +39,22 @@ function getEntry(globPath, pathDir) {
 	}
 	return entries;
 }
+
+
 ```
+
+最后得出的entries类似`{"index":["./src/js/index.js"]}`
+
+得出了所有的js后,就可以设置入口文件了
+
+```javascript
+entries['lib'] =['jquery'] //说明lib模块
+
+var config = {
+	entry: entries,
+```
+
+这样就可以打包出单独的index和lib的js文件啦.
 
 
 
