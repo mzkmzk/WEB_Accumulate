@@ -10,7 +10,7 @@
 
 直接把重构的image、css、html复制过来,然后直接可以进行开发,并且处理好打包和版本号的问题
 
-# 分析
+# 分析与解决
 
 ## js打包
 
@@ -18,6 +18,30 @@
 
 1. 主流程js: index.js
 2. 辅助包: lib.js
+
+注意利用glob,遍历js
+
+```javascript
+function getEntry(globPath, pathDir) {
+	var files = glob.sync(globPath);
+	var entries = {},
+		entry, dirname, basename, extname;
+	//debugger;
+	console.log("files: "+ JSON.stringify(files));
+	for (var i = 0; i < files.length; i++) {
+		entry = files[i];
+
+		dirname = path.dirname(entry); //获取文件路径
+		extname = path.extname(entry); //获取文件后缀
+		basename = path.basename(entry, extname); //获取文件基本名称
+		
+		entries[basename] = ['./' + entry];
+	}
+	return entries;
+}
+```
+
+
 
 # css打包
 
@@ -30,4 +54,8 @@ tips: 可能有使用bootstrap的出来说了,如果类似使用css组件的话,
 1. 支持多页面打包
 2. 引入相关css和js
 3.. 对资源路径的更换和加版本号
+
+
+
+
 
