@@ -160,6 +160,7 @@
       * [思路](si_lu.md)
     * [基于webpack打造一个原生态的前端脚支架](基于webpack打造一个原生态的前端脚支架.md)
     * [K-Utils](k-utils.md)
+      * [打造常用易用的javascript库](k-utils/javascript.md)
   * [插件](othercha_jian.md)
     * [jQuery](jquery.md)
       * [偷点东西](tou_dian_dong_xi.md)
