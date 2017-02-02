@@ -27,6 +27,7 @@
       * [arguments小探究](arguments小探究.md)
       * [傻逼错误](傻逼错误.md)
       * [escape、encodeURI和encodeURIComponent的总结](escapeencodeuriencodeuricomponent.md)
+      * [ASCII、Unicode和UTF-8](asciiunicodeutf-8.md)
     * [npm](npm.md)
       * [Package.json](packagejson.md)
       * [项目安装失败经验](xiang_mu_an_zhuang_shi_bai_jing_yan.md)
