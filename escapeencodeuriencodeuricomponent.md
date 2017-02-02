@@ -5,7 +5,7 @@
 ## 特殊符号是否编码
 
 1. escape: 不编码ASCII字母、数字、标点符号"@ * _ + - . /"，对其他所有字符进行编码。
-2. encodeURI: 不编码"; / ? : @ & = + $ , #",对其他所有字符进行编码。
+2. encodeURI: 不编码ASCII字母、数字、标点符号"; / ? : @ & = + $ , #",对其他所有字符进行编码。
 3. encodeURIComponent: 对所有字符进行编码
 
 ## 转码结果
@@ -17,6 +17,26 @@
 tips:
 
 1. 但是我们知道，网页在提交表单的时候，如果有空格，则会被转化为+字符。服务器处理数据的时候，会把+号处理成空格。
+
+# 注意点
+
+## 为何解码最好解两次
+
+例如笔者常用的解码方式
+
+```javascript
+function decode(str) {
+    var r = '';
+        try {r = decodeURIComponent(decodeURIComponent(str));   
+    }catch(e){
+        try {r = decodeURIComponent(str);} catch(e) {r = str;}
+    }
+    return r;
+}
+```
+
+1. 为什么捕抓异常: 其实decodeURIComponent是会有时候会爆异常的..这个属于bug
+2. 为什么要先尝试两次的: 因为
 
 # 参考链接
 
