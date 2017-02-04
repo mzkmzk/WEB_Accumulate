@@ -75,3 +75,7 @@ mozilla/5.0 (linux; u; android 4.1.2; zh-cn; mi-one plus build/jzo54k) applewebk
 Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0
 ```
 
+正则表达式: `/(mozilla)(?:.*? rv:([\w.]+))?/`
+
+1. `(mozilla)`: 要匹配一个mozilla
+2. `(?:)?`
