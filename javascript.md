@@ -67,3 +67,11 @@ mozilla/5.0 (linux; u; android 4.1.2; zh-cn; mi-one plus build/jzo54k) applewebk
 2. `[ \/]`: 要匹配一个空格或者一个`/`
 3. `([\w.]+)`: 要匹配1个或多个的\w(字母或数组或下划线或汉字)或小数点
 
+### mozilla
+
+示例字符串
+
+```
+Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0
+```
+
