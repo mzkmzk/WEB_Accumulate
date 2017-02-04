@@ -6,14 +6,14 @@
 
 # 我们需要什么
 
-## 所处软件
+## 所处软件及其版本号
 
 在国内,有时需要区分的是在微信还是在支付宝里,幸好,其userAgent有声明
 
 微信: `mozilla/5.0 (iphone; cpu iphone os 5_1_1 like mac os x) applewebkit/534.46 (khtml, like gecko) mobile/9b206 micromessenger/5.0`中的micromessenger/5.0
 
 
-支付宝
+支付宝: ` Mozilla/5.0 (Linux; U; Android 5.1.1; en-us; KIW-AL10 Build/HONORKIW-AL10) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 UCBrowser/1.0.0.100 U3/0.8.0 Mobile Safari/534.30 AlipayDefined(nt:WIFI,ws:360|592|3.0) AliApp(AP/9.5.3.030408) AlipayClient/9.5.3.030408 Language/zh-Hans`中的AlipayClient/9.5.3.030408
 
 # 可以获取什么
 
