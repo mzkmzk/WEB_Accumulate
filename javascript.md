@@ -33,3 +33,6 @@ function createOptions( options ) {
 
 `[^x]` 排除了空格和换行符等东西
 
+## 匹配userAgent的内核和版本号
+
+
