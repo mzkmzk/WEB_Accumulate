@@ -15,6 +15,16 @@
 
 支付宝: ` Mozilla/5.0 (Linux; U; Android 5.1.1; en-us; KIW-AL10 Build/HONORKIW-AL10) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 UCBrowser/1.0.0.100 U3/0.8.0 Mobile Safari/534.30 AlipayDefined(nt:WIFI,ws:360|592|3.0) AliApp(AP/9.5.3.030408) AlipayClient/9.5.3.030408 Language/zh-Hans`中的AlipayClient/9.5.3.030408
 
+## 所在系统
+
+这样有些人貌似会用来设置系统来设置字体,但没人没试过
+
+## 区分终端
+
+pc/pad/wap
+
+
+
 # 可以获取什么
 
 可以稍微看下
