@@ -35,6 +35,10 @@ function createOptions( options ) {
 
 ## 匹配userAgent的内核和版本号
 
+tips: 不建议用userAgent去判断内核和版本号
+
+因为有各种奇怪的版本号了,用这种方法只能算出大多数情况下的内核和版本号,有一些奇怪的版本号 并没有按规定设置.
+
 各内核对应的正则如下
 
 ```javascript
