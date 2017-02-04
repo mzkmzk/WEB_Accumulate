@@ -52,5 +52,14 @@ mozilla: /(mozilla)(?:.*? rv:([\w.]+))?/,
 mozilla/5.0 (linux; u; android 4.1.2; zh-cn; mi-one plus build/jzo54k) applewebkit/534.30 (khtml, like gecko) version/4.0 mobile safari/534.30 micromessenger/5.0.1.352
 ```
 
-要匹配其中的`webkit/534.30`
+要匹配其中的
+
+1. `webkit/534.30`
+2. `webkit 534.30`
+
+正则表达式: `/(webkit)[ \/]([\w.]+)/`
+
+1. `(webkit)`: 表示要匹配一个webkit
+2. `[ \/]`: 要匹配一个空格或者一个`/`
+3. `([\w.]+)`: 要匹配1个或多个的\w(字母或数组或下划线或汉字)或小数点
 
