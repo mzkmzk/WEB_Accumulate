@@ -35,6 +35,19 @@ function createOptions( options ) {
 
 ## 匹配userAgent的内核和版本号
 
-```javascript
+示例字符串
 
+```
+mozilla/5.0 (linux; u; android 4.1.2; zh-cn; mi-one plus build/jzo54k) applewebkit/534.30 (khtml, like gecko) version/4.0 mobile safari/534.30 micromessenger/5.0.1.352
+```
+
+要匹配其中的`webkit/534.30`
+
+各内核对应的正则如下
+
+```javascript
+ webkit: /(webkit)[ \/]([\w.]+)/,
+ opera: /(opera)(?:.*version)?[ \/]([\w.]+)/,
+ msie: /(msie) ([\w.]+)/,
+ mozilla: /(mozilla)(?:.*? rv:([\w.]+))?/,
 ```
