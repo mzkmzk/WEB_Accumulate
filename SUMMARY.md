@@ -165,6 +165,7 @@
     * [K-Utils](k-utils.md)
       * [打造常用易用的javascript库](k-utils/javascript.md)
       * [Cookie](k-utils/cookie.md)
+    * [K-Trainer](k-trainer.md)
   * [插件](othercha_jian.md)
     * [jQuery](jquery.md)
       * [偷点东西](tou_dian_dong_xi.md)
