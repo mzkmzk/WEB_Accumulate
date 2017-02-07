@@ -27,5 +27,25 @@
 
 经研究后,发现代码和思路与笔者不符,弃之
 
+# 中途折腾点
+
+## 文件更改监听
+
+```javascript
+var fs = require('fs');
+
+fs.watch('./*', {encoding: 'buffer'}, (eventType, filename) => {
+    console.log(filename);
+    console.log(eventType);
+});
+```
+
+这个方法注意点有
+
+1. 不支持子目录监听
+2. 当新建目录或文件时,eventType为rname
+
+
+
 
 
