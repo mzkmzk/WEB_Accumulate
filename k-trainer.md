@@ -47,7 +47,37 @@ fs.watch('./*', {encoding: 'buffer'}, (eventType, filename) => {
 1. 不支持子目录监听
 2. 当新建目录或文件时,eventType为rname
 
+## 安装lftp失败
 
+错误信息
 
+```javascript
+ ~/Downloads/lftp-4.7.5   brew install lftp
+==> Downloading http://lftp.yar.ru/ftp/lftp-4.6.0.tar.gz
+Already downloaded: /Library/Caches/Homebrew/lftp-4.6.0.tar.gz
+Error: SHA1 mismatch
+Expected: 8bc43080c3c467d1aeb659382d95ef5ac7436504
+```
+
+一开始我以为我以前把brew的源切换了,然后验证了下
+
+```javascript
+
+down vote
+cd `brew --prefix`
+git remote -v
+
+ /usr/local  master ✔  git remote -v
+origin	https://github.com/Homebrew/homebrew (fetch)
+origin	https://github.com/Homebrew/homebrew (push)
+```
+
+结构发现并没有,后来发现可能是brew太旧的原因
+
+于是brew update就可以了
+
+参考链接:
+
+1. http://stackoverflow.com/questions/9857629/sha1-error-when-using-brew-install
 
 
