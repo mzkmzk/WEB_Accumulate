@@ -17,9 +17,11 @@
 
 # ftp提交
 
-1. 检查文件变化
+1. 检查文件改动: 依赖`https://www.npmjs.com/package/gaze
+` 
 2. 查找sftp-config.json
 3. 上传文件
+
 
 查找了下,可以根据下面的库进行改造
 
