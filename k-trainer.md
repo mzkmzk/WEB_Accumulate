@@ -25,5 +25,7 @@
 
 `https://github.com/dyz1990/node-ftpsync`
 
+经研究后,发现代码和思路与笔者不符,弃之
+
 
 
