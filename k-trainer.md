@@ -29,6 +29,48 @@
 
 经研究后,发现代码和思路与笔者不符,弃之
 
+# 其余知识点
+
+## node命令行设置
+
+我们如何通过命令行和nodejs文件交互?
+
+建立处理命令行文件,
+
+```javascript
+#!/usr/bin/env node
+console.log('hello world');
+```
+
+给予权限
+
+chmod 755 文件名
+
+这时就可以进行交互了,当时命令没有在全局里,需要npm link
+
+在执行命令前需要修改package.json
+
+```javascript
+  "bin": {
+    "命令名称": ".文件路径"
+  },
+```
+
+获取参数
+
+通过process.argv
+
+```javascript
+//console.log('hello world1',process.argv);
+  ~ / k_trainer asdas
+hello world1 [ '/usr/local/bin/node', '/usr/local/bin/k_trainer', 'asdas' ]
+```
+
+参考链接
+
+1. http://www.ruanyifeng.com/blog/2015/05/command-line-with-node.html
+
+
 # 中途折腾点
 
 ## 文件更改监听
