@@ -74,7 +74,27 @@ origin	https://github.com/Homebrew/homebrew (push)
 
 结构发现并没有,后来发现可能是brew太旧的原因
 
-于是brew update就可以了
+于是brew update,但是还是不行
+
+```shell
+Checking out v1.0.1 in /usr/local/Homebrew...
+To checkout v1.0.1 in /usr/local/Homebrew run:
+  'cd /usr/local/Homebrew && git checkout v1.0.1
+Error: No available formula with the name "lftp" 
+==> Searching for similarly named formulae...
+This similarly named formula was found:
+homebrew/x11/curlftpfs ✔
+To install it, run:
+  brew install homebrew/x11/curlftpfs ✔
+==> Searching taps...
+Error: No formulae found in taps.
+```
+
+然后根据http://stackoverflow.com/questions/39633159/homebrew-cant-find-lftp-formula-on-macos-sierra,进行`brew install homebrew/boneyard/lftp`,但还是安装失败
+
+最后找到这个pkg,然后安装...
+
+http://rudix.org/packages/lftp.html
 
 参考链接:
 
