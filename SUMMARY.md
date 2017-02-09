@@ -187,7 +187,6 @@
   * [小实验室](xiao_shi_yan_shi.md)
     * [JavaScript](javascript.md)
       * [scroll和resize的监听是否并发的](scrollhe_resize_de_jian_ting_shi_fou_bing_fa_de.md)
-  * [常见问题](.md)
 * [服务器](fu_wu_qi.md)
   * [Linux](linux.md)
     * [Common](common.md)
