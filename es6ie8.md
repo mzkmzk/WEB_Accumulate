@@ -25,6 +25,12 @@ npm i es3ify-loader --save
          test: /\.js$/,
          loaders: ['es3ify','babel'] //es3ify必须放在babel前
 },
+//或者
+{
+    postLoaders: [ //postLoaders表明在loader之后
+      { test: /\.js$/, loader: 'es3ify' }
+    ]
+}
 ```
 
 使用后的编码
