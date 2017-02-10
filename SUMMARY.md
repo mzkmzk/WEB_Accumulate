@@ -193,6 +193,7 @@
   * [video](video.md)
     * [基础知识](video/_video.md)
   * [HTTP](http.md)
+    * [http\_206](http/http_206.md)
 * [服务器](fu_wu_qi.md)
   * [Linux](linux.md)
     * [Common](common.md)
