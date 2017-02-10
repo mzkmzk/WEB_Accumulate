@@ -27,6 +27,12 @@ npm i es3ify-loader --save
 },
 ```
 
+使用后的编码
+
+```javascript
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+```
+
 ## 参考链接
 
 1. https://github.com/sorrycc/es3ify-loader/issues/3
