@@ -6,8 +6,9 @@
 
 # 相关Request字段
 
-If-Match:"2e9891-7129ca-54829ea480240"
+Range:bytes=0-
 
+指定内容的范围
 
 
 # Report
