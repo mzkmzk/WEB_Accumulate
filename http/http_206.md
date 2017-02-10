@@ -8,6 +8,14 @@
 
 Range:bytes=0-
 
+语法: 
+
+```shell
+# first-byte-pos 和 last-byte-pos都可忽略,但不能同时忽略
+Range: range-unit=first-byte-pos "-" [last-byte-pos]
+
+```
+
 指定内容的范围
 
 
