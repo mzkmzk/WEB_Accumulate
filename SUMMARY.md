@@ -192,6 +192,7 @@
     * [video标签\_412错误](common_question/video_412.md)
   * [video](video.md)
     * [基础知识](video/_video.md)
+  * [HTTP](http.md)
 * [服务器](fu_wu_qi.md)
   * [Linux](linux.md)
     * [Common](common.md)
