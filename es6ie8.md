@@ -43,3 +43,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 1. https://github.com/sorrycc/es3ify-loader/issues/3
 2. https://github.com/sorrycc/es3ify-loader/issues/1
+3. http://www.aliued.com/?p=3240
