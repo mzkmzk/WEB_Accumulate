@@ -2,6 +2,10 @@
 
 # 关键字
 
+原理很简单 把双引号包含住,就不会有关键字错误了
+
+## es3ify方法
+
 例如class,default等关键字如果单独声明出来
 
 比较常见的是babel转化import时会出现这句话
@@ -38,6 +42,12 @@ npm i es3ify-loader --save
 ```javascript
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 ```
+## babel es3插件
+
+1. http://babeljs.io/docs/plugins/transform-es3-member-expression-literals/
+2. http://babeljs.io/docs/plugins/transform-es3-property-literals/
+
+在babel引入这两个plugins即可
 
 ## 参考链接
 
