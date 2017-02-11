@@ -11,7 +11,7 @@
 比较常见的是babel转化import时会出现这句话
 
 ```javascript
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 ```
 
@@ -87,3 +87,4 @@ exports.default = 42;
 1. https://github.com/sorrycc/es3ify-loader/issues/3
 2. https://github.com/sorrycc/es3ify-loader/issues/1
 3. http://www.aliued.com/?p=3240
+4. object.defineProperty解决: https://github.com/reactjs/react-redux/issues/227
