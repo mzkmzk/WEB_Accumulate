@@ -49,6 +49,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 在babel引入这两个plugins即可
 
+# Object.defineProperty问题
+
+
+
 ## 参考链接
 
 1. https://github.com/sorrycc/es3ify-loader/issues/3
