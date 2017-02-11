@@ -21,6 +21,11 @@ Range: range-unit=first-byte-pos "-" [last-byte-pos]
 
 # Report
 
+Accept-Ranges: bytes
+
+表明了服务器支持Range请求，且支持的单位是bytes
+
+
 # Response
 
 
