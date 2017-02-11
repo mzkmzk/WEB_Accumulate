@@ -51,7 +51,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 # Object.defineProperty问题
 
+babel中
 
+```javascript
+export default 42
+```
+
+会转化成
+
+```javascript
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+ 
+exports.default = 42;
+```
 
 ## 参考链接
 
