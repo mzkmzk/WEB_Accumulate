@@ -2,6 +2,8 @@
 
 请记住: 最难写的单元测试是第一个单元测试
 
+
+
 # 第一个单元测试
 
 1. npm install --save-dev jest
@@ -25,3 +27,4 @@
         "test": "jest"
       },
     ```
+4. `npm test`
