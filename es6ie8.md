@@ -67,6 +67,21 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = 42;
 ```
 
+在IE8中
+
+`Object.defineProperty`没有实现,并且不让别人访问或修改!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+所以在plugins引入`babel-plugin-transform-es2015-modules-commonjs `
+
+https://www.npmjs.com/package/babel-plugin-transform-es2015-modules-commonjs
+
+就可以转化成
+
+```javascript
+exports.__esModule = true;
+exports.default = 42;
+```
+
 ## 参考链接
 
 1. https://github.com/sorrycc/es3ify-loader/issues/3
