@@ -26,3 +26,19 @@
       },
     ```
 4. `npm test`
+
+    ```shell
+     ~/Learning/apache_sites/K-Utils: npm run test
+
+    > k-utils@0.0.1 test /Users/maizhikun/Learning/apache_sites/K-Utils
+    > jest
+    
+     PASS  Test/Common/Common.test.js
+      ✓ get_url_info (19ms)
+    
+    Test Suites: 1 passed, 1 total
+    Tests:       1 passed, 1 total
+    Snapshots:   0 total
+    Time:        0.895s, estimated 1s
+    Ran all test suites.
+    ```
