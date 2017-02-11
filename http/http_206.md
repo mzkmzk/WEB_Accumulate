@@ -6,7 +6,7 @@
 
 # 相关Request字段
 
-Range:bytes=0-
+* Range:bytes=0-
 
 语法: 
 
@@ -21,9 +21,21 @@ Range: range-unit=first-byte-pos "-" [last-byte-pos]
 
 # Report
 
-Accept-Ranges: bytes
+* Accept-Ranges: bytes
 
 表明了服务器支持Range请求，且支持的单位是bytes
+
+* Content-Range: bytes 0-499/1234
+
+语法
+
+```shell
+Content-Range: range-unit first-byte-pos "-" last-byte-pos "/" (instance-length | *)
+```
+
+instance-length可以表示当前资源的长度,也可以*表示不知道具体的实际长度值
+
+
 
 
 # Response
