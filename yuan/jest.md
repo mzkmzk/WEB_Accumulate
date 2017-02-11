@@ -18,3 +18,10 @@
         expect(url_info.is_url).toBe(true);
     })
     ```
+3. 在package.json里添加
+
+    ```javascript
+      "scripts": {
+        "test": "jest"
+      },
+    ```
