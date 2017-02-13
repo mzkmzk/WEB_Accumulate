@@ -11,6 +11,15 @@ pc android ios 的事件流程不太一致,在这里列出主要的
 5. error: iOS有明确错误,android则可能有莫名错误
 6. stalled: 网络状况差,导致异常网络状况不佳，导致视频下载中断
 
+# video属性
+
+1. poster: 封面图片
+2. preload: 预加载 iOS不支持,android支持
+3. autoplay: 自动播放 iOS不支持
+4. loop: 循环播放
+5. controls: 控制条
+6. width,height: 一定要给出并且不能为0,android下css设置的可能会无效
+
 # 参考资料
 
 1. 挺全的video资料: http://zhaoda.net/2014/10/30/html5-video-optimization/
