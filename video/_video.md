@@ -20,6 +20,14 @@ pc android ios 的事件流程不太一致,在这里列出主要的
 5. controls: 控制条
 6. width,height: 一定要给出并且不能为0,android下css设置的可能会无效
 
+# 禁止全屏播放问题
+
+默认手机端,基本都会全屏播放
+
+但我们有时候需要内联!
+
+1. 
+
 # 参考资料
 
 1. 挺全的video资料: http://zhaoda.net/2014/10/30/html5-video-optimization/
