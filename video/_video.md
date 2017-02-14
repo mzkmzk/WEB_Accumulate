@@ -52,6 +52,10 @@ pc android ios 的事件流程不太一致,在这里列出主要的
 
 chrome版本: `"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"`
 
+我估计缓存了5M
+
+因为每次循环,会重新请求1~2M,而且每次都不一定
+
 # 参考资料
 
 1. 挺全的video资料: http://zhaoda.net/2014/10/30/html5-video-optimization/
