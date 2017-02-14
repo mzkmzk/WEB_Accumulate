@@ -21,7 +21,7 @@ pc android ios 的事件流程不太一致,在这里列出主要的
 5. controls: 控制条
 6. width,height: 一定要给出并且不能为0,android下css设置的可能会无效
 7. crossorigin: 设置anonymous跨域
-8. buffered: 设置缓存206,但是缓存了之后非常严重,在视频连接后加参数仍然无法去除
+8. buffered: 无什么用,因为浏览器的缓存估计根据每个站点来,最大的缓存为多少.所以每次播放时,都会拉去
 
 
 
