@@ -37,7 +37,9 @@ pc android ios 的事件流程不太一致,在这里列出主要的
 <video  webkit-playsinline="" playsinline="" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="false">
 ```
 
+# 其余
 
+一个支撑flv在手机上播放的插件: https://github.com/Bilibili/flv.js
 
 # 参考资料
 
