@@ -23,7 +23,8 @@ pc android ios 的事件流程不太一致,在这里列出主要的
 # 其他浏览器属性
 
 1. webkit-playsinline: iOS加上或不加这个基本都是全屏播放
-2. 
+2.  x-webkit-airplay: 值为`allow|true`时,支持投影到其他AirPlay上
+3. 
 
 # 禁止全屏播放问题
 
