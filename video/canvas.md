@@ -23,6 +23,10 @@ v.addEventListener('play',function() {
 },false);
 ```
 
+有一个插件专门解决这个问题,可惜,android也是显示黑屏的
+
+他的demo地址: https://stanko.github.io/html-canvas-video-player/,其中的视频就是canvas播放,但是android下不行
+
 # 问题
 
 iOS没问题,但是在android微信里是黑屏
