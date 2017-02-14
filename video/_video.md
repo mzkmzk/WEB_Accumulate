@@ -22,9 +22,10 @@ pc android ios 的事件流程不太一致,在这里列出主要的
 
 # 其他浏览器属性
 
-1. webkit-playsinline: iOS加上或不加这个基本都是全屏播放
+1. webkit-playsinline&&playsinline: iOS加上这个则为内联播放(应该只支持iOS10以上),两个属性最好都加上
 2.  x-webkit-airplay: 值为`allow|true`时,支持投影到其他AirPlay上
-3. 
+3. x5-video-player-type: 设为'h5',意义为x5内核下,使用同层H5播放器
+4. x5-video-player-fullscreen: 为false时,阻止x5全屏
 
 # 禁止全屏播放问题
 
@@ -32,7 +33,9 @@ pc android ios 的事件流程不太一致,在这里列出主要的
 
 但我们有时候需要内联!
 
-1. 
+```html
+<video  webkit-playsinline="" playsinline="" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="false">
+```
 
 
 
