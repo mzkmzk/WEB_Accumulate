@@ -192,6 +192,7 @@
     * [video标签\_412错误](common_question/video_412.md)
   * [video](video.md)
     * [基础知识](video/_video.md)
+    * [canvas播放视频](video/canvas.md)
   * [HTTP](http.md)
     * [http\_206](http/http_206.md)
   * [单元测试](yuan.md)
