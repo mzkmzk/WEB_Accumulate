@@ -10,6 +10,7 @@ pc android ios 的事件流程不太一致,在这里列出主要的
 4. timeupdate: 进度发生变化(可以在这里获取currentTime,检查到变化则肯定为播放了)
 5. error: iOS有明确错误,android则可能有莫名错误
 6. stalled: 网络状况差,导致异常网络状况不佳，导致视频下载中断
+7. abort: 当替换src时会触发,其余未发现
 
 # video属性
 
@@ -19,6 +20,10 @@ pc android ios 的事件流程不太一致,在这里列出主要的
 4. loop: 循环播放
 5. controls: 控制条
 6. width,height: 一定要给出并且不能为0,android下css设置的可能会无效
+7. crossorigin: 设置anonymous跨域
+8. buffered: 设置缓存206,但是缓存了之后非常严重,在视频连接后加参数仍然无法去除
+
+
 
 # 其他浏览器属性
 
