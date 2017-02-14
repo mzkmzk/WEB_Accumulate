@@ -25,7 +25,19 @@ v.addEventListener('play',function() {
 
 有一个插件专门解决这个问题,可惜,android也是显示黑屏的
 
-他的demo地址: https://stanko.github.io/html-canvas-video-player/,其中的视频就是canvas播放,但是android下不行
+他的demo地址: https://stanko.github.io/html-canvas-video-player/
+
+其中的视频就是canvas播放,但是android下不行
+
+作者原话
+
+```shell
+Known issues
+It is very buggy and sometimes doesn't work at all on Android. 
+I don't have plans for fixing this, 
+if someone has idea, please issue a pull request. 
+Just use regular HTML5 video.
+```
 
 # 问题
 
