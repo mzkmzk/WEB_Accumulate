@@ -51,7 +51,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 # Object.defineProperty问题
 
-babel中
+babel的export default中
 
 ```javascript
 export default 42
@@ -81,6 +81,56 @@ https://www.npmjs.com/package/babel-plugin-transform-es2015-modules-commonjs
 exports.__esModule = true;
 exports.default = 42;
 ```
+
+而在ES6的class使用中
+
+babel正常转化是
+
+```javascript
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var Options = function () {
+	    function Options() {
+	        _classCallCheck(this, Options);
+	    }
+
+	    _createClass(Options, null, [{
+	        key: 'defaultOptions',
+	        value: function defaultOptions() {
+	            return {
+	                ...
+	            };
+	        }
+	    }, {
+
+```
+
+这里也是有Object.defineProperties的
+
+解决方案是在编译时使用loose模式
+
+babel转化有normal模式和loose模式,默认为normal
+
+而这里的class转化,需要写成loose才会支持IE8
+
+```javascript
+{
+   "plugins": [
+   	...
+       ["transform-es2015-classes", { "loose": true }],
+   ]
+}
+```
+
+转化后
+
+```javascript
+ Options.setOptions = function setOptions(options) {
+ ...
+ }
+```
+
+
 
 ## 参考链接
 
