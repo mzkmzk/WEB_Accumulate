@@ -191,7 +191,7 @@
   * [常见问题](common_question.md)
     * [video标签\_412错误](common_question/video_412.md)
   * [video](video.md)
-    * [基础知识](video/_video.md)
+    * [video标签](video/_video.md)
     * [canvas播放视频](video/canvas.md)
   * [HTTP](http.md)
     * [http\_206](http/http_206.md)
