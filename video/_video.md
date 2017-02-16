@@ -13,11 +13,13 @@ pc android ios 的事件流程不太一致,在这里列出主要的
 
 1. loadstart: 视频开始加载
 2. canplaythrough: 可以流畅播放
-3. playing: 开始播放(android兼容性可能不好,ipad无触发)
+3. playing: 开始播放(android兼容性可能不好)
 4. timeupdate: 进度发生变化(可以在这里获取currentTime,检查到变化则肯定为播放了)
 5. error: iOS有明确错误,android则可能有莫名错误
 6. stalled: 网络状况差,导致异常网络状况不佳，导致视频下载中断
 7. abort: 当替换src时会触发,其余未发现
+
+最好都是用DOM2监听,DOM0有些设备无效
 
 # video属性
 
