@@ -200,6 +200,7 @@
   * [自动构建](automatic-construction.md)
     * [多浏览器自动测试](automatic-construction/more_brower_test.md)
   * [偶遇问题](frent_question.md)
+    * [chrome://inspect白屏](frent_question/chromeinspect.md)
 * [服务器](fu_wu_qi.md)
   * [Linux](linux.md)
     * [Common](common.md)
