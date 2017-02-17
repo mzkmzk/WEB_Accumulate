@@ -97,3 +97,6 @@ mousewheel5 s:480
 
 所以js目前貌似不能判断书触摸板还是鼠标,所以这个问题笔者暂未解决
 
+# 参考链接
+
+1. mousewhell基本属性: http://www.zhangxinxu.com/wordpress/2013/04/js-mousewheel-dommousescroll-event/
