@@ -99,7 +99,9 @@ mousewheel5 s:480
 
 > tips
 
-网上说`event.originalEvent.sourceCapabilities.firesTouchEvents`能判断是否为触摸行为,但是笔者的Mac无论鼠标还是触摸板都是false
+网上(https://www.zhihu.com/question/46620479)说
+
+`event.originalEvent.sourceCapabilities.firesTouchEvents`能判断是否为触摸行为,但是笔者的Mac无论鼠标还是触摸板都是false,可能说的是直接触屏?而不是触摸板
 
 # 参考链接
 
