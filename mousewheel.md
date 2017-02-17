@@ -97,6 +97,10 @@ mousewheel5 s:480
 
 所以js目前貌似不能判断书触摸板还是鼠标,所以这个问题笔者暂未解决
 
+> tips
+
+网上说`event.originalEvent.sourceCapabilities.firesTouchEvents`能判断是否为触摸行为,但是笔者的Mac无论鼠标还是触摸板都是false
+
 # 参考链接
 
 1. mousewhell基本属性: http://www.zhangxinxu.com/wordpress/2013/04/js-mousewheel-dommousescroll-event/
