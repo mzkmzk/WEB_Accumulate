@@ -25,7 +25,7 @@ pc android ios 的事件流程不太一致,在这里列出主要的
 
 1. poster: 封面图片
 2. preload: 预加载 iOS不支持,android支持
-3. autoplay: 自动播放 iOS不支持
+3. autoplay: 自动播放 iOS不支持(IE9下不支持 要右击播放)
 4. loop: 循环播放
 5. controls: 控制条
 6. width,height: 一定要给出并且不能为0,android下css设置的可能会无效
