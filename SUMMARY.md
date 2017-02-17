@@ -194,6 +194,7 @@
   * [video](video.md)
     * [video标签](video/_video.md)
     * [canvas播放视频](video/canvas.md)
+    * [循环播放中的缓存](video/loop_cache.md)
   * [HTTP](http.md)
     * [http\_206](http/http_206.md)
   * [单元测试](yuan.md)
