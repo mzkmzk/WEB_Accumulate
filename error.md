@@ -56,6 +56,9 @@ onerror 不会监听静态资源404等错误,只会捕抓JS错误
 
 JS错误可以用onerror也可以用addEventListener
 
+# 小心死循环
+
+在监听error的函数中,一定要注意,,如果监听error函数中本身也会有报错,那么就会死循环,最好用try catch
 
 
 
