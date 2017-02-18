@@ -108,6 +108,8 @@ performance.getEntriesByType('measure')获取
 # 其余注意
 
 1. 当mp4被部分缓存时,performance无法将其列举出来
+2. 有出现过同一url的mp4(206传输),在performance出现过两次
+3. mp4文件(206),即使在后续会继续出现206加载时,performance不会变化
 
 # 参考链接
 
