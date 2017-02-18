@@ -3,7 +3,9 @@
 # 分类
 
 1. js报错
-2. 静态资源404
+2. 静态资源和接口
+
+
 
 # 捕抓前的错误
 
@@ -39,7 +41,9 @@ window.addEventListener('error', function(e) {
 
 onerror 不会监听静态资源404等错误,只会捕抓JS错误
 
+所以
 
+静态资源错误只能交给
 
 
 
