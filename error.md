@@ -41,12 +41,20 @@ window.addEventListener('error', function(e) {
 
 onerror 不会监听静态资源404等错误,只会捕抓JS错误
 
+
+
+而因为addEventListener在JS报错信息上只有以下信息
+
+![JS报错](/assets/QQ20170218-2.png)
+
+
+里面的error对象和message属性对我们比较有用,但是跟window.onerror相比,还是少了行号等信息
+
 所以
 
-静态资源错误只能交给
+静态资源和接口只能交给addEventListener
 
-
-
+JS错误用onerror
 
 
 
