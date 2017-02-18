@@ -14,9 +14,15 @@ img的请求是不会冒泡的,但是会经过捕抓.查看捕抓的path
 
 ![img冒泡](/assets/QQ20170218-0.png)
 
+并不会经过window,而是从document开始
+
 所以,可以在document.html.body及其其他祖先元素和本身触发load事件
 
 ## video请求
 
 video 是没有load事件的
+
+## window的load
+
+只有当页面上所有的图像,css,js加载完毕时触发,
 
