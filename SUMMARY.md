@@ -202,6 +202,7 @@
     * [http\_206](http/http_206.md)
   * [单元测试](yuan.md)
     * [jest](yuan/jest.md)
+    * [K-Report的单元测试](yuan/k-reportyuan.md)
   * [自动构建](automatic-construction.md)
     * [多浏览器自动测试](automatic-construction/more_brower_test.md)
   * [偶遇问题](frent_question.md)
