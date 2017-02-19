@@ -115,3 +115,4 @@ performance.getEntriesByType('measure')获取
 
 1. http://www.alloyteam.com/2015/09/explore-performance/
 2. http://www.html-js.com/article/Brief-introduction-of-JavaScript-Resource-Timing-API-to-learn-something-every-day
+3. w3c解说: https://www.w3.org/TR/navigation-timing/
