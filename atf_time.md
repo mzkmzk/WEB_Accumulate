@@ -20,3 +20,4 @@
 # 参考资源
 
 1. 首屏打点的技巧: http://www.alloyteam.com/2016/01/points-about-resource-loading/
+2. 介绍了相关的自动化工具: http://fex.baidu.com/blog/2014/05/build-performance-monitor-in-7-days/
