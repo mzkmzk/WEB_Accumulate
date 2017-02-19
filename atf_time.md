@@ -15,3 +15,7 @@
 # 计算方式
 
 1. 打点: 最常见和最较为准确的方式,能够根据不同的页面形式,定义自己所需要的首屏时间
+
+# 参考资源
+
+1. 首屏打点的技巧: http://www.alloyteam.com/2016/01/points-about-resource-loading/
