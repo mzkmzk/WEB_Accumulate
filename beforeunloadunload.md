@@ -34,16 +34,20 @@ beforeunload在unload之前
 3. UI人机交互失效(window.open,alert,confirm全部失效)
 4. 没有任何操作可以阻止unload过程的执行。(unload事件的Cancelable属性值为No)
 
+# 确认是否关闭
+
+```javascript
+//绑定到unload无效
+window.addEventListener('beforeunload',function(e) { 
+  e.returnValue = '非可转换成false的东西';
+})
+```
+
 ## 兼容性
 
 ![](/assets/xlifecycle-events-testing.png.pagespeed.ic.mLbvU6UX-AQJSwkOff9e.png)
 
-window.addEventListener('beforeunload', function(e){
-  var msg = "Do u want to leave?\nChanges u made may be lost."
-  //var evt = window.event
-  e.returnValue = msg
-})
-
 # 参考链接
 
 1. page visbility挺好的讲解: https://www.w3ctech.com/topic/1588
+2. beforeunload和unload挺不错的讲解: http://web.jobbole.com/86886/
