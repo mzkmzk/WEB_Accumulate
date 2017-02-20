@@ -1,5 +1,7 @@
 # beforeunload和unload
 
+
+
 # 触发时机
 
 两者触发的时机都是
@@ -11,8 +13,26 @@
 5. 调用window.navigate实现跳转;
 6. 调用window.open或document.open方法在当前页面加载其他页面或重新打开输入流。
 
+# 两者区别
+
+## 顺序
+
+beforeunload在unload之前
+
+## 环境
+
+beforeunload
+
+## 兼容性
+
+![](/assets/xlifecycle-events-testing.png.pagespeed.ic.mLbvU6UX-AQJSwkOff9e.png)
+
 window.addEventListener('beforeunload', function(e){
   var msg = "Do u want to leave?\nChanges u made may be lost."
   //var evt = window.event
   e.returnValue = msg
 })
+
+# 参考链接
+
+1. page visbility挺好的讲解: https://www.w3ctech.com/topic/1588
