@@ -295,4 +295,6 @@
   * [前端](前端.md)
     * [XSS](xss.md)
       * [第一波XSS探针实现](第一波xss探针实现.md)
+* [English](english.md)
+  * [读音问题](english/pronunciation.md)
 
