@@ -21,7 +21,18 @@ beforeunload在unload之前
 
 ## 环境
 
-beforeunload
+> beforeunload
+
+1. 页面所有资源均未释放，且页面可视区域效果没有变化
+2. UI人机交互失效(window.open,alert,confirm全部失效)
+3. 最后时机可以阻止unload过程的执行.(beforeunload事件的Cancelable属性值为Yes)
+
+> unload
+
+1. 页面所有资源(img, iframe等)均未被释放
+2. 页面可视区域一片空白
+3. UI人机交互失效(window.open,alert,confirm全部失效)
+4. 没有任何操作可以阻止unload过程的执行。(unload事件的Cancelable属性值为No)
 
 ## 兼容性
 
