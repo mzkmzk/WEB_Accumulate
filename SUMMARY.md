@@ -241,6 +241,7 @@
   * [MySQL](mysql.md)
     * [常见问题](chang_jian_wen_ti.md)
     * [常见命令](chang_jian_ming_ling.md)
+    * [常用函数](common_functioon.md)
   * [Apache](apache.md)
     * [解决跨域问题](jie_jue_kua_yu_wen_ti.md)
     * [指定文件路径别包含中文](zhi_ding_wen_jian_lu_jing_bie_bao_han_zhong_wen.md)
