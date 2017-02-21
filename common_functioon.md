@@ -4,6 +4,10 @@
 
 语法: `DATE_SUB(date,INTERVAL expr type)`
 
+用处
+
+1. 获取几天内的数据
+
 ## 相关函数
 
 1. DATE_ADD()
