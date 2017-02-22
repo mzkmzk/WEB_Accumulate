@@ -5,6 +5,8 @@
 ```shell
 npm config get registry
 https://registry.npmjs.org/
+npm config set registry https://registry.npmjs.org/
+
 
 //有些人可能切到了淘宝源https://registry.npm.taobao.org/
 ```
