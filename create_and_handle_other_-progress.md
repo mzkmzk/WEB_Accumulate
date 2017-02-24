@@ -15,6 +15,10 @@ options 可以的配置信息可参考: https://nodejs.org/api/child_process.htm
 
 例如: gid, uid, env,cwd,encoding,killSingnal等
 
+# 优点
+
+1. 能比较简单的拼接命令
+
 ## 缺点
 
 1. 除了命令行参数和环境变量之外,exec()函数不允许与子进程通信
