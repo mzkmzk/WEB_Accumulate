@@ -41,4 +41,30 @@ args = require('yargs')
 console.log(args);
 ```
 
+输出
+
+```shell
+//提示语
+~/Learning/apache_sites/K-Cli/ k_cli
+Usage /usr/local/bin/k_cli -t {type} -out [path]
+
+Options:
+  --type, -t  select type for React|Web                               [required]
+  --out, -o   copy to the path, default is "./"
+  --help      Show help                                                [boolean]
+
+Missing required argument: type
+Please select type by copy project
+
+//argv参数
+ ~/Learning/apache_sites/K-Cli/ k_cli --type web --out ./
+{ _: [],
+  help: false,
+  type: 'web',
+  t: 'web',
+  out: './',
+  o: './',
+  '$0': '/usr/local/bin/k_cli' }
+```
+
 更完全的文档可见: https://github.com/yargs/yargs
