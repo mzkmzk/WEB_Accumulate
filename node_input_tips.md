@@ -28,7 +28,8 @@ args = require('yargs')
         .usage('Usage $0 -t {type} -out [path] ')//语法介绍
         .option('type',{ //对每个参数进行说明
             alias: 't', //简写
-            describe: 'select type for ' + dir_array.join('|')//说明
+            describe: 'select type by copy project',//说明
+            choices: ["React", "Web"]
         })
         .option('out',{
             alias: 'o',
@@ -49,7 +50,7 @@ console.log(args);
 Usage /usr/local/bin/k_cli -t {type} -out [path]
 
 Options:
-  --type, -t  select type for React|Web                               [required]
+  --type, -t  select type by copy project   [required] [choices: "React", "Web"]
   --out, -o   copy to the path, default is "./"
   --help      Show help                                                [boolean]
 
