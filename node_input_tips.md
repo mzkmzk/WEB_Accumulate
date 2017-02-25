@@ -29,11 +29,12 @@ args = require('yargs')
         .option('type',{ //对每个参数进行说明
             alias: 't', //简写
             describe: 'select type by copy project',//说明
-            choices: ["React", "Web"]
+            choices: ["React", "Web"]//仅限可通过的值
         })
         .option('out',{
             alias: 'o',
-            describe: 'copy to the path, default is "./" '
+            describe: 'copy to the path, default is "./" ',
+            default: './' //默认值,
         })
         .demandOption(['type'],'Please select type by copy project ')//必选的参数,如果没满足的说明
         .help()//自带help命令
@@ -51,7 +52,7 @@ Usage /usr/local/bin/k_cli -t {type} -out [path]
 
 Options:
   --type, -t  select type by copy project   [required] [choices: "React", "Web"]
-  --out, -o   copy to the path, default is "./"
+  --out, -o   copy to the path, default is "./"    [default: "./"]
   --help      Show help                                                [boolean]
 
 Missing required argument: type
@@ -68,4 +69,9 @@ Please select type by copy project
   '$0': '/usr/local/bin/k_cli' }
 ```
 
+问题: 如果 只说明参数没有指定值,默认为true,像上面的 
+
+`k_cli -t React  -o`
+
+则argv.o非default的'./'而是true,
 更完全的文档可见: https://github.com/yargs/yargs
