@@ -73,5 +73,6 @@ Please select type by copy project
 
 `k_cli -t React  -o`
 
-则argv.o非default的'./'而是true,
+则argv.o非default的'./'而是true
+
 更完全的文档可见: https://github.com/yargs/yargs
