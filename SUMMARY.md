@@ -119,6 +119,7 @@
       * [Nodejs命令行开发](nodejs.md)
       * [Error: spawn cp  ENOENT](error-spawn-cp-enoent.md)
       * [命令输入提示](node_input_tips.md)
+      * [Linux安装NODE](linuxnode.md)
     * [基础文章](基础文章.md)
       * [process对象](process对象.md)
     * [deepstream.io](deepstreamio.md)
