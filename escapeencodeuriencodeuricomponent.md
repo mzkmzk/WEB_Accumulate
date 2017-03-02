@@ -46,6 +46,7 @@ function decode(str) {
 
 1. 为什么捕抓异常: 其实decodeURIComponent是会有时候会爆异常的..这个属于bug
 2. 为什么要尝试两次编码、一次编码、和无编码: 因为防止服务端encode两次、一次、或者无编码
+3. 为什么要最后unescape,因为只有这个方法能解析Unicode编码
 
 # 参考链接
 
