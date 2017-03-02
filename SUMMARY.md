@@ -34,6 +34,7 @@
       * [error事件](error.md)
       * [首屏加载时间](atf_time.md)
       * [beforeunload和unload](beforeunloadunload.md)
+      * [jsonp拦截](jsonp_-intercept.md)
     * [npm](npm.md)
       * [Package.json](packagejson.md)
       * [项目安装失败经验](xiang_mu_an_zhuang_shi_bai_jing_yan.md)

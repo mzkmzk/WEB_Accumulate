@@ -27,9 +27,18 @@ tips:
 ```javascript
 function decode(str) {
     var r = '';
-        try {r = decodeURIComponent(decodeURIComponent(str));   
+    try {
+        r = decodeURIComponent(decodeURIComponent(str));   
     }catch(e){
-        try {r = decodeURIComponent(str);} catch(e) {r = str;}
+        try {
+            r = decodeURIComponent(str);
+        } catch(e) {
+            try {
+                r = unescape(str); //Unicode
+            }catch(e) {
+                r = str;
+            }
+        }
     }
     return r;
 }
