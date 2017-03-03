@@ -44,6 +44,7 @@
       * [第一次发布自己的npm插件](di_yi_ci_fa_bu_zi_ji_de_npm_cha_jian.md)
       * [export、exports、module.exports的区别](exportexportsmoduleexportsde_qu_bie.md)
       * [搭建私有npm](private_package.md)
+      * [npm命令积累](npm_use_-order.md)
     * [Canvas](canvas.md)
       * [shoot\_game制作过程](shootgame_zhi_zuo_guo_cheng.md)
       * [shoot\_game](shootgame.md)
