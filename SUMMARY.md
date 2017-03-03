@@ -45,6 +45,7 @@
       * [export、exports、module.exports的区别](exportexportsmoduleexportsde_qu_bie.md)
       * [搭建私有npm](private_package.md)
       * [npm命令积累](npm_use_-order.md)
+      * [nvm的使用](use_nvm.md)
     * [Canvas](canvas.md)
       * [shoot\_game制作过程](shootgame_zhi_zuo_guo_cheng.md)
       * [shoot\_game](shootgame.md)
