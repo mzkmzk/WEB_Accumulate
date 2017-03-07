@@ -23,3 +23,11 @@
 chrome下还是会有竖滚动条,但横的滚动条能消失,body的height会比canvas多2px
 
 firefox下还是会有竖滚动条,但横的滚动条能消失,body的height会比canvas多4px
+
+## canvas的postion改为absolute
+
+无滚动条,body和canvas的框高度一致
+
+# 遗留问题
+
+仍然不知道为啥body会多几px
