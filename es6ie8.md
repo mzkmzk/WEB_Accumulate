@@ -135,6 +135,21 @@ babel转化有normal模式和loose模式,默认为normal
 
 但是UglifyJsPlugin打包后..又会把双引号去掉...汗...
 
+webpack
+
+```javascript
+new UglifyJsPlugin({ //压缩代码
+    compress: {
+    	warnings: false,
+    	screw_ie8: false
+    
+    }, 
+    mangle: false,
+    output: { screw_ie8: false },
+```
+
+这个设置本身就有加关键字的双引号,无需上面设置babel,
+
 
 ## 参考链接
 
