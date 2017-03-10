@@ -129,7 +129,11 @@ babel转化有normal模式和loose模式,默认为normal
  ...
  }
 ```
+# UglifyJsPlugin去掉双引号问题
 
+上面说过了如何对default进行加双引号...
+
+但是UglifyJsPlugin打包后..又会把双引号去掉...汗...
 
 
 ## 参考链接
