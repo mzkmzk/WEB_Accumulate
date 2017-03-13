@@ -29,3 +29,34 @@ exec是个异步任务
 
 queue,实现极其简单,充分利用nodejs的event模块
 
+```javascript
+//queue,默认是N多个任务可并行的,如果希望串行,则设置concurrency为1
+var q = queue({
+    concurrency: 1
+});
+[shell1,shell2].forEach(function(element){
+    q.push(function(next){
+        exec(element.command, element.options, (error, stdout, stderr) => {
+        next();//通知执行下一个任务
+        });
+    }
+})
+```
+
+# promise
+
+```javascript
+var promise = Promise.resolve()
+
+[shell1,shell2].forEach(function(element){
+    promise = promise.then(function(){
+        return new Promise(function(resolve, reject){  
+            exec(element.command, element.options, (error, stdout, stderr) => {
+                resolve();//通知执行下一个任务
+            });
+        });
+    })
+})
+
+```
+
