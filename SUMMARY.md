@@ -133,7 +133,7 @@
       * [基础API](基础api.md)
     * [异步问题](async_reslove_question.md)
       * [异步串行](async_reslove_question/async_serial.md)
-      * promise
+      * [promise](async_reslove_question/promise.md)
   * [CSS](___css.md)
     * [基本语法](CSS_ji_ben_yu_fa.md)
     * [兼容问题](___jian_rong_wen_ti.md)
