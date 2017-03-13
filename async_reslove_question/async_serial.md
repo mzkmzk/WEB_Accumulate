@@ -60,3 +60,6 @@ var promise = Promise.resolve()
 
 ```
 
+# 参考链接
+
+1. 利用reduce和foreach进行异步串行: https://simplyy.space/article/580873968ad7cc6a02e64172#reduce 版本
