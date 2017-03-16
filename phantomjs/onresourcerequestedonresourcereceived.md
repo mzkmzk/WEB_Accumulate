@@ -212,3 +212,8 @@ window.performance navigation,timing,now
 ```
 
 可枚举的方法只有now......其他两个是属性 所以放弃这个方法哒.
+
+# 注意点
+
+1. PhantomJS是一个阉割版的webkit，不支持flash、webGL、video/audio、css 3-d，phontomjs不想背负操作系统强相关的特性，跨平台比较困难。
+2. 如果使用Page模块的onResourceReceived()方法监听页面收到的请求资源，是无法得到该资源的response.body的，这也是目前PhantomJS最受开发者吐槽的点之一。
