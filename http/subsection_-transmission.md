@@ -24,6 +24,8 @@ HTTP1.0 需要声明Connection: keep-alive才为长链接
 
 可用于告诉浏览器,此次链接的实际长度(假如Content-length比实际短,浏览器也只会截取Content-length的长度)
 
+一般
+
 先列举一下正常的demo
 
 ```javascript
@@ -42,5 +44,27 @@ require('net').createServer(function(sock) {
 2. 打印内容
 3. 结束链接
 4. 没毛病
+
+而此时改成这样 结果会如何
+
+```javascript
+console.log('listen http://127.0.0.1:9090');
+require('net').createServer(function(sock) {
+    console.log('go in  http://127.0.0.1:9090');
+    sock.on('data', function(data) {
+        sock.write('HTTP/1.1 200 OK\r\n');
+        sock.write('Content-Length: 11\r\n');
+        sock.write('\r\n');
+        sock.write('hello world!');
+        //sock.destroy();
+    });
+}).listen(9090, '127.0.0.1');
+```
+
+改动地方
+
+1. `Content-Length: 11`: 导致结果只会打印`hello world`,`!`无法输出,因为已经超出了Content-Length的长度
+2. `//sock.destroy()`:  如果不设置content-length,该链接会一直显示pedding(chrome的network可看),但是声明了长度,这里的销毁就不重要了
+
 
 
