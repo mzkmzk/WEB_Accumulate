@@ -129,3 +129,7 @@ require('net').createServer(function(sock) {
 而响应头也有对应的Range:bytes=0-
 
 表明从多少字节开始
+
+# 参考文章
+
+1. https://imququ.com/post/transfer-encoding-header-in-http.html: 主要参考这里面的思路走
