@@ -66,5 +66,5 @@ require('net').createServer(function(sock) {
 1. `Content-Length: 11`: 导致结果只会打印`hello world`,`!`无法输出,因为已经超出了Content-Length的长度
 2. `//sock.destroy()`:  如果不设置content-length,该链接会一直显示pedding(chrome的network可看),但是声明了长度,这里的销毁就不重要了
 
-
+# Transfer-Encoding: chunked
 
