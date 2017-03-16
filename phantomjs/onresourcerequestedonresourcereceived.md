@@ -6,6 +6,45 @@
 
 # 尝试方法
 
+## onResourceRequested和onResourceReceived
+
+先看下实验,然后再说明
+
+```javascript
+Resources.prototype.onResourceRequested = function(request){
+    var now = new Date().getTime();
+    this.resources[request.id] = {
+        id: request.id,
+        url: request.url,
+        request: request,
+        responses: {},
+        duration: '-',
+        times: {
+            request: now
+        }
+    };
+}
+
+Resources.prototype.onResourceReceived = function(response){
+    var now = new Date().getTime(),
+        resource = this.resources[response.id];
+
+    if (response.bodySize) {
+        resource.size = response.bodySize;
+    } else if (!resource.size) {
+        response.headers.forEach(function (header) {
+            if (header.name.toLowerCase()=='content-length') {
+                resource.size = parseInt(header.value);
+            }
+        });
+    }
+
+    
+}
+
+
+```
+
 ## window.performance.getEntries()
 
 `失败,放弃使用该方法`
