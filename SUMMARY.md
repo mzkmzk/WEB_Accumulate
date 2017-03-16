@@ -136,6 +136,7 @@
       * [promise](async_reslove_question/promise.md)
     * [Phantomjs](phantomjs.md)
       * [小实验室](phantomjs/little_test_phantom.md)
+      * [onResourceRequested和onResourceReceived](phantomjs/onresourcerequestedonresourcereceived.md)
   * [CSS](___css.md)
     * [基本语法](CSS_ji_ben_yu_fa.md)
     * [兼容问题](___jian_rong_wen_ti.md)
