@@ -1,4 +1,4 @@
-# 分段传输
+# 分段传输的由来
 
 # 背景
 
@@ -12,7 +12,7 @@
 
 1. Connection: keep-alive
 2. Transfer-Encoding: chunked
-3. Content-Encoding: gzip
+3. Content-Encoding: gzip: 表名启动gzip压缩
 4. Content-Length
 5. Accept-Ranges:bytes
 
@@ -118,4 +118,14 @@ require('net').createServer(function(sock) {
 
 (假如十六进制比实际内容小,则资源会获取失败,而比实际内容大,则正常)
 
+# Accept-Ranges:bytes
 
+之前的Transfer-Encoding: chunked还是属于一个链接的分块
+
+假如视频这些大文件,需要把视频分成一小块一小块返回,例如腾讯视频可以去看看视频资源都是Accept-Ranges:bytes的效应头
+
+响应头Accept-Ranges:bytes,表名切块根据bytes来
+
+而响应头也有对应的Range:bytes=0-
+
+表明从多少字节开始
