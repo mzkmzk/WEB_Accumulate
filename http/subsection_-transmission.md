@@ -130,6 +130,8 @@ require('net').createServer(function(sock) {
 
 表明从多少字节开始
 
+状态码也会变成206
+
 # 参考文章
 
 1. https://imququ.com/post/transfer-encoding-header-in-http.html: 主要参考这里面的思路走
