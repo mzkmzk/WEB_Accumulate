@@ -4,6 +4,10 @@
 
 对于一些静态文件,比较优秀的做法是进行分段传输
 
+1. 因为减少三次握手,所以引用了Connection: keep-alive
+2. 因为Connection: keep-alive,需要知道实体的边界,所以需要Content-Length
+3. 因为Content-Length计算动态文件比较麻烦,所以运用了Transfer-Encoding: chunked
+
 # 本文设计的HTTP响应头
 
 1. Connection: keep-alive
@@ -11,6 +15,8 @@
 3. Content-Encoding: gzip
 4. Content-Length
 5. Accept-Ranges:bytes
+
+
 
 # Connection: keep-alive
 
@@ -66,5 +72,46 @@ require('net').createServer(function(sock) {
 1. `Content-Length: 11`: 导致结果只会打印`hello world`,`!`无法输出,因为已经超出了Content-Length的长度
 2. `//sock.destroy()`:  如果不设置content-length,该链接会一直显示pedding(chrome的network可看),但是声明了长度,这里的销毁就不重要了
 
+
+应用场景
+
+1. 静态文件: 例如img
+
+不适用于:动态文件
+
+因为计算Content-length需要开启buffer,等全部内容生成好再计算,这样会影响TTFB(客户端发出请求到接受到响应第一个字节所花费的时间)
+
+但是为了计算响应实体的长度而缓存所有内容,跟更短的TTFB背道而驰
+
+所以Transfer-Encoding: chunked的出现,可以不需要计算Content-Length
+
 # Transfer-Encoding: chunked
 
+声明了Transfer-Encoding: chunked后,主题内容有规则
+
+1. 每个分块包括两行,一行十六进制的长度值,第二行为数据
+2. 两行都需要`\r\n`结尾
+3. 最后一块的长度值必须为0,对应的分块数据没有内容
+
+node模拟
+
+```javascript
+require('net').createServer(function(sock) {
+    sock.on('data', function(data) {
+        sock.write('HTTP/1.1 200 OK\r\n');
+        sock.write('Transfer-Encoding: chunked\r\n');
+        sock.write('\r\n');
+
+        sock.write('b\r\n');
+        sock.write('01234567890\r\n');
+
+        sock.write('5\r\n');
+        sock.write('12345\r\n');
+
+        sock.write('0\r\n');
+        sock.write('\r\n');
+    });
+}).listen(9090, '127.0.0.1');
+```
+
+输出是: 0123456789012345
