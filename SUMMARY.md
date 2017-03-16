@@ -217,6 +217,7 @@
     * [循环播放中的缓存](video/loop_cache.md)
   * [HTTP](http.md)
     * [http\_206](http/http_206.md)
+    * [分段传输](http/subsection_-transmission.md)
   * [单元测试](yuan.md)
     * [jest](yuan/jest.md)
     * [K-Report的单元测试](yuan/k-reportyuan.md)
