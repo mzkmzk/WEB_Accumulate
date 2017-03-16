@@ -38,11 +38,169 @@ Resources.prototype.onResourceReceived = function(response){
             }
         });
     }
-
-    
 }
 
+```
 
+打印的结果是
+
+onResourceRequested被回调了一次
+
+而onResourceReceived被回调了两次
+
+看下结果的输出
+
+```javascript
+{
+    "headers": [
+        {
+            "name": "Referer",
+            "value": "http://xunlei.com/"
+        },
+        {
+            "name": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"
+        },
+        {
+            "name": "Accept",
+            "value": "*/*"
+        }
+    ],
+    "id": 20,
+    "method": "GET",
+    "time": "2017-03-16T03:14:58.266Z",
+    "url": "http://img.vip.kanimg.com/img/banner/201702151504372411.jpg"
+}
+{
+    "body": "",
+    "bodySize": 8333,
+    "contentType": "image/jpeg",
+    "headers": [
+        {
+            "name": "Server",
+            "value": "DnionOS/1.11.2.2"
+        },
+        {
+            "name": "Date",
+            "value": "Thu, 16 Mar 2017 03:14:59 GMT"
+        },
+        {
+            "name": "Content-Type",
+            "value": "image/jpeg"
+        },
+        {
+            "name": "Content-Length",
+            "value": "35512"
+        },
+        {
+            "name": "Connection",
+            "value": "keep-alive"
+        },
+        {
+            "name": "Last-Modified",
+            "value": "Wed, 15 Feb 2017 07:34:57 GMT"
+        },
+        {
+            "name": "ETag",
+            "value": "\"58a404a1-8ab8\""
+        },
+        {
+            "name": "Expires",
+            "value": "Fri, 17 Mar 2017 07:38:18 GMT"
+        },
+        {
+            "name": "Cache-Control",
+            "value": "max-age=2592000"
+        },
+        {
+            "name": "Via",
+            "value": "tw06270, CT-CNC-ZJFY-P-6-99 (DLC-3.0), CT-GDJM-C-234-70 (DLC-3.0)"
+        },
+        {
+            "name": "Accept-Ranges",
+            "value": "bytes"
+        },
+        {
+            "name": "Age",
+            "value": "2489810"
+        },
+        {
+            "name": "Server-Info",
+            "value": "DnionATS"
+        }
+    ],
+    "id": 20,
+    "redirectURL": null,
+    "stage": "start",
+    "status": 200,
+    "statusText": "OK",
+    "time": "2017-03-16T03:14:59.334Z",
+    "url": "http://img.vip.kanimg.com/img/banner/201702151504372411.jpg"
+}
+{
+    "contentType": "image/jpeg",
+    "headers": [
+        {
+            "name": "Server",
+            "value": "DnionOS/1.11.2.2"
+        },
+        {
+            "name": "Date",
+            "value": "Thu, 16 Mar 2017 03:14:59 GMT"
+        },
+        {
+            "name": "Content-Type",
+            "value": "image/jpeg"
+        },
+        {
+            "name": "Content-Length",
+            "value": "35512"
+        },
+        {
+            "name": "Connection",
+            "value": "keep-alive"
+        },
+        {
+            "name": "Last-Modified",
+            "value": "Wed, 15 Feb 2017 07:34:57 GMT"
+        },
+        {
+            "name": "ETag",
+            "value": "\"58a404a1-8ab8\""
+        },
+        {
+            "name": "Expires",
+            "value": "Fri, 17 Mar 2017 07:38:18 GMT"
+        },
+        {
+            "name": "Cache-Control",
+            "value": "max-age=2592000"
+        },
+        {
+            "name": "Via",
+            "value": "tw06270, CT-CNC-ZJFY-P-6-99 (DLC-3.0), CT-GDJM-C-234-70 (DLC-3.0)"
+        },
+        {
+            "name": "Accept-Ranges",
+            "value": "bytes"
+        },
+        {
+            "name": "Age",
+            "value": "2489810"
+        },
+        {
+            "name": "Server-Info",
+            "value": "DnionATS"
+        }
+    ],
+    "id": 20,
+    "redirectURL": null,
+    "stage": "end",
+    "status": 200,
+    "statusText": "OK",
+    "time": "2017-03-16T03:14:59.364Z",
+    "url": "http://img.vip.kanimg.com/img/banner/201702151504372411.jpg"
+}
 ```
 
 ## window.performance.getEntries()
