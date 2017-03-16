@@ -53,10 +53,7 @@ onResourceRequested被回调了一次
 ```javascript
 {
     "headers": [
-        {
-            "name": "Referer",
-            "value": "http://xunlei.com/"
-        },
+
         {
             "name": "User-Agent",
             "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"
@@ -69,7 +66,7 @@ onResourceRequested被回调了一次
     "id": 20,
     "method": "GET",
     "time": "2017-03-16T03:14:58.266Z",
-    "url": "http://img.vip.kanimg.com/img/banner/201702151504372411.jpg"
+    "url": "http://**/img/banner/201702151504372411.jpg"
 }
 {
     "body": "",
@@ -77,57 +74,14 @@ onResourceRequested被回调了一次
     "contentType": "image/jpeg",
     "headers": [
         {
-            "name": "Server",
-            "value": "DnionOS/1.11.2.2"
-        },
-        {
-            "name": "Date",
-            "value": "Thu, 16 Mar 2017 03:14:59 GMT"
-        },
-        {
-            "name": "Content-Type",
-            "value": "image/jpeg"
-        },
-        {
             "name": "Content-Length",
             "value": "35512"
         },
-        {
-            "name": "Connection",
-            "value": "keep-alive"
-        },
-        {
-            "name": "Last-Modified",
-            "value": "Wed, 15 Feb 2017 07:34:57 GMT"
-        },
-        {
-            "name": "ETag",
-            "value": "\"58a404a1-8ab8\""
-        },
-        {
-            "name": "Expires",
-            "value": "Fri, 17 Mar 2017 07:38:18 GMT"
-        },
-        {
-            "name": "Cache-Control",
-            "value": "max-age=2592000"
-        },
-        {
-            "name": "Via",
-            "value": "tw06270, CT-CNC-ZJFY-P-6-99 (DLC-3.0), CT-GDJM-C-234-70 (DLC-3.0)"
-        },
+       
         {
             "name": "Accept-Ranges",
             "value": "bytes"
         },
-        {
-            "name": "Age",
-            "value": "2489810"
-        },
-        {
-            "name": "Server-Info",
-            "value": "DnionATS"
-        }
     ],
     "id": 20,
     "redirectURL": null,
@@ -135,62 +89,19 @@ onResourceRequested被回调了一次
     "status": 200,
     "statusText": "OK",
     "time": "2017-03-16T03:14:59.334Z",
-    "url": "http://img.vip.kanimg.com/img/banner/201702151504372411.jpg"
+    "url": "http://**/img/banner/201702151504372411.jpg"
 }
 {
     "contentType": "image/jpeg",
     "headers": [
-        {
-            "name": "Server",
-            "value": "DnionOS/1.11.2.2"
-        },
-        {
-            "name": "Date",
-            "value": "Thu, 16 Mar 2017 03:14:59 GMT"
-        },
-        {
-            "name": "Content-Type",
-            "value": "image/jpeg"
-        },
+       
         {
             "name": "Content-Length",
             "value": "35512"
         },
         {
-            "name": "Connection",
-            "value": "keep-alive"
-        },
-        {
-            "name": "Last-Modified",
-            "value": "Wed, 15 Feb 2017 07:34:57 GMT"
-        },
-        {
-            "name": "ETag",
-            "value": "\"58a404a1-8ab8\""
-        },
-        {
-            "name": "Expires",
-            "value": "Fri, 17 Mar 2017 07:38:18 GMT"
-        },
-        {
-            "name": "Cache-Control",
-            "value": "max-age=2592000"
-        },
-        {
-            "name": "Via",
-            "value": "tw06270, CT-CNC-ZJFY-P-6-99 (DLC-3.0), CT-GDJM-C-234-70 (DLC-3.0)"
-        },
-        {
             "name": "Accept-Ranges",
             "value": "bytes"
-        },
-        {
-            "name": "Age",
-            "value": "2489810"
-        },
-        {
-            "name": "Server-Info",
-            "value": "DnionATS"
         }
     ],
     "id": 20,
@@ -199,9 +110,37 @@ onResourceRequested被回调了一次
     "status": 200,
     "statusText": "OK",
     "time": "2017-03-16T03:14:59.364Z",
-    "url": "http://img.vip.kanimg.com/img/banner/201702151504372411.jpg"
+    "url": "http://**/img/banner/201702151504372411.jpg"
 }
 ```
+
+第一次response和第二次response的差别主要有 
+
+1. 第一次response多一个`"body": ""和"bodySize": 8333`
+2. 第二次的stage为end,而第一次stage为start
+
+只有当headers中含有
+
+```shell
+{
+    "name": "Accept-Ranges",
+    "value": "bytes"
+}
+```
+时,才会出现第一次的bodySize和content-length不一致的情况
+
+因为`Accept-Ranges: bytes`表明资源可以分段传输
+
+而`Accept-Ranges`和`Content-length`是服务器决定是否给你返回这个headers的
+
+而`Accept-Ranges`和`Content-length`是配套使用的
+
+因为没有Content-length无法知道断点传输是否已经传输完了
+
+> 结论
+
+1. bodySize: 可能只包含部分字节(size of the received content decompressed (entire content or chunk content))
+2. 获取资源大小,先获取content-length,没有再去找bodysize
 
 ## window.performance.getEntries()
 
