@@ -61,7 +61,7 @@
         data-chapter-title="ES6支持IE8"
         data-filepath="es6ie8.md"
         data-basepath="."
-        data-revision="Thu Mar 09 2017 13:57:22 GMT+0800 (CST)"
+        data-revision="Fri Mar 17 2017 23:57:14 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -2210,6 +2210,108 @@
             
         </li>
     
+        <li class="chapter " data-level="1.1.15" data-path="async_reslove_question.html">
+            
+                
+                    <a href="./async_reslove_question.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.15.</b>
+                        
+                        异步问题
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.15.1" data-path="async_reslove_question/async_serial.html">
+            
+                
+                    <a href="./async_reslove_question/async_serial.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.15.1.</b>
+                        
+                        异步串行
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.15.2" data-path="async_reslove_question/promise.html">
+            
+                
+                    <a href="./async_reslove_question/promise.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.15.2.</b>
+                        
+                        promise
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.16" data-path="phantomjs.html">
+            
+                
+                    <a href="./phantomjs.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.16.</b>
+                        
+                        Phantomjs
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.16.1" data-path="phantomjs/little_test_phantom.html">
+            
+                
+                    <a href="./phantomjs/little_test_phantom.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.16.1.</b>
+                        
+                        小实验室
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.16.2" data-path="phantomjs/onresourcerequestedonresourcereceived.html">
+            
+                
+                    <a href="./phantomjs/onresourcerequestedonresourcereceived.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.16.2.</b>
+                        
+                        onResourceRequested和onResourceReceived
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -3594,6 +3696,21 @@
             
         </li>
     
+        <li class="chapter " data-level="1.14.2" data-path="http/subsection_-transmission.html">
+            
+                
+                    <a href="./http/subsection_-transmission.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.2.</b>
+                        
+                        分段传输
+                    </a>
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -3727,42 +3844,6 @@
                             <b>1.17.1.</b>
                         
                         chrome://inspect白屏
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.18" data-path="phantomjs.html">
-            
-                
-                    <a href="./phantomjs.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.18.</b>
-                        
-                        phantomjs
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.18.1" data-path="phantomjs/api.html">
-            
-                
-                    <a href="./phantomjs/api.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.18.1.</b>
-                        
-                        API了解
                     </a>
             
             
@@ -5470,6 +5551,20 @@ exports.default = <span class="hljs-number">42</span>;
  ...
  }
 </code></pre>
+<h1 id="uglifyjsplugin&#x53BB;&#x6389;&#x53CC;&#x5F15;&#x53F7;&#x95EE;&#x9898;">UglifyJsPlugin&#x53BB;&#x6389;&#x53CC;&#x5F15;&#x53F7;&#x95EE;&#x9898;</h1>
+<p>&#x4E0A;&#x9762;&#x8BF4;&#x8FC7;&#x4E86;&#x5982;&#x4F55;&#x5BF9;default&#x8FDB;&#x884C;&#x52A0;&#x53CC;&#x5F15;&#x53F7;...</p>
+<p>&#x4F46;&#x662F;UglifyJsPlugin&#x6253;&#x5305;&#x540E;..&#x53C8;&#x4F1A;&#x628A;&#x53CC;&#x5F15;&#x53F7;&#x53BB;&#x6389;...&#x6C57;...</p>
+<p>webpack</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">new</span> UglifyJsPlugin({ <span class="hljs-comment">//&#x538B;&#x7F29;&#x4EE3;&#x7801;</span>
+    compress: {
+        warnings: <span class="hljs-literal">false</span>,
+        screw_ie8: <span class="hljs-literal">false</span>
+
+    }, 
+    mangle: <span class="hljs-literal">false</span>,
+    output: { screw_ie8: <span class="hljs-literal">false</span> },
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x8BBE;&#x7F6E;&#x672C;&#x8EAB;&#x5C31;&#x6709;&#x52A0;&#x5173;&#x952E;&#x5B57;&#x7684;&#x53CC;&#x5F15;&#x53F7;,&#x65E0;&#x9700;&#x4E0A;&#x9762;&#x8BBE;&#x7F6E;babel,</p>
 <h2 id="&#x53C2;&#x8003;&#x94FE;&#x63A5;">&#x53C2;&#x8003;&#x94FE;&#x63A5;</h2>
 <ol>
 <li><a href="https://github.com/sorrycc/es3ify-loader/issues/3" target="_blank">https://github.com/sorrycc/es3ify-loader/issues/3</a></li>
@@ -5478,7 +5573,7 @@ exports.default = <span class="hljs-number">42</span>;
 <li>object.defineProperty&#x89E3;&#x51B3;: <a href="https://github.com/reactjs/react-redux/issues/227" target="_blank">https://github.com/reactjs/react-redux/issues/227</a> </li>
 </ol>
 <footer class="page-footer"><span class="copyright">&#xA9; 404mzk all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2017-02-16 23:33:40
+2017-03-10 15:01:24
 </span></footer>
                     
                     </section>
