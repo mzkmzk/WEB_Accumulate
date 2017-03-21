@@ -4,11 +4,12 @@
 
 捕抓错误一般是
 
-phantom.onError和pageonError
+1. phantom.onError: 对phantomjs执行的js进行捕抓
+2. pageonError: 对页面中的js进行错误捕抓
 
 先来看下几种状况
 
-# 实验
+# 捕抓
 
 ## page(页面)中的JS报错
 
@@ -40,4 +41,28 @@ TRACE:
  -> : 0 (in function "injectJs")
  -> phantomjs://code/report.js: 116
  -> phantomjs://platform/webpage.js: 286 (in function "_onPageOpenFinished")
+```
+
+## phantomjs 执行的js错误捕抓
+
+```javascript
+phantom.onError = function(msg, trace) {
+  var msgStack = ['PHANTOM ERROR: ' + msg];
+  if (trace && trace.length) {
+    msgStack.push('TRACE:');
+    trace.forEach(function(t) {
+      msgStack.push(' -> ' + (t.file || t.sourceURL) + ': ' + t.line + (t.function ? ' (in function ' + t.function +')' : ''));
+    });
+  }
+  console.log(msgStack.join('\n'));
+  phantom.exit(1);
+};
+```
+
+输出
+
+```javascript
+PHANTOM ERROR: ReferenceError: Can't find variable: abc
+TRACE:
+ -> phantomjs://code/report.js: 54 (in function global code)
 ```
