@@ -66,3 +66,7 @@ PHANTOM ERROR: ReferenceError: Can't find variable: abc
 TRACE:
  -> phantomjs://code/report.js: 54 (in function global code)
 ```
+
+# 总结
+
+如果不进行捕抓,phantomjs将会卡在那里,不做任何处理或者退出程序
