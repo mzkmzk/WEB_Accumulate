@@ -229,6 +229,7 @@
   * [phantomjs](phantomjs.md)
     * [API了解](phantomjs/api.md)
     * [计算首屏时间](phantomjs/ji-suan-shou-ping-shi-jian.md)
+    * [捕抓错误](phantomjs/cuo-wu-ji-zhi.md)
 * [服务器](fu_wu_qi.md)
   * [Linux](linux.md)
     * [Common](common.md)
