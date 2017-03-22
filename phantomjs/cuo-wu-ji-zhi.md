@@ -6,6 +6,7 @@
 
 1. phantom.onError: 对phantomjs执行的js进行捕抓
 2. pageonError: 对页面中的js进行错误捕抓
+3. page中的资源请求错误
 
 先来看下几种状况
 
@@ -66,6 +67,21 @@ PHANTOM ERROR: ReferenceError: Can't find variable: abc
 TRACE:
  -> phantomjs://code/report.js: 54 (in function global code)
 ```
+
+## page中的资源请求错误
+
+```javascript
+page.onResourceError = function(){
+    console.log('page.onResourceError'+ JSON.stringify(arguments));
+}
+```
+
+请求一个域名不存在的接口
+
+```shell
+page.onResourceError{"0":{"errorCode":5,"errorString":"Operation canceled","id":42,"status":null,"statusText":null,"url":"http://127.0.1.1:10220/"}}
+```
+
 
 # 总结
 
