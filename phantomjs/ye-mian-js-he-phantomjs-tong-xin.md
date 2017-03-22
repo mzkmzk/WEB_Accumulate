@@ -74,6 +74,12 @@ onAlert{"0":"{\"headers\":{\"Accept\":\"application/json, text/javascript, */*; 
 onAlert{"0":"linster error catch"}
 ```
 
+## 监听事件
+
+1. page.onAlert: 捕抓js中的alert
+2. page.onCallback: 捕抓就是中window.callPhantom(数据);
+
+
 
 # 参考链接
 
