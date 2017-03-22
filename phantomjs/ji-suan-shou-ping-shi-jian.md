@@ -38,6 +38,6 @@
 # 参考链接 
 
 1. 感知哈希算法的介绍: http://www.ruanyifeng.com/blog/2011/07/principle_of_similar_image_search.html
-2. 感知哈希算法的js实现: 
+2. 感知哈希算法的js实现: http://zhangmhao.github.io/2015/11/16/find-similar-picture/
 
 
