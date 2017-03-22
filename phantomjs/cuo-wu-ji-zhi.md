@@ -82,6 +82,17 @@ page.onResourceError = function(){
 page.onResourceError{"0":{"errorCode":5,"errorString":"Operation canceled","id":42,"status":null,"statusText":null,"url":"http://127.0.1.1:10220/"}}
 ```
 
+# phantom.onerror 对page.open不捕抓
+
+假如
+
+```javascript
+page.open(address, function (status) {
+  abc();//不存在的方法
+}
+```
+phantom.onerror 是没有捕抓到,这时我只能靠自己的try,catch,进行判断,而且是程序卡主了不会往下执行,
+
 
 # 总结
 
