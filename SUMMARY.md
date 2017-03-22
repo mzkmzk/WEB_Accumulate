@@ -228,7 +228,7 @@
     * [onResourceRequested和onResourceReceived](phantomjs/onresourcerequestedonresourcereceived.md)
     * [捕抓错误](phantomjs/cuo-wu-ji-zhi.md)
     * [页面JS和phantomjs通信](phantomjs/ye-mian-js-he-phantomjs-tong-xin.md)
-    * [计算首屏时间](phantomjs/ji-suan-shou-ping-shi-jian.md)
+    * [计算网络性能指标](phantomjs/ji-suan-shou-ping-shi-jian.md)
 * [服务器](fu_wu_qi.md)
   * [Linux](linux.md)
     * [Common](common.md)
