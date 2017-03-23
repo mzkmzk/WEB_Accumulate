@@ -1,4 +1,4 @@
-# 计算首屏时间
+# 计算网页网络性能
 
 # 环境
 
@@ -45,9 +45,8 @@ window.k_report = {
     dom_complete: null,
     window_onload: null
 }
-//window.document.body.style.cssText = 'height: 100px; overflow:hidden';
+
 document.addEventListener( 'DOMContentLoaded', function(){
-    //document.body.style.cssText = 'height: 100px; overflow:hidden';
     window.k_report.dom_complete = new Date().getTime();
 })
 
@@ -57,7 +56,17 @@ window.onload = function(){
 
 ```
 
+# 白屏时间、首屏时间、加载中的图片比较
 
+## 截图
+
+
+
+## 遗留问题
+
+还有待解决的是图片的数量
+
+因为服务器进行截图是需要耗时间的,如果截图越少,就越不准确
 
 
 
