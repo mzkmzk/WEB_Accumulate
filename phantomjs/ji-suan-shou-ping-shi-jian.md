@@ -24,6 +24,42 @@
 
 # 计算DOMContentLoaded和window.onload
 
+这里主要是injectJs进去,监听DOMContentLoaded,然后在page加载完成后,取这两个值出来
+
+phantomjs
+```javascript
+page.onInitialized = function() {
+    page.injectJs('../JS/get_data.js')
+}
+
+page.open(address, function (status) {
+    var k_report = page.evaluate(function(){
+            return window.k_report;
+        })
+}
+```
+
+../JS/get_data.js
+```javascript
+window.k_report = {
+    dom_complete: null,
+    window_onload: null
+}
+//window.document.body.style.cssText = 'height: 100px; overflow:hidden';
+document.addEventListener( 'DOMContentLoaded', function(){
+    //document.body.style.cssText = 'height: 100px; overflow:hidden';
+    window.k_report.dom_complete = new Date().getTime();
+})
+
+window.onload = function(){
+    window.k_report.window_onload = new Date().getTime();
+}
+
+```
+
+
+
+
 
 # 比较图片相似度: 感知哈希算法
 
