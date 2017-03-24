@@ -49,3 +49,4 @@ chrome 如果是取缓存的话
 
 1. http://www.alloyteam.com/2012/03/web-cache-1-web-cache-overview/
 2. 缓存设置优先级探究: http://blog.csdn.net/cor_twi/article/details/48596325
+3. from disk 和 from memory: http://aircloud.10000h.top/58
