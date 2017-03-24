@@ -16,10 +16,16 @@
 
 这取决于
 
+1. 查看response-header的cache-control、pragma: no-cahce、Expires属性
 1. 有无`<META HTTP-EQUIV="Pragma" CONTENT="no-cache">`,有则完全不走缓存,但是笔者在chrome 56上尝试了,浏览器还是会读缓存
 2. 
+
+
+# 遗留问题
+
+1. 如何缓存.html,如果不用manifest
 
 # 参考链接
 
 1. http://www.alloyteam.com/2012/03/web-cache-1-web-cache-overview/
-
+2. 缓存设置优先级探究: http://blog.csdn.net/cor_twi/article/details/48596325
