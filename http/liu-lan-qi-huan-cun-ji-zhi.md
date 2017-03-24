@@ -16,6 +16,8 @@
 
 这取决于
 
+1. 有无`<META HTTP-EQUIV="Pragma" CONTENT="no-cache">`,有则完全不走缓存,但是笔者在chrome 56上尝试了,浏览器还是会读缓存
+2. 
 
 # 参考链接
 
