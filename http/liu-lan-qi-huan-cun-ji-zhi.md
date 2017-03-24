@@ -16,10 +16,30 @@
 
 这取决于
 
-1. 查看response-header的cache-control、pragma: no-cahce、Expires属性
-1. 有无`<META HTTP-EQUIV="Pragma" CONTENT="no-cache">`,有则完全不走缓存,但是笔者在chrome 56上尝试了,浏览器还是会读缓存
-2. 
+在请求资源,第一次返回来时
 
+1. 查看response-header的cache-control、pragma: no-cahce、Expires属性
+2. 查看当前html文件的cache-control、pragma: no-cahce、Expires属性
+
+## from memory 和 from disk
+
+这里基于chrome56做研究,不同的浏览器可能策略不一样
+
+chrome 如果是取缓存的话
+
+1. image去from memory的
+2. js,css是from disk的
+3. 小于1K的js和css也会from memory
+
+而from memory(0ms) 肯定会比 from disk(1ms)快的
+
+但是chrome缺不能全部存在内存中
+
+还做了一个小实验
+
+现在进入一个有缓存的页面,能看到上诉规律
+
+然后关掉chrome,重新进入这个页面,会发现所有的都是from disk的
 
 # 遗留问题
 
