@@ -214,6 +214,7 @@
   * [HTTP](http.md)
     * [http\_206](http/http_206.md)
     * [分段传输](http/subsection_-transmission.md)
+    * [浏览器缓存机制](http/liu-lan-qi-huan-cun-ji-zhi.md)
   * [单元测试](yuan.md)
     * [jest](yuan/jest.md)
     * [K-Report的单元测试](yuan/k-reportyuan.md)
