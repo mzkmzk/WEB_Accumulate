@@ -60,6 +60,53 @@ window.onload = function(){
 
 ## 截图
 
+定义屏幕宽高为 1400x900 `page.viewportSize = { width: 1400, height: 700 }`
+
+由于考虑到截图的效率,默认截图是截全网页的,而如果每次截这么大,截图花费时间比较多,所以只截取中间的一部分
+
+```javascript
+page.clipRect = {
+    top: 400,
+    left: 200,
+    width: 600,
+    height: 300
+};
+```
+
+设置开始截图时机和关闭截图时机
+
+```javascript
+this.page.on_loadstarted_promise.push(function(){
+    self.get_interval_capture();
+})
+
+this.page.on_loadfinished_promise.push(function()
+        return  new Promise(function(resolve){
+            clearInterval( self.intervalId );
+            //setTimeout(function(){
+            page.evaluate(function(screenshot){
+                
+                    window.copy_to_html(screenshot);
+                    window.judge_picture_evaluate(screenshot);
+
+                },screenshot);
+
+                self.page.on_callback_promise.push(function(data){
+                    if (data && data.command === 'computer_similar_exit') {
+                        resolve();
+                    }
+                })
+                
+        
+            
+            
+        })
+       
+})    
+
+
+```
+
 
 
 ## 遗留问题
