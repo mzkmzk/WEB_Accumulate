@@ -99,17 +99,21 @@ this.page.on_loadfinished_promise.push(function()
 })    
 ```
 
+## 计算白屏和首屏时间
 
 
 
 
-## 遗留问题
+
+# 遗留问题
 
 还有待解决的是图片的数量
 
 因为服务器进行截图是需要耗时间的,如果截图越少,就越不准确
 
+## window.callPhantom 
 
+只能使用一次 js里定义两次,发现两个都没被触发
 
 # 比较图片相似度: 感知哈希算法
 
