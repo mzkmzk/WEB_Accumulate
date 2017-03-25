@@ -81,26 +81,20 @@ this.page.on_loadstarted_promise.push(function(){
 })
 
 this.page.on_loadfinished_promise.push(function()
-        return  new Promise(function(resolve){
-            clearInterval( self.intervalId );
-            //setTimeout(function(){
-            page.evaluate(function(screenshot){
-                
-                    window.copy_to_html(screenshot);
-                    window.judge_picture_evaluate(screenshot);
+    return  new Promise(function(resolve){
+        clearInterval( self.intervalId );
+           //setTimeout(function(){
+           page.evaluate(function(screenshot){              
+                window.copy_to_html(screenshot);
+                window.judge_picture_evaluate(screenshot);
+           },screenshot);
 
-                },screenshot);
-
-                self.page.on_callback_promise.push(function(data){
-                    if (data && data.command === 'computer_similar_exit') {
-                        resolve();
-                    }
-                })
-                
-        
-            
-            
-        })
+            self.page.on_callback_promise.push(function(data){
+                if (data && data.command === 'computer_similar_exit') {
+                    resolve();
+                }
+            })            
+    })
        
 })    
 
