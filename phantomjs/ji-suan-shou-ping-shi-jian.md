@@ -101,11 +101,33 @@ this.page.on_loadfinished_promise.push(function()
 
 ## 计算白屏和首屏时间
 
+当白屏的时候,图片经过计算的hash码是'100000000000000000000000000000000'的
+
+而拿最后一张图,和之前的图进行对比,最先和最后一张图类似的,即为首屏时间
+
+```javascript
+for (var i = 0; i < _atf.capture_array.length ; i++) {
+
+    try {
+        
+        var result = similar_result( _atf.capture_array[i].image, _atf.capture_array[ _atf.capture_array.length - 1 ].image )
+
+        if ( window.similar_picture.white_screen === -1 && result.hash_1 !== '100000000000000000000000000000000' ) {
+            window.similar_picture.white_screen = _atf.capture_array[i].time;
+        }
+        if ( window.similar_picture.atf === -1 && result.hash_1 === result.hash_2 ) {
+            window.similar_picture.atf = _atf.capture_array[i].time;
+        }    
+    }catch(e){
+        alert(e)
+    }
+
+}
+```
 
 
 
-
-# 遗留问题
+## 遗留问题
 
 还有待解决的是图片的数量
 
