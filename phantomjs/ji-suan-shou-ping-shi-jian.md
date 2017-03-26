@@ -125,8 +125,6 @@ for (var i = 0; i < _atf.capture_array.length ; i++) {
 }
 ```
 
-
-
 ## 遗留问题
 
 还有待解决的是图片的数量
