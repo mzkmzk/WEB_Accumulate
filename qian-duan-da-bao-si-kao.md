@@ -34,6 +34,13 @@ all in one
 1. 增加了首次加载的大小
 2. 对于一些其他页面不需要执行的js,需要判断哪个url,哪个JS要执行的 
 
+最后还是选择了one in one
+
+每个页面,有自己单独的js
+
+原因是因为如果all in one,就迫不得已在一些不需要执行的js里判断location.path 然后return,实在强迫症
+
+
 # 功能点
 
 ## 按chunks 划分模块
