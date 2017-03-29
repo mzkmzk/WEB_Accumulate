@@ -7,7 +7,9 @@
     "baidu",
     "tbfed-pagefooter",
     "github-buttons",
-    "splitter"
+    "splitter",
+	"simple-page-toc",
+	"anchors"
   ],
   "pluginsConfig": {
     "duoshuo": {
@@ -29,7 +31,10 @@
         "watch"
       ],
       "size": "small"
+    },
+	"simple-page-toc": {
+        "maxDepth": 3,
+        "skipFirstH1": true
     }
-
   }
 }
