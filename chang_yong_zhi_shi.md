@@ -50,3 +50,20 @@ git clone 时,默认为仓库的名字 要想重命名 砸破
 参考链接还有一些正则的使用方式
 
 参考<http://stackoverflow.com/questions/4259996/how-can-i-view-a-git-log-of-just-one-users-commits>
+
+# 8. 查看文件修改记录
+
+> 1. git log -p filename
+
+能详细显示出每次该文件修改的diff
+
+> 2. git show commit号 filename
+
+ 能查看该次commit的文件修改
+ 
+> 3. git log filename 或 git log --pretty=oneline filename
+
+ 显示出与该文件有关的commit
+ 
+   
+
