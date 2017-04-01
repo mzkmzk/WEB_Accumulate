@@ -74,5 +74,14 @@ console.log(typeof function a(){} ) //function
 2. instanceof: 判断自定义对象时用
 3. toString: 判断浏览器内置对象时用
 
+一般判断type的方法
+
+` (obj === null || obj === undefined) ? String(obj) : Object.prototype.toString.call(obj).match(/\[object (\w+)\]/)[1].toLowerCase()`
+
+返回 null ,undefined, number, array, object 等
+
+至于为啥`(obj === null || obj === undefined) ? String(obj) `
+
+其实不写这个也可以,后面一样可以返回正确的值,这样写的原因是效率相对高点 
 
 
