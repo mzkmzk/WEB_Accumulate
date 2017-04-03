@@ -1,5 +1,7 @@
 # typeof instanceof toString 等判断类型
 
+<!-- toc -->
+
 # typeof 
 
 可靠的比较-检测基本类型和function
