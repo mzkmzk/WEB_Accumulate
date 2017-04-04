@@ -288,6 +288,8 @@
   * [自动集成](zi_dong_ji_cheng.md)
     * [JS集成travis-ci](jsji_cheng_travis_-_ci1.md)
       * [入门DEMO](traviis_js_ru_men_demo.md)
+  * [GitBook](gitbook.md)
+    * [制作一个gitbook插件: 页面title改为层级显示](gitbook/zhi-zuo-yi-ge-gitbook-cha-4ef63a-ye-mian-title-gai-wei-ceng-ji-xian-shi.md)
 * [单元测试](dan_yuan_ce_shi.md)
   * [常见问题](phpunit_chang_jian_wen_ti.md)
 * [重构](zhong_gou.md)
