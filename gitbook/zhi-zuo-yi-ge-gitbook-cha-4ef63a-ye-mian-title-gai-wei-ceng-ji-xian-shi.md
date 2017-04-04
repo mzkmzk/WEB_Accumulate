@@ -24,3 +24,22 @@
 
 `https://toolchain.gitbook.com/plugins/create.html` 了解其gitbook提供的钩子和API
 
+主要的结构为入口js 例如index.js
+
+```javascript
+module.exports = {
+    // Map of hooks
+    hooks: {},
+
+    // Map of new blocks
+    blocks: {},
+
+    // Map of new filters
+    filters: {}
+};
+```
+
+
+
+
+
