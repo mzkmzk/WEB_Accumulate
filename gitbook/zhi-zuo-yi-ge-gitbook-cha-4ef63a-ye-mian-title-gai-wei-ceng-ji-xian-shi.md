@@ -39,6 +39,18 @@ module.exports = {
 };
 ```
 
+一般主要用hooks,可以监听page生成前和生成时
+
+block和filters主要是自定义数据模板的
+
+# 尝试过的失败
+
+## 直接修改hooks中的page:before
+
+page:before函数中有page.title属性,但是修改了并没什么用,title依旧
+
+一般page.content修改就很好使
+
 
 
 
