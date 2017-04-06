@@ -51,7 +51,20 @@ page:before函数中有page.title属性,但是修改了并没什么用,title依�
 
 一般page.content修改就很好使
 
+## hooks中的navigation修改title
 
+```javascript
+hooks: {
+        "init": function(){
+            
+            for(key in this.navigation) {
+                this.navigation[ key ].title = 12345;
+            }
+            console.log(circular_json.stringify(this, null, 4))
 
+        },
+```
+
+然而这并没有修改到title
 
 
