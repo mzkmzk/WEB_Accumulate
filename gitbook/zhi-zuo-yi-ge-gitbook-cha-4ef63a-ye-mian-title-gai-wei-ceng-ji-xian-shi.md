@@ -43,6 +43,35 @@ module.exports = {
 
 block和filters主要是自定义数据模板的
 
+# 修改最终的文件 
+
+最后的思路是
+
+利用page:before(page事件也行)中的page对象收集level和title
+
+最终收集的数据类似
+
+```javascript
+    {
+        "level": "1.7.1",
+        "title": "只有偏执狂才能生存",
+        "basename": "zhi_you_pian_zhi_kuang_cai_neng_sheng_cun"
+    },
+    {
+        "level": "1.8",
+        "title": "设计",
+        "basename": "she_ji"
+    },
+    {
+        "level": "1.8.1",
+        "title": "至美用户人本设计剖析",
+        "basename": "zhi_mei_yong_hu_ren_ben_she_ji_pou_xi"
+    }
+```
+
+
+
+
 # 尝试过的失败
 
 ## 直接修改hooks中的page:before
