@@ -124,6 +124,38 @@ hooks: {
 
 # 遇到的技术点
 
+## 箭头函数和arguments变量
+
+平常在调试时,喜欢用arguments来获取所有参数
+
+例如
+
+```javascript
+var a = function(){
+    console.log(arguments)
+}
+a(1) //{ '0': 1}
+```
+
+但是如果写成
+
+```javascript
+var a = () => {    
+    console.log(arguments)
+}
+a(1)
+```
+
+输出的则是`{ '0': {} }`
+
+箭头函数是不支持arguments,的如果需要获取所有参数,需要`...变量`
+
+```javascript
+var a = (...args) => {
+    console.log(args) //[1]
+}
+```
+
 ## 正则中添加变量
 
 例如需要匹配.html中的title
