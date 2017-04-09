@@ -53,6 +53,8 @@ block和filters主要是自定义数据模板的
 4. 根据当前level,找出父目录的title
 5. 用node进行文件修改title
 
+怎么过程通过Promise写,比较清晰,具体代码在文章最下面
+
 ## 收集 level,title和basename
 
 最终收集的数据类似
@@ -92,11 +94,70 @@ block和filters主要是自定义数据模板的
 
 这里注意的是README.md最终生成的是index.html而非README.html,这个需要特殊处理
 
+```javascript
+ if (element.basename !== 'README') {
+     element.file_path = path.join(output,element.basename + ".html")
+}else {
+     element.file_path = path.join(output,'index' + ".html")
+}
+return element
 
+```
 
-# 遗留问题
+## 读取内容
 
-1. 如果标题中含有空格则不起作用,有待优化正则
+```javascript
+return new Promise( resolve => {
+    fs.readFile( element.file_path, (err, data) => {
+        if (err) throw err
+
+        element.content = new String(data)
+        
+        resolve( element )
+    })
+})
+```
+
+## 设置新title
+
+```javascript
+let title = (( element.content ).match(new RegExp("<title>(.+)· " + book_title  )  ) )[1].slice(0, -1), //去掉最后匹配多出来的空格
+    title_object = _.find(title_array, function(element){
+                        if (element.title === title) return true
+                    }),
+    level = title_object.level
+
+while(true){
+    level = level.substring(0, level.lastIndexOf('.'))
+    title_object = _.find(title_array, function(element){
+                if (element.level === level) return true
+            })
+
+    if ( !title_object ) break;
+
+    title +=  ' ' +  title_object.title
+}
+
+element.new_title = title
+return element
+```
+
+## 更换title
+
+```javascript
+element.content = element.content.replace(/<title>(.+)<\/title>/,function(match, p1){
+    return '<title>' + element.new_title + ' · ' + book_title + '</title>'
+})
+ return element
+```
+
+## 新title写入文件
+
+```javascript
+fs.writeFile(element.file_path,  element.content, function(err){
+    if (err) throw err
+} )
+```
 
 # 尝试过的失败
 
