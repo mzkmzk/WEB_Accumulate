@@ -144,6 +144,8 @@ hooks: {
 
 获取到title还需要.slice(0, -1)掉后面的空格.
 
+参考链接<http://www.cnblogs.com/season-huang/p/3544873.html>
+
 ## slice, substr, substring的区别
 
 主要区别有
