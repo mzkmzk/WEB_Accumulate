@@ -18,6 +18,8 @@
 
 然后就撸起袖子
 
+最终项目链接: <https://github.com/mzkmzk/gitbook-plugin-catalogue-title>
+
 # 学习gitbook插件
 
 首先建议可以先看看
