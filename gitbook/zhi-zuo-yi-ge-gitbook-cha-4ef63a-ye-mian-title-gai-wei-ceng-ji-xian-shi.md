@@ -160,3 +160,130 @@ hooks: {
 
 参考链接<http://www.cnblogs.com/ider/p/js-slice-vs-substr-vs-substring-table.html>
 
+## 过程promise
+
+之前用以前普通的写法缺点有
+
+1. 有读写文件回调,嵌套感觉不爽
+2. 很多错都没catch到,如果再全部加一层 try catch 感觉更乱
+
+无promise代码
+
+```javascript
+_.each(title_array, function(element){
+    //fs.readFileSync()
+    let file_path
+
+    if (element.basename !== 'README') {
+        file_path = path.join(output,element.basename + ".html")
+    }else {
+        file_path = path.join(output,'index' + ".html")
+    }
+     
+
+    fs.readFile(file_path, function(err, data){
+        if (err) {
+            console.log(err)
+            return
+        }
+        let content = new String(data),
+            result = content.match(/<title>(\S+)/),
+            default_title = result && result[1],
+            title_object = _.find(title_array, function(element){
+                        if (element.title === default_title) return true
+                    })
+            level = title_object && title_object.level,
+            new_title = default_title
+
+        while(true){
+            level = level && level.substring(0, level.lastIndexOf('.'))
+            title_object = _.find(title_array, function(element){
+                        if (element.level === level) return true
+                    })
+            if ( !title_object ) break;
+            new_title +=  ' ' +  title_object.title
+        }
+
+        content =  content.replace(/<title>(\S+)<\/title>/,function(match, p1){
+            return '<title>' + new_title + ' · ' + book_title + '</title>'
+        })
+
+        fs.writeFile(file_path,  content, function(err){
+            if (err) throw err
+        } )
+
+
+        console.log(file_path)
+        console.log(result&& result[1])
+        console.log(new_title)
+        
+    }.bind(null, file_path))
+})
+```
+
+Promise后代码
+
+```javascript
+_.each(title_array, element => {
+    Promise.resolve()
+        .then( () => { //查找html
+            if (element.basename !== 'README') {
+                 element.file_path = path.join(output,element.basename + ".html")
+            }else {
+                 element.file_path = path.join(output,'index' + ".html")
+            }
+            return element
+        })
+        .then( element => { //读取内容
+            return new Promise( resolve => {
+                fs.readFile( element.file_path, (err, data) => {
+                    if (err) throw err
+
+                    element.content = new String(data)
+                    
+                    resolve( element )
+                })
+            })
+            
+        })
+        .then( element => { //获取新title
+            
+            let title = (( element.content ).match(new RegExp("<title>(.+)· " + book_title  )  ) )[1].slice(0, -1),
+            //let title = (( element.content ).match(/<title>(\S+)/) )[1],
+                title_object = _.find(title_array, function(element){
+                                    
+                                    if (element.title === title) return true
+                                }),
+                level = title_object.level
+            
+            while(true){
+                level = level.substring(0, level.lastIndexOf('.'))
+                title_object = _.find(title_array, function(element){
+                            if (element.level === level) return true
+                        })
+
+                if ( !title_object ) break;
+
+                title +=  ' ' +  title_object.title
+            }
+
+            element.new_title = title
+            return element
+        })
+        .then ( element => { //设置新title
+             element.content = element.content.replace(/<title>(.+)<\/title>/,function(match, p1){
+                return '<title>' + element.new_title + ' · ' + book_title + '</title>'
+            })
+             return element
+        })
+        .then( element => { //新title都到文件中 
+            
+            fs.writeFile(element.file_path,  element.content, function(err){
+                if (err) throw err
+            } )
+        } )
+        .catch(err => {
+            console.log(err)
+        })
+})
+```
