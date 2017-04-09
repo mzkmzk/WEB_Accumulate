@@ -47,7 +47,13 @@ block和filters主要是自定义数据模板的
 
 最后的思路是
 
-利用page:before(page事件也行)中的page对象收集level和title
+1. 利用page:before(page事件也行)中的page对象收集level、title和basename
+2. 获取最终文件生成路径,第一步收集的basename,则用于寻找最终生成的.html文件
+3. 获取.html文件中的title,根据title匹配上level
+4. 根据当前level,找出父目录的title
+5. 用node进行文件修改title
+
+## 收集 level,title和basename
 
 最终收集的数据类似
 
@@ -69,7 +75,24 @@ block和filters主要是自定义数据模板的
     }
 ```
 
-然后
+实现的代码比较简单
+
+```javascript
+"page:before": function (page) {
+    title_array.push({
+        level: page.level,
+        title: page.title,
+        basename:  page.path.substring(0, page.path.lastIndexOf('.') )
+    });
+    return page;
+},
+```
+
+## 获取最终生成的.html文件
+
+这里注意的是README.md最终生成的是index.html而非README.html,这个需要特殊处理
+
+
 
 # 遗留问题
 
@@ -99,4 +122,39 @@ hooks: {
 
 然而这并没有修改到title
 
+# 遇到的技术点
+
+## 正则中添加变量
+
+例如需要匹配.html中的title
+
+`<title>TCP-IP详解 卷一: 协议 · 404k的阅读笔记</title>`
+
+一开始匹配title用的正则是`/<title>(\S+)/`
+
+一般没有空格的都是ok的,但是上面这周自己title有空格的话就只匹配到`TCP-IP详解`,这样的title匹配不到level的
+
+所以当时的想法书名也匹配进来,不过`404k的阅读笔记`是个变量,每本书都不一样,怎么往正则加这个呢
+
+定义正则的方法有字变量和构造函数,而字变量尝试了几波误解...只好用字变量
+
+所以最后正则变为
+
+`new RegExp("<title>(.+)· " + book_title )`,//book_title为404k的阅读笔记
+
+获取到title还需要.trim掉后面的空格.
+
+## slice, substr, substring的区别
+
+主要区别有
+
+1. 只有slice支持负数
+2. substring会对参数1和参数2进行大小比较,小的替换为参数1,大的替换成参数2
+3. substr的参数2表示截取的长度,而其他两个都代表截取到字符串的哪一位
+
+![slice, substr, substring的区别](/assets/QQ20170409-0.png)
+
+
+
+参考链接<http://www.cnblogs.com/ider/p/js-slice-vs-substr-vs-substring-table.html>
 
