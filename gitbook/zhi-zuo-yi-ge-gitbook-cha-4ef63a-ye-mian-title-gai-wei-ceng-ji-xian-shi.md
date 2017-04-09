@@ -75,9 +75,12 @@ block和filters主要是自定义数据模板的
         "title": "至美用户人本设计剖析",
         "basename": "zhi_mei_yong_hu_ren_ben_she_ji_pou_xi"
     }
-```
+
+```
+
 
 实现的代码比较简单
+
 
 ```javascript
 "page:before": function (page) {
