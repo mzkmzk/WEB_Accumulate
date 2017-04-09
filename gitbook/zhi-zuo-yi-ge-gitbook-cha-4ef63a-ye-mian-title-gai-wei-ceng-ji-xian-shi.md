@@ -142,7 +142,7 @@ hooks: {
 
 `new RegExp("<title>(.+)· " + book_title )`,//book_title为404k的阅读笔记
 
-获取到title还需要.trim掉后面的空格.
+获取到title还需要.slice(0, -1)掉后面的空格.
 
 ## slice, substr, substring的区别
 
