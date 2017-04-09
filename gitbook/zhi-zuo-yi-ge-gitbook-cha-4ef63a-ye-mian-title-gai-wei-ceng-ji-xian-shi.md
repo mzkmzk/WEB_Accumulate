@@ -156,6 +156,19 @@ var a = (...args) => {
 }
 ```
 
+找资料中的额外发现
+
+```javascript
+//小提示：当使用箭头函数创建普通对象时，你总是需要将对象包裹在小括号里。
+
+    // 为与你玩耍的每一个小狗创建一个新的空对象
+    var chewToys = puppies.map(puppy => {});   // 这样写会函数会返回undefined
+    var chewToys = puppies.map(puppy => ({})); //
+```
+
+
+参考资料<http://www.infoq.com/cn/articles/es6-in-depth-arrow-functions>
+
 ## 正则中添加变量
 
 例如需要匹配.html中的title
