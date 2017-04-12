@@ -66,7 +66,7 @@
           * [计时器](ji_shi_qi.md)
           * [JSX\_Hello\_World](jsxhello_world.md)
         * [知识点](zhi_shi_dian.md)
-          * [React声明周期和props & state](reactsheng_ming_zhou_qi_he_props_&_state.md)
+          * [React生命周期和props & state](reactsheng_ming_zhou_qi_he_props_&_state.md)
           * [Redux+React使用ajax](redux+reactshi_yong_ajax.md)
         * [ReduxDevtool](reduxdevtool.md)
         * [基础API](ji_chu_api.md)
