@@ -233,6 +233,7 @@
     * [计算网络性能指标](phantomjs/ji-suan-shou-ping-shi-jian.md)
     * page的on事件令其可多次使用
   * [线上BUG](xian-shang-bug.md)
+    * [缓存相关](xian-shang-bug/huan-cun-xiang-guan.md)
 * [服务器](fu_wu_qi.md)
   * [Linux](linux.md)
     * [Common](common.md)
