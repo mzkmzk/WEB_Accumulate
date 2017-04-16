@@ -314,6 +314,7 @@
   * [常用知识](chang_yong_zhi_shi.md)
 * [其他](qi_ta.md)
   * [简历](jian_li.md)
+  * [网页收集](wang-ye-shou-ji.md)
 * [优秀网站](you_xiu_wang_zhan.md)
   * [设计](web_she_ji.md)
   * [前端](web_qian_duan.md)
