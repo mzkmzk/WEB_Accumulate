@@ -171,8 +171,6 @@
     * [Grunt](grunt.md)
       * [入门](grunt_ru_men.md)
     * [Gulp](gulp_gulp.md)
-  * [素材](su_cai.md)
-    * [炫酷网站收集](xuan_ku_wang_zhan_shou_ji.md)
   * [第三方嵌入](第三方嵌入.md)
     * [新浪微博](新浪微博.md)
     * [七牛](七牛.md)
