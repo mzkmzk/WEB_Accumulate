@@ -16,3 +16,7 @@
 5. https://github.com/gf-rd/gulp-gf-md5: 广发银行js文件md5加密
 6. http://www.aliued.cn/: 阿里1688前端团队
 7. http://rapheal.sinaapp.com/: 微信拉风的博客
+
+## 炫酷网站收集
+
+1. http://www.galaxia.co/: 宇宙系列,声音和背景很酷,响应式
