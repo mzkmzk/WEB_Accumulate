@@ -35,6 +35,7 @@ entry: ['webpack-hot-middleware/client', 'index.js]
 新建serve.js
 
 ````javascript
+
 var webpack = require('webpack');
 var webpackConfig = require('./webpack.config');
 var compiler = webpack(webpackConfig);
