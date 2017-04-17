@@ -168,6 +168,7 @@
       * [常见问题](webpack_chang_jian_wen_ti.md)
         * [无法安装node-sass](wu_fa_an_zhuang_node_-_sass.md)
       * [前端打包思考](qian-duan-da-bao-si-kao.md)
+      * [热更新](re-geng-xin.md)
     * [Grunt](grunt.md)
       * [入门](grunt_ru_men.md)
     * [Gulp](gulp_gulp.md)
