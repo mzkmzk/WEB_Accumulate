@@ -101,6 +101,7 @@
         * [webpack的loader和loaders问题](webpackde_loader_he_loaders_wen_ti.md)
       * [react-router](react-router.md)
         * [刷新404](刷新404.md)
+        * [react-router的生命周期 ](react-routerde-sheng-ming-zhou-qi.md)
     * [ESLint](eslint.md)
       * [错误收集](cuo_wu_shou_ji.md)
     * [WebGL](webgl.md)
