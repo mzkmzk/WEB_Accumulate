@@ -6,7 +6,7 @@
 
 `<hr/>`在各浏览器的显示常常是100%的宽度，2px的高度,3D边框风格渲染
 
-# border
+# 粗细
 
 在大部分浏览器中2px的高度
 
@@ -31,3 +31,18 @@ hr{
 
 # 颜色
 
+比较兼容的写法
+
+```css
+hr{
+    color:red;
+    background-color:red;
+    height:1px;
+    line-height:1px;
+    font-size:0;
+    border:none;
+}
+著作权归作者所有。
+商业转载请联系作者获得授权,非商业转载请注明出处。
+原文: https://www.w3cplus.com/css/css-hr © w3cplus.com
+```
