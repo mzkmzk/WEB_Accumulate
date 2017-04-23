@@ -38,11 +38,15 @@ hr{
     color:red;
     background-color:red;
     height:1px;
-    line-height:1px;
-    font-size:0;
+    line-height:1px;/*保证ＩＥ下高度效果一致，不留白色空白区*/
+    font-size:0;/*设置为0，以确保IE6下不留空白区*/
     border:none;
 }
 著作权归作者所有。
 商业转载请联系作者获得授权,非商业转载请注明出处。
 原文: https://www.w3cplus.com/css/css-hr © w3cplus.com
 ```
+
+# 参考链接
+
+1. https://www.w3cplus.com/css/css-hr
