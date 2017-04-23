@@ -179,3 +179,16 @@ background: no-repeat center top url("../Image/Index/index.jpg");
 ![蓝色边框](QQ20160113-2.png)
 
 取消: `outline:none`
+
+### 11. z-index的定义
+
+z-index属性目前只有在
+
+1. position:relative
+2. position:absolute
+3. position:fixed
+
+参与的情况下才有作用
+
+在默认情况下，元素应用了非static的position属性后，其就会有一个隐晦的层级，会居于普通元素之上，无需额外设置z-index属性值。
+
