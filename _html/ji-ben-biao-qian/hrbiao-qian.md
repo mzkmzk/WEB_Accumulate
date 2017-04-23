@@ -22,8 +22,12 @@
 hr{
     height: 1px;
     border: none;
+    background: 颜色;//必须设,不然没有任何东西显示在IE其他的浏览器
+    color: 颜色;//IE设置hr颜色的方法
 }
 ```
+
+或者改变border
 
 # 颜色
 
