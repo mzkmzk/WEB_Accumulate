@@ -165,3 +165,11 @@ padding-bottom实现,因为padding算百分比是根据父元素的宽度计算�
 更具体可以参考
 
 <https://idiotwu.me/css-responsive-square/>
+
+###9.. 背景图片永远居中
+
+横向滚动条不会出现,窗口显示的是最中间的图形
+
+```css
+background: no-repeat center top url("../Image/Index/index.jpg");
+```
