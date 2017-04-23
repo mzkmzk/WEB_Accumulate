@@ -16,3 +16,11 @@
 
 所以大部分浏览器的hr默认为2px
 
+所以如果你只想要1px 可以这么做
+
+```css
+hr{
+    height: 1px;
+    border: none;
+}
+```
