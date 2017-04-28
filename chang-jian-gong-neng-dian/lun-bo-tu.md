@@ -24,6 +24,9 @@
 
 ## 4.1 简单的图片切换
 
+![图片切换轮播图](/assets/carousel_1_base.gif)
+
+在线地址<http://demo.404mzk.com/carousel/1-base/>
 
 
 
