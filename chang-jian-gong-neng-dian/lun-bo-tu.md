@@ -28,6 +28,39 @@
 
 在线地址<http://demo.404mzk.com/carousel/1-base/>
 
+这种比较简单,就是用js控制src就OK...
 
+## 4.2 简单滚动
+
+简单的滚动其实是所有的图片都在一行
+
+然后通过left或其他方式控制位置实现
+
+实现所有图片都在一行的方式有很多种,例如
+
+```html
+<ul>
+    <li><img src="../images/wechat.png"></li>
+    <li><img src="../images/sogou.png"></li>
+    <li><img src="../images/xmind8.png"></li>
+</ul>
+```
+
+```css
+ul{
+    white-space:nowrap;
+    width: 680px;
+    overflow: hidden;
+}
+li{
+    display:inline-block;
+}
+
+img{
+    width: 680px;
+    height: 240px;
+    
+}
+```
 
 
