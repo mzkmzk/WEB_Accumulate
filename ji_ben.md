@@ -199,3 +199,10 @@ z-index属性目前只有在
 所以所定义元素 如果没有宽度/高度的限制
 
 即使定义了`overflow: hidden`是无效的
+
+可选值
+
+1. visable: 大多数元素的默认值,不剪切内容,也不添加滚动条
+2. auto: 为body、textare和div的默认值
+3. hidden: 不显示超出尺寸的内容
+4. scroll: 总是显示滚动条 
