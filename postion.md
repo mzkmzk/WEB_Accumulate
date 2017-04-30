@@ -12,9 +12,14 @@ top bottom lft right 或 z-index均被忽略
 
 `postion: relative`
 
-相对定位,相对于谁? -- 元素为static时的元素本身
+相对定位, 相对于谁? -- 元素为static时的元素本身
 
 # 绝对定位
 
-`position`
+`position: absolute`
 
+绝对定位, 绝对与谁? -- 绝对于父类不为static的元素
+
+# 参考链接
+
+1. 对absolute和relative讲解有demo挺ok的文章: http://www.cnblogs.com/lxblog/p/3152897.html
