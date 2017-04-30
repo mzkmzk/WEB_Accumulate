@@ -141,7 +141,7 @@
     * [常用语法](常用api.md)
       * [border-radius](border-radius.md)
       * [clip-path](clip-path.md)
-      * [postion](postion.md)
+      * [position](postion.md)
   * [HTML](_html.md)
     * [基本标签](_html/ji-ben-biao-qian.md)
       * [hr标签](_html/ji-ben-biao-qian/hrbiao-qian.md)
