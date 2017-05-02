@@ -32,7 +32,9 @@
 
 ## 4.2 简单滚动
 
+![轮播移动截图](/assets/carousel_2_move.gif)
 
+在线地址: <http://demo.404mzk.com/carousel/2-move/>
 
 简单的滚动其实是所有的图片都在一行
 
