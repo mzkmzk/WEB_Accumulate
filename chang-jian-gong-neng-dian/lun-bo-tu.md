@@ -139,7 +139,8 @@ css代码
 
 ```javascript
  document.querySelector('.j_carousel_ul').style.marginTop = '-' + cur_index * 210 +'px';
-``
+```
+
 
 ## 4.4 循环轮播
 
@@ -147,9 +148,86 @@ css代码
 
 在线demo: <http://demo.404mzk.com/carousel/4-infinite/>
 
+无限轮播的思路主要有两种
 
+1. 不断的clone,然后append到ul的最前面或者最后面
+2. 只控制进入视觉的图片,一般为3张
 
+```html
+<div class="wrapper">
+     <a href="javascript:;" class="j_pre">上一张</a>
+     <a href="javascript:;" class="j_next" >下一张</a>
+    <ul class="j_carousel_ul">
+        <li ><img class="j_img_0"></li>
+        <li ><img class="j_img_1"></li>
+        <li ><img class="j_img_2"></li>
+    </ul>
+   
+    <p>当前第 <em class="j_cur_index">0</em> 张</p>
+</div>
+```
 
+css代码
+```css
+    .wrapper{
+        user-select:none;
+        width: 850px;
+        overflow: hidden;
+    }
+   
+    ul{
+        padding-left: 80px;
+        white-space:nowrap;
+    }
+    li{
+        list-style: none;
+        display: inline-block;
+  
+    }
+
+    img{
+        width: 680px;
+        height: 240px;
+        
+    }
+```
+
+javascript代码
+
+```javascript
+ var cur_index = 0,
+        IMAGE_ARRAY = [
+            '../images/wechat.png',
+            '../images/sogou.png',
+            '../images/xmind8.png',
+            '../images/fuli.png',
+            '../images/watch.jpg'
+        ],
+        get_right_index = function(index){
+            return index < 0 ? IMAGE_ARRAY.length + index : index % IMAGE_ARRAY.length
+        },
+    change_pic = function(next_index){
+         cur_index = get_right_index( next_index )
+       
+        
+         document.querySelector('.j_img_0').src = IMAGE_ARRAY[  get_right_index( cur_index - 1) ];
+        document.querySelector('.j_img_1').src = IMAGE_ARRAY[  cur_index ];
+        document.querySelector('.j_img_2').src = IMAGE_ARRAY[ get_right_index( cur_index + 1 ) ];
+
+        document.querySelector('.j_cur_index').innerHTML = cur_index
+    }
+      document.querySelector('.j_carousel_ul').style.marginLeft = '-' + 1 * 680 +'px';
+    document.querySelector('.j_img_0').src = IMAGE_ARRAY[ IMAGE_ARRAY.length - 1 ];
+    document.querySelector('.j_img_1').src = IMAGE_ARRAY[ 0 ];
+    document.querySelector('.j_img_2').src = IMAGE_ARRAY[ 1 ];
+    document.querySelector('.j_pre').addEventListener('click',function(){
+        change_pic( cur_index - 1 )
+    })
+
+    document.querySelector('.j_next').addEventListener('click',function(){
+        change_pic( cur_index + 1 )
+    })
+```
 # 参考链接
 
 1. css裁剪功能: http://www.jianshu.com/p/6e5793760e6e
