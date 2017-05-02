@@ -143,6 +143,9 @@ css代码
 
 ## 4.4 循环轮播
 
+![无效轮播demo截图](/assets/carousel_4_infinite.gif)
+
+
 
 
 # 参考链接
