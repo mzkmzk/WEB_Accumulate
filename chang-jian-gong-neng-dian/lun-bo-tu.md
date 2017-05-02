@@ -93,6 +93,10 @@ document.querySelector('.j_carousel_ul').style.marginLeft = '-' + cur_index * 68
 
 所以left应该是在ul, ul的父元素对ul进行裁剪 
 
+## 4.3 简单纵向移动
+
+![纵向滚动](/assets/carousel_3_cloumn.gif)
+
 # 参考链接
 
 1. css裁剪功能: http://www.jianshu.com/p/6e5793760e6e
