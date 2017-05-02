@@ -46,7 +46,14 @@
 </ul>
 ```
 
+html代码
+
 ```css
+.wrapper{
+    user-select:none;
+    width: 680px;
+    overflow: hidden;
+ }
 ul{
     white-space:nowrap;
     width: 680px;
