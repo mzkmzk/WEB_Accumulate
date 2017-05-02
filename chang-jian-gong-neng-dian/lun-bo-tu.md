@@ -153,6 +153,14 @@ css代码
 1. 不断的clone,然后append到ul的最前面或者最后面
 2. 只控制进入视觉的图片,一般为3张
 
+demo采取了方法二
+
+这里没有做任何动画,所以切换图片的时候,直接把3个img标签切换掉
+
+如果需要加动画,就是控制margin-left
+
+然后动画结束,立马切换img的src
+
 ```html
 <div class="wrapper">
      <a href="javascript:;" class="j_pre">上一张</a>
