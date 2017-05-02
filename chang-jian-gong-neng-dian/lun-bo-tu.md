@@ -145,6 +145,8 @@ css代码
 
 ![无效轮播demo截图](/assets/carousel_4_infinite.gif)
 
+在线demo: <http://demo.404mzk.com/carousel/4-infinite/>
+
 
 
 
