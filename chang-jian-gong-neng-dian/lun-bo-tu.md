@@ -141,6 +141,10 @@ css代码
  document.querySelector('.j_carousel_ul').style.marginTop = '-' + cur_index * 210 +'px';
 ``
 
+## 4.4 循环轮播
+
+
+
 # 参考链接
 
 1. css裁剪功能: http://www.jianshu.com/p/6e5793760e6e
