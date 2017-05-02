@@ -97,6 +97,48 @@ document.querySelector('.j_carousel_ul').style.marginLeft = '-' + cur_index * 68
 
 ![纵向滚动](/assets/carousel_3_cloumn.gif)
 
+在线demo: <http://demo.404mzk.com/carousel/3-column/>
+
+横向是通过margin-left,而纵向则是利用margin-top
+
+```html
+<div class="wrapper">
+    <ul class="j_carousel_ul">
+        <li><img src="../images/wechat.png"></li>
+        <li><img src="../images/sogou.png"></li>
+        <li><img src="../images/xmind8.png"></li>
+    </ul>
+</div>
+```
+
+css代码
+
+```css
+    .wrapper{
+        height: 240px;
+        overflow: hidden;
+    }
+   
+    ul{
+        
+    }
+    li{
+        list-style: none;
+ 
+    }
+    img{
+        width: 680px;
+        height: 240px;
+        
+    }
+```
+
+切换时通过
+
+```javascript
+ document.querySelector('.j_carousel_ul').style.marginTop = '-' + cur_index * 210 +'px';
+``
+
 # 参考链接
 
 1. css裁剪功能: http://www.jianshu.com/p/6e5793760e6e
