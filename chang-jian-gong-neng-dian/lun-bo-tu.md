@@ -46,11 +46,13 @@ html代码
 
 
 ```html
-<ul>
-    <li><img src="../images/wechat.png"></li>
-    <li><img src="../images/sogou.png"></li>
-    <li><img src="../images/xmind8.png"></li>
-</ul>
+<div class="wrapper">
+    <ul class="j_carousel_ul">
+        <li><img src="../images/wechat.png"></li>
+        <li><img src="../images/sogou.png"></li>
+        <li><img src="../images/xmind8.png"></li>
+    </ul>
+</div>
 ```
 
 css代码
