@@ -57,7 +57,6 @@ css代码
 
 ```css
 .wrapper{
-    user-select:none;
     width: 680px;
     overflow: hidden;
  }
