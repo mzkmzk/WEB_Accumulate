@@ -38,6 +38,9 @@
 
 实现所有图片都在一行的方式有很多种,例如
 
+html代码
+
+
 ```html
 <ul>
     <li><img src="../images/wechat.png"></li>
@@ -46,7 +49,7 @@
 </ul>
 ```
 
-html代码
+css代码
 
 ```css
 .wrapper{
