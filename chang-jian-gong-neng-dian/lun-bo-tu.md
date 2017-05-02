@@ -32,6 +32,8 @@
 
 ## 4.2 简单滚动
 
+
+
 简单的滚动其实是所有的图片都在一行
 
 然后通过left或其他方式控制位置实现
@@ -59,8 +61,6 @@ css代码
  }
 ul{
     white-space:nowrap;
-    width: 680px;
-    overflow: hidden;
 }
 li{
     display:inline-block;
@@ -73,4 +73,19 @@ img{
 }
 ```
 
+上面的css控制了比较重要的一步
 
+就是ul是会被裁剪的
+
+![轮播ul显示](/assets/2470298-0f6308aec6e15f44.png)
+
+关于移动的话,这里只做了最简单的切换
+
+```javascript
+document.querySelector('.j_carousel_ul').style.marginLeft = '-' + cur_index * 680 +'px';
+```
+对ul进行marginLeft进行更改
+
+# 参考链接
+
+1. css裁剪功能: http://www.jianshu.com/p/6e5793760e6e
