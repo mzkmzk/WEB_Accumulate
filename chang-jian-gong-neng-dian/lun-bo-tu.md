@@ -87,6 +87,12 @@ document.querySelector('.j_carousel_ul').style.marginLeft = '-' + cur_index * 68
 ```
 对ul进行marginLeft进行更改
 
+> 注意
+
+这里笔者因为css不太熟,之前一直想left在第一个li里,然后后面的元素自动跟着left,但是发现 后面的元素不能移动
+
+所以left应该是在ul, ul的父元素对ul进行裁剪 
+
 # 参考链接
 
 1. css裁剪功能: http://www.jianshu.com/p/6e5793760e6e
