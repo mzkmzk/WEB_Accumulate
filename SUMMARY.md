@@ -320,4 +320,5 @@
 * [English](english.md)
   * [读音问题](english/pronunciation.md)
 * [算法](suan-fa.md)
+  * [排序](suan-fa/pai-xu.md)
 
