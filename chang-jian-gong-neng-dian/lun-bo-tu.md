@@ -138,7 +138,9 @@ css代码
 切换时通过
 
 ```javascript
+
  document.querySelector('.j_carousel_ul').style.marginTop = '-' + cur_index * 210 +'px';
+ 
 ```
 
 
