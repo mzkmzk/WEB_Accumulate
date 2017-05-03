@@ -4,6 +4,8 @@
 
 轮播图可以抽象为通过改变坐标位置,而使显示内容得以变化
 
+本文章的所有demo都在<https://github.com/mzkmzk/demo-404mzk-com/tree/master/carousel>中
+
 # 2. 附属功能
 
 因为的交互方式有
