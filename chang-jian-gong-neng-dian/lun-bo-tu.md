@@ -116,23 +116,23 @@ document.querySelector('.j_carousel_ul').style.marginLeft = '-' + cur_index * 68
 css代码
 
 ```css
-    .wrapper{
-        height: 240px;
-        overflow: hidden;
-    }
-   
-    ul{
-        
-    }
-    li{
-        list-style: none;
- 
-    }
-    img{
-        width: 680px;
-        height: 240px;
-        
-    }
+.wrapper{
+    height: 240px;
+    overflow: hidden;
+}
+
+ul{
+    
+}
+li{
+    list-style: none;
+
+}
+img{
+    width: 680px;
+    height: 240px;
+    
+}
 ```
 
 切换时通过
