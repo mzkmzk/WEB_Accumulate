@@ -319,4 +319,5 @@
       * [第一波XSS探针实现](第一波xss探针实现.md)
 * [English](english.md)
   * [读音问题](english/pronunciation.md)
+* [算法](suan-fa.md)
 
