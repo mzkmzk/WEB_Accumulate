@@ -308,3 +308,4 @@ document.querySelector('.j_carousel_ul').addEventListener('mouseup',mouseup_call
 
 1. css裁剪功能: http://www.jianshu.com/p/6e5793760e6e
 2. 元素拖动参考: http://www.zhangxinxu.com/wordpress/2010/03/javascript%E5%AE%9E%E7%8E%B0%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E6%8B%96%E6%8B%BD%E6%95%88%E6%9E%9C/
+3. 防止图片被拖动: http://www.cnblogs.com/kevin-ye/p/3272253.html
