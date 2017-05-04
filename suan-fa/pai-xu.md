@@ -32,4 +32,4 @@ console.log(quick_sort([2,4,3,4,6,3,2,5,6,2,3,6,5,4]))
 
 # 参考链接
 
-1. 快排: 
+1. 快排: <http://www.ruanyifeng.com/blog/2011/04/quicksort_in_javascript.html>
