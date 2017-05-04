@@ -30,6 +30,34 @@ console.log(quick_sort([0,3,1,2,2]))
 console.log(quick_sort([2,4,3,4,6,3,2,5,6,2,3,6,5,4]))
 ```
 
+# 2. 冒泡
+
+两个for
+
+每经过一次第一层循环,都能拿到一个当前最小值
+
+```javascript
+var bubble_sort = function(sort_array){
+    var sort_array_length = sort_array.length,
+        tmp
+
+    for (var i =  0 ; i < sort_array_length ; i++) {
+        for (var j =  i ; j < sort_array_length ; j++) {
+            if ( sort_array[ i ] >  sort_array[ j ] ) {
+                tmp = sort_array[ i ]
+                sort_array[ i ] = sort_array[ j ]
+                sort_array[ j ] = tmp
+            }
+        }
+    }
+    return sort_array
+}
+console.log(bubble_sort([0,3]))
+console.log(bubble_sort([0,3,4]))
+console.log(bubble_sort([0,3,1,2,2]))
+console.log(bubble_sort([2,4,3,4,6,3,2,5,6,2,3,6,5,4]))
+```
+
 # 参考链接
 
 1. 快排: <http://www.ruanyifeng.com/blog/2011/04/quicksort_in_javascript.html>
