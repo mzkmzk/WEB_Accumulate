@@ -91,3 +91,4 @@ console.log([0,3].merge_sort())
 
 1. 快排: <http://www.ruanyifeng.com/blog/2011/04/quicksort_in_javascript.html>
 2. 归并排序: https://zh.wikipedia.org/wiki/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F
+3. javascript不错的图文并茂多排序算法: http://bubkoo.com/2014/01/17/sort-algorithm/archives/
