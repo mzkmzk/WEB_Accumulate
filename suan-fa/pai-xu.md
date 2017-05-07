@@ -62,8 +62,36 @@ console.log(bubble_sort([2,4,3,4,6,3,2,5,6,2,3,6,5,4]))
 
 # 3. 归并排序
 
-1. 把元素两两合并为数组,并对数组内两个元素进行排序,最终得出Math.ceil( n/2 )个数
-2. 将数组两两合并,第一个数组与第二个数组的对应位置进行比较,较小的首先被提出原数组并加入合并后的新数组,当其中一个数组没有元素后,另一个数组剩余元素全部放入到合并数组的最后.
-3. 当最后只剩一个数组时,排序结束
+1. 将数组分为两个数字为一组的floor(n/2)个有序数组,
+2. 将上述得到的数组再进行合并排序,形成floor(n/4)个数组
+3. 直到只剩下一个数组
+
+1. 将数组分为两两一对的排序好的数组,floor(n/2)个数组
+2. 将floor(n/2)合并为floor(n/4)个数组
+3. 直到只剩一个数组
+
+合并排序规则: 不断拿两个数组的第0个元素进行对比,小的进入合并后数组,当一个数组为空时,另一个数组剩余元素加入到合并数组的最后
+
+```javascript
+var _merge = function(left, right){
+    var tmp = []
+    while ( left.length !== 0 && right.length !==0 ){
+        left[0] > right[0] ? tmp.push( right.shift() ) : tmp.push( left.shift() )
+    }
+    return tmp.concat(left, right)
+}
+
+Array.prototype.merge_sort = function(){
+    if ( this.length < 2 ) return this
+    var mid = parseInt(this.length / 2),
+        left = this.slice( 0, mid ).merge_sort(),
+        right = this.slice(mid).merge_sort()
+    return _merge( left, right )
+}
+
+console.log([0,3,1].merge_sort())
+console.log([0,3].merge_sort())
+```
 
 1. 快排: <http://www.ruanyifeng.com/blog/2011/04/quicksort_in_javascript.html>
+2. 归并排序: https://zh.wikipedia.org/wiki/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F
