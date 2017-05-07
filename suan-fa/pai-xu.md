@@ -7,7 +7,7 @@
 3. 对"基准"左边和右边的两个子集，不断重复第一步和第二步，直到所有子集只剩下一个元素为止。
 
 ```javascript
-var quick_sort = (function fn(sort_array){
+var quick_sort = function(sort_array){
 
     if (sort_array.length <= 1) return sort_array 
 
@@ -24,7 +24,7 @@ var quick_sort = (function fn(sort_array){
         right_array = fn(right_array)
 
     return left_array.concat([ sort_array[ privot ] ], right_array)
-})
+}
 
 console.log(quick_sort([0,3,1,2,2]))
 console.log(quick_sort([2,4,3,4,6,3,2,5,6,2,3,6,5,4]))
