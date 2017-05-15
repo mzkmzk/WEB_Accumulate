@@ -66,3 +66,13 @@ react只是在最外层的document进行监听
 
 所以event.stopPropagation() 只会阻止react自己定义的事件冒泡
 
+# 观察现象
+
+那么react中就无法阻止原生的事件冒泡吗
+
+非也
+
+先看下结论
+
+1. event.stopPropagation：在react事件回调函数中调用能阻止react合成事件的冒泡
+2. event.nativeEvent.stopPropagation：基本无作用, 阻止的是document的冒泡(不能阻止代理到document的事件)。document可能冒泡给谁?.window
