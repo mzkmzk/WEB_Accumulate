@@ -80,4 +80,4 @@ react只是在最外层的document进行监听
 
 # 参考链接
 
-1. 
+1. 事件冒泡的基本内容: http://echizen.github.io/tech/2017/04-02-reactjquery-event-system
