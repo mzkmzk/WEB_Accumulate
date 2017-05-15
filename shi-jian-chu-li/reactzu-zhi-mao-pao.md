@@ -59,3 +59,10 @@ react和jquery类似, 自己维护自己一套事件系统
  *                   .
  *    React Core     .  General Purpose Event Plugin System
 ```
+
+react只是在最外层的document进行监听
+
+而且react中的onClick 传递的event,是react的合成event
+
+所以event.stopPropagation() 只会阻止react自己定义的事件冒泡
+
