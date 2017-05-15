@@ -16,6 +16,7 @@
 5. https://github.com/gf-rd/gulp-gf-md5: 广发银行js文件md5加密
 6. http://www.aliued.cn/: 阿里1688前端团队
 7. http://rapheal.sinaapp.com/: 微信拉风的博客
+8. http://zhenhua-lee.github.io/ 阿里资深前端,了解react原理时路过的
 
 ## 炫酷网站收集
 
