@@ -311,6 +311,7 @@
   * [常用知识](chang_yong_zhi_shi.md)
 * [其他](qi_ta.md)
   * [网页收集](wang-ye-shou-ji.md)
+  * [读源码经验](du-yuan-ma-jing-yan.md)
 * [运维](yun_wei.md)
   * [阿里云服务器裸机初始化及安装Docker + Nginx + PHP + MySQL + Luajit](a_li_yun_fu_wu_qi_luo_ji_chu_shi_hua_ji_an_zhuang_.md)
   * [压测](ya_ce.md)
