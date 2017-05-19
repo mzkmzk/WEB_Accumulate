@@ -26,3 +26,4 @@
 
 1. 教导自搭SS: https://www.loyalsoldier.me/fuck-the-gfw-with-my-own-shadowsocks-server/
 2. 自搭SS: https://slarker.me/ss-deploy/
+3. vyprvpn: http://bestvpnchina.net/vyprvpn%E8%AF%84%E6%B5%8B/ 有优惠链接
