@@ -26,7 +26,8 @@
 
 1. 教导自搭SS: https://www.loyalsoldier.me/fuck-the-gfw-with-my-own-shadowsocks-server/
 2. 自搭SS: https://slarker.me/ss-deploy/
-3. vyprvpn: http://bestvpnchina.net/vyprvpn%E8%AF%84%E6%B5%8B/ 有优惠链接
+3. vyprvpn: http://bestvpnchina.net/vyprvpn%E8%AF%84%E6%B5%8B/ 有优惠链接, 免费试用不行,就没打算后续了 
 4. 云梯: 其实还蛮不错 就是在家里老掉线, 客服叫我重启路由器.但我还没尝试 因为他们的软件不支持mac10.10, 所以就退费了
 5. 3个推荐VPN: https://bestvpnchina.net/%E4%B8%AD%E5%9B%BDvpn%E6%8E%A8%E8%8D%90/
 6. 5个推荐VPN: http://bestvpnchina.net/%E6%9C%80%E5%A5%BD%E7%9A%84%E7%BF%BB%E5%A2%99vpn%E6%8E%A8%E8%8D%90/
+7. 朋友推荐的VPN: http://www.fyvps.com/
