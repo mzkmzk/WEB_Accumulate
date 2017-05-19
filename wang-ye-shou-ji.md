@@ -21,3 +21,8 @@
 ## 炫酷网站收集
 
 1. http://www.galaxia.co/: 宇宙系列,声音和背景很酷,响应式
+
+## 关于翻墙
+
+1. 教导自搭SS: https://www.loyalsoldier.me/fuck-the-gfw-with-my-own-shadowsocks-server/
+2. 自搭SS: https://slarker.me/ss-deploy/
