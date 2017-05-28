@@ -1,4 +1,6 @@
-# Error: spawn cp  ENOENT
+# 常见错误 
+
+## Error: spawn cp  ENOENT
 
 错误代码
 
@@ -63,10 +65,55 @@ spawn called
      './' ] }
 ```
 
-# 原因
+> 原因
 
 看到输出后...就立马能想到是因为cp后面的空格.........
 
-# 参考链接
+> 参考链接
 
 1. 排查错误的代码: http://stackoverflow.com/questions/27688804/how-do-i-debug-error-spawn-enoent-on-node-js
+
+
+# Mac运行Node相关命令行库发生 env: node\r: No such file or directory
+
+当node脚本是创建在window时, DOS格式`\r\n`
+
+而unix默认的'\n'
+
+所以mac中找不到`#!/usr/bin/env node`
+
+## 解决方案
+
+第一种是
+```javascript
+vim script
+
+:se ff=unix
+:wq
+```
+找到安装在全局的node执行脚本, vim进去 设置ff
+
+亲测有效
+
+另外两种看起来更有效, 不过还没亲自校验过
+
+第二种是
+
+通过更改format 其实原理一样
+
+```shell
+brew install dos2unix
+sudo dos2unix /usr/local/lib/node_modules/task-app/src/task-app.js //每个人的node路径不一定一致
+```
+
+第三种 
+
+自行修改format
+```javascript
+cat your_script.js | tr -d '\r' > fixed_script.js
+```
+
+
+> 参考链接
+
+1. https://stackoverflow.com/questions/30344858/node-script-executable-not-working-on-mac-env-node-r-no-such-file-or-directo
