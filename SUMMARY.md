@@ -140,6 +140,7 @@
       * [border-radius](border-radius.md)
       * [clip-path](clip-path.md)
       * [position](postion.md)
+      * [object-position和object-fit](object-positionhe-object-fit.md)
   * [HTML](_html.md)
     * [基本标签](_html/ji-ben-biao-qian.md)
       * [hr标签](_html/ji-ben-biao-qian/hrbiao-qian.md)
