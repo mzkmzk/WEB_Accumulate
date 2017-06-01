@@ -17,6 +17,7 @@
 6. http://www.aliued.cn/: 阿里1688前端团队
 7. http://rapheal.sinaapp.com/: 微信拉风的博客
 8. http://zhenhua-lee.github.io/ 阿里资深前端,了解react原理时路过的
+9. http://www.faviconico.org/favicon: 生成faviconico文件
 
 ## 炫酷网站收集
 
