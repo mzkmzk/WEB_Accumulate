@@ -21,4 +21,5 @@ du -hm -d 4  | sort -n
 
 # 参考链接
 
-1. http://man.linuxde.net/du
+1. http://man.linuxde.net/du: du命令
+2. http://www.cnblogs.com/kerrycode/p/4391859.html: 查找大文件大目录 
