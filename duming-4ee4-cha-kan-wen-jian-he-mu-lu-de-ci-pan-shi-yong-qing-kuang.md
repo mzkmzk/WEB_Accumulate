@@ -18,3 +18,7 @@
 du -hm -d 4  | sort -n
 # 按排序找出占空间最大的文件
 ```
+
+# 参考链接
+
+1. http://man.linuxde.net/du
