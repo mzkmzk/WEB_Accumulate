@@ -54,8 +54,6 @@
       * [ES6支持IE8](es6ie8.md)
     * [兼容问题](_jian_rong_wen_ti.md)
       * [基础](jichu_js.md)
-    * [黑魔法](_hei_mo_fa.md)
-      * [基本](tmp.md)
     * [React](react.md)
       * [入门](react_ru_men.md)
         * [案例](an_li.md)
