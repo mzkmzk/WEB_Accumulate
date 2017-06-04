@@ -115,7 +115,36 @@ window.addEventListener('mousemove', function(){
 
 ## underscore的debounce
 
+```javascript
+  _.debounce = function(func, wait, immediate) {
+    var timeout, result;
 
+    var later = function(context, args) {
+      timeout = null;
+      if (args) result = func.apply(context, args); //只有immediate非true时 才会执行到这里
+    };
+
+    var debounced = restArgs(function(args) {
+      if (timeout) clearTimeout(timeout);
+      if (immediate) { //立即先执行一次 然后再进行反抖
+        var callNow = !timeout;
+        timeout = setTimeout(later, wait);
+        if (callNow) result = func.apply(this, args);
+      } else {
+        timeout = _.delay(later, wait, this, args);
+      }
+
+      return result;
+    });
+
+    debounced.cancel = function() {
+      clearTimeout(timeout);
+      timeout = null;
+    };
+
+    return debounced;
+  };
+```
 
 
 # 参考链接
