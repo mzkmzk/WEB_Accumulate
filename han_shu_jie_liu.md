@@ -49,7 +49,7 @@ underscore的throttle有两个参数
     var throttled = function() {
       var now = _.now();
       if (!previous && options.leading === false) previous = now;
-      var remaining = wait - (now - previous);
+      var remaining = wait - (now - previous); // 代表还有多少时间, 可以执行下一次函数
       context = this;
       args = arguments;
       
@@ -61,7 +61,7 @@ underscore的throttle有两个参数
         previous = now;
         result = func.apply(context, args);
         if (!timeout) context = args = null;
-      } else if (!timeout && options.trailing !== false) {
+      } else if (!timeout && options.trailing !== false) {// 被节流的函数都要执行setimeout, 
         timeout = setTimeout(later, remaining);
       }
       return result;
