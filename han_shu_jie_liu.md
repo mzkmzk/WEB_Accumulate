@@ -1,6 +1,6 @@
 # 函数节流与反抖
 
-# 节流需求
+# 节流
 
 ## underscore的throttle简介
 
@@ -104,6 +104,9 @@ window.addEventListener('mousemove', function(){
     }   
 })
 ```
+
+# 反抖
+
 
 
 # 做法
