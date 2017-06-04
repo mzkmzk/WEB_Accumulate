@@ -2,6 +2,8 @@
 
 # 节流需求
 
+## underscore的throttle简介
+
 为了指定时间内函数只被触发一次
 
 `.`代表函数被触发时, `|`代表函数真正执行了, 这里显示每1秒触发一次函数`.`, 限定每3秒内只能触发一次
@@ -24,6 +26,56 @@ underscore的throttle有两个参数
 
 1. leading: false;//这里如果设置了 会阻止第一个`|`被执行
 2. trailing: false; //这里如果设置了 会阻止第二个`|`被执行
+
+这种情况其实很常见, 如果没有设置上面两个参数, 并且假设`|`设置了ajax请求, 那么很容易连续触发两次ajax, 这是绝对不允许的
+
+一般ajax的话, 建议`leading: false`
+
+## underscore的throttle源码
+
+```javascript
+  _.throttle = function(func, wait, options) {
+    var timeout, context, args, result;
+    var previous = 0;
+    if (!options) options = {};
+
+    var later = function() {
+      previous = options.leading === false ? 0 : _.now();
+      timeout = null;
+      result = func.apply(context, args);
+      if (!timeout) context = args = null;
+    };
+
+    var throttled = function() {
+      var now = _.now();
+      if (!previous && options.leading === false) previous = now;
+      var remaining = wait - (now - previous);
+      context = this;
+      args = arguments;
+      
+      if (remaining <= 0 || remaining > wait) { //只有当没有设置options.leading = false和 非节流的情况第一次能进来这里. 
+        if (timeout) { // 虽然 remaining不可能超过wait, 这里没必要clearTimeout(timeout), 因为如果setTimeout能准确执行的话, 这里timeout肯定不存在
+          clearTimeout(timeout); //但是seTimeout 并不准确, 可能会延迟, 所以可能到了超过remaining的时间, 但setTimeout还没执行, 所以要移除掉
+          timeout = null;
+        }
+        previous = now;
+        result = func.apply(context, args);
+        if (!timeout) context = args = null;
+      } else if (!timeout && options.trailing !== false) {
+        timeout = setTimeout(later, remaining);
+      }
+      return result;
+    };
+
+    throttled.cancel = function() {
+      clearTimeout(timeout);
+      previous = 0;
+      timeout = context = args = null;
+    };
+
+    return throttled;
+  };
+```
 
 
 
