@@ -77,6 +77,13 @@ underscore的throttle有两个参数
   };
 ```
 
+## 简单做法
+
+underscore的throttle虽然是功能强大, 但是我们有没有办法做出一个建议的节流呢
+
+
+
+
 
 
 # 做法
@@ -149,3 +156,4 @@ window.onresize = function(){
 
 1. http://www.alloyteam.com/2012/11/javascript-throttle/
 2. underscore的做法: http://www.qdfuns.com/notes/17398/93ec1a3c4cf2a1ecd5f8ff1a905f2d03
+3. http://www.css88.com/archives/4648: 节流说法
