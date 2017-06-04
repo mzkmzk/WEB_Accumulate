@@ -81,9 +81,20 @@ underscore的throttle有两个参数
 
 underscore的throttle虽然是功能强大, 但是我们有没有办法做出一个建议的节流呢
 
+如果非通用的话 ,这里就是一个节流
 
-
-
+```javascript
+var resizeTimer=null;
+$(window).on('resize',function(){
+       if(resizeTimer){
+           clearTimeout(resizeTimer)
+       }
+       resizeTimer=setTimeout(function(){
+           console.log("window resize");
+       },400);
+   }
+);
+```
 
 
 # 做法
