@@ -84,16 +84,25 @@ underscore的throttle虽然是功能强大, 但是我们有没有办法做出一
 如果非通用的话 ,这里就是一个节流
 
 ```javascript
-var resizeTimer=null;
-$(window).on('resize',function(){
-       if(resizeTimer){
-           clearTimeout(resizeTimer)
-       }
-       resizeTimer=setTimeout(function(){
-           console.log("window resize");
-       },400);
-   }
-);
+var my_throttled_timeout = null,
+    prev_time = null,
+    my_function = function(){
+        document.querySelector('.j_my_throttle_sum').innerHTML = parseInt(document.querySelector('.j_my_throttle_sum').innerHTML) + 1;
+        my_throttled_timeout = null
+        prev_time = new Date().getTime();
+
+    }
+window.addEventListener('mousemove', function(){
+    if (my_throttled_timeout) return;
+    remaining = 3000 - ( new Date().getTime() - prev_time )
+    if ( remaining <= 0 ) {
+        my_function()
+    }else {
+        my_throttled_timeout = setTimeout(function(){
+        my_function()
+    }, remaining)
+    }   
+})
 ```
 
 
@@ -167,4 +176,3 @@ window.onresize = function(){
 
 1. http://www.alloyteam.com/2012/11/javascript-throttle/
 2. underscore的做法: http://www.qdfuns.com/notes/17398/93ec1a3c4cf2a1ecd5f8ff1a905f2d03
-3. http://www.css88.com/archives/4648: 节流说法
