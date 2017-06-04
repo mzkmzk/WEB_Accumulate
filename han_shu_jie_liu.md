@@ -155,6 +155,8 @@ window.addEventListener('mousemove', function(){
 而如果想要`.|....空空空|`的效果如何, 这就是immediate, 如果之前n秒前没被执行过, 第一次触发 会立马执行,然后再进行防抖
 
 
+做研究的demo地址: http://demo.404mzk.com/test/throttle_and_debounce/
+
 # 参考链接
 
 1. http://www.alloyteam.com/2012/11/javascript-throttle/
