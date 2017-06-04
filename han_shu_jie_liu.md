@@ -109,6 +109,13 @@ window.addEventListener('mousemove', function(){
 
 在某个连续触发的函数时, n秒内没有再被触发, 则执行一次
 
+应用场景: 拖动window的size, 不断触发resize, 当停止拖动时, 才做处理
+
+`................  |...............  |`
+
+## underscore的debounce
+
+
 
 
 # 参考链接
