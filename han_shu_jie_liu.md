@@ -2,19 +2,30 @@
 
 # 节流需求
 
-在react里,做了个监听scroll,在某div快到底部时,加载数据
+为了指定时间内函数只被触发一次
 
-为了快到底部的时候就能记载数据而非完全到底部了才加载数据
+`.`代表函数被触发时, `|`代表函数真正执行了, 这里显示每1秒触发一次函数`.`, 限定每3秒内只能触发一次
 
-scroll里我写的函数是
+这里以underscore的throttle为例
 
-```javascript
-if (check() === false && target.scrollTop + target.clientHeight + 300 >= target.scrollHeight) {
-    this.props.load_data()
-}
-```
+`.|...|...|`
 
-假设我这里check需要经过很多数据访问才能得到结果,所以我就不想scroll经常执行,那怎么办
+这种是最正常的情况
+
+首先触发了一次`.`, 然后函数立马执行,1 然后中途多次触发`.`, 但是每秒才能触发一次
+
+比较特殊的情况, 执行了2次`.`
+
+按理来说, 只会触发一次函数, 但underscore实际触发了两次
+
+`.|.|`
+
+underscore的throttle有两个参数
+
+1. leading: false;//这里如果设置了 会阻止第一个`|`被执行
+2. trailing: false; //这里如果设置了 会阻止第二个`|`被执行
+
+
 
 # 做法
 
