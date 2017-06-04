@@ -111,7 +111,7 @@ window.addEventListener('mousemove', function(){
 
 应用场景: 拖动window的size, 不断触发resize, 当停止拖动时, 才做处理
 
-`................空空|..............空空|` 当n为2时
+`................空空空|..............空空空|` 当n为3000时
 
 ## underscore的debounce
 
@@ -145,6 +145,14 @@ window.addEventListener('mousemove', function(){
     return debounced;
   };
 ```
+
+这个思路比较清晰, 就是不断触发就不断clearTimeout
+
+而immediate是何作用
+
+一般默认的debounce 是`.空空空|`(n为3000)
+
+而如果想要`.|....空空空|`的效果如何, 这就是immediate, 如果之前n秒前没被执行过, 第一次触发 会立马执行,然后再进行防抖
 
 
 # 参考链接
