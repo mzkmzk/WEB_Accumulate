@@ -111,7 +111,7 @@ window.addEventListener('mousemove', function(){
 
 应用场景: 拖动window的size, 不断触发resize, 当停止拖动时, 才做处理
 
-`................空空|..............空空|`
+`................空空|..............空空|` 当n为2时
 
 ## underscore的debounce
 
