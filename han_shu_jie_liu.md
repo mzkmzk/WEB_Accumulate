@@ -107,7 +107,7 @@ window.addEventListener('mousemove', function(){
 
 # 反抖
 
-在某个连续触发的函数时, 停止触发后n秒 执行一次函数
+在某个连续触发的函数时, n秒内没有再被触发, 则执行一次
 
 
 
