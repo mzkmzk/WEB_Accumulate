@@ -29,6 +29,14 @@ safari显示: Safari打不开该网页, 因为网址无效
 
 而微信依然是没反应 
 
+# 结论
+
+这只是暂时的结论
+
+iphone9以上可以 通过 通用域的来打开APP/打开APPstore的处理
+
+而其他一切的协议 在iphone9后 都不能判断了 
+
 # 参考链接
 
 1. http://fegirl.com/2016/06/27/IOS9%20%E9%80%9A%E7%94%A8%E9%93%BE%E6%8E%A5%EF%BC%88universal%20link%EF%BC%89/
