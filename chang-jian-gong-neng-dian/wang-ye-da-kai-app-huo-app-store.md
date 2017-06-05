@@ -1,6 +1,6 @@
 # 网页打开APP或APP_Store
 
-在线测试地址: demo.404mzk.com/test/go_app.html
+在线测试地址: http://demo.404mzk.com/test/go_app.html
 
 # 尝试结果
 
