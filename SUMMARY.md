@@ -231,6 +231,7 @@
     * [查看卡顿原因](diao-shi/cha-kan-qia-dun-yuan-yin.md)
   * [常见功能点](chang-jian-gong-neng-dian.md)
     * [轮播图](chang-jian-gong-neng-dian/lun-bo-tu.md)
+    * [网页打开APP或APP\_Store](chang-jian-gong-neng-dian/wang-ye-da-kai-app-huo-app-store.md)
 * [服务器](fu_wu_qi.md)
   * [Linux](linux.md)
     * [Common](common.md)
