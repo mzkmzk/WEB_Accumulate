@@ -1,5 +1,7 @@
 # 网页打开APP或APP_Store
 
+在线测试地址: demo.404mzk.com/test/go_app.html
+
 # 尝试结果
 
 ## 微信和safari 均可打开APP STORE
