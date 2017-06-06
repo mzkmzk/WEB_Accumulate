@@ -103,6 +103,14 @@ mousewheel5 s:480
 
 `event.originalEvent.sourceCapabilities.firesTouchEvents`能判断是否为触摸行为,但是笔者的Mac无论鼠标还是触摸板都是false,可能说的是直接触屏?而不是触摸板
 
+# 兼容性
+
+FF绑定: window.addEventListener('DOMMouseScroll', jieliu, false);
+
+其他高级浏览器绑定: window.addEventListener('mousewheel', jieliu, false);
+
+IE8绑定: document.body.onmousewheel = jieliu 或者  document.body.attachEvent('onmousewheel', jieliu) //不能绑定到window
+
 # 参考链接
 
 1. mousewhell基本属性: http://www.zhangxinxu.com/wordpress/2013/04/js-mousewheel-dommousescroll-event/
