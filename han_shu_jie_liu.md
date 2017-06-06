@@ -2,8 +2,6 @@
 
 做研究的demo地址: http://demo.404mzk.com/test/throttle_and_debounce/
 
-
-
 # 节流
 
 ## underscore的throttle简介
