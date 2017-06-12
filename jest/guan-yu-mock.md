@@ -84,3 +84,37 @@ jquery.ajax = options => {
 
 module.exports = jquery
 ```
+
+测试代码
+
+```javascript
+let Speed, $, speed, callback
+beforeEach(() => {
+    jest.resetModules()
+    Speed = require('../src/index')
+    $ = require('jquery')
+    speed = new Speed()
+    callback = jest.fn()
+});
+
+it('_get_interface_url success ', () => {
+    let mock_data = {
+            errno: 0,
+            interface_ip: '127.0.0.1',
+            interface_port: 80,
+        }
+    
+    speed._get_interface_url(callback)
+
+    $.__ajax_success(mock_data)
+
+    expect(callback.mock.calls[0][0]).toEqual({
+        errno: 0,
+        message: '',
+        url: 'http://127.0.0.1:80/',
+        data: {
+            ajax_query_portal: mock_data
+        }
+    })
+})
+```
