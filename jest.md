@@ -15,3 +15,5 @@ mock jqeury 单一
 https://gist.github.com/jcouyang/34686f695cd28309759e
 
 react和jest: http://www.bijishequ.com/detail/379328?p=14
+
+mock jquery: http://dj1211.com/?p=673
