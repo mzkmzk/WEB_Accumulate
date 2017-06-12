@@ -61,4 +61,26 @@ it('_get_interface_url success ', () => {
 
 [官网自行mock函数库](https://facebook.github.io/jest/docs/en/mock-function-api.html#content)
 
+首先写好mock函数
 
+```javascript
+let jquery = jest .genMockFromModule('jquery')
+
+let ajax_options 
+
+jquery.__ajax_success = result =>{
+    ajax_options.success(result)
+}
+
+jquery.__ajax_error = result => {
+    ajax_options.error(result)
+}
+
+
+jquery.ajax = options => {
+    
+    ajax_options = options
+}
+
+module.exports = jquery
+```
