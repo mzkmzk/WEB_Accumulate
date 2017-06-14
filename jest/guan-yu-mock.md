@@ -93,6 +93,7 @@ beforeEach(() => {
     jest.resetModules()
     Speed = require('../src/index')
     $ = require('jquery')
+    //注意 这里再也不用 jest.mock('jquery')
     speed = new Speed()
     callback = jest.fn()
 });
