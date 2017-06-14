@@ -117,3 +117,18 @@ it('_get_interface_url success ', () => {
     })
 })
 ```
+
+## 只mock $.ajax
+
+以上方法都是整个jquery都是模拟的 只有ajax可用 其他所有函数方法都是返回undefined
+
+所以把代码改成这样, 就可以只mock$.jquery
+
+```javascript
+let $
+beforeEach(() => {
+    $ =  require('jquery')
+    $.ajax = jest.genMockFunction()
+
+});
+```
