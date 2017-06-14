@@ -51,8 +51,6 @@ it('_get_interface_url success ', () => {
 
 可以看看 [官网mock说明](https://facebook.github.io/jest/docs/en/jest-object.html#jestmockmodulename-factory-options)
 
-所以这种mock方法 非常鸡肋
-
 ## 自己实现mock 第三方库
 
 回到刚刚的问题 
