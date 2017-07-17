@@ -34,7 +34,7 @@ loaders: [
 
 1.64M -> 1.43 MB 减少了`210KB`
 
-这里还可以`webpack --display-modules`看下所有被打包的模块 有没有自己不用的 我自己的项目现在是木有
+这里还可以`webpack --display-modules --sort-modules-by size`看下所有被打包的模块 有没有自己不用的 我自己的项目现在是木有
 
 # 检查babelrc
 
@@ -55,4 +55,33 @@ loaders: [
 
 1.43M -> 1.40 MB 减少了`30KB`
 
+# 打通用组件包
 
+这里其实不能减少包大小
+
+只能将一些第三库 打成一个vendor.js 做 长久缓存
+
+```javascript
+entry:{ 
+        index : [
+        //'webpack-dev-server/client?http://localhost:8080',
+        //'webpack/hot/only-dev-server',
+        './Src/View/Index/index'],
+        vendor: ['zepto','react','react-dom','react-redux','redux','redux-thunk','underscore','k-logging', 'react-router']
+    },
+ plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+            name: "vendor",
+            filename: "vendor.js",
+            chunks: ['index'],
+        }),
+ ]
+```
+
+# 总结
+
+最终 减少包大小240kb......
+
+index.bundle大小为291KB 打包后106KB
+
+verndor.js为1.02M 打包后 打包后 280kb
