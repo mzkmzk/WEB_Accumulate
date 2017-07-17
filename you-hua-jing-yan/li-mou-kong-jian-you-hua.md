@@ -35,3 +35,24 @@ loaders: [
 1.64M -> 1.43 MB 减少了`210KB`
 
 这里还可以`webpack --display-modules`看下所有被打包的模块 有没有自己不用的 我自己的项目现在是木有
+
+# 检查babelrc
+
+```javascript
+{
+	"presets": [
+		"es2015",
+		"react"
+	],
+    "plugins": [
+        "transform-object-assign",
+        "react-hot-loader/babel"
+    ]
+}
+
+```
+把react-hot-loader/babel去掉...
+
+1.43M -> 1.40 MB 减少了`30KB`
+
+
