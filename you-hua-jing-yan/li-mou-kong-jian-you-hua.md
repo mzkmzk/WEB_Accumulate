@@ -91,6 +91,17 @@ vendor.js 从1.02M -> 1000KB
 
 index.css 69.4kb 没变
 
+# Tree-shaking
+
+这里我引用了这个特性, 文件反而变大了.....
+
+特性没有太仔细检查
+
+1. http://www.aliued.com/?p=4060
+2. https://mssn.midea.com/ask/?/question/179
+3. http://imweb.io/topic/58666d57b3ce6d8e3f9f99b0
+4. http://imweb.io/topic/5868e1abb3ce6d8e3f9f99bb
+
 # 总结
 
 最终 减少包大小240kb......
