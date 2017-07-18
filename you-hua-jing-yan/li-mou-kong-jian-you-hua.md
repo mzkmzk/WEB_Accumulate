@@ -78,6 +78,13 @@ entry:{
  ]
 ```
 
+# tree-shaking
+
+这个特性的教程都是在webpack2上的 所以要先把我的webpack1干脆升级到3
+
+1. 首先要把package和webpack相关的包 都重新 npm install 升级到最新的版本
+2. 
+
 # 总结
 
 最终 减少包大小240kb......
