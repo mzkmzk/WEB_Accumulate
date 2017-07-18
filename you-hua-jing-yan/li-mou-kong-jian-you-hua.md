@@ -104,8 +104,8 @@ index.css 69.4kb 没变
 
 # 总结
 
-最终 减少包大小240kb......
+最终 减少包大小250kb......
 
-index.bundle大小为291KB 打包后106KB
+index.bundle大小为285KB 打包后111KB
 
-verndor.js为1.02M 打包后 打包后 280kb
+verndor.js为1.00M 打包后 打包后 260kb
