@@ -78,12 +78,18 @@ entry:{
  ]
 ```
 
-# tree-shaking
+# 升级到webpack3
 
 这个特性的教程都是在webpack2上的 所以要先把我的webpack1干脆升级到3
 
 1. 首先要把package和webpack相关的包 都重新 npm install 升级到最新的版本
-2. 
+2. 改变extract-text-webpack-plugin的打包css改为` {test: /\.css$/,loader: ExtractTextPlugin.extract({fallback: "style-loader",use: "css-loader"})`
+
+index.bundle.js 从 291kb -> 285kb
+
+vendor.js 从1.02M -> 1000KB
+
+index.css 69.4kb 没变
 
 # 总结
 
