@@ -279,6 +279,7 @@
   * [iTerm](iterm.md)
     * [快捷键](kuai_jie_jian.md)
     * [使用rz和sz](shi_yong_rz_he_sz.md)
+    * [自定义在iterm中改建映射](zi-ding-yi-zai-iterm-zhong-gai-jian-ying-she.md)
   * [Vim](vim.md)
     * [常用命令](chang_yong_ming_ling.md)
     * [常见配置](chang_jian_pei_zhi.md)
