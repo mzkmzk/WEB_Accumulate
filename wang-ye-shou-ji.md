@@ -32,3 +32,9 @@
 4. 云梯: 其实还蛮不错 就是在家里老掉线, 客服叫我重启路由器.但我还没尝试 因为他们的软件不支持mac10.10, 所以就退费了
 5. 3个推荐VPN: https://bestvpnchina.net/%E4%B8%AD%E5%9B%BDvpn%E6%8E%A8%E8%8D%90/
 6. 5个推荐VPN: http://bestvpnchina.net/%E6%9C%80%E5%A5%BD%E7%9A%84%E7%BF%BB%E5%A2%99vpn%E6%8E%A8%E8%8D%90/
+
+# 工具
+
+## tmux
+
+1. 讲解基础文章: https://mba811.gitbooks.io/mac-dev/content/iTerm/tmux.html
