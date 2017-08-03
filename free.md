@@ -24,4 +24,6 @@
 
 这里是创建了1GB的swap
 
+# 参考资源
 
+1. composer install报错: https://getcomposer.org/doc/articles/troubleshooting.md#proc-open-fork-failed-errors
