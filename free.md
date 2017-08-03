@@ -22,6 +22,6 @@
 /sbin/swapon /var/swap.1
 ```
 
-这里是创建了以GB的swap
+这里是创建了1GB的swap
 
 
