@@ -13,7 +13,7 @@ mac上按ctrl+b 本来就惨绝人寰....
 1. item2->performance->keys->+
 2. keyboard shortcut里写你想改成啥快捷键
 3. 选择action为 Send Hex code
-4. 最后一栏去查询[](http://www.cisco.com/c/en/us/td/docs/ios/12_2/configfun/command/reference/ffun_r/frf019.pdf "查询键盘和16进制Hex转换的查询表")
+4. 最后一栏去查询[查询键盘和16进制Hex转换的查询表](http://www.cisco.com/c/en/us/td/docs/ios/12_2/configfun/command/reference/ffun_r/frf019.pdf "查询键盘和16进制Hex转换的查询表")
 
 # 例子
 

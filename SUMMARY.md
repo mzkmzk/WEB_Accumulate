@@ -238,6 +238,7 @@
     * [基本命令](linuxji_ben_ming_ling.md)
       * [top](linuxtop.md)
       * [du命令- 查看文件和目录的磁盘使用情况](duming-4ee4-cha-kan-wen-jian-he-mu-lu-de-ci-pan-shi-yong-qing-kuang.md)
+      * [free](free.md)
     * [常用技巧](chang_yong_ji_qiao.md)
       * [命令长期运行](ming_ling_chang_qi_yun_xing.md)
       * [命令开机执行](ming_ling_kai_ji_zhi_xing.md)
