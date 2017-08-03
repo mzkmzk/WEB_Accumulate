@@ -12,3 +12,16 @@
 
 后来初步学习了下free, 发现我的系统没有swap(可能我的主机就1GB内存, 阿里默认不帮我开?)
 
+# 其他
+
+## 创建虚拟内存
+
+```javascript
+/bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
+/sbin/mkswap /var/swap.1
+/sbin/swapon /var/swap.1
+```
+
+这里是创建了以GB的swap
+
+
