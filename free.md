@@ -27,6 +27,18 @@
 -V 　显示版本信息。
 ```
 
+示例
+
+每10秒 以M为单位 并且显示内存总和列
+
+```shell
+2222@1111:~$ free -s10 -mt
+             total       used       free     shared    buffers     cached
+Mem:           992        906         86         30        125        403
+-/+ buffers/cache:        377        615
+Swap:          499          0        499
+Total:        1492        906        586
+```
 
 # 其他
 
