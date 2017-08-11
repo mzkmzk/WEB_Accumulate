@@ -45,6 +45,27 @@
 
 # 常见的测试疑问
 
+## 测试promise
+
+```javascript
+//待测试代码
+runExec = (execArray, callback) => {
+        if ( Object.prototype.toString.call(execArray) !== '[object Array]') throw 'execArray need array '
+        
+        return execArray.reduce( (acc, current, index, array) => {
+            return new Promise( (resolve, reject) => {
+                exec(current.command, current.options, (error, stdout, stderr) => {
+                    if (error) throw error
+                    if ( index === array.length - 1) callback()
+                    resolve() 
+                })
+            })
+        }, Promise.resolve())
+    }
+```
+
+
+
 # 遗留问题
 
 # 测试cookie的有效期
