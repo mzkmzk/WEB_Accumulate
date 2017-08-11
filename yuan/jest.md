@@ -42,3 +42,44 @@
     Time:        0.895s, estimated 1s
     Ran all test suites.
     ```
+
+# 常见的测试疑问
+
+# 遗留问题
+
+# 测试cookie的有效期
+
+```javascript
+//测试代码
+
+it('设置 根域 expires_s是否有效', (done) => {
+    //jest.useFakeTimers();
+    //jest.useRealTimers() ;
+    document.domain = ''
+    vip_cookie.setCookie('test3','test3_value', {
+        is_root_domain: false,// 是否写在根域名下
+        expires_s: 1, // cookie存活时间 单位秒
+    })
+    expect(vip_cookie.getCookie('test3')).toBe('test3_value')
+    setTimeout(function(){
+        console.log('2 ' + vip_cookie.getCookie('test3'))
+        expect(vip_cookie.getCookie('test3')).toBe('test3_value')
+         //done()
+    },50)
+    
+    //jest.runTimersToTime(999)
+    setTimeout(function(){
+        console.log('4 ' + vip_cookie.getCookie('test3'))
+        expect(vip_cookie.getCookie('test3')).toBe('')
+        done()
+    },1050)
+     //jest.runTimersToTime(2500)
+     //jest.runTimersToTime(2500);
+     //jest.runAllTimers()
+
+})
+
+```
+
+这里耗时过长, 原因jest的关于计时器都不会更改实际的时间 
+
