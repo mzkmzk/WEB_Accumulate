@@ -64,6 +64,27 @@ runExec = (execArray, callback) => {
     }
 ```
 
+想要测试是否能顺利执行到callback
+
+```javascript
+//测试代码
+it('测试 runExec 是否可以成功执行', () => {
+    let runExec = require('../src/index').runExec,
+        callback = jest.fn()
+    
+    return runExec([
+                {
+                    command: 'echo 1'
+                },
+                {
+                    command: 'echo 2'
+                }
+            ], callback)
+            .then(() => {
+                expect(callback).toBeCalled()
+            })
+})
+```
 
 
 # 遗留问题
