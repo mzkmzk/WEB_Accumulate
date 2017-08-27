@@ -15,6 +15,42 @@ alias chrome='/Users/maizhikun/Mac软件/Chrome/Google\ Chrome.app/Contents/MacO
 
 ```
 
+# 启动无头浏览器
+
+chrome --headless --remote-debugging-port=9222
+
+# 准备node跑页面
+
+创建项目并 npm install --save chrome-remote-interface
+
+然后跑新建如index.js, 然后node index.js 即可
+
+```javascript
+const CDP = require('chrome-remote-interface');
+
+CDP((client) => {
+  // Extract used DevTools domains.
+  const {Page, Runtime} = client;
+
+  // Enable events on domains we are interested in.
+  Promise.all([
+    Page.enable()
+  ]).then(() => {
+    return Page.navigate({url: 'https://example.com'});
+  });
+
+  // Evaluate outerHTML after page has loaded.
+  Page.loadEventFired(() => {
+    Runtime.evaluate({expression: 'document.body.outerHTML'}).then((result) => {
+      console.log(result.result.value);
+      client.close();
+    });
+  });
+}).on('error', (err) => {
+  console.error('Cannot connect to browser:', err);
+});
+```
+
 
 # 参考文档
 
