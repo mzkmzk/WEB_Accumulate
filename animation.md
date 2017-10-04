@@ -48,7 +48,7 @@ tips:
     border-radius: 50%;
     margin: auto;
     background: red radial-gradient(at 30% 30%, #fdd, red);
-    animation: bounce 2s ease-in forwards;
+    animation: bounce 10s ease-in forwards;
 }
 ```
 
