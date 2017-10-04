@@ -75,3 +75,4 @@ tips:
 # 参考链接
 
 1. 多值组合, 浏览器处理结果: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values
+2. css魔法的效果: http://dabblet.com/gist/1b37089310d0a5a2d8e6
