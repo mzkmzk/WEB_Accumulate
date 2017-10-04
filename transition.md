@@ -12,7 +12,7 @@ transition-duration: 默认0, 切换动画的持续时间
 transition-property: 默认all, 起动画作用的样式(设置多个属性时, 逗号分隔)
     例如  background
          color
-         margin-left等
+         margin-left等, 也可以为class
 transition-timing-function: 默认ease, 动画的执行速度
     例如 ease 开始慢,后面会快
         ease-in, 开始慢, 后面加速
