@@ -58,6 +58,9 @@ transition: unset;
 1. transition只对block级元素生效
 2. img标签的width,动画无效, 用scale
 
+# 简单DEMO
+
+http://demo.404mzk.com/css/transition/index.html
 
 # 参考链接
 
