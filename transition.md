@@ -62,3 +62,4 @@ transition: unset;
 # 参考链接
 
 1. 基本语法: https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition
+2. 更多图片轮播: http://css3.bradshawenterprises.com/cfimg/
