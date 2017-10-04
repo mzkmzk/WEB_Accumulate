@@ -50,6 +50,22 @@ tips:
 }
 ```
 
+分隔为就是 
+
+0~60%: 默认的加速ease-in, 下降
+
+60%~70%: 覆盖默认的 ease-out, 上升
+
+70%~80%: 默认的ease-in, 下降
+
+80%~90%:覆盖默认的ease-out, 上升
+
+90%~100%: 默认的ease-in, 下降
+
+而forwards则取最后一帧的样式
+
+
+
 # 参考链接
 
 1. 多值组合, 浏览器处理结果: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values
