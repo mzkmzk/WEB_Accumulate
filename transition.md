@@ -1,5 +1,3 @@
-# Transition
-
 # 简述
 
 定义一个元素, 切换样式时, 的变化方式
@@ -64,7 +62,7 @@ transition: unset;
 
 切换效果如下
 
-![transition图片切换](/assets/transition-image-hover-2.gif)
+![transition图片切换](/assets/transition-image-hover-3.gif)
 
 简单分析一下
 
