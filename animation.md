@@ -19,6 +19,31 @@ tips:
 2. animation-play-state: 如一开始就是paused, 则维持第一帧的样式, 而非默认样式
 3. animation里animation-duration和animation-name是必须的
 
+# 回单效果
+
+现在要做的是小球做自由落体运动的效果
+
+首先大致的样式为
+
+```css
+@keyframes bounce {
+    60%, 80%, to {
+        transform: translateY(400px);
+        animation-timing-function: ease-out;
+    }
+    70% { transform: translateY(300px); }
+    90% { transform: translateY(360px); }
+}
+
+.ball {
+    width: 0; height: 0; padding: 1.5em;
+    border-radius: 50%;
+    margin: auto;
+    background: red radial-gradient(at 30% 30%, #fdd, red);
+    animation: bounce 2s ease-in forwards;
+}
+```
+
 # 参考链接
 
 1. 多值组合, 浏览器处理结果: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values
