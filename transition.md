@@ -58,9 +58,14 @@ transition: unset;
 1. transition只对block级元素生效
 2. img标签的width,动画无效, 用scale
 
-# 简单DEMO
+# 任务1 图片切换
 
-http://demo.404mzk.com/css/transition/index.html
+切换效果如下
+
+![transition图片切换](/assets/transition-image-hover.gif)
+
+
+
 
 # 参考链接
 
