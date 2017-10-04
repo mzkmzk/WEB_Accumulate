@@ -59,6 +59,7 @@ transition: unset;
 
 1. transition只对block级元素生效
 2. img标签的width,动画无效, 用scale
+3. 可能会发现height:0 或其他值到height:auto的过渡不会生效, 这是因为auto是一个关键字, 无法解析为一个可动画的值, 这种情况可以改max-height进行过渡, 饼干这个属性指定一个足够大的值作文展示状态
 
 # 任务1 图片切换
 
