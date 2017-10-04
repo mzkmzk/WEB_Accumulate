@@ -23,6 +23,8 @@ tips:
 
 现在要做的是小球做自由落体运动的效果
 
+体验地址: http://demo.404mzk.com/css/animation/index.html
+
 可以分为两部分
 
 球向下运动是 加速运动 可以运用 ease-in
@@ -64,7 +66,7 @@ tips:
 
 而forwards则取最后一帧的样式
 
-
+最终效果
 
 # 参考链接
 
