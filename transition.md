@@ -75,7 +75,7 @@ transition: unset;
 1. 前一张图片旋转至0度 并缩放至0倍
 2. 后一张图片旋转至360度 并缩放到1倍 
 
-```css
+```css        
 .demo_1{
     width: 200px;
     position: relative;
@@ -99,7 +99,7 @@ transition: unset;
     transition-duration: 1s;
     transform: rotate(360deg) scale(1,1);
 }
-
+        
 ```
 
 
