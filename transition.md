@@ -55,7 +55,9 @@ transition: unset;
 
 # 注意事项
 
-transition只对block级元素生效
+1. transition只对block级元素生效
+2. img标签的width,动画无效, 用scale
+
 
 # 参考链接
 
