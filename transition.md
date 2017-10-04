@@ -9,14 +9,14 @@
 ```css
 transition-delay: 默认0, 切换动画延迟时间(可负数)
 transition-duration: 默认0, 切换动画的持续时间
-transition-property: 默认all, 起动画作用的样式
+transition-property: 默认all, 起动画作用的样式(设置多个属性时, 逗号分隔)
     例如  background
          color
          margin-left等
-ransition-timing-function: 默认ease, 动画的执行速度
+transition-timing-function: 默认ease, 动画的执行速度
     例如 ease 开始慢,后面会快
-        ease-in, 开始慢, 后面匀加速
-        ease-out, 开始快, 后面匀减速
+        ease-in, 开始慢, 后面加速
+        ease-out, 开始快, 后面减速
         ease-in-out, 先慢, 中快, 后慢
         linear, 平滑
         step-start, 开始就到最终效果
