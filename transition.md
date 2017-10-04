@@ -60,11 +60,45 @@ transition: unset;
 
 # 任务1 图片切换
 
+在线体验: http://demo.404mzk.com/css/transition/index.html
+
 切换效果如下
 
-![transition图片切换](/assets/transition-image-hover.gif)
+![transition图片切换](/assets/transition-image-hover-2.gif)
 
+简单分析一下
 
+切换时 
+
+1. 前一张图片旋转至0度 并缩放至0倍
+2. 后一张图片旋转至360度 并缩放到1倍 
+
+```css
+.demo_1{
+    width: 200px;
+    position: relative;
+}
+.demo_1 .img_1{
+    position: absolute; ;
+    transition-duration: 1s;
+    transform: rotate(0deg) scale(1,1);
+}
+.demo_1 .img_2{
+    transition-duration: 1s;
+     position: absolute; ;
+    transform: rotate(0deg) scale(0,0);
+}
+
+.demo_1:hover .img_1{
+    transition-duration: 1s;
+    transform: rotate(360deg) scale(0,0);
+}
+.demo_1:hover .img_2{
+    transition-duration: 1s;
+    transform: rotate(360deg) scale(1,1);
+}
+
+```
 
 
 # 参考链接
