@@ -93,7 +93,7 @@ step-end: 等同于steps(1, end)
 
 x轴无法大于1, 因为我们木有时光机
 
-# 任务1 图片切换
+# 任务1: 图片切换
 
 在线体验: http://demo.404mzk.com/css/transition/index.html
 
@@ -134,6 +134,12 @@ x轴无法大于1, 因为我们木有时光机
 }
         
 ```
+
+# 任务2: 输入框弹性提示框
+
+效果图
+
+在线演示: http://demo.404mzk.com/css/transition/index.html
 
 
 # 参考链接
