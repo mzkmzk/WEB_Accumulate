@@ -112,3 +112,4 @@ transition: unset;
 
 1. 基本语法: https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition
 2. 更多图片轮播: http://css3.bradshawenterprises.com/cfimg/
+3. cubic-bezier说明: https://developer.mozilla.org/en-US/docs/Web/CSS/single-transition-timing-function
