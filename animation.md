@@ -72,7 +72,42 @@ tips:
 
 # DEMO2: 逐帧动画
 
+效果图:
 
+![逐帧loading图](/assets/animation-2.gif)
+
+在线demo: http://demo.404mzk.com/css/animation/index.html#demo_2
+
+如果想要做一个loading的动画
+
+会考虑用css写还是gif还是js实现
+
+
+
+先说说gif的弊端
+
+1. GIF图片的颜色数量被限制在256色
+2. GIF不具备Alpha透明的特定, 这对于不确定GIF动画的下层是什么的时候, 会是一个大问题, 更别说有半透明效果的需求
+3. 无法再CSS层修改GIF的持续时间, 循环次数, 是否停止等
+
+这个逐帧动画 并不是平滑的, 而是每隔一段时间 立马换一个效果的
+
+所以先准备大概8张的加载中的图片放在精灵图里 
+
+![加载中](/assets/loader.png)
+
+```css
+@keyframes loader {
+    to { background-position: -800px 0; }
+}
+
+.demo_div_2 {
+    width: 100px; height: 100px;
+    text-indent: 999px; overflow: hidden; /* Hide text */
+    background: url(../images/loader.png) 0 0;
+    animation: loader 1s infinite steps(8);
+}
+```
 
 # 参考链接
 
