@@ -114,6 +114,8 @@ tips:
 
 实现效果 文字闪烁
 
+在线地址: http://demo.404mzk.com/css/animation/index.html#demo_3
+
 文字闪烁分为两个阶段
 
 1. 文字透明度0->文字透明度1
