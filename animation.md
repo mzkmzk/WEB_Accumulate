@@ -135,6 +135,20 @@ tips:
 }
 ```
 
+# DEMO 4: 打字动画
+
+要实现的是 挨个字母的出现顺序
+
+
+
+在线地址: http://demo.404mzk.com/css/animation/index.html#demo_4
+
+```css
+
+```
+
+
+
 # 参考链接
 
 1. 多值组合, 浏览器处理结果: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values
