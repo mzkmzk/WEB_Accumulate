@@ -139,12 +139,29 @@ tips:
 
 要实现的是 挨个字母的出现顺序
 
-
+![打字动画](/assets/aniamtion-demo-4.gif)
 
 在线地址: http://demo.404mzk.com/css/animation/index.html#demo_4
 
 ```css
+@keyframes typing {
+    from { width: 0 }
+}
 
+@keyframes caret {
+    50% { border-right-color: transparent; }
+}
+
+.demo_div_4 h1 {
+    font: bold 200% Consolas, Monaco, monospace;
+    /*width: 8.25em;*/
+    width: 15ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .05em solid;
+    animation: typing 8s steps(15),
+                caret 1s steps(1) infinite;
+}
 ```
 
 
