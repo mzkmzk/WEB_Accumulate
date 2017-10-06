@@ -12,7 +12,7 @@ top bottom lft right 或 z-index均被忽略
 
 `postion: relative`
 
-相对定位, 相对于谁? -- 元素为static时的元素本身
+存在正常流中 主要用于1absolute作为定位的依据
 
 # 绝对定位
 
