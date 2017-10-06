@@ -96,6 +96,7 @@ tips:
 
 ![加载中](/assets/loader.png)
 
+
 ```css
 @keyframes loader {
     to { background-position: -800px 0; }
@@ -106,6 +107,27 @@ tips:
     text-indent: 999px; overflow: hidden; /* Hide text */
     background: url(../images/loader.png) 0 0;
     animation: loader 1s infinite steps(8);
+}
+```
+
+# DEMO 3: 闪烁动画
+
+实现效果 文字闪烁
+
+文字闪烁分为两个阶段
+
+1. 文字透明度0->文字透明度1
+2. 文字透明度1->文字透明度0
+
+```css
+@keyframes blink-2 { 
+    to { 
+        color: transparent 
+    }
+}
+.blink-smooth-2 {
+    animation: .5s blink-2 6;
+    animation-direction: alternate;
 }
 ```
 
