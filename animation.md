@@ -19,7 +19,7 @@ tips:
 2. animation-play-state: 如一开始就是paused, 则维持第一帧的样式, 而非默认样式
 3. animation里animation-duration和animation-name是必须的
 
-# 回单效果
+# DEMO1: 回单效果
 
 现在要做的是小球做自由落体运动的效果
 
@@ -69,6 +69,8 @@ tips:
 90%~100%: 默认的ease-in, 下降
 
 而forwards则取最后一帧的样式
+
+# DEMO2: 逐帧动画
 
 
 
