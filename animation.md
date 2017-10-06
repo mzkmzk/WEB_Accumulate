@@ -114,6 +114,8 @@ tips:
 
 实现效果 文字闪烁
 
+![文字闪烁](/assets/aniamtion-demo-3.gif)
+
 在线地址: http://demo.404mzk.com/css/animation/index.html#demo_3
 
 文字闪烁分为两个阶段
