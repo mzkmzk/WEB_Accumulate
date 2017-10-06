@@ -139,7 +139,21 @@ x轴无法大于1, 因为我们木有时光机
 
 效果图
 
+![弹性效果图](/assets/transition-demo-2.gif)
+
 在线演示: http://demo.404mzk.com/css/transition/index.html
+
+```css
+input:not(:focus) + .callout:not(:hover) {
+    transform: scale(0);
+    transition: .25s transform;
+}
+
+.callout {
+    transition: .5s cubic-bezier(.25,.1,.3,1.5) transform;
+    transform-origin: 1.4em -.4em;
+}
+```
 
 
 # 参考链接
