@@ -63,7 +63,35 @@ transition: unset;
 
 # 自定义调速
 
+transition-timing-function中定义了几个常用的调速变量
 
+但实际上我们可以自定义
+
+`cubic-bezier(x1, y1, x2, y2)`
+
+x1,y1 和x2,y2是贝塞尔曲线的两个瞄点
+
+例如最常用的变量的cubic-bezier值为
+
+```html
+linear: cubic-bezier(0.0, 0.0, 1.0, 1.0)
+ease: cubic-bezier(0.25, 0.1, 0.25, 1.0)![](/assets/-.1-.25-1-.25.png)
+ease-in: cubic-bezier(0.42, 0.0, 1.0, 1.0)
+ease-in-out: cubic-bezier(0.42, 0.0, 0.58, 1.0)
+ease-out: cubic-bezier(0.0, 0.0, 0.58, 1.0)
+step-start: 等同于steps(1, start)
+step-end: 等同于steps(1, end)
+```
+
+自定义曲线点网址是: http://cubic-bezier.com/
+
+例如ease的贝塞尔曲线:
+
+![ease贝塞尔曲线](/assets/ease-bezier.png)
+
+这里的y轴代表动画完成进度可以大于1, 例如当`scale为(1,1)`, 而想在中途有个放大大于1倍的而最后又回到倍数1的效果.
+
+x轴无法大于1, 因为我们木有时光机
 
 # 任务1 图片切换
 
