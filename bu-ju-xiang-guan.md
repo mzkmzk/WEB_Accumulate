@@ -2,6 +2,8 @@
 
 # 满幅的背景, 定宽的内容
 
+![满幅的背景, 定宽的内容](/assets/full-background-fixation-width.png)
+
 ## margin:auto实现
 
 最常见的写法是
