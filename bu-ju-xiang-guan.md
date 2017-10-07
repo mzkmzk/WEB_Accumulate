@@ -68,8 +68,48 @@ html部分
 
 ## 基于绝对定位的解决方案1 绝对定位+margin
 
+http://demo.404mzk.com/css/layout/vertical-centering.html#demo_1
 
+```css
+.demo {
+    background: orange;
+    position: relative;
+    height: 300px;
+}
+.demo_div_1 {
+    background: #655;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /**
+     * transform可改为
+     * margin-top -3em;
+     * margin-left: -9em;
+     * width: 18em;
+     * height: 6em;
+     * 
+     */
+    }
+```
 
 缺点: 
 
-1. 内容的宽高度是固定的
+1. 要试用绝对定位
+
+## 基于Flex
+
+http://demo.404mzk.com/css/layout/vertical-centering.html#demo_2
+
+```css
+.demo_2{
+    background: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+.demo_div_2 {
+   background: #655;
+}
+```
