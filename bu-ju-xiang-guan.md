@@ -6,6 +6,8 @@
 
 最常见的写法是
 
+http://demo.404mzk.com/css/layout/full-background-fixation-width.html#demo_1
+
 css部分:
 
 ```css
@@ -35,6 +37,8 @@ html部分:
 2. 在宽度上, 如果父元素有宽带限制则marin都为0, 如果无宽带限制则左右边距都等于`视口宽度的一半减去的内容宽带的一半`
 
 ## calc+padding实现
+
+http://demo.404mzk.com/css/layout/full-background-fixation-width.html#demo_2
 
 css部分
 
