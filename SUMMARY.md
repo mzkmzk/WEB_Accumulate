@@ -334,4 +334,6 @@
   * [读音问题](english/pronunciation.md)
 * [算法](suan-fa.md)
   * [排序](suan-fa/pai-xu.md)
+* [源码理解](yuan-ma-yue-du.md)
+  * [lighthouse](yuan-ma-yue-du/lighthouse.md)
 
