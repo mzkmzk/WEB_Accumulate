@@ -1,5 +1,60 @@
 # lighthouse
 
+# Gather 收集数据部分
+
+## 生命流程
+
+简单版
+
+1. 启动浏览器
+2. 执行Gather
+    1. beforePass: 访问url前的操作
+    2. pass: load页面后的操作
+    3. afterPass: 所以gather都执行完pass后
+
+下面是官方版的
+
+```js
+/**
+ * Class that drives browser to load the page and runs gatherer lifecycle hooks.
+ * Execution sequence when GatherRunner.run() is called:
+ *
+ * 1. Setup
+ *   A. navigate to about:blank
+ *   B. driver.connect()
+ *   C. GatherRunner.setupDriver()
+ *     i. assertNoSameOriginServiceWorkerClients
+ *     ii. beginEmulation
+ *     iii. enableRuntimeEvents
+ *     iv. evaluateScriptOnLoad rescue native Promise from potential polyfill
+ *     v. register a performance observer
+ *     vi. register dialog dismisser
+ *     vii. clearDataForOrigin
+ *
+ * 2. For each pass in the config:
+ *   A. GatherRunner.beforePass()
+ *     i. navigate to about:blank
+ *     ii. Enable network request blocking for specified patterns
+ *     iii. all gatherers' beforePass()
+ *   B. GatherRunner.pass()
+ *     i. cleanBrowserCaches() (if it's a perf run)
+ *     ii. beginDevtoolsLog()
+ *     iii. beginTrace (if requested)
+ *     iv. GatherRunner.loadPage()
+ *       a. navigate to options.url (and wait for onload)
+ *     v. all gatherers' pass()
+ *   C. GatherRunner.afterPass()
+ *     i. endTrace (if requested) & endDevtoolsLog & endThrottling
+ *     ii. all gatherers' afterPass()
+ *
+ * 3. Teardown
+ *   A. GatherRunner.disposeDriver()
+ *   B. collect all artifacts and return them
+ *     i. collectArtifacts() from completed passes on each gatherer
+ *     ii. add trace data and computed artifact methods
+ */
+```
+
 # 常用概念名称
 
 1. First Paint Time(FP): 表示文档中任一元素首次渲染的时间
