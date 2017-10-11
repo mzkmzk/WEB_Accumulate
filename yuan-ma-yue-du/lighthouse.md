@@ -55,6 +55,46 @@
  */
 ```
 
+## Gather 例子1: 收集console信息
+
+```javascript
+'use strict';
+
+const Gatherer = require('./gatherer');
+
+class ChromeConsoleMessages extends Gatherer {
+
+  constructor() {
+    super();
+    this._logEntries = [];
+    this._onConsoleEntryAdded = this.onConsoleEntry.bind(this);
+  }
+
+  onConsoleEntry(entry) {
+    this._logEntries.push(entry);
+  }
+
+  beforePass(options) {
+    const driver = options.driver;
+    driver.on('Log.entryAdded', this._onConsoleEntryAdded);
+    return driver.sendCommand('Log.enable')
+      .then(() => driver.sendCommand('Log.startViolationsReport', {
+        config: [{name: 'discouragedAPIUse', threshold: -1}],
+      }));
+  }
+
+  afterPass(options) {
+    return Promise.resolve()
+        .then(_ => options.driver.sendCommand('Log.stopViolationsReport'))
+        .then(_ => options.driver.off('Log.entryAdded', this._onConsoleEntryAdded))
+        .then(_ => options.driver.sendCommand('Log.disable'))
+        .then(_ => this._logEntries);
+  }
+}
+
+module.exports = ChromeConsoleMessages;
+```
+
 # 常用概念名称
 
 1. First Paint Time(FP): 表示文档中任一元素首次渲染的时间
