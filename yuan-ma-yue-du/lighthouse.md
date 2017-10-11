@@ -100,8 +100,8 @@ module.exports = ChromeConsoleMessages;
 1. 监听console增加触发的事件: `driver.on('Log.entryAdded', this._onConsoleEntryAdded);`
 2. 开启Logger功能: `driver.sendCommand('Log.enable')`
 3. 开启chrome中自带的console警告功能: `driver.sendCommand('Log.startViolationsReport', {
-        config: [{name: 'discouragedAPIUse', threshold: -1}],
-      }`
+  config: [{name: 'discouragedAPIUse', threshold: -1}],
+}`
       
 然后在afterPass 主要就是关闭在beforePass中开启的功能
 
