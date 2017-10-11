@@ -95,6 +95,19 @@ class ChromeConsoleMessages extends Gatherer {
 module.exports = ChromeConsoleMessages;
 ```
 
+代码主要在beforePass中 
+
+1. 监听console增加触发的事件: `driver.on('Log.entryAdded', this._onConsoleEntryAdded);`
+2. 开启Logger功能: `driver.sendCommand('Log.enable')`
+3. 开启chrome中自带的console警告功能: `driver.sendCommand('Log.startViolationsReport', {
+        config: [{name: 'discouragedAPIUse', threshold: -1}],
+      }`
+      
+然后在afterPass 主要就是关闭在beforePass中开启的功能
+
+
+
+
 # 常用概念名称
 
 1. First Paint Time(FP): 表示文档中任一元素首次渲染的时间
