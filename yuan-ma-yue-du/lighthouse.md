@@ -1,5 +1,9 @@
 # lighthouse
 
+# 简介
+
+lighthouse是一个
+
 # Gather 收集数据部分
 
 ## 生命流程
