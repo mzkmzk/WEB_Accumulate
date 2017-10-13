@@ -124,6 +124,9 @@ module.exports = ChromeConsoleMessages;
 8. Speed Index: 视觉速度(Mean Pixel-Histogram Difference 算法)
 9. Perceptual Speed Index: 视觉速度(Structural Similarity Image Metric算法)
 
+# 限制网络和CPU
+
+
 
 # 参考链接
 
