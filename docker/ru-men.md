@@ -20,3 +20,4 @@ Registry Mirrors:
  
 # Docker中跑node
 
+1. 下载node镜像
