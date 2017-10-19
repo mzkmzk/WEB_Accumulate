@@ -11,8 +11,8 @@ let addToPrefiltersOrTransports = structure => {
 let inspectPrefiltersOrTransports = ( structure, options, originalOptions, jqXHR ) {
     ...
     return {
-        send: function(headers, complete){},
-        abort: function(){}
+        send: (headers, complete) => {},
+        abort: () => {...}
     }
 }
 jQuery.extend({
