@@ -11,7 +11,9 @@
      "anchor-navigation-ex",
      "catalogue-title",
      "edit-link",
-     "sitemap-general"
+     "sitemap-general",
+      "prism", 
+      "-highlight"
   ],
   "pluginsConfig": {
     "disqus": {
