@@ -5,6 +5,7 @@
 Ajax大致结构
 
 ```javascript
+let prefilters = {}, transports = {}
 //给全局增加Prefilters或Transports的方法
 let addToPrefiltersOrTransports = structure => {
     return (dataTypeExpression, func) => {...}
@@ -30,5 +31,33 @@ jQuery.extend({
     ajaxPrefilter: addToPrefiltersOrTransports( prefilters ),
     //
     ajaxTransport: addToPrefiltersOrTransports( transports ),
+    ajax: (url, options) => {
+        ...
+        //初始化设置
+        let s = jQuery.ajaxSetup( {}, options ),
+            jqXHR = {
+                readyState: 0,
+                getResponseHeader: key => {...},
+                getAllResponseHeaders: () => {...},
+                setRequestHeader: (name, value) => {...},
+                overrideMimeType: type => {...},
+                statusCode: map => {...},
+                abort: statusText => {...}
+            }
+        deferred.promise( jqXHR );//将jqXHR promise化
+        ...
+        inspectPrefiltersOrTransports( prefilters, s, options, jqXHR ) //经过预处理
+        ...
+        jqXHR.done( s.success );
+	jqXHR.fail( s.error );
+	
+	//获取可以真正执行各种ajax操作的传输器对象
+	transport = inspectPrefiltersOrTransports( transports, s, options, jqXHR )
+	...
+	//正在发送请求
+	transport.send(  requestHeaders, done )
+	
+	function(){}
+    }
 })
 ```
