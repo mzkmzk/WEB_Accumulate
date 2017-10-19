@@ -3,7 +3,6 @@
   "description": "404mzk blog",
   "language": "zh",
   "plugins": [
-    "disqus",
     "baidu",
     "tbfed-pagefooter",
     "github-buttons",
