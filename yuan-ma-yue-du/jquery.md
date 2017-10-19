@@ -120,3 +120,4 @@ jQuery.ajaxTransport( "script", function( s ) {
 # 参考链接
 
 1. ajax: http://www.jianshu.com/p/6266e69849dc
+2. ajax: https://segmentfault.com/a/1190000008619849
