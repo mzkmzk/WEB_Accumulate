@@ -29,7 +29,7 @@ jQuery.extend({
     ajaxSetup: (target, setting) => {...},
     //增加全局ajax的预处理的方法
     ajaxPrefilter: addToPrefiltersOrTransports( prefilters ),
-    //
+    //增加全局ajax的传输器方法
     ajaxTransport: addToPrefiltersOrTransports( transports ),
     ajax: (url, options) => {
         ...
@@ -57,7 +57,16 @@ jQuery.extend({
 	//正在发送请求
 	transport.send(  requestHeaders, done )
 	
-	function(){}
+	//完成请求的回调
+	function done(){
+	    ...
+	    if ( isSuccess ) {
+		deferred.resolveWith( callbackContext, [ success, statusText, jqXHR ] );
+	    } else {
+		deferred.rejectWith( callbackContext, [ jqXHR, statusText, error ] );
+	    }
+	    ...
+	}
     }
 })
 ```
