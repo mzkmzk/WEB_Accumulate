@@ -11,7 +11,7 @@ let addToPrefiltersOrTransports = structure => {
 let inspectPrefiltersOrTransports = ( structure, options, originalOptions, jqXHR ) {
     ...
     return {
-        send: (headers, complete) => {},
+        send: (headers, complete) => {...},
         abort: () => {...}
     }
 }
