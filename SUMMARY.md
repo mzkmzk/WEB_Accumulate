@@ -114,7 +114,6 @@
       * [创建和控制外部流程](create_and_handle_other_-progress.md)
       * [Nodejs命令行开发](nodejs.md)
       * [常见错误](error-spawn-cp-enoent.md)
-      * [命令输入提示](node_input_tips.md)
       * [Linux安装NODE](linuxnode.md)
     * [deepstream.io](deepstreamio.md)
       * [入门DEMO](ru_men_demo.md)
