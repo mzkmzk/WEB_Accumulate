@@ -116,7 +116,6 @@
       * [常见错误](error-spawn-cp-enoent.md)
       * [Linux安装NODE](linuxnode.md)
     * [deepstream.io](deepstreamio.md)
-      * [入门DEMO](ru_men_demo.md)
     * [RxJS](rxjs.md)
       * [入门](入门.md)
       * [基础API](基础api.md)
