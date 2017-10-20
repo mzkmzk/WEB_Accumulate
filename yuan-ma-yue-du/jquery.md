@@ -4,7 +4,7 @@
 
 Ajax流程
 
-![jquery Ajax](/assets/QQ20171019-233825.png)
+![jquery Ajax图解](/assets/QQ20171019-233825.png)
 
 Ajax大致结构
 
