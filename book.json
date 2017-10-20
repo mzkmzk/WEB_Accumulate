@@ -19,6 +19,11 @@
     "disqus": {
         "shortName": "blog-5j7bfapkvn"
     },
+    "prism": {
+      "css": [
+        "prismjs/themes/prism-okaidia.css"
+      ]
+    },
     "duoshuo": {
       "short_name": "blog404mzk",
       "theme": "default"
