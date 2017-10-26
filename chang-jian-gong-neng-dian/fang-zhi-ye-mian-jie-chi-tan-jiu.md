@@ -12,3 +12,6 @@
 
 所以只能另辟蹊径...
 
+# Content Security Policy
+
+这个是现代浏览器中最稳的方式了
