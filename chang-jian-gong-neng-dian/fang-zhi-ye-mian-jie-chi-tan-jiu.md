@@ -53,6 +53,8 @@
 
 `<meta http-equiv="Content-Security-Policy" content="script-src *.xunlei.com xunlei.com *.baidu.com baidu.com *.sina.com.cn 'unsafe-inline' 'unsafe-eval';">`
 
+假如最后`'unsafe-inline' 'unsafe-eval'`不加的话 则html里内嵌的js无法执行, 并且类似evel等动态执行代码都无法执行
+
 需要注意的是
 
 1. 假如想可以匹配a.com和a.com的子域名, 需要分开写,`a.com *.a.com`
