@@ -206,6 +206,7 @@
   * [常见功能点](chang-jian-gong-neng-dian.md)
     * [轮播图](chang-jian-gong-neng-dian/lun-bo-tu.md)
     * [网页打开APP或APP\_Store](chang-jian-gong-neng-dian/wang-ye-da-kai-app-huo-app-store.md)
+    * [防止页面劫持探究](chang-jian-gong-neng-dian/fang-zhi-ye-mian-jie-chi-tan-jiu.md)
   * [Chromium-Headless](chromium-headless.md)
     * [入门](chromium-headless/ji-chu/ru-men.md)
 * [服务器](fu_wu_qi.md)
