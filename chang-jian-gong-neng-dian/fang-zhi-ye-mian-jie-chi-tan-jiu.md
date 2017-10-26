@@ -49,9 +49,14 @@
 | 'unsafe-inline' | 允许加载 inline 资源（例如常见的 style 属性，onclick，inline js 和 inline css 等等）。 |
 | 'unsafe-eval'   | 允许加载动态 js 代码，例如 eval()。                                                    |
 
+例子: 假如我只能加载xunlei和 baidu和sina的js
+
+`<meta http-equiv="Content-Security-Policy" content="script-src *.xunlei.com xunlei.com *.baidu.com baidu.com *.sina.com.cn 'unsafe-inline' 'unsafe-eval';">`
+
 需要注意的是
 
 1. 假如想可以匹配a.com和a.com的子域名, 需要分开写,`a.com *.a.com`
+2. IE兼容性为10及其以上(而且IE10, IE11 要设置为`X-Content-Security-Policy`)
 
 # 参考链接
 
