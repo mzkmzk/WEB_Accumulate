@@ -34,7 +34,26 @@
 | sandbox     | 对请求的资源启用 sandbox(类似于 iframe 的 sandbox 属性)[https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe]）。                                                                                 |
 | report-uri  | 告诉浏览器如果请求的资源不被策略允许时，往哪个地址提交日志信息，只提交日志，不阻止任何内容(仅对Content-Security-Policy-Report-Only头有效)。 |
 
+指令值
+
+| 指令值          | 说明                                                                                   |
+|-----------------|----------------------------------------------------------------------------------------|
+|                 | 允许任何内容(默认)                                                                     |
+| 'none'          | 不允许任何内容                                                                         |
+| 'self'          | 允许同域内容                                                                           |
+| data:           | 允许data: 的图片                                                                       |
+| www.a.com       | 允许加载指定域名的资源。                                                               |
+| .a.com          | 允许加载 a.com 任何子域的资源。                                                        |
+| https://a.com   | 允许加载 a.com 的 https 资源（协议需匹配）。                                           |
+| https:          | 允许加载 https 资源。                                                                  |
+| 'unsafe-inline' | 允许加载 inline 资源（例如常见的 style 属性，onclick，inline js 和 inline css 等等）。 |
+| 'unsafe-eval'   | 允许加载动态 js 代码，例如 eval()。                                                    |
+
+需要注意的是
+
+1. 假如想可以匹配a.com和a.com的子域名, 需要分开写,`a.com *.a.com`
+
 # 参考链接
 
 1. CSP2的w3文档 https://www.w3.org/TR/CSP2/
-
+2. 指令详解: https://imququ.com/post/content-security-policy-reference.html
