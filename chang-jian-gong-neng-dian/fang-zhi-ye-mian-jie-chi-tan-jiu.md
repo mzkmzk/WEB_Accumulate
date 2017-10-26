@@ -31,7 +31,7 @@
 | object-src  | 针对 、 或,等标签引入的 flash 等插件的加载策略。                                                                                            |
 | media-src   | 针对,或,等标签引入的 HTML 多媒体的加载策略。                                                                                                |
 | frame-src   | 针对 frame 的加载策略。                                                                                                                     |
-| sandbox     | 对请求的资源启用 sandbox（类似于 iframe 的 sandbox 属性）。                                                                                 |
+| sandbox     | 对请求的资源启用 sandbox(类似于 iframe 的 sandbox 属性)[https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe]）。                                                                                 |
 | report-uri  | 告诉浏览器如果请求的资源不被策略允许时，往哪个地址提交日志信息，只提交日志，不阻止任何内容(仅对Content-Security-Policy-Report-Only头有效)。 |
 
 # 参考链接
