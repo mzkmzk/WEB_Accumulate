@@ -85,3 +85,4 @@ Content-Security-Policy: script-src 'nonce-EDNnf03nceIOfn39fn3e9h3sdfa'
 3. 一些安全相关的HTTP响应头: https://imququ.com/post/web-security-and-response-header.html
 4. 检查被劫持情况: http://www.cnblogs.com/kenkofox/p/4919668.html
 5. 谷歌相关说明: https://developers.google.com/web/fundamentals/security/csp/?hl=zh-cn
+6. 同源策略的限制: https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy
