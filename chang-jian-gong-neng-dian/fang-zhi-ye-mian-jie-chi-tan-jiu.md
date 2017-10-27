@@ -76,7 +76,9 @@ Content-Security-Policy: script-src 'nonce-EDNnf03nceIOfn39fn3e9h3sdfa'
 
 用户就是nonce-后面跟随机数, 但是这个用户在IE内都是不支持的, 所以暂时还是保留`unsafe-inline`
 
+值得注意的是跟`Content-Security-Policy`类似的是`Content-Security-Policy-Report-Only`
 
+语法基本一致, 但是后者不会阻拦任何内容, 而只是向`report-uri`指令设置的地址发送检测到异常的报告
 
 # 参考链接
 
