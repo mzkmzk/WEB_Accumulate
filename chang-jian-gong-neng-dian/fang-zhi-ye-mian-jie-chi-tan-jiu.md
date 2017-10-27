@@ -65,3 +65,4 @@
 1. CSP2的w3文档 https://www.w3.org/TR/CSP2/
 2. 指令详解: https://imququ.com/post/content-security-policy-reference.html
 3. 一些安全相关的HTTP响应头: https://imququ.com/post/web-security-and-response-header.html
+4. 检查被劫持情况: http://www.cnblogs.com/kenkofox/p/4919668.html
