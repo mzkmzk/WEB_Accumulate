@@ -60,9 +60,28 @@
 1. 假如想可以匹配a.com和a.com的子域名, 需要分开写,`a.com *.a.com`
 2. IE兼容性为10及其以上(而且IE10, IE11 要设置为`X-Content-Security-Policy`)
 
+对于`unsafe-inline` 会允许内联代码
+
+但是有时劫持会直接在html加script
+
+而我们页面本身又是需要内联script的, 该如何处理呢
+
+```html
+Content-Security-Policy: script-src 'nonce-EDNnf03nceIOfn39fn3e9h3sdfa'
+
+<script nonce=EDNnf03nceIOfn39fn3e9h3sdfa>
+  //Some inline code I cant remove yet, but need to asap.
+</script>
+```
+
+用户就是nonce-后面跟随机数, 但是这个用户在IE内都是不支持的, 所以暂时还是保留`unsafe-inline`
+
+
+
 # 参考链接
 
 1. CSP2的w3文档 https://www.w3.org/TR/CSP2/
 2. 指令详解: https://imququ.com/post/content-security-policy-reference.html
 3. 一些安全相关的HTTP响应头: https://imququ.com/post/web-security-and-response-header.html
 4. 检查被劫持情况: http://www.cnblogs.com/kenkofox/p/4919668.html
+5. 谷歌相关说明: https://developers.google.com/web/fundamentals/security/csp/?hl=zh-cn
