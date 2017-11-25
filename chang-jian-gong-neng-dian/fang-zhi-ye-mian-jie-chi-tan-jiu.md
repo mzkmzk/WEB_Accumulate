@@ -92,6 +92,12 @@ DNS劫持方的劫持方式一般有
 1. 嵌入iframe
 2. 通过污染js源文件，然后加载劫持方的js
 
+`<meta http-equiv="Content-Security-Policy" content="https: 'unsafe-inline' 'unsafe-eval';">`
+
+
+
+script-src
+
 # 参考链接
 
 1. CSP2的w3文档 https://www.w3.org/TR/CSP2/
