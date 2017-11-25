@@ -12,6 +12,11 @@
 
 所以只能另辟蹊径...
 
+# 劫持方式
+
+1. 嵌入iframe(以赚广告量)
+2. 污染源JS，修改为加载广告埋点和加载源JS
+
 # Content Security Policy
 
 这个是现代浏览器中最稳的方式了
@@ -82,7 +87,10 @@ Content-Security-Policy: script-src 'nonce-EDNnf03nceIOfn39fn3e9h3sdfa'
 
 ## 具体方案
 
+DNS劫持方的劫持方式一般有
 
+1. 嵌入iframe
+2. 通过污染js源文件，然后加载劫持方的js
 
 # 参考链接
 
