@@ -80,6 +80,10 @@ Content-Security-Policy: script-src 'nonce-EDNnf03nceIOfn39fn3e9h3sdfa'
 
 语法基本一致, 但是后者不会阻拦任何内容, 而只是向`report-uri`指令设置的地址发送检测到异常的报告
 
+## 具体方案
+
+
+
 # 参考链接
 
 1. CSP2的w3文档 https://www.w3.org/TR/CSP2/
