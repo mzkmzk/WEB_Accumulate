@@ -94,6 +94,8 @@ DNS劫持方的劫持方式一般有
 
 `<meta http-equiv="Content-Security-Policy" content="script-src https: 'unsafe-inline' 'unsafe-eval'; frame-src *.xunlei.com ">`
 
+用frame-src来限定自己所在域名(假设为*.xunlei.com)做限制, 而且要求所有静态的JS资源用https
+
 
 
 
