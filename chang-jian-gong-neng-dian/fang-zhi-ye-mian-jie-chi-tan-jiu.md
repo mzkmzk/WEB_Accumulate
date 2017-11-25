@@ -21,7 +21,7 @@
 
 这个是现代浏览器中最稳的方式了
 
-语法: 一个指令的多个值用英文空格分开, 多个指令间用
+语法: 一个指令的多个值用英文空格分开, 多个指令间用英文分号分割
 
 ## 指令
 
@@ -92,11 +92,10 @@ DNS劫持方的劫持方式一般有
 1. 嵌入iframe
 2. 通过污染js源文件，然后加载劫持方的js
 
-`<meta http-equiv="Content-Security-Policy" content="https: 'unsafe-inline' 'unsafe-eval';">`
+`<meta http-equiv="Content-Security-Policy" content="script-src https: 'unsafe-inline' 'unsafe-eval'; frame-src *.xunlei.com ">`
 
 
 
-script-src
 
 # 参考链接
 
