@@ -24,12 +24,11 @@ mock jquery: http://dj1211.com/?p=673
 
 ## 模拟ajax返回
 
-### 情境
+### 场景
 
 代码情况: 业务调用ajax, 根据返回内容做处理数据
 
 ```javascript
-//源代码 ./examples.js
 let examples = {
     data: 0,
     addData: () => {
@@ -43,14 +42,13 @@ let examples = {
 
 ```
 
-### 解决方案
+### 测试用例
 
 ```javascript
-//测试代码 ./__tests__/examples.test.js
 it('检查处理数据', () => {
     let $ = require('jquery'),
         examples = require('../examples.js')
-    $.ajax = jest.genMockFunction()
+    $.ajax = jest.fn()
     examples.addData()
     $.ajax.mock.calls[0][0].success(1)  
      
@@ -64,15 +62,41 @@ it('检查处理数据', () => {
 
 整个逻辑就是模拟ajax会返回数字1, 然后验证其最终的加法是否正确
 
-## 定时器处理
+## 简单定时器处理
 
 ### 场景 
 
+要等待定时器执行完毕后, 然后验证其计算结果
+
 ```javascript
-setTimeout(() => {
-    
-}, 3000)
+var examples = {
+    data: 0,
+    addData: () => {
+        setTimeout(() => {
+            examples += 1        
+        }, 3000)
+    }
+}
 ```
+
+### 测试用例
+
+```javascript
+it('测试定时器' => {
+    jest.useFakeTimers()
+    let exampels = require('../examples.js')
+    
+    examples.addData()
+    
+    setTimeout.mock.calls[0][0]()
+    expect(examples.data).toBe(2) 
+})
+```
+
+`jest.useFakeTimers()`的作用是对`(setTimeout, setInterval, clearTimeout, clearInterval, nextTick, setImmediate and clearImmediate`等函数进行mock
+
+作用类似于setTimeout = jest.fn()
+
 
 # 测试模块内部不公开的函数
 
