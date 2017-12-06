@@ -95,7 +95,7 @@ it('测试定时器' => {
 
 `jest.useFakeTimers()`的作用是对`(setTimeout, setInterval, clearTimeout, clearInterval, nextTick, setImmediate and clearImmediate`等函数进行mock
 
-作用类似于setTimeout = jest.fn()
+作用类似于`setTimeout = jest.fn()`
 
 
 # 测试模块内部不公开的函数
