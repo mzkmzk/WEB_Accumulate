@@ -52,7 +52,7 @@ it('检查处理数据', () => {
     examples.addData()
     $.ajax.mock.calls[0][0].success(1)  
      
-    expect(examples.data).toBe(2)                             
+    expect(examples.data).toBe(1)                             
 })
 ```
 
@@ -69,11 +69,11 @@ it('检查处理数据', () => {
 要等待定时器执行完毕后, 然后验证其计算结果
 
 ```javascript
-var examples = {
+let examples = {
     data: 0,
     addData: () => {
         setTimeout(() => {
-            examples += 1        
+            examples.data += 1        
         }, 3000)
     }
 }
@@ -89,7 +89,7 @@ it('测试定时器' => {
     examples.addData()
     
     setTimeout.mock.calls[0][0]()
-    expect(examples.data).toBe(2) 
+    expect(examples.data).toBe(1) 
 })
 ```
 
