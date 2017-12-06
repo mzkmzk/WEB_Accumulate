@@ -273,7 +273,7 @@
     * [制作一个gitbook插件: 页面title改为层级显示](gitbook/zhi-zuo-yi-ge-gitbook-cha-4ef63a-ye-mian-title-gai-wei-ceng-ji-xian-shi.md)
 * [单元测试](dan_yuan_ce_shi.md)
   * [常见问题](phpunit_chang_jian_wen_ti.md)
-  * [Jest](jest.md)
+  * [用Jest单元测试维护你的javascript代码](jest.md)
 * [优化实践](you_hua_shi_jian.md)
   * [Nicefoto.cc优化](nicefotoccyou_hua.md)
   * [离某空间优化](you-hua-jing-yan/li-mou-kong-jian-you-hua.md)

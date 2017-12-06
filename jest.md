@@ -1,4 +1,6 @@
-# jest
+# 用Jest单元测试维护你的javascript代码
+
+
 
 # 踩坑记录
 
@@ -17,6 +19,60 @@ https://gist.github.com/jcouyang/34686f695cd28309759e
 react和jest: http://www.bijishequ.com/detail/379328?p=14
 
 mock jquery: http://dj1211.com/?p=673
+
+# 常用技巧
+
+## 模拟ajax返回
+
+### 情境
+
+代码情况: 业务调用ajax, 根据返回内容做处理数据
+
+```javascript
+//源代码 ./examples.js
+let examples = {
+    data: 0,
+    addData: () => {
+        $.ajax({
+            ...
+            success: function(result){ examples.data += result}
+        })
+    }
+}
+
+
+```
+
+### 解决方案
+
+```javascript
+//测试代码 ./__tests__/examples.test.js
+it('检查处理数据', () => {
+    let $ = require('jquery'),
+        examples = require('../examples.js')
+    $.ajax = jest.genMockFunction()
+    examples.addData()
+    $.ajax.mock.calls[0][0].success(1)  
+     
+    expect(examples.data).toBe(2)                             
+})
+```
+
+重点在于`$.ajax = jest.genMockFunction()` 表示以后`$.ajax`都会被模拟处理
+
+`$.ajax.mock.calls[0][0].success`表示的是: $.ajax中第1次被调用时的第一个参数中success变量
+
+整个逻辑就是模拟ajax会返回数字1, 然后验证其最终的加法是否正确
+
+## 定时器处理
+
+### 场景 
+
+```javascript
+setTimeout(() => {
+    
+}, 3000)
+```
 
 # 测试模块内部不公开的函数
 
