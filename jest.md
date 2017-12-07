@@ -1,25 +1,5 @@
 # 用Jest单元测试维护你的javascript代码
 
-
-
-# 踩坑记录
-
-> jest.mock
-
-jest.mock('jquery')
-
-beforeEach(() => jest.resetModules());
-
-不然 $.ajax.mock.calls情况进行累加 
-
-mock jqeury 单一
-
-https://gist.github.com/jcouyang/34686f695cd28309759e
-
-react和jest: http://www.bijishequ.com/detail/379328?p=14
-
-mock jquery: http://dj1211.com/?p=673
-
 # 安装
 
 1. npm install --save-dev jest babel-jest babel-core
@@ -27,10 +7,6 @@ mock jquery: http://dj1211.com/?p=673
 3. npm t即可
 
 更详细请前往<http://facebook.github.io/jest/docs/en/getting-started.html#content>
-
-
-
-
 
 # 常用技巧
 
@@ -50,7 +26,6 @@ let examples = {
         })
     }
 }
-
 
 ```
 
@@ -231,6 +206,20 @@ infiniteTimerGame()
 但是`jest.runAllTimers()` 会执行定时器里的定时任务, 假如定时器里还有定时器, 又会继续执行定时器任务, 这里的例子, 测试用例将会不断的死循环执行
 
 # 注意事项
+
+## resetModules
+
+最好都在单元测试中顶部增加
+
+```javascript
+beforeEach(() => jest.resetModules());
+```
+这会在运行每次单元测试前 重置模块
+
+不然全局中的变量的.mock.calls很容易会记录之前单元测试的记录
+
+也可以防止某个单元测试修改了模块, 而影响到了其他单元测试
+
 
 # 待补充
 
