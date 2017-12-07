@@ -22,6 +22,14 @@ mock jquery: http://dj1211.com/?p=673
 
 # 安装
 
+1. npm install --save-dev jest babel-jest babel-core
+2. 编辑package.json, 添加`scripts: { test: jest }`
+3. npm t即可
+
+更详细请前往<http://facebook.github.io/jest/docs/en/getting-started.html#content>
+
+
+
 
 
 # 常用技巧
