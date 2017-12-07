@@ -20,6 +20,10 @@ react和jest: http://www.bijishequ.com/detail/379328?p=14
 
 mock jquery: http://dj1211.com/?p=673
 
+# 安装
+
+
+
 # 常用技巧
 
 ## 模拟ajax返回
