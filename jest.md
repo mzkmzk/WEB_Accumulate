@@ -1,5 +1,11 @@
 # 用Jest单元测试维护你的javascript代码
 
+# 单元测试的应用场景
+
+笔者不太推荐所有业务都使用单元测试
+
+但是一些JS公共组件库, 需要用单元测试来保证其模块API的稳定性
+
 # 安装
 
 1. npm install --save-dev jest babel-jest babel-core
