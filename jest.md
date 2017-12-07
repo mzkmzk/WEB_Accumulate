@@ -236,3 +236,9 @@ infiniteTimerGame()
 
 1. 异步 mock第三方库
 
+# 参考资料
+
+1. mock第三方库参考:https://gist.github.com/jcouyang/34686f695cd28309759e
+2. react和jest测试: http://www.bijishequ.com/detail/379328?p=14
+3. mock jquery: http://dj1211.com/?p=673
+
