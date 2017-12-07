@@ -146,17 +146,39 @@ let utils = {
 ```
 
 
-##
+### 测试用例
+
+```javascript
+it('测试isWeixin', () => {
+    let util = require('../../src/common/util.js').default
+
+    Object.defineProperty(navigator, 'userAgent', {
+        writable: true,
+        value: ' MicroMessenger '
+    })
+
+    expect(util.isWeixin()).toBe(true)
+})
+```
 
 
+## 测试模块内部不公开的函数
 
+### 场景
 
-# 测试模块内部不公开的函数
+有时候有些模块里的内部方法不想被外部调用, 而不暴露在模块里
+
+这时候我们应该如何进行测试
+
+### 测试用例
+
+这里我们主要用[rewire](https://github.com/jhnns/rewire "rewire")这个库
 
 ```javascript
 let rewire = require('rewire'),
     path = require('path')
-    
+
+//getHtmlUrl即为我们没暴露, 但是要进行测试的方法
 it('test', () => {
     //getHtmlUrl就是../../src/ci模块中的内部方法
     let app = rewire(path.join(__dirname, '../../src/ci')),
@@ -169,3 +191,42 @@ it('test', () => {
 这里有个坑就是 `../../src/ci`如果直接用require的时候是可以的
 
 但是rewire的时候就说找不到模块, 所以采用了绝对路径
+
+# 疑惑点
+
+## jest.runAllTimers()和jest.runOnlyPendingTimers()的区别
+
+jest.runAllTimers(): 为执行当前所有的时间类任务
+
+jest.runOnlyPendingTimers(): 为执行当前正在等待的所有时间类任务
+
+例子
+
+```javascript
+let infiniteTimerGame = () => {
+    setTimeout(() => {
+        console.log('Times up! 10 seconds before the next game starts...');
+        callback && callback();
+    
+        // Schedule the next game in 10 seconds
+        setTimeout(() => {
+          infiniteTimerGame(callback);
+        }, 10000);
+    }, 1000);
+}
+infiniteTimerGame()
+```
+
+这个任务是
+
+1. 调用方法后等待1000ms后执行回调
+2. 过10000ms后就继续第一个步骤
+
+这种情况下 测试代码
+
+执行`jest.runOnlyPendingTimers()` 只会执行第一个1000ms的正在等待任务
+
+但是`jest.runAllTimers()` 会执行定时器里的定时任务, 假如定时器里还有定时器, 又会继续执行定时器任务, 这里的例子, 测试用例将会不断的死循环执行
+
+# 注意事项
+
