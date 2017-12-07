@@ -79,7 +79,7 @@ let examples = {
 }
 ```
 
-### 测试用例一: 利用简单的时间类mock机制
+### 测试用例
 
 ```javascript
 it('测试定时器' => {
@@ -96,6 +96,47 @@ it('测试定时器' => {
 `jest.useFakeTimers()`的作用是对`(setTimeout, setInterval, clearTimeout, clearInterval, nextTick, setImmediate and clearImmediate`等函数进行mock
 
 作用类似于`setTimeout = jest.fn()`
+
+方案2: 模拟运行时间
+
+`setTimeout.mock.calls[0][0]()`替换成`jest.runTimersToTime(3000)`
+
+也可以通过测试, runTimersToTime(3000)表示时间向前运行了3000毫秒
+
+方案3: 运行等待的时间类任务
+
+`setTimeout.mock.calls[0][0]()`替换成
+
+`jest.runAllTimers()`或
+
+`jest.runOnlyPendingTimers()` 也会完成当前所有等待的时间类任务
+
+这两者的区别后面会谈到
+
+## 修改userAgent
+
+userAgent代表一些不能被JS修改的变量
+
+有时我们的业务代码对不同的userAgent做判断
+
+那单元测试应该怎跑 
+
+### 场景
+
+```javascript
+let utils = {
+    isWeixin: function() {
+        let ua = navigator.userAgent.toLowerCase();
+        return ua.match(/MicroMessenger/i) == "micromessenger") 
+    }
+}
+
+```
+
+
+##
+
+
 
 
 # 测试模块内部不公开的函数
