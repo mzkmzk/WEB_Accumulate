@@ -18,6 +18,10 @@ Web无处不在, 给Web调试带来不少的困扰
 6. android chrome浏览器
 7. android混合应用页面
 
+# 工具
+
+1. 移动端资源: https://github.com/liriliri/eruda
+
 # 参考链接
 
 1. Weinre移动端调试: https://div.io/topic/1322
