@@ -106,7 +106,75 @@ it('测试定时器' => {
 
 这两者的区别后面会谈到
 
+## 异步
 
+### 场景一: callback回调
+
+例如JSONP, 大部分情况下我们都mock掉
+
+但是假如我们真的要测试jsonp方法是否有把请求发出去, 并验证接口的返回
+
+### 测试用例一: done方法
+
+```javascript
+it('测试真实ajax', done => {
+    $.ajax({
+        url: 'http://dynamic.vip.*.com/cashv2/userCashList',
+        data: { 
+            paybiz: 'supervip'
+        },
+        timeout: 2000,
+        success: result =>  {
+            expect(result).toEqual({ result: -1, msg: '登录验证失败！'});
+            done()
+        },
+        error: result => {}
+    })
+})
+```
+
+只有真正运行到done, 单元测试才会结束
+
+要注意假如expect不正确, 就不会执行下面的done 并且不会告诉expect前后对比差在哪里, 只会等到jest的timeout错误
+
+### 测试用例二: Promise方法
+
+```javascript
+it('测试真实ajax', () => {
+    expect.assertions(1)
+    return $.ajax({
+        url: 'http://dynamic.vip.*.com/cashv2/userCashList',
+        data: { 
+            paybiz: 'supervip'
+        },
+        timeout: 2000
+    })
+    .then(result => expect(result).toEqual({ result: -1, msg: '登录验证失败！'});
+)
+})
+```
+
+`expect.assertions(1)`表示要执行一次expect校验
+
+### 测试用例三: .resolves / .rejects 
+
+```javascript
+it('测试真实ajax', () => {
+    expect.assertions(1)
+    return $.ajax({
+        url: 'http://dynamic.vip.*.com/cashv2/userCashList',
+        data: { 
+            paybiz: 'supervip'
+        },
+        timeout: 2000
+    })
+    .resolves()
+    .toEqual({ result: -1, msg: '登录验证失败！'});
+)
+})
+```
+
+类似Async/Await的用法可以参考<http://facebook.github.io/jest/docs/en/asynchronous.html#async-await>
 
 ## 修改userAgent
 
@@ -175,6 +243,72 @@ it('test', () => {
 
 但是rewire的时候就说找不到模块, 所以采用了绝对路径
 
+## Mock整个第三方库
+
+### 场景
+
+```javascript
+let { exec } = require('child_process'),
+    ci = {
+    check: () => {
+        exec('git log --name-only -1', (error, stdout, stderr) => {
+            ...
+        }
+    }
+}
+
+
+```
+
+###测试用例 
+
+我们需要测试的是 回调中的处理 
+
+但是exec里执行的我们要mock掉, 而且回调中的参数 要是我们mock的
+
+```javascript
+//在__tests__同父目录下新建, __mocks__/child_process.js
+const child_process = jest.genMockFromModule('child_process');
+
+
+let exec_callback_args = []
+function __setMockExec(args = []) {
+    exec_callback_args = args
+}
+
+function exec(_, callback) {
+    callback && callback.apply(null, exec_callback_args )
+}
+
+child_process.__setMockExec = __setMockExec;
+child_process.exec = exec;
+
+module.exports = child_process;
+
+```
+
+```javascript
+//test.js
+jest.mock('child_process')
+
+it('测试处理exec', () => {
+    let myStdout = 'ahah',
+        myStderr = 'aaa',
+        ci = require('../src/ci.js')
+        
+    require('child_process').__setMockExec([null, myStdout, myStderr])
+    ci.check()
+    
+    expect...    
+    
+})
+
+```
+
+这种方式是写mock的时候会比较麻烦
+
+但是写好一次后 以后类似的mock功能 就可以通用了
+
 # 疑惑点
 
 ## jest.runAllTimers()和jest.runOnlyPendingTimers()的区别
@@ -226,10 +360,49 @@ beforeEach(() => jest.resetModules());
 
 也可以防止某个单元测试修改了模块, 而影响到了其他单元测试
 
+# 单元测试覆盖率 
 
-# 待补充
+```
+> jest --coverage
+Test Suites: 2 passed, 2 total
+Tests:       18 passed, 18 total
+Snapshots:   0 total
+Time:        0.695s, estimated 1s
+Ran all test suites.
+----------|----------|----------|----------|----------|----------------|
+File      |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+----------|----------|----------|----------|----------|----------------|
+All files |      100 |      100 |      100 |      100 |                |
+ index.js |      100 |      100 |      100 |      100 |                |
+ utils.js |      100 |      100 |      100 |      100 |                |
+----------|----------|----------|----------|----------|----------------|
+```
 
-1. 异步 mock第三方库
+1. Stmts: 语句覆盖率
+2. Branch: 分支覆盖率
+3. Funcs: 函数覆盖率
+4. Lines: 行覆盖率
+
+其实这些指标都是一个提示, 并不要太在意
+
+通常80%以上的覆盖率就足够
+
+若每个分支都要走一遍 很多是意义的
+
+什么叫做无意义, 是即使你走了这个分支 你的断言也不知道该怎么检查
+
+这4个指标里 一般百分比最高的是Funcs, 最低的是Branch
+
+我的建议是: 对外开放的接口多测试
+
+而内部使用的方法 保证内部使用正确即可 
+
+# 有什么没讲
+
+1. ui类测试
+2. react测试
+
+jest其实基本是为react定制的, 但是笔者不太喜欢给UI写测试, 所以这两类测试都木有讲
 
 # 参考资料
 
