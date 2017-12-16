@@ -297,6 +297,7 @@
   * [前端](前端.md)
     * [XSS](xss.md)
       * [第一波XSS探针实现](第一波xss探针实现.md)
+  * [HTTPS部署及相关知识](httpsbu-shu-ji-xiang-guan-zhi-shi.md)
 * [算法](suan-fa.md)
   * [排序](suan-fa/pai-xu.md)
 * [源码理解](yuan-ma-yue-du.md)
