@@ -94,7 +94,7 @@ ssl_certificate_key  pki/private.key;
 ```
 chrome和safari等浏览器都可通过
 
-但是firefox还是会提示证书不可用 这个不知是缓存问题还是证书问题 后面再深究
+但是firefox还是会提示证书不可用 应该是直接由根证书签署到网站证书 缺少中间证书的原因 暂未解决 后面再深究
 
 
 # 参考资料
