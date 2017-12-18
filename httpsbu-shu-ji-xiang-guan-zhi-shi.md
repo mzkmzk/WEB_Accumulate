@@ -12,7 +12,15 @@
 
 1. 随机生成密钥-`rootca.key`
 2. 根据rootca.key生成证书`rootca.crt`
-3. 配置根
+3. 配置根证书的配置文件ca.conf(用于给别人签发证书时, 别人知道根证书的信息)
+4. 随机生成密钥-`intermediate1.key`
+5. 根据intermediate1.key生成待确认信息文件`intermediate1.csr`
+6. 根据ca.conf、intermediate1.csr 生成中级CA证书`intermediate1.crt`
+7. 根据ca.conf、rootca.key和rootca.crt生成根证书的信息交换文件`rootca.crl.pem`
+8. 根据`rootca.crl.pem`生成待确认信息文件`root.crl`
+9. 配置中级证书的配置文件`intermediate1.conf`
+10. 根据`intermediate1.conf`、`intermediate1.key`和`intermediate1.crt`生成中级证书的信息交换文件
+
 
 # Mac OS下签发多域名证书
 
