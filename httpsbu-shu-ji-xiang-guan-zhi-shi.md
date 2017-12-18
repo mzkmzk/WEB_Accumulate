@@ -92,9 +92,11 @@ server_name  example.com;
 ssl_certificate      pki/cert.pem;
 ssl_certificate_key  pki/private.key;
 ```
-chrome和safari等浏览器都可通过
+chrome、firefox和safari等浏览器都可通过
 
-但是firefox还是会提示证书不可用 应该是直接由根证书签署到网站证书 缺少中间证书的原因 暂未解决 后面再深究
+# 注意点
+
+1. firefox信任的证书在mac下 不跟系统走, 而是要firefox自己有一套自己信任根证书, 在系统添加完信任证书后, 要在firefox再添加一遍 
 
 
 # 遗留问题
