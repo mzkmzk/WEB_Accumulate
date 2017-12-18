@@ -94,10 +94,35 @@ ssl_certificate_key  pki/private.key;
 ```
 chrome、firefox和safari等浏览器都可通过
 
+# HPKP
+
+
+
 # 注意点
 
-1. firefox信任的证书在mac下 不跟系统走, 而是要firefox自己有一套自己信任根证书, 在系统添加完信任证书后, 要在firefox再添加一遍 
+> firefox单独管理信任证书
 
+firefox信任的证书在mac下 不跟系统走, 而是要firefox自己有一套自己信任根证书, 在系统添加完信任证书后, 要在firefox再添加一遍 
+
+> 整合中间证书
+
+一般是根证书->中间证书->服务器证书
+
+nginx中的crt需要把三个证书合并在一起 顺序是
+
+```
+服务器证书
+中间机构证书
+根证书
+```
+
+顺序错了 nginx会报错 
+
+```
+SSL_CTX_use_PrivateKey_file(" ... /www.example.com.key") failed
+   (SSL: error:0B080074:x509 certificate routines:
+    X509_check_private_key:key values mismatch)
+```
 
 # 遗留问题
 
@@ -107,4 +132,5 @@ chrome、firefox和safari等浏览器都可通过
 
 1. mac生成根证书及生成多域名证书: https://www.zhoumingzhi.com/2016/11/15/macos%E4%B8%8B%E7%AD%BE%E5%8F%91%E5%A4%9A%E5%9F%9F%E5%90%8D%E8%AF%81%E4%B9%A6/
 2. 详细的CA类别说明和自建根证书: http://www.barretlee.com/blog/2016/04/24/detail-about-ca-and-certs/
+3. nginx使用中间证书: http://blog.csdn.net/gudufeiyang/article/details/58603402
 
