@@ -1,5 +1,10 @@
 # HTTPS部署及相关知识
 
+# 常用文件类型
+
+1. `.key`: 一串密钥 相当于密码
+2. `.crt`: 证书文件
+
 # 生成根证书理论逻辑
 
 这里举例的是 
@@ -28,6 +33,10 @@
 16. 根据`intermediate1.crl.pem`生成待确认信息文件`intermediate1.crl`
 17. 将enduser-example.com.crt、intermediate1.crt和rootca.crt合并在一起成为最终的用户证书`enduser-example.com.chain.crt`
 18. 配置`enduser-example.com.chain.crt`和`enduser-example.com.key`在nginx
+
+看完上面你的疑问可能是
+
+1. 要crl干啥?
 
 
 # Mac OS下签发多域名证书
@@ -126,6 +135,25 @@ chrome、firefox和safari等浏览器都可通过
 
 # HPKP
 
+# 常用命令
+
+> 查看证书链接
+
+`openssl s_client -connect mac-act-vip-ssl.?.com:443`
+
+```
+Certificate chain
+ 0 s:/CN=Thunder-Vip/ST=Some-State/C=AU/O=Internet Widgits Pty Ltd
+   i:/CN=Thunder-Middle/ST=Some-State/C=AU/O=Internet Widgits Pty Ltd
+ 1 s:/CN=Thunder-Middle/ST=Some-State/C=AU/O=Internet Widgits Pty Ltd
+   i:/C=AU/ST=Some-State/O=Internet Widgits Pty Ltd/CN=Thunder-Root
+ 2 s:/C=AU/ST=Some-State/O=Internet Widgits Pty Ltd/CN=Thunder-Root
+   i:/C=AU/ST=Some-State/O=Internet Widgits Pty Ltd/CN=Thunder-Root
+---
+```
+s代表本证书
+
+i代表s中的正式是谁发的
 
 
 # 注意点
@@ -152,6 +180,21 @@ nginx中的crt需要把三个证书合并在一起 顺序是
 SSL_CTX_use_PrivateKey_file(" ... /www.example.com.key") failed
    (SSL: error:0B080074:x509 certificate routines:
     X509_check_private_key:key values mismatch)
+```
+
+> 管理员配置错证书
+
+当管理员配置错中间证书, 但假如管理员之前配置正确过
+
+浏览器信任过这个证书, 会在管理员电脑中正常
+
+但是其他用户缺不正常
+
+因为浏览器验证颁发证书机构时 有缓存策略
+
+```
+A、浏览器自安装以来，从未见过这个i。那么验证会失败。
+B、浏览器以前见过、并且验证过i，那么验证会成功。
 ```
 
 # 遗留问题
