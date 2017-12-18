@@ -17,7 +17,7 @@
 5. 根据intermediate1.key生成待确认信息文件`intermediate1.csr`
 6. 根据ca.conf、intermediate1.csr 生成中级CA证书`intermediate1.crt`
 7. 根据ca.conf、rootca.key和rootca.crt生成根证书的信息交换文件`rootca.crl.pem`
-8. 根据`rootca.crl.pem`生成待确认信息文件`root.crl`
+8. 根据`rootca.crl.pem`生成待确认信息文件`rootca.crl`
 9. 配置中级证书的配置文件`intermediate1.conf`
 10. 根据`intermediate1.conf`、`intermediate1.key`和`intermediate1.crt`生成中级证书的信息交换文件`intermediate1.crl.pem`
 11. 根据`intermediate1.crl.pem`生成待确认信息文件`intermediate1.crl`
