@@ -97,6 +97,10 @@ chrome和safari等浏览器都可通过
 但是firefox还是会提示证书不可用 应该是直接由根证书签署到网站证书 缺少中间证书的原因 暂未解决 后面再深究
 
 
+# 遗留问题
+
+导出xunlei-maizhikun根证书crt 解决 firefox问题 
+
 # 参考资料
 
 1. mac生成根证书及生成多域名证书: https://www.zhoumingzhi.com/2016/11/15/macos%E4%B8%8B%E7%AD%BE%E5%8F%91%E5%A4%9A%E5%9F%9F%E5%90%8D%E8%AF%81%E4%B9%A6/
