@@ -274,4 +274,5 @@ B、浏览器以前见过、并且验证过i，那么验证会成功。
 4. openssl数字证书常见格式与协议介绍: http://www.huangxiaobai.com/archives/1739
 5. 命令安装多级证书: https://linux.cn/article-6498-1.html
 6. 英文版命令安装多级证书: https://raymii.org/s/tutorials/OpenSSL_command_line_Root_and_Intermediate_CA_including_OCSP_CRL%20and_revocation.html
+7. openssl配置文件讲解: https://www.phildev.net/ssl/opensslconf.html
 
