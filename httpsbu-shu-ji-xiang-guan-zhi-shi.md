@@ -191,7 +191,7 @@ chrome、firefox和safari等浏览器都可通过
 
 # HPKP
 
-# 常用命令
+# 常用检查工具
 
 > 查看证书链接
 
@@ -210,6 +210,15 @@ Certificate chain
 s代表本证书
 
 i代表s中的正式是谁发的
+
+> 检查SSL情况网址
+
+https://www.ssllabs.com/ssltest/analyze.html
+
+> 补全证书中间链工具
+
+1. 命令工具: https://github.com/spatie/ssl-certificate-chain-resolver
+2. 在线网址: https://certificatechain.io/
 
 
 # 注意点
