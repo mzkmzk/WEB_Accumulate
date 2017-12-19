@@ -72,18 +72,12 @@ MIICJjCCAdCgAwIBAgIBITANBgkqhkiG9w0BAQQFADCBqTELMAkGA1UEBhMCVVMx
 4. 随机生成密钥-`intermediate1.key`
 5. 根据intermediate1.key生成待确认信息文件`intermediate1.csr`
 6. 根据ca.conf、intermediate1.csr 生成中级CA证书`intermediate1.crt`
-7. 根据ca.conf、rootca.key和rootca.crt生成根证书的信息交换文件`rootca.crl.pem`
-8. 根据`rootca.crl.pem`生成待确认信息文件`rootca.crl`
-9. 配置中级证书的配置文件`intermediate1.conf`
-10. 根据`intermediate1.conf`、`intermediate1.key`和`intermediate1.crt`生成中级证书的信息交换文件`intermediate1.crl.pem`
-11. 根据`intermediate1.crl.pem`生成待确认信息文件`intermediate1.crl`
-12. 随机生成密钥`enduser-example.com.key`
-13. 根据`enduser-example.com.key`生成待确认信息文件`enduser-example.com.csr`
-14. 用`intermediate1.conf`和`enduser-example.com.csr`生成用户最终证书`enduser-example.com.crt`
-15. 根据中级证书配置文件和`intermediate1.key`和`intermediate1.crt`生成中级证书信息交换文件`intermediate1.crl.pem`
-16. 根据`intermediate1.crl.pem`生成待确认信息文件`intermediate1.crl`
-17. 将enduser-example.com.crt、intermediate1.crt和rootca.crt合并在一起成为最终的用户证书`enduser-example.com.chain.crt`
-18. 配置`enduser-example.com.chain.crt`和`enduser-example.com.key`在nginx
+7. 配置中级证书的配置文件`intermediate1.conf`
+8. 随机生成密钥`enduser-example.com.key`
+9. 根据`enduser-example.com.key`生成待确认信息文件`enduser-example.com.csr`
+10. 用`intermediate1.conf`和`enduser-example.com.csr`生成用户最终证书`enduser-example.com.crt`
+11. 将enduser-example.com.crt、intermediate1.crt和rootca.crt合并在一起成为最终的用户证书`enduser-example.com.chain.crt`
+12. 配置`enduser-example.com.chain.crt`和`enduser-example.com.key`在nginx
 
 tips:
 
@@ -187,7 +181,7 @@ server_name  example.com;
 ssl_certificate      pki/cert.pem;
 ssl_certificate_key  pki/private.key;
 ```
-chrome、firefox和safari等浏览器都可通过
+
 
 # HPKP
 
