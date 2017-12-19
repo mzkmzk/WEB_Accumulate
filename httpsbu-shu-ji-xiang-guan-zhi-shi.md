@@ -11,14 +11,53 @@
 证书文件
 > `.csr`
 
-用于发送给CA中心等待签发
+证书请求文件, 用于发送给CA中心等待签发
 
 > `.pem(Privacy Enhanced Mail)`
 
-存放各种信息, 是openssl默认采用的信息存放方式, 其内容只要包括 
-  1. 内容类型: ---BEGIN XXX--- ... ---END XXX ---来表示存放的是什么信息内容
-  2. 头信息: 表名数据是如何被处理后存放的,openssl中用的最多的是加密信息, 比如加密算法及初始化向量iv
-  3. 信息体: BASE64编码数据. 可以保护私钥(RSA和DSA)、公钥(RSA和DSA私钥)和(x509)证书, 它存储用Base64编码的DER格式数据, 用ascii报头包围, 因此适合系统之间的文本传输模式
+存放各种信息, 是openssl默认采用的信息存放方式
+
+其内容只要包括 
+
+1. 内容类型: ---BEGIN XXX--- ... ---END XXX ---来表示存放的是什么信息内容
+2. 头信息: 表名数据是如何被处理后存放的,openssl中用的最多的是加密信息, 比如加密算法及初始化向量iv
+3. 信息体: BASE64编码数据. 可以保护私钥(RSA和DSA)、公钥(RSA和DSA私钥)和(x509)证书, 它存储用Base64编码的DER格式数据, 用ascii报头包围, 因此适合系统之间的文本传输模式
+
+例如存储证书的pem.crt一般为
+
+```
+—–BEGIN CERTIFICATE—–
+MIICJjCCAdCgAwIBAgIBITANBgkqhkiG9w0BAQQFADCBqTELMAkGA1UEBhMCVVMx
+………
+1p8h5vkHVbMu1frD1UgGnPlOO/K7Ig/KrsU=
+—–END CERTIFICATE—–
+```
+
+例如存储私钥的pem.key一般为
+
+```
+—–BEGIN RSA PRIVATE KEY—–
+MIICJjCCAdCgAwIBAgIBITANBgkqhkiG9w0BAQQFADCBqTELMAkGA1UEBhMCVVMx
+………
+1p8h5vkHVbMu1frD1UgGnPlOO/K7Ig/KrsU=
+—–END RSA PRIVATE KEY—–
+```
+
+例如存储证书请求文件的pem.csr一般为
+
+```
+—–BEGIN CERTIFICATE REQUEST—–
+MIICJjCCAdCgAwIBAgIBITANBgkqhkiG9w0BAQQFADCBqTELMAkGA1UEBhMCVVMx
+………
+1p8h5vkHVbMu1frD1UgGnPlOO/K7Ig/KrsU=
+—–END CERTIFICATE REQUEST—–
+```
+
+
+
+
+
+
 
 # 生成根证书理论逻辑
 
