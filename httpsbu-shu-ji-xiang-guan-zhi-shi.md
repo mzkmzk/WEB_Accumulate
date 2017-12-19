@@ -68,7 +68,7 @@ MIICJjCCAdCgAwIBAgIBITANBgkqhkiG9w0BAQQFADCBqTELMAkGA1UEBhMCVVMx
 
 1. 随机生成密钥`rootca.key`
 2. 根据`rootca.key`生成证书`rootca.crt`
-3. 配置根证书的配置文件ca.conf(用于给别人签发证书时, 别人知道根证书的信息)
+3. 配置根证书的配置文件ca.conf(用于给别人签发证书时, 别人需要知道根证书的信息)
 4. 随机生成密钥-`intermediate1.key`
 5. 根据intermediate1.key生成待确认信息文件`intermediate1.csr`
 6. 根据ca.conf、intermediate1.csr 生成中级CA证书`intermediate1.crt`
@@ -87,11 +87,12 @@ MIICJjCCAdCgAwIBAgIBITANBgkqhkiG9w0BAQQFADCBqTELMAkGA1UEBhMCVVMx
 
 tips:
 
-1. 配置文件shi存储着签发着的私钥密钥路径及各种信息的文件
+1. 配置文件是存储着签发着的私钥密钥路径及各种信息的文件
+2. crl: 证书吊销列表 (Certification Revocation List) 是一种包含撤销的证书列表的签名数据结构
 
 看完上面你的疑问可能是
 
-1. 要crl干啥?
+1. 要crl干啥? 第7,8 10 11 15 16都在生成crl
 
 
 # Mac OS下签发多域名证书
@@ -262,4 +263,5 @@ B、浏览器以前见过、并且验证过i，那么验证会成功。
 2. 详细的CA类别说明和自建根证书: http://www.barretlee.com/blog/2016/04/24/detail-about-ca-and-certs/
 3. nginx使用中间证书: http://blog.csdn.net/gudufeiyang/article/details/58603402
 4. openssl数字证书常见格式与协议介绍: http://www.huangxiaobai.com/archives/1739
+5. 命令安装多级证书: https://linux.cn/article-6498-1.html
 
