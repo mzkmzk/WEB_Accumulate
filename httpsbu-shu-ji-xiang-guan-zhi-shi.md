@@ -2,8 +2,23 @@
 
 # 常用文件类型
 
-1. `.key`: 一串密钥 相当于密码
-2. `.crt`: 证书文件
+> `.key` 
+
+一串密钥 相当于密码
+
+> `.crt`
+
+证书文件
+> `.csr`
+
+用于发送给CA中心等待签发
+
+> `.pem(Privacy Enhanced Mail)`
+
+存放各种信息, 是openssl默认采用的信息存放方式, 其内容只要包括 
+  1. 内容类型: ---BEGIN XXX--- ... ---END XXX ---来表示存放的是什么信息内容
+  2. 头信息: 表名数据是如何被处理后存放的,openssl中用的最多的是加密信息, 比如加密算法及初始化向量iv
+  3. 信息体: BASE64编码数据. 可以保护私钥(RSA和DSA)、公钥(RSA和DSA私钥)和(x509)证书, 它存储用Base64编码的DER格式数据, 用ascii报头包围, 因此适合系统之间的文本传输模式
 
 # 生成根证书理论逻辑
 
@@ -206,4 +221,5 @@ B、浏览器以前见过、并且验证过i，那么验证会成功。
 1. mac生成根证书及生成多域名证书: https://www.zhoumingzhi.com/2016/11/15/macos%E4%B8%8B%E7%AD%BE%E5%8F%91%E5%A4%9A%E5%9F%9F%E5%90%8D%E8%AF%81%E4%B9%A6/
 2. 详细的CA类别说明和自建根证书: http://www.barretlee.com/blog/2016/04/24/detail-about-ca-and-certs/
 3. nginx使用中间证书: http://blog.csdn.net/gudufeiyang/article/details/58603402
+4. 
 
