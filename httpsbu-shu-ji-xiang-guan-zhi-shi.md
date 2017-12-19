@@ -56,9 +56,6 @@ MIICJjCCAdCgAwIBAgIBITANBgkqhkiG9w0BAQQFADCBqTELMAkGA1UEBhMCVVMx
 
 
 
-
-
-
 # 生成根证书理论逻辑
 
 这里举例的是 
@@ -87,6 +84,10 @@ MIICJjCCAdCgAwIBAgIBITANBgkqhkiG9w0BAQQFADCBqTELMAkGA1UEBhMCVVMx
 16. 根据`intermediate1.crl.pem`生成待确认信息文件`intermediate1.crl`
 17. 将enduser-example.com.crt、intermediate1.crt和rootca.crt合并在一起成为最终的用户证书`enduser-example.com.chain.crt`
 18. 配置`enduser-example.com.chain.crt`和`enduser-example.com.key`在nginx
+
+tips:
+
+1. 配置文件shi存储着签发着的私钥密钥路径及各种信息的文件
 
 看完上面你的疑问可能是
 
@@ -260,5 +261,5 @@ B、浏览器以前见过、并且验证过i，那么验证会成功。
 1. mac生成根证书及生成多域名证书: https://www.zhoumingzhi.com/2016/11/15/macos%E4%B8%8B%E7%AD%BE%E5%8F%91%E5%A4%9A%E5%9F%9F%E5%90%8D%E8%AF%81%E4%B9%A6/
 2. 详细的CA类别说明和自建根证书: http://www.barretlee.com/blog/2016/04/24/detail-about-ca-and-certs/
 3. nginx使用中间证书: http://blog.csdn.net/gudufeiyang/article/details/58603402
-4. 
+4. openssl数字证书常见格式与协议介绍: http://www.huangxiaobai.com/archives/1739
 
