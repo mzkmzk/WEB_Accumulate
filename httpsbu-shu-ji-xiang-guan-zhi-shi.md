@@ -385,4 +385,6 @@ B、浏览器以前见过、并且验证过i，那么验证会成功。
 6. 英文版命令安装多级证书: https://raymii.org/s/tutorials/OpenSSL_command_line_Root_and_Intermediate_CA_including_OCSP_CRL%20and_revocation.html
 7. openssl配置文件讲解: https://www.phildev.net/ssl/opensslconf.html
 8. 清楚详细的命令行签发证书, 但是有个命令报错: http://blog.csdn.net/howeverpf/article/details/21622545
+9. 阮一峰加密过程: http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html#comment-349225#comment-text
+10. tls相关rfc: https://tools.ietf.org/html/rfc5246
 
