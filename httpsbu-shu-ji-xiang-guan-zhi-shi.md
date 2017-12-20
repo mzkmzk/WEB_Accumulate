@@ -18,7 +18,31 @@ HTTPS的传输内容都是明文的
 
 这就相当于谁能控制路由器, 谁就能获得并修改你所有的网络传输数据
 
-
+# HTTPS是如何加密数据的
+
+传统的http传输方式是 第四步的TCP到第七层的HTTP层之间是明文传输的
+
+需要在这加一层负责传输加解密的层(SSL/TLS)
+
+HTTP收到的时候都是明文, 对原先逻辑不影响
+
+更加具体的传输过程可见https://tools.ietf.org/html/rfc5246
+
+## SSL和TLS的关联
+
+```
+1994年，NetScape公司设计了SSL协议（Secure Sockets Layer）的1.0版，但是未发布。
+
+1995年，NetScape公司发布SSL 2.0版，很快发现有严重漏洞。
+
+1996年，SSL 3.0版问世，得到大规模应用。
+
+1999年，互联网标准化组织ISOC接替NetScape公司，发布了SSL的升级版TLS 1.0版。
+
+2006年和2008年，TLS进行了两次升级，分别为TLS 1.1版和TLS 1.2版。最新的变动是2011年TLS 1.2的修订版。//https://tools.ietf.org/html/rfc6176
+```
+
+
 
 # 常用文件类型
 
