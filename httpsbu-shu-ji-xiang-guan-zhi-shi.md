@@ -51,6 +51,43 @@ wiresharek截图数据
 
 ![clienthello](/assets/QQ20171220-230822.png)
 
+> 服务器回应ServerHello
+
+1. 确认使用的加密通信协议版本，比如TLS 1.0版本。如果浏览器与服务器支持的版本不一致，服务器关闭加密通信。
+2. 一个服务器生成的随机数，稍后用于生成"对话密钥"。
+3. 确认使用的加密方法，比如RSA公钥加密
+4. 服务器证书。
+
+![ServerHello](/assets/QQ20171220-232703.png)
+
+> 客户端回应
+
+1. 一个随机数。该随机数用服务器公钥加密，防止被窃听。
+2. 编码改变通知，表示随后的信息都将用双方商定的加密方法和密钥发送。
+3. 客户端握手结束通知，表示客户端的握手阶段已经结束。这一项同时也是前面发送的所有内容的hash值，用来供服务器校验。
+
+![客户端回应](/assets/QQ20171220-233351.png)
+
+整体交互流程
+```
+Client                                               Server
+
+ClientHello                  -------->
+                                                ServerHello
+                                               Certificate*
+                                         ServerKeyExchange*
+                                        CertificateRequest*
+                             <--------      ServerHelloDone
+Certificate*
+ClientKeyExchange
+CertificateVerify*
+[ChangeCipherSpec]
+Finished                     -------->
+                                         [ChangeCipherSpec]
+                             <--------             Finished
+Application Data             <------->     Application Data
+```
+
 ## SSL和TLS的关联
 
 ```
