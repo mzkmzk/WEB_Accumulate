@@ -56,6 +56,8 @@ wiresharek截图数据
 3. 确认使用的加密方法，比如RSA公钥加密
 4. 服务器证书。
 
+![ServerHello](/assets/QQ20171221-143247.png)
+
 ![ServerHello](/assets/QQ20171220-232703.png)
 
 > 客户端回应
