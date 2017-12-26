@@ -4,7 +4,7 @@
 
 > 防止运营商劫持
 
-运营商不止简单的在页面上加iframe广告
+运营商不止简单的在页面上加iframe广告
 
 还会串改我们的JS
 
@@ -18,7 +18,7 @@ HTTPS的传输内容都是明文的
 
 这就相当于谁能控制路由器, 谁就能获得并修改你所有的网络传输数据
 
-# HTTPS是如何加密数据的
+# HTTPS是如何加密数据的
 
 传统的http传输方式是 第四步的TCP到第七层的HTTP层之间是明文传输的
 
@@ -446,6 +446,6 @@ add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; prelo
 8. 清楚详细的命令行签发证书, 但是有个命令报错: http://blog.csdn.net/howeverpf/article/details/21622545
 9. 阮一峰加密过程: http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html#comment-349225#comment-text
 10. tls相关rfc: https://tools.ietf.org/html/rfc5246
-11. 浏览器HTTPS错误码解释: https://hg.mozilla.org/l10n-central/zh-CN/file/default/security/manager/chrome/pipnss/nsserrors.properties
+11. 浏览器HTTPS错误码解释: https://hg.mozilla.org/l10n-central/zh-CN/file/default/security/manager/chrome/pipnss/nsserrors.properties
 12. HSTS阅读: http://www.barretlee.com/blog/2015/10/22/hsts-intro/
 13. 证书相关说明: http://www.barretlee.com/blog/2016/04/24/detail-about-ca-and-certs/
