@@ -209,6 +209,8 @@ MIICJjCCAdCgAwIBAgIBITANBgkqhkiG9w0BAQQFADCBqTELMAkGA1UEBhMCVVMx
 11. 将enduser-example.com.crt、intermediate1.crt和rootca.crt合并在一起成为最终的用户证书`enduser-example.com.chain.crt`
 12. 配置`enduser-example.com.chain.crt`和`enduser-example.com.key`在nginx
 
+具体可参考: https://linux.cn/article-6498-1.html
+
 tips:
 
 1. 配置文件是存储着签发着的私钥密钥路径及各种信息的文件
