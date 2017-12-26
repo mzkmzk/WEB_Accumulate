@@ -404,4 +404,4 @@ B、浏览器以前见过、并且验证过i，那么验证会成功。
 8. 清楚详细的命令行签发证书, 但是有个命令报错: http://blog.csdn.net/howeverpf/article/details/21622545
 9. 阮一峰加密过程: http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html#comment-349225#comment-text
 10. tls相关rfc: https://tools.ietf.org/html/rfc5246
-
+11. 浏览器HTTPS错误码解释: https://hg.mozilla.org/l10n-central/zh-CN/file/default/security/manager/chrome/pipnss/nsserrors.properties
