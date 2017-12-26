@@ -384,6 +384,35 @@ A、浏览器自安装以来，从未见过这个i。那么验证会失败。
 B、浏览器以前见过、并且验证过i，那么验证会成功。
 ```
 
+# HSTS
+
+以为上了HTTPS就相安无事了吗
+
+运营商就无法劫持了吗..看一下下图
+
+![HTTPS劫持](/assets/20151004_f70b86fd.jpg)
+
+一般用户输入xxx.com时, 并不会前面写上https://xxx.com
+
+而且输入xxx.com到服务器之后 ,服务器再重定向到https://xxx.com
+
+但如果在这之前被劫持了, 就是上诉情况了
+
+我们可以通过nginx启动HSTS
+
+```
+add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; preload";
+```
+
+这样只要用户访问了一次https://xxx.com 浏览器就会在max-age里 
+
+如果用户再访问xxx.com 浏览器会访问307直接去https://xxx.com
+
+好处在于
+
+1. 节省一次 302/301 的跳转
+2. 能在有效期内防止中间人劫持
+
 # 遗留问题
 
 导出xunlei-maizhikun根证书crt 解决 firefox问题 
@@ -401,3 +430,5 @@ B、浏览器以前见过、并且验证过i，那么验证会成功。
 9. 阮一峰加密过程: http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html#comment-349225#comment-text
 10. tls相关rfc: https://tools.ietf.org/html/rfc5246
 11. 浏览器HTTPS错误码解释: https://hg.mozilla.org/l10n-central/zh-CN/file/default/security/manager/chrome/pipnss/nsserrors.properties
+12. HSTS阅读: http://www.barretlee.com/blog/2015/10/22/hsts-intro/
+13. 证书相关说明: http://www.barretlee.com/blog/2016/04/24/detail-about-ca-and-certs/
