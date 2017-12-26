@@ -128,6 +128,23 @@ Application Data             <------->     Application Data
 2006年和2008年，TLS进行了两次升级，分别为TLS 1.1版和TLS 1.2版。最新的变动是2011年TLS 1.2的修订版。//https://tools.ietf.org/html/rfc6176
 ```
 
+# 服务器证书
+
+估计HTTPS大家都很希望在浏览器中看到类似Gihutb Inc的小绿标
+
+这些有公司名的小绿标和普通的小绿标差别在哪
+
+![服务器证书](/assets/QQ20171226-231907.png)
+
+其加密效果都是一样的 但是面向的对象不一样
+
+1. DV（Domain Validation），面向个体用户，安全体系相对较弱，验证方式就是向 whois 信息中的邮箱发送邮件，按照邮件内容进行验证即可通过；
+2. OV（Organization Validation），面向企业用户，证书在 DV 证书验证的基础上，还需要公司的授权，CA 通过拨打信息库中公司的电话来确认；
+3. EV（Extended Validation），打开 Github 的网页，你会看到 URL 地址栏展示了注册公司的信息，这会让用户产生更大的信任，这类证书的申请除了以上两个确认外，还需要公司提供金融机构的开户许可证，要求十分严格。
+
+
+引自`http://www.barretlee.com/blog/2016/04/24/detail-about-ca-and-certs/`
+
 
 
 # 常用文件类型
