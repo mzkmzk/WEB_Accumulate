@@ -99,6 +99,9 @@ Finished                     -------->
 Application Data             <------->     Application Data
 ```
 
+![四次握手图](/assets/bg2014092003.png)
+
+
 ## SSL和TLS的关联
 
 ```
