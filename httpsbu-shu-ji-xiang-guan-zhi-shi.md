@@ -327,10 +327,6 @@ server_name  example.com;
 ssl_certificate      pki/cert.pem;
 ssl_certificate_key  pki/private.key;
 ```
-
-
-# HPKP
-
 # 常用检查工具
 
 > 查看证书链接
@@ -429,11 +425,7 @@ add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; prelo
 好处在于
 
 1. 节省一次 302/301 的跳转
-2. 能在有效期内防止中间人劫持
-
-# 遗留问题
-
-导出xunlei-maizhikun根证书crt 解决 firefox问题 
+2. 能在有效期内防止中间人劫持 
 
 # 参考资料
 
