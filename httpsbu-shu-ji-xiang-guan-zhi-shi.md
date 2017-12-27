@@ -357,9 +357,15 @@ ssl_certificate_key  pki/private.key;
 2. PC信任伪造证书
 3. 手机连接Fiddle并信任Fiddle证书
 
-关于手机如何信任Fiddle证书, 直接在手机内置浏览器中访问Fiddle的ip:代理端口
+关于手机如何信任Fiddle证书, 
 
-进入的页面 有个按钮可以下载证书 信任即可
+1. Fiddle打开HTTPS设置(Tools->Options->HTTPS)
+2. 手机内置浏览器中访问Fiddle的ip:代理端口
+3. 进入的页面 有个按钮可以下载证书 信任即可
+
+Fillder开启抓取HTTPS
+
+![Fillder开启抓取HTTPS](/assets/WX20171227-125705@2x.png)
 
 # HSTS
 
