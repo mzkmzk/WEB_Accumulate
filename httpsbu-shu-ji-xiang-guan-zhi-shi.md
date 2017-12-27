@@ -365,7 +365,7 @@ ssl_certificate_key  pki/private.key;
 
 Fillder打开HTTPS设置(Tools->Options->HTTPS)
 
-![Fillder开启抓取HTTPS](/assets/WX20171227-125705@2x.png)
+![Fillder打开HTTPS设置](/assets/QQ20171227-141023.png)
 
 # HSTS
 
