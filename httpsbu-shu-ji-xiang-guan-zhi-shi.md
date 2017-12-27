@@ -108,7 +108,8 @@ Application Data             <------->     Application Data
 
 还有其他优化握手速度的解决方案
 
-例如 CDN帮忙完成(除了解密对话密钥的步骤)握手 和DH算法
+1. CDN帮忙完成(除了解密对话密钥的步骤)握手
+2. 运用DH算法
 
 具体可参看<http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html>
 
