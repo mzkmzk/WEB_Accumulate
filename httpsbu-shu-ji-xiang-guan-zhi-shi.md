@@ -367,6 +367,17 @@ Fillder打开HTTPS设置(Tools->Options->HTTPS)
 
 ![Fillder打开HTTPS设置](/assets/QQ20171227-141023.png)
 
+> Firefox
+
+Firefox和chrome IE等不一样
+
+chrome ie的信任证书是跟操作系统信任的证书一致的
+
+而firefox信任的正式是走自己的, 所以要单独信任证书
+
+1. 选项->隐私与安全->查看证书
+2. 导入->选择证书
+
 # HSTS
 
 以为上了HTTPS就相安无事了吗
