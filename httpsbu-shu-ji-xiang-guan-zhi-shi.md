@@ -429,7 +429,7 @@ Certificate chain
 ```
 s代表本证书
 
-i代表s中的正式是谁发的
+i代表s中的证书是谁发的
 
 > 检查SSL情况网址
 
