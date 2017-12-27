@@ -209,7 +209,7 @@ MIICJjCCAdCgAwIBAgIBITANBgkqhkiG9w0BAQQFADCBqTELMAkGA1UEBhMCVVMx
 这里举例的是 
 
 1. 生成根证书
-2. 根证书签发中间证书
+2. 根证书签发中级证书
 3. 中级证书签发用户证书
 
 然则具体的逻辑是
