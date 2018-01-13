@@ -109,6 +109,13 @@ cat 404mzk-com.crt intermediate.pem root.pem > chained.pem
 /usr/sbin/nginx -s reload
 ```
 
+加入定时脚本
+
+```
+> crontab -e 
+> 0 0 1 * * /home/xxx/shell/renew_cert.sh >/dev/null 2>&1
+```
+
 
 # 参考文章
 
