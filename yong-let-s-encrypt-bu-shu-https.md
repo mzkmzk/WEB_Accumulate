@@ -99,8 +99,6 @@ Let's-Encrypt颁发证书的有效性只有3个月
 ```bash
 #!/bin/bash
 
-#!/bin/bash
-
 cd /var/www/ssl/k-inner-report-...-com
 python ./acme_tiny.py --account-key 404mzk-com-account.key --csr 404mzk-com.csr --acme-dir ./challenges/ > 404mzk-com.crt || exit
 wget -O - https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem > intermediate.pem
