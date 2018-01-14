@@ -112,8 +112,9 @@ cat 404mzk-com.crt intermediate.pem root.pem > chained.pem
 加入定时脚本
 
 ```
-> crontab -e 
-> 0 0 1 * * /home/xxx/shell/renew_cert.sh >/dev/null 2>&1
+> vim /etc/crontab
+> 0 0 1 * * root /home/xxx/shell/renew_cert.sh > /var/www/ssl/xxx-com/renew_cert.log 2>&1
+
 ```
 
 
