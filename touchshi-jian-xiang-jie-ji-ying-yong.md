@@ -25,16 +25,88 @@ touch类和mouse类的时间主要有
 
 这几个数组里的对象包含比较重要的属性有
 
-1. clientX: 视口中的x坐标
-2. clientY: 视口中的y坐标
-3. pageX: 页面中的x坐标
-4. pageY: 页面中的y坐标
-5. screenX: 屏幕中的x坐标
-6. screenY: 屏幕中的Y坐标
+1. clientX: 触摸目标在视口中的x坐标
+2. clientY: 触摸目标在视口中的y坐标
+3. pageX: 触摸目标在页面中的x坐标
+4. pageY: 触摸目标在页面中的y坐标
+5. screenX: 触摸目标在屏幕中的x坐标
+6. screenY: 触摸目标在屏幕中的Y坐标
 
 # 应用
 
 ## 判断各种手势
+
+这里按照讲解AlloyFinger源码的思路来解析各种手势
+
+AlloyFinger在构造函数中监听元素移动
+
+```javascript
+var AlloyFinger = function (el, option) {
+    ...
+    this.element.addEventListener("touchstart", this.start, false);
+    this.element.addEventListener("touchmove", this.move, false);
+    this.element.addEventListener("touchend", this.end, false);
+    this.element.addEventListener("touchcancel", this.cancel, false);
+    ...
+}
+```
+
+比如在轮播图中, 要判断用户向左滑还是向右滑
+
+> tap
+
+在移动端里, 如果监听click时间, 会有300ms的延迟时间(因为浏览器需要判断该次点击是否为其他操作)
+
+![移动端tap](/assets/687474703a2f2f696d61676573323031352e636e626c6f67732e636f6d2f626c6f672f3130353431362f3230313631312f3130353431362d32303136313131313039353930363034352d3733333935373734312e706e67.png)
+
+移动端click有300毫秒延时，tap的本质其实就是touchend。但是要判断touchstart的手的坐标和touchend时候手的坐标x、y方向偏移要小于30。小于30才会去触发tap
+
+```javascript
+ AlloyFinger.prototype = {
+     start: function(evt){
+         this.x1 = evt.touches[0].pageX;
+         this.y1 = evt.touches[0].pageY;
+         //防止是长按 或滑动等其他操作         
+         this._preventTap = false;
+         this.longTapTimeout = setTimeout(function () {
+             this.longTap.dispatch(evt, this.element);
+             this._preventTap = true;
+         }.bind(this), 750);
+     },
+     move: function(evt){
+         var currentX = evt.touches[0].pageX,
+             currentY = evt.touches[0].pageY;
+             
+         this.x2 = currentX;
+         this.y2 = currentY;
+     },
+     end: function(evt){
+         var self = this;
+         if ((this.x2 && Math.abs(this.x1 - this.x2) > 30) ||
+            (this.y2 && Math.abs(this.y1 - this.y2) > 30)) {
+           ...
+         } else {
+             if(!self._preventTap){
+                 //触发tap
+                 self.tap.dispatch(evt, self.element);
+             }
+         }
+     }
+ }
+```
+
+关键的判断逻辑在
+
+```javascript
+if ((this.x2 && Math.abs(this.x1 - this.x2) > 30) ||
+    (this.y2 && Math.abs(this.y1 - this.y2) > 30)) {
+   ...
+ } else {
+     if(!self._preventTap){
+         self.tap.dispatch(evt, self.element);
+     }
+ }
+```
 
 
 
