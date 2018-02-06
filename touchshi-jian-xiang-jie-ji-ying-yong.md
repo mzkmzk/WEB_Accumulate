@@ -119,6 +119,43 @@ AlloyFinger.prototype = {
 
 ```
 
+> swipe滑动
+
+![swipe滑动](/assets/687474703a2f2f696d61676573323031352e636e626c6f67732e636f6d2f626c6f672f3130353431362f3230313631312f3130353431362d32303136313131313039353932323838392d313439323133343934382e706e67.png)
+
+这里需要注意，当touchstart的手的坐标和touchend时候手的坐标x、y方向偏移要大于30，判断swipe，小于30会判断tap。那么用户到底是从上到下，还是从下到上，或者从左到右、从右到左滑动呢？可以根据上面三个判断得出，具体的代码如下：
+
+```javascript
+AlloyFinger.prototype = {
+     start: function(evt){
+         this.longTapTimeout = setTimeout(function () {
+             //触发长按tips
+             this.longTap.dispatch(evt, this.element);
+         }.bind(this), 750);
+     },
+     move: function(evt){
+         this.x2 = evt.touches[0].pageX;
+         this.y2 = evt.touches[0].pageY;
+     },
+     end: function(evt){
+         if ((this.x2 && Math.abs(this.x1 - this.x2) > 30) ||
+            (this.y2 && Math.abs(this.y1 - this.y2) > 30)) {
+            evt.direction = this._swipeDirection(this.x1, this.x2, this.y1, this.y2);
+            this.swipeTimeout = setTimeout(function () {
+                self.swipe.dispatch(evt, self.element);
+
+            }, 0)
+        }
+     },
+     _swipeDirection: function (x1, x2, y1, y2) {
+        return Math.abs(x1 - x2) >= Math.abs(y1 - y2) ? (x1 - x2 > 0 ? 'Left' : 'Right') : (y1 - y2 > 0 ? 'Up' : 'Down')
+    }
+ }
+
+```
+
+
+
 # 注意事项
 
 > 阻止缩放
