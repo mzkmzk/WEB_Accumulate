@@ -97,6 +97,14 @@ var AlloyFinger = function (el, option) {
 
 > longtips
 
+![](/assets/687474703a2f2f696d61676573323031352e636e626c6f67732e636f6d2f626c6f672f3130353431362f3230313631312f3130353431362d32303136313131313039353931383031342d3831373832373339332e706e67 %281%29.png)
+
+
+
+touchstart开启一个750毫秒的settimeout，如果750ms内有touchmove或者touchend都会清除掉该定时器。超过750ms没有touchmove或者touchend就会触发longTap
+
+
+
 
 
 # 注意事项
