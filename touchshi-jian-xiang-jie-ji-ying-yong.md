@@ -129,7 +129,7 @@ AlloyFinger.prototype = {
 
 1. touchstart的手的坐标和touchend时候手的坐标x、y方向偏移要大于30
 2. 判断x坐标的变化大还是y坐标的变化大, 假如x坐标变化大则为向左或右, 假如y坐标变化大则向上或向下
-3. 
+3. 通过判断touchstart的pageX和最后的touchmove的pageX 对比大小, 判断向左还是向右,向上向下同理
 
 ```javascript
 AlloyFinger.prototype = {
