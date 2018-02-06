@@ -95,21 +95,6 @@ var AlloyFinger = function (el, option) {
  }
 ```
 
-关键的判断逻辑在
-
-```javascript
-if ((this.x2 && Math.abs(this.x1 - this.x2) > 30) ||
-    (this.y2 && Math.abs(this.y1 - this.y2) > 30)) {
-   ...
- } else {
-     if(!self._preventTap){
-         self.tap.dispatch(evt, self.element);
-     }
- }
-```
-
-
-
 # 注意事项
 
 > 阻止缩放
