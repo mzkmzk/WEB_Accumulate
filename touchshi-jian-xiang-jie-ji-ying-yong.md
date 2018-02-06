@@ -55,7 +55,7 @@ var AlloyFinger = function (el, option) {
 
 > tap
 
-在移动端里, 如果监听click时间, 会有300ms的延迟时间(因为浏览器需要判断该次点击是否为其他操作)
+在移动端里, 如果监听click时间, 会有300ms的延迟时间\(因为浏览器需要判断该次点击是否为其他操作\)
 
 ![移动端tap](/assets/687474703a2f2f696d61676573323031352e636e626c6f67732e636f6d2f626c6f672f3130353431362f3230313631312f3130353431362d32303136313131313039353930363034352d3733333935373734312e706e67.png)
 
@@ -76,7 +76,7 @@ var AlloyFinger = function (el, option) {
      move: function(evt){
          var currentX = evt.touches[0].pageX,
              currentY = evt.touches[0].pageY;
-             
+
          this.x2 = currentX;
          this.y2 = currentY;
      },
@@ -94,6 +94,10 @@ var AlloyFinger = function (el, option) {
      }
  }
 ```
+
+> longtips
+
+
 
 # 注意事项
 
@@ -117,3 +121,6 @@ minimum-scale     - 允许用户缩放到的最小比例
 maximum-scale     - 允许用户缩放到的最大比例
 user-scalable     - 用户是否可以手动缩放
 ```
+
+
+
