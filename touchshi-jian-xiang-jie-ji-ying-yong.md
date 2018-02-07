@@ -226,5 +226,27 @@ maximum-scale     - 允许用户缩放到的最大比例
 user-scalable     - 用户是否可以手动缩放
 ```
 
+> android4.x 浏览器touchend的bug
 
+android4.x 默认touchstart后只触发一次touchmove 并且不触发touchend
+
+只能在touchstart或touchmove 里event.preventDefault() 才能继续触发多次touchmove和touchend
+
+但是要注意的是: 不建议在documet.body上绑定touchmove然后`event.preventDefault()`, 因为会阻止浏览器滚动
+
+一般针对需要处理的div , 然后在其下监听touchmove 去`event.preventDefault()`
+
+```javascript
+var is_android_4 = navigator.userAgent.indexOf('Android 4') !== -1
+document.querySelector('.dialog').addEventListener('touchmove',function(e){
+    if(is_android_4)
+    e.preventDefault();
+   
+})
+```
+
+# 参考链接
+
+1. aloyfiger原理详解: https://github.com/AlloyTeam/AlloyCrop/blob/master/asset/alloyfinger.md
+2. 
 
