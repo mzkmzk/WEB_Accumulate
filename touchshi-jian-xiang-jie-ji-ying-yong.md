@@ -8,6 +8,8 @@ touch类和mouse类的时间主要有
 
 > touch 事件
 
+touch事件初体验: http://demo.404mzk.com/event/base/window_all_type.html
+
 1. touchstart: 手指触摸屏幕时触发
 2. touchmove: 手指滑动屏幕时触发
 3. touchend: 手指离开屏幕时触发
@@ -35,6 +37,8 @@ touch类和mouse类的时间主要有
 # 应用
 
 ## 判断各种手势
+
+手势判断初体验: http://demo.404mzk.com/event/base/alloy_finger.html
 
 这里按照讲解AlloyFinger源码的思路来解析各种手势
 
@@ -160,7 +164,9 @@ AlloyFinger.prototype = {
 
 ```
 
+## 拖动div
 
+拖动初体验: http://demo.404mzk.com/event/base/move_div.html
 
 # 注意事项
 
