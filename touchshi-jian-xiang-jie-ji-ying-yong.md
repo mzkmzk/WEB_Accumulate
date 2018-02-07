@@ -248,5 +248,5 @@ document.querySelector('.dialog').addEventListener('touchmove',function(e){
 # 参考链接
 
 1. aloyfiger原理详解: https://github.com/AlloyTeam/AlloyCrop/blob/master/asset/alloyfinger.md
-2. 
+2. android4.x bug: http://www.cnblogs.com/shuiyi/p/5138006.html
 
