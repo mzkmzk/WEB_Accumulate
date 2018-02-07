@@ -245,6 +245,10 @@ document.querySelector('.dialog').addEventListener('touchmove',function(e){
 })
 ```
 
+## 下拉刷新及 下拉加载更多
+
+待补充 对Alloytouch的应用
+
 # 参考链接
 
 1. aloyfiger原理详解: https://github.com/AlloyTeam/AlloyCrop/blob/master/asset/alloyfinger.md
