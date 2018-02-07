@@ -168,6 +168,41 @@ AlloyFinger.prototype = {
 
 拖动初体验: http://demo.404mzk.com/event/base/move_div.html
 
+1. 阻止preventDefault事件主要防止拖动时 浏览器跟着滑动和微信页面向下滑动
+2. 将pageX和pageY减去div的一半是为了让物体置于手指中间
+3. 判断pageX和pageY最后的最大和最小值, 为了防止拖动出屏幕
+
+```javascript
+var div = document.querySelector('.j_demo_div'),
+    half_width = div.offsetWidth / 2,
+    half_height = div.offsetHeight / 2,
+    min_x = 0,
+    min_y = 0,
+    max_x = window.innerWidth - div.offsetWidth,
+    max_y = window.innerHeight - div.offsetHeight
+    
+div.addEventListener('touchmove', function(event){
+    event.preventDefault()
+    var x = event.touches[0].pageX - half_width,
+        y = event.touches[0].pageY - half_height
+
+    if ( x < min_x ) {
+        x = min_x
+    }else if ( x > max_x){
+        x = max_x
+    }
+
+    if ( y < min_y ) {
+        y = min_y
+    }else if ( y > max_y){
+        y = max_y
+    }
+    div.style.left = x  + 'px'
+    div.style.top = y + 'px'
+    
+})
+```
+
 # 注意事项
 
 > 阻止缩放
