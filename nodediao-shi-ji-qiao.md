@@ -38,3 +38,4 @@ chrome调试的缺点在于不能一开始就对代码进行设置断点
 #参考链接
 
 1. node官网调试文档: https://nodejs.org/en/docs/inspector/
+2. 内存信息分析: http://www.barretlee.com/blog/2015/10/07/debug-nodejs-in-command-line/
