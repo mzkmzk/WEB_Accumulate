@@ -4,7 +4,7 @@
 
 ## 全局作用域问题
 
-业务代码
+有内存泄露的业务代码
 ```javascript
 let global_window = {
     init: () => {
@@ -17,6 +17,22 @@ let global_window = {
 
 module.exports = global_window
 ```
+
+无内存泄露的业务代码
+```javascript
+let global_window = {
+    init: () => {
+        let a = []
+        for (var i = 0; i < 300; i++) {
+            a[i] = new Array(1000000).join('*')
+        }
+    }
+}
+
+module.exports = global_window
+```
+
+
 
 测试代码
 ```javascript
@@ -40,6 +56,9 @@ it('global_window 无内存泄露', function(done){
 
 ```
 > node  --expose-gc node_modules/jest/bin/jest.js //这里的--expose-gc是暴露global.gc()给代码手动清理缓存 
-global_window_true 启动时内存占用: 进程常驻内存:  99.8 MB, 已申请的堆内存: 72.4 MB, 已使用的内存: 40.1 MB
+global_window_false 启动时内存占用: 进程常驻内存:  100 MB, 已申请的堆内存: 75.0 MB, 已使用的内存: 35.2 MB
 global_window_false 结束时内存占用: 进程常驻内存:  404 MB, 已申请的堆内存: 378 MB, 已使用的内存: 335 MB
+
+global_window_true 启动时内存占用: 进程常驻内存:  99.8 MB, 已申请的堆内存: 72.4 MB, 已使用的内存: 40.1 MB
+global_window_true 结束时内存占用: 进程常驻内存:  100 MB, 已申请的堆内存: 75.0 MB, 已使用的内存: 35.0 MB
 ```
