@@ -32,8 +32,6 @@ let global_window = {
 module.exports = global_window
 ```
 
-
-
 测试代码
 ```javascript
 let utils = require('../utils')
@@ -62,3 +60,7 @@ global_window_false 结束时内存占用: 进程常驻内存:  404 MB, 已申�
 global_window_true 启动时内存占用: 进程常驻内存:  99.8 MB, 已申请的堆内存: 72.4 MB, 已使用的内存: 40.1 MB
 global_window_true 结束时内存占用: 进程常驻内存:  100 MB, 已申请的堆内存: 75.0 MB, 已使用的内存: 35.0 MB
 ```
+
+可见有内存泄露代码中的a变量用了全局变量, 而导致gc后仍然占用内存 
+
+
