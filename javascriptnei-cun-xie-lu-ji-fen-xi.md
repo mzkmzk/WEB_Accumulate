@@ -39,6 +39,7 @@ it('global_window 无内存泄露', function(done){
 输出结果
 
 ```
+> node  --expose-gc node_modules/jest/bin/jest.js //这里的--expose-gc是暴露global.gc()给代码手动清理缓存 
 global_window_true 启动时内存占用: 进程常驻内存:  99.8 MB, 已申请的堆内存: 72.4 MB, 已使用的内存: 40.1 MB
 global_window_false 结束时内存占用: 进程常驻内存:  404 MB, 已申请的堆内存: 378 MB, 已使用的内存: 335 MB
 ```
