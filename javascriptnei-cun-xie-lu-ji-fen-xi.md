@@ -32,6 +32,20 @@ let global_window = {
 module.exports = global_window
 ```
 
+我们通过调试chrome看下内存有无泄露
+
+![chrome](/assets/QQ20180212-183104.png)
+
+三次内存的收集时机分别是
+
+1. 加载第一行代码时
+2. 执行完global_window.init后
+3. 点击手动GC后
+
+发现GC并不能收集a变量, 因为其被绑定到了global全局变量里 
+
+除了每次在chrome进行调试, 我们还可以通过node来帮助我们完成这个功能
+
 测试代码
 ```javascript
 let utils = require('../utils')
@@ -63,4 +77,4 @@ global_window_true 结束时内存占用: 进程常驻内存:  100 MB, 已申请
 
 可见有内存泄露代码中的a变量用了全局变量, 而导致gc后仍然占用内存 
 
-
+c
