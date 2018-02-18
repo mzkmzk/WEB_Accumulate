@@ -1,5 +1,23 @@
 # JavaScript内存泄露及分析
 
+# JavaScript内存管理
+
+JavaScript的语言引擎有一张"引用表"
+
+保存着内存里面所有资源(通常是各种值)的引用次数
+
+如果一个资源的引用次数是0, 那么该资源的内存即可释放
+
+
+
+# 应用工具
+
+在查找内存泄露时, 不可避免的就是用工具去查找内存泄露的点, 下面就介绍常用的工具
+
+## chrome
+
+
+
 # 例子
 
 ## 意外的全局变量
@@ -51,7 +69,7 @@ module.exports = global_window
 let utils = require('../utils')
 
 it('global_window 无内存泄露', function(done){
-   
+    
     let global_window_true = require('../global_window_true.js')
     console.log('global_window_true 启动时内存占用: ' + utils.get_memory())
     global_window_true.init()
@@ -78,5 +96,9 @@ global_window_true 结束时内存占用: 进程常驻内存:  100 MB, 已申请
 可见有内存泄露代码中的a变量用了全局变量, 而导致gc后仍然占用内存 
 
 ## 闭包
+
+# 参考资料
+
+1. 垃圾回收机制: http://www.ruanyifeng.com/blog/2017/04/memory-leak.html
 
 
