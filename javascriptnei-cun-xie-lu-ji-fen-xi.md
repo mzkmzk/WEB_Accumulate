@@ -16,12 +16,43 @@ JavaScript的语言引擎有一张"引用表"
 
 则为内存泄露
 
+# 发现内存泄露
+
+我们如何发现内存泄露
 
 # 应用工具
 
 在查找内存泄露时, 不可避免的就是用工具去查找内存泄露的点, 下面就介绍常用的工具
 
 ## chrome
+
+> memory
+
+chrome比较精华的内存分析工具就在于memory, 是发现内存泄露的利器
+
+在运用它之前, 先了解一下它的用途
+
+![memory内存图](/assets/QQ20180219-221825.png)
+
+1. Distance: 代表该对象距离跟window的距离
+2. Object Count: 表示该项Constructor占有了对象数和比例饿
+3. Shallow Size: 浅层大小, 指对象自身占用内存的大小
+4. Retained Size: 这是将对象本身连同其无法从 GC 根到达的相关对象一起删除后释放的内存大小
+
+Shallow Size还有需要注意的地方
+
+1. 通常只有数组和字符串会有明显的浅层大小
+2. 不过字符串和外部数组的主存储一般位于渲染器内存中, 仅将一个小包装前对象置于javascript堆上
+3. 渲染器内存是渲染检查页面的进程的内存总和: 原生内 + 页面的JS堆内存 + 页面启动的所有专用工作线程的JS堆内存
+4. 尽管如此, 即使一个小对象也可能阻止其他对象被自动垃圾回收进程处理的方式间接地占用大量内存
+
+Retained Size还有需要注意的地方
+
+GC根有很多, 但是大部分都不需要用户关注, 从应用角度来看, 存在以下种类的根
+
+1. Window全局对象(位于每个iframe中)
+2. 文档DOM树
+3. 有时程序被调试当中的上下文和DevTools控制保留, 在调试程序中清除控制台并移除活动断点, 创建堆快照
 
 
 
@@ -107,5 +138,6 @@ global_window_true 结束时内存占用: 进程常驻内存:  100 MB, 已申请
 # 参考资料
 
 1. 垃圾回收机制: http://www.ruanyifeng.com/blog/2017/04/memory-leak.html
+2. google官网内存讲解: https://developers.google.com/web/tools/chrome-devtools/memory-problems/memory-101?hl=zh-cn
 
 
