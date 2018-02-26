@@ -35,7 +35,7 @@ chrome比较精华的内存分析工具就在于memory, 是发现内存泄露的
 ![memory内存图](/assets/QQ20180219-221825.png)
 
 1. Distance: 代表该对象距离跟window的距离
-2. Object Count: 表示该项Constructor占有了对象数和比例饿
+2. Object Count: 表示该项Constructor占有了对象数和比例
 3. Shallow Size: 浅层大小, 指对象自身占用内存的大小
 4. Retained Size: 这是将对象本身连同其无法从 GC 根到达的相关对象一起删除后释放的内存大小
 
