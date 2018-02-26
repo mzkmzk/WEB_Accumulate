@@ -176,8 +176,8 @@ var interval_id = setInterval(replaceThing, 1000);
 以上代码会引起内存泄露的点在于
 
 1. replaceThing每执行一次, 因为代码中有引用外部的theThing变量, 函数都会处于活跃状态, 直至clearInterval
-2. replaceThing每执行一次, theThing都会获取多一个对象
-3.  
+2. replaceThing每执行一次, theThing都会获取新一个对象
+3. unused和someMethod共享作用域, 并且unused里引用了originalThing 
 
 以下是 interval执行了5次的前后内存对比
 
