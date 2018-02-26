@@ -183,6 +183,12 @@ var interval_id = setInterval(replaceThing, 1000);
 
 ![闭包内存泄露](/assets/QQ20180226-173559.png)
 
+而缓解这个内存泄露的方法有
+
+1. 清除掉这个interval
+2. 在unused中不引用 originalThing
+3. originalThing最后置为null
+
 setInterval和普通的例如for循环机制不太一样
 
 1. setInterval 执行函数一次后, 该函数仍然处于活跃状态
