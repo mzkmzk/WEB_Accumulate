@@ -194,6 +194,8 @@ setInterval和普通的例如for循环机制不太一样
 1. setInterval 执行函数一次后, 该函数仍然处于活跃状态
 2. for循环 执行函数后, 整个函数就就可以被进行回收
 
+## 魔鬼eval和 new Function
+
 
 
 # 参考资料
