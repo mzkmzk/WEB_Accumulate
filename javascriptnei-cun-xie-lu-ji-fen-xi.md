@@ -146,6 +146,50 @@ global_window_true 结束时内存占用: 进程常驻内存:  100 MB, 已申请
 
 ## 闭包
 
+闭包本身并非非常危险, 但是闭包+setInterval 就会经常掉坑里 
+
+```javascript
+var theThing = null;
+var run_num = 10;
+var replaceThing = function () {
+  if (run_num-- == 0){
+    //clearInterval(interval_id) //'1'
+  }
+
+  var originalThing = theThing;
+  var unused = function () {
+    if (originalThing) { } // '2'
+     
+  };
+  theThing = {
+    longStr: new Array(1000000).join('*'),
+    someMethod: function () {
+      
+    }
+  };
+  //originalThing = null //'3'
+};
+
+var interval_id = setInterval(replaceThing, 1000);
+```
+
+以上代码会引起内存泄露的点在于
+
+1. replaceThing每执行一次, 因为代码中有引用外部的theThing变量, 函数都会处于活跃状态, 直至clearInterval
+2. replaceThing每执行一次, theThing都会获取多一个对象
+3.  
+
+以下是 interval执行了5次的前后内存对比
+
+![闭包内存泄露](/assets/QQ20180226-173559.png)
+
+setInterval和普通的例如for循环机制不太一样
+
+1. setInterval 执行函数一次后, 该函数仍然处于活跃状态
+2. for循环 执行函数后, 整个函数就就可以被进行回收
+
+
+
 # 参考资料
 
 1. 垃圾回收机制: http://www.ruanyifeng.com/blog/2017/04/memory-leak.html
