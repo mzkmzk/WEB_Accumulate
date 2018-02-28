@@ -391,7 +391,28 @@ chrome ie的信任证书是跟操作系统信任的证书一致的
 
 如果用户电脑时间不对，也会导致浏览器提示证书有问题，这时浏览器一般都会有明确的提示，例如 Chrome 的 ERR_CERT_DATE_INVALID。
 
-> 
+> 第三方资源
+
+页面中难免有时引用第三方资源, 而第三方却不支持HTTPS
+
+1. 如果是接口: 可通过nginx代理
+2. 如果是资源: 可以通过nginx代理或把资源存放在自己的https域名里
+
+需要注意的是 
+
+1. 代理会造成第三方通过REMOTE_ADDR拿到的是代理IP, 很可能导致这个IP被限制请求频率或被封
+2. 代理只能拿到自己域名下的cookie, 需要从其他域获取Cookie的第三方接口被代理可能不能正常工作
+3. 代理对Referrer、被代理的URL都需要做好白名单机制
+
+> Referrer
+
+目前大多数浏览器在https的页面点击跳转到HTTP网站时, 并不会在请求头带上Referrer
+
+可以通过在html里增加这个meta
+
+`<meta name="referrer" content="always" />`
+
+
 
 # HTTPS的页面必须所有资源都是HTTPS的吗
 
@@ -548,5 +569,4 @@ B、浏览器以前见过、并且验证过i，那么验证会成功。
 13. 证书相关说明: http://www.barretlee.com/blog/2016/04/24/detail-about-ca-and-certs/
 14. Fiddle模拟HTTPS原理: https://www.jianshu.com/p/54dd21c50f21
 15. ququ的HTTPS系列文章1: https://imququ.com/post/sth-about-switch-to-https.html
-16. ququ的HTTPS系列文章1: https://imququ.com/post/sth-about-switch-to-https.html
-17. ququ的HTTPS系列文章1: https://imququ.com/post/sth-about-switch-to-https.html
+17. ququ的HTTPS系列文章3: https://imququ.com/post/sth-about-switch-to-https-3.html
