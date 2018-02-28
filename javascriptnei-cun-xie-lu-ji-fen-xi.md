@@ -196,11 +196,11 @@ setInterval和普通的例如for循环机制不太一样
 
 ## 魔鬼eval和 new Function
 
-
+1. 简介使用eval会导致其创建
 
 # 参考资料
 
 1. 垃圾回收机制: http://www.ruanyifeng.com/blog/2017/04/memory-leak.html
 2. google官网内存讲解: https://developers.google.com/web/tools/chrome-devtools/memory-problems/memory-101?hl=zh-cn
-
+3. eval和new Function作用域: https://www.jianshu.com/p/db7ec7b51933
 
