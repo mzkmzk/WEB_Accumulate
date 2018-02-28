@@ -403,12 +403,23 @@ HTTPS 网页中加载的 HTTP 资源被称之为 Mixed Content（混合内容）
 
 > 早期的IE
 
-发现Mixed Content的时候, 会弹出`是否只查看安全传送的网页内容? `对话框, 
+发现Mixed Content的时候, 会弹出`是否只查看安全传送的网页内容? `静态对话框 
 
 1. 用户选择是则不加载所有Mixed Content
 2. 用户选择否则加载所有Mixed Content
 
 > 比较新的IE
+
+静态对话框改为底部的提示条, 而且默认加载图片类的Mixed Content
+
+> 现代浏览器
+
+都遵守W3C的Mixed Content规范(https://www.w3.org/TR/mixed-content/)
+
+将Mixed Content分为
+
+1. Optionally-blockable: <img>, <video>, <audio>, <source>, Prefetched资源
+2. blockable: 不在Optionally-blockable范围内的
 
 
 
