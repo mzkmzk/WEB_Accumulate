@@ -196,7 +196,12 @@ setInterval和普通的例如for循环机制不太一样
 
 ## 魔鬼eval和 new Function
 
-1. 简介使用eval会导致其创建
+1. 间接使用eval会导致其作用域在全局, 而如果在非严格下使用eval, 会导致eval可以创建变量
+2. new Function其函数字符串, 会在全局, 并且其作用域是全局的 
+
+new Function的话 之前发现undescore里的 _.template 是 用new Function实现的, 所以说每次template的函数字符串
+
+都是无法被GC的 
 
 # 参考资料
 
