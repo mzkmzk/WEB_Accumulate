@@ -208,4 +208,5 @@ new Function的话 之前发现undescore里的 _.template 是 用new Function实
 1. 垃圾回收机制: http://www.ruanyifeng.com/blog/2017/04/memory-leak.html
 2. google官网内存讲解: https://developers.google.com/web/tools/chrome-devtools/memory-problems/memory-101?hl=zh-cn
 3. eval和new Function作用域: https://www.jianshu.com/p/db7ec7b51933
+4. 常见内存泄露距离: https://www.jianshu.com/p/0191c6937917
 
