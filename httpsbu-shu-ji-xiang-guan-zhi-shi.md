@@ -547,3 +547,6 @@ B、浏览器以前见过、并且验证过i，那么验证会成功。
 12. HSTS阅读: http://www.barretlee.com/blog/2015/10/22/hsts-intro/
 13. 证书相关说明: http://www.barretlee.com/blog/2016/04/24/detail-about-ca-and-certs/
 14. Fiddle模拟HTTPS原理: https://www.jianshu.com/p/54dd21c50f21
+15. ququ的HTTPS系列文章1: https://imququ.com/post/sth-about-switch-to-https.html
+16. ququ的HTTPS系列文章1: https://imququ.com/post/sth-about-switch-to-https.html
+17. ququ的HTTPS系列文章1: https://imququ.com/post/sth-about-switch-to-https.html
