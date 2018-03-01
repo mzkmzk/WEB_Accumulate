@@ -121,8 +121,31 @@ function releaseLeak () {
 ```
 这里每执行一次addLeak 都会引发一次内存泄露
 
-1. leakObject是全局变量, 无法被GC
-2. leakObject.closure引用了oldObj, oldObj无法被回收
+为什么, 因为他们形成了一个链表
+
+这里假如执行了3次addLeak会有三个oldObj泄露了
+
+第一次执行addLeak
+
+链表如图所示
+
+![链表](/assets/QQ20180301-131637.png)
+
+第一次产生的'xxxx', 存在其实是正常的, 和闭包没关系,只不过因为xxx保存在window.leakObject.leakObj里而已
+
+而看下第二次执行addLeak
+
+![第二次addLeak内存](/assets/QQ20180301-131815.png)
+
+注意下其链表value->leakObj->oldObj->closure->window.leakObject
+
+注意下这里的closure
+
+因为closure保存了oldObj, 而导致其oldObj.leakObj也无法被释放
+
+以此类推, 以后每次泄露的oldLeak 都可以追溯的window.leakObject
+
+所以要释放这个内存泄露 只需要window.leakObject = null即可 
 
 demo地址: http://demo.404mzk.com/js_mermory/closure_circulation_use/closure.html
 
