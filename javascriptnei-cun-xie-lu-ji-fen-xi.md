@@ -95,53 +95,37 @@ global_window_true 结束时内存占用: 进程常驻内存:  100 MB, 已申请
 
 ## 闭包
 
-闭包本身并非非常危险, 但是闭包+setInterval 就会经常掉坑里 
-
 ```javascript
-var theThing = null;
-var run_num = 10;
-var replaceThing = function () {
-  if (run_num-- == 0){
-    //clearInterval(interval_id) //'1'
-  }
+'use strict';
 
-  var originalThing = theThing;
-  var unused = function () {
-    if (originalThing) { } // '2'
-     
-  };
-  theThing = {
-    longStr: new Array(1000000).join('*'),
-    someMethod: function () {
-      
+function LeakObject () {
+  this.value = new Array(1024 * 1024).join('X');
+}
+
+var leakObject = null;
+
+function addLeak() {
+  var oldObj = leakObject;
+  leakObject = {
+    leakObj: new LeakObject(),
+    closure: function () {
+      console.log(oldObj);
     }
   };
-  //originalThing = null //'3'
-};
+}
 
-var interval_id = setInterval(replaceThing, 1000);
+function releaseLeak () {
+  leakObject = null;
+}
+
 ```
+这里每执行一次addLeak 都会引发一次内存泄露
 
-以上代码会引起内存泄露的点在于
+1. leakObject是全局变量, 无法被GC
+2. leakObject.closure引用了oldObj, oldObj无法被回收
 
-1. replaceThing每执行一次, 因为代码中有引用外部的theThing变量, 函数都会处于活跃状态, 直至clearInterval
-2. replaceThing每执行一次, theThing都会获取新一个对象
-3. unused和someMethod共享作用域, 并且unused里引用了originalThing 
+demo地址: http://demo.404mzk.com/js_mermory/closure_circulation_use/closure.html
 
-以下是 interval执行了5次的前后内存对比
-
-![闭包内存泄露](/assets/QQ20180226-173559.png)
-
-而缓解这个内存泄露的方法有
-
-1. 清除掉这个interval
-2. 在unused中不引用 originalThing
-3. originalThing最后置为null
-
-setInterval和普通的例如for循环机制不太一样
-
-1. setInterval 执行函数一次后, 该函数仍然处于活跃状态
-2. for循环 执行函数后, 整个函数就就可以被进行回收
 
 ## 魔鬼eval和 new Function
 
