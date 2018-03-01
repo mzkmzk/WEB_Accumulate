@@ -95,6 +95,9 @@ global_window_true 结束时内存占用: 进程常驻内存:  100 MB, 已申请
 
 ## 闭包
 
+demo地址: http://demo.404mzk.com/js_mermory/closure_circulation_use/closure.html
+
+
 ```javascript
 'use strict';
 
@@ -146,9 +149,6 @@ function releaseLeak () {
 以此类推, 以后每次泄露的oldLeak 都可以追溯的window.leakObject
 
 所以要释放这个内存泄露 只需要window.leakObject = null即可 
-
-demo地址: http://demo.404mzk.com/js_mermory/closure_circulation_use/closure.html
-
 
 ## 魔鬼eval和 new Function
 
