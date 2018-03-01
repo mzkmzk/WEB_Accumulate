@@ -97,7 +97,6 @@ global_window_true 结束时内存占用: 进程常驻内存:  100 MB, 已申请
 
 demo地址: http://demo.404mzk.com/js_mermory/closure_circulation_use/closure.html
 
-
 ```javascript
 'use strict';
 
