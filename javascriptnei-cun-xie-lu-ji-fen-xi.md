@@ -303,15 +303,25 @@ function removeLeak(){
 
 我们如何发现内存泄露
 
-# 应用工具
+# chrome 
 
-在查找内存泄露时, 不可避免的就是用工具去查找内存泄露的点, 下面就介绍常用的工具
+这里用http://demo.404mzk.com/js_mermory/closure_circulation_use/evil.html来举例
 
-## chrome
+## performance
 
-> memory
+每次点击evalClosures都会引起一次内存泄露
+
+![performance 内存泄露](/assets/QQ20180302-153406.png)
+
+## memory
 
 chrome比较精华的内存分析工具就在于memory, 是发现内存泄露的利器
+
+memory有三种类型的内存查看
+
+![memory有三种类型的内存查看](/assets/QQ20180302-153808.png)
+
+> Take heap snapshot视图
 
 在运用它之前, 先了解一下它的用途
 
@@ -348,9 +358,17 @@ memory不同的快照类型
 
 注：并不是所有属性都存储在 JavaScript 堆上。不会捕捉使用执行原生代码的 getter 实现的属性。另外，也不会捕捉数字等非字符串值
 
+> Record allocation profile
 
+这里主要给出每个函数申请的内存
 
+![每个函数申请的内存](/assets/QQ20180302-154553.png)
 
+> Record allocation timeline
+
+蓝色表示新申请的内存 灰色表示被回收的GC
+
+![Record allocation timeline](/assets/record-allocation-timeline.gif)
 
 # 参考资料
 
