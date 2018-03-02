@@ -187,6 +187,70 @@ function releaseLeak () {
 }
 ```
 
+执行一次addLeak之后 发现已分离DOM如下
+
+![已分离DOM](/assets/QQ20180302-082450.png)
+
+DOM节点有可能三种颜色
+
+1. 白色: DOM仍处于DOM树中
+2. 黄色: DOM不在DOM树, 但是JavaScript有引用其变量
+3. 红色: DOM不在DOM树, javascript也没有引用其变量, 但是仍然没被回收
+
+这类原因隐蔽是例如一个UL(黄色)被JS引用, 但是UL下面还有很多个LI是红色
+
+所以解决方案是把黄色的UL处理掉, 下面的LI也会被回收 
+
+> 子树导致整颗树无法被GC
+
+可体验DEMO: http://demo.404mzk.com/js_mermory/closure_circulation_use/dom4.html
+
+假如有颗树是这样的 tree节点->middle_div节点(保存着大量数据)->little_span节点
+
+当tree.innerHTML = ''之后
+
+DOM全部脱离DOM树
+
+此时假如 little_span仍被JS引用的话, middle_div的数据会被GC吗
+
+```javascript
+var tree = document.getElementById("p") ,
+    need_div = null
+    
+function createTree() {
+
+
+  var middle_div = document.createElement("div"),
+      little_span = document.createElement("span")
+
+  
+  middle_div.data = new Array(1024 * 1024).join('x');
+  tree.appendChild(middle_div); 
+
+  little_span.id = 'little_span'
+  middle_div.appendChild(little_span)  
+
+  need_div = document.getElementById('little_span') 
+}
+
+function detachTree(){
+  tree.innerHTML = ''
+}
+function removeTree(){
+  tree = null
+}
+function removeLeak(){
+  need_div = null
+}
+
+```
+
+因为little_span被JS引用了, 导致整个tree即使脱离了DOM都无法被GC,只有little_span = null 之后才能GC
+
+内存泄露快照
+
+![DOM内存泄露](/assets/QQ20180302-092531.png)
+
 # 发现内存泄露
 
 我们如何发现内存泄露
