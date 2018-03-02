@@ -377,5 +377,5 @@ memory不同的快照类型
 3. eval和new Function作用域: https://www.jianshu.com/p/db7ec7b51933
 4. 常见内存泄露距离: https://www.jianshu.com/p/0191c6937917
 5. 英文版 详解内存泄露的原因和排查方式: https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/
-6. 讲解内存的PPT: http://slides.com/gruizdevilla/memory#/
+6. 讲解内存的PPT: http://slides.com/gruizdevilla/memory/
 
