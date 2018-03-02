@@ -305,7 +305,7 @@ function removeLeak(){
 
 # chrome 
 
-这里用http://demo.404mzk.com/js_mermory/closure_circulation_use/evil.html来举例
+这里用http://demo.404mzk.com/js_mermory/closure_circulation_use/evil.html 来举例
 
 ## performance
 
