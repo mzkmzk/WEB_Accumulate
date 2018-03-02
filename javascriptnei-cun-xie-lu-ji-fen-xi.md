@@ -151,10 +151,60 @@ function releaseLeak () {
 
 ## 魔鬼eval和 new Function
 
+体验DEMO: http://demo.404mzk.com/js_mermory/closure_circulation_use/evil.html
+
 1. 间接使用eval会导致其作用域在全局, 而如果在非严格下使用eval, 会导致eval可以创建变量
 2. new Function其函数字符串, 会在全局, 并且其作用域是全局的 
 
 new Function的话 之前发现undescore里的 _.template 是 用new Function实现的, 所以说每次template的函数字符串
+
+eval魔鬼
+
+```javascript
+var closures = [];
+
+function createLargeClosure() {
+    var largeStr = new Array(1000000).join('x');
+    return function lC() {
+        return largeStr;
+    };
+}
+
+function createSmallClosure() {
+    var smallStr = 'x';
+    var largeStr = new Array(1000000).join('x');
+    return function sC() {
+        return smallStr;
+    };
+}
+
+function createEvalClosure() {
+    var smallStr = 'x';
+    var largeStr = new Array(1000000).join('x');
+    return function eC() {
+        eval('');
+        return smallStr;
+    };
+}
+
+function largeClosures() {
+    closures.push(createLargeClosure());
+}
+
+function smallClosures() {
+    closures.push(createSmallClosure());
+
+}
+
+function evalClosures() {
+    closures.push(createEvalClosure());
+    
+}
+
+function clearClosures() {
+    closures = []
+}
+```
 
 都是无法被GC的 
 
