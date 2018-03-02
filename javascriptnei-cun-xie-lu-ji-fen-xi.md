@@ -193,12 +193,10 @@ function largeClosures() {
 
 function smallClosures() {
     closures.push(createSmallClosure());
-
 }
 
 function evalClosures() {
     closures.push(createEvalClosure());
-    
 }
 
 function clearClosures() {
