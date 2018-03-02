@@ -158,6 +158,35 @@ new Function的话 之前发现undescore里的 _.template 是 用new Function实
 
 都是无法被GC的 
 
+## 分离DOM泄露
+
+demo体验地址: http://demo.404mzk.com/js_mermory/closure_circulation_use/dom.html
+
+DOM已不在DOM树, 而JS变量扔保留着节点信息 
+
+发现此类节点一般在memory->录取一个HEAP SNAPSHOTS->过滤框搜索`Detached`
+
+```javascript
+var leakObject = null
+function addLeak() {
+
+      var ul = document.createElement('ul');
+      for (var i = 0; i < 10; i++) {
+        var li = document.createElement('li');
+        ul.appendChild(li);
+      }
+      leakObject = ul;
+
+      document.body.appendChild(ul)
+      document.body.removeChild(ul)
+      
+}
+
+function releaseLeak () {
+  leakObject = null;
+}
+```
+
 # 发现内存泄露
 
 我们如何发现内存泄露
