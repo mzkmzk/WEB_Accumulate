@@ -3,7 +3,7 @@
   "description": "404mzk blog",
   "language": "zh",
   "plugins": [
-    "tongji",
+    "gitbook-plugin-baiduana",
     "baidu",
     "tbfed-pagefooter",
     "github-buttons",
