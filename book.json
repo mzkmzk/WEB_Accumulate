@@ -3,7 +3,7 @@
   "description": "404mzk blog",
   "language": "zh",
   "plugins": [
-    "baiduana",
+    "tongji",
     "baidu",
     "tbfed-pagefooter",
     "github-buttons",
@@ -32,6 +32,9 @@
    "baidu":{
       "token": "28e4de852c4a19da042c4c580c79e556"
     },
+    "tongji": {
+        "token": "28e4de852c4a19da042c4c580c79e556"
+      },
     "tbfed-pagefooter": {
       "copyright":"&copy 404mzk",
       "modify_label": "<a target='_blank' href='http://blog.404mzk.com'>http://blog.404mzk.com </a> 该文件修订时间：",
