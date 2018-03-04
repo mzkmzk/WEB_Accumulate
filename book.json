@@ -3,19 +3,22 @@
   "description": "404mzk blog",
   "language": "zh",
   "plugins": [
-    "baiduana",
-    "baidu",
     "tbfed-pagefooter",
     "github-buttons",
     "splitter",
+    "catalogue-title",
 	   "anchors",
      "anchor-navigation-ex",
      "edit-link",
      "sitemap-general",
       "prism", 
-      "-highlight"
+      "-highlight",
+            "3-ba"
   ],
   "pluginsConfig": {
+    "3-ba": {
+            "token": "28e4de852c4a19da042c4c580c79e556"
+    },
     "disqus": {
         "shortName": "blog-5j7bfapkvn"
     },
@@ -24,16 +27,6 @@
         "prismjs/themes/prism-okaidia.css"
       ]
     },
-    "duoshuo": {
-      "short_name": "blog404mzk",
-      "theme": "default"
-    },
-   "baidu":{
-      "token": "28e4de852c4a19da042c4c580c79e556"
-    },
-    "tongji": {
-        "token": "28e4de852c4a19da042c4c580c79e556"
-      },
     "tbfed-pagefooter": {
       "copyright":"&copy 404mzk",
       "modify_label": "<a target='_blank' href='http://blog.404mzk.com'>http://blog.404mzk.com </a> 该文件修订时间：",
