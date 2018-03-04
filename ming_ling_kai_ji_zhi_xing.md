@@ -18,7 +18,7 @@
 
 但是例如看看/etc/rc0.d
 
-```shell
+```bash
 work@iZ94fnej0x9Z:/etc/rc0.d$ ll
 total 12
 drwxr-xr-x  2 root root 4096 Sep 19 23:47 ./
@@ -50,7 +50,7 @@ sysv-rc-conf是Ubuntu用于替代chkconfig
 
 命令
 
-```shell
+```bash
 sysv-rc-conf --list apache2
 sysv-rc-conf apache2 on
 ```

@@ -31,7 +31,7 @@ v.addEventListener('play',function() {
 
 作者原话
 
-```shell
+```bash
 Known issues
 It is very buggy and sometimes doesn't work at all on Android. 
 I don't have plans for fixing this, 
@@ -45,6 +45,6 @@ iOS没问题,但是在android微信里是黑屏
 
 userAgent:
 
-```shell
+```bash
 Mozilla/5.0 (Linux; Android 6.0; PRO 6 Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/53.0.2785.49 Mobile MQQBrowser/6.2 TBS/043024 Safari/537.36
 ```

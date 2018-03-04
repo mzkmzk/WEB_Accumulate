@@ -121,7 +121,7 @@ onResourceRequested被回调了一次
 
 只有当headers中含有
 
-```shell
+```bash
 {
     "name": "Accept-Ranges",
     "value": "bytes"
@@ -207,7 +207,7 @@ console.log('window.performance ' + page.evaluate(function () {
 ```
 输出
 
-```shell
+```bash
 window.performance navigation,timing,now
 ```
 

@@ -85,7 +85,7 @@ cat 404mzk-signed.crt intermediate.pem root.pem> chained.pem
 
 > 配置nginx证书
 
-```shell
+```bash
 ssl_certificate     ~/www/ssl/chained.pem;
 ssl_certificate_key ~/www/ssl/404mzk.key;
 ```

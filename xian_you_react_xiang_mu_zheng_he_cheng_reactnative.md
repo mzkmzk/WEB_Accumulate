@@ -18,7 +18,7 @@
     1. pod init,就会生成Podfile文件
     2. 修改Podfile
     
-        ```shell
+        ```bash
         # Uncomment this line to define a global platform for your project
         # platform :ios, '9.0'
         
@@ -56,7 +56,7 @@
 
 报错
 
-```shell
+```bash
  pod install
 Setting up CocoaPods master repo
 [!] Unable to add a source with url `https://github.com/CocoaPods/Specs.git` named `master`.
@@ -71,7 +71,7 @@ Go to ~/.cocoapods/repos and run git clone https://github.com/CocoaPods/Specs.gi
 
 刚开始执行pod install时,会爆
 
-```shell
+```bash
 Analyzing dependencies
 [!] The dependency `React/Core (from `/Users/maizhikun/Learning/apache_sites/Journey_Front/node_modules/react-native`)` is not used in any concrete target.
 The dependency `React/RCTImage (from `/Users/maizhikun/Learning/apache_sites/Journey_Front/node_modules/react-native`)` is not used in any concrete target.
@@ -86,7 +86,7 @@ The dependency `React/RCTWebSocket (from `/Users/maizhikun/Learning/apache_sites
 
 这个原因是因为刚开始的podfile文件是我自己在网上粘贴的
 
-```shell
+```bash
 platform :ios, “7.0”
 
 # 取决于你的工程如何组织，你的node_modules文件夹可能会在别的地方。

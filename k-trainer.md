@@ -118,7 +118,7 @@ origin	https://github.com/Homebrew/homebrew (push)
 
 于是brew update,但是还是不行
 
-```shell
+```bash
 Checking out v1.0.1 in /usr/local/Homebrew...
 To checkout v1.0.1 in /usr/local/Homebrew run:
   'cd /usr/local/Homebrew && git checkout v1.0.1

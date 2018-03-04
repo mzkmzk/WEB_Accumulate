@@ -38,7 +38,7 @@
 
 不然启动时,会报
 
-```shell
+```bash
 AH00526: Syntax error on line 156 of /etc/apache2/apache2.conf:
 Invalid command 'Header', perhaps misspelled or defined by a module not included in the server configuration
 Action 'restart' failed.

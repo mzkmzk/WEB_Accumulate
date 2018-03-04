@@ -8,7 +8,7 @@
 
 然后上网搜了一下,重新生成密钥就可以了
 
-```shell
+```bash
 php artisan key:generate
 Application key [1HPet63EUJF2wGeOFrKpYvevlp5ukZoP] set successfully.
 ```

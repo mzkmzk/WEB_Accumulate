@@ -24,7 +24,7 @@ safari为默认把post改为options请求,导致有些服务器没有支持这�
 
 在from表单并且enctype等于 multipart/form-data时
 
-```shell
+```bash
 ------WebKitFormBoundarybUB4deZjYLxS31hM
 Content-Disposition: form-data; name="filepath"; filename="中二病也要谈恋爱136c06c5e486d2531439acb9e362f307c93d74a9.torrent"
 Content-Type: application/octet-stream

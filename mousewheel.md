@@ -35,7 +35,7 @@ Fixfox采取的是后者
 
 > 鼠标下 
 
-```shell
+```bash
 mousewheel46 s:106
 mousewheel46 s:118
 mousewheel46 s:130
@@ -60,7 +60,7 @@ mousewheel46 s:642
 
 大概如果在触摸板最下面,一下滑到最下面
 
-```shell
+```bash
 mousewheel4 s:337
 mousewheel4 s:346
 mousewheel4 s:350

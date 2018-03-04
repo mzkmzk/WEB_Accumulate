@@ -8,7 +8,7 @@
 
 > 去掉httpd.conf的注释
 
-```shell
+```bash
 LoadModule ssl_module libexec/apache2/mod_ssl.so
 ```
 
@@ -18,7 +18,7 @@ LoadModule ssl_module libexec/apache2/mod_ssl.so
 
 还是在httpd.conf中 找到
 
-```shell
+```bash
     AddType text/html .shtml
     AddOutputFilter INCLUDES .shtml .html
 ```

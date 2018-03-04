@@ -50,7 +50,7 @@ $.ajax({
 
 结果
 
-```shell
+```bash
 //serve收到请求
 server {
   "headers": {

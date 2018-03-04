@@ -59,7 +59,7 @@ if (system.args.length === 1) {
 
 结果
 
-```shell
+```bash
 page.onLoadStarted
 Loading time event 690 msec
 page.onLoadFinished

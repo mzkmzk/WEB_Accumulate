@@ -32,7 +32,7 @@ travis-ci.org会把你的responsitory全都显示出来,把你想进行自动构
 
 在<https://github.com/mzkmzk/K-Logging>中,最开始为
 
-```shell
+```bash
 sudo: required
 dist: trusty
 language: node_js
@@ -54,7 +54,7 @@ before_install:
 
 只要在README.md上添加
 
-```shell
+```bash
 [![Build Status](https://travis-ci.org/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME].png)](https://travis-ci.org/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME])
 ```
 即可

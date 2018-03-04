@@ -6,7 +6,7 @@
 
 但是在红帽中
 
-```shell
+```bash
  cat /proc/version
 Linux version 2.6.32-431.el6.x86_64 (mockbuild@c6b8.bsys.dev.centos.org) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-4) (GCC) ) #1 SMP Fri Nov 22 03:15:09 UTC 2013
 ```
@@ -19,7 +19,7 @@ Linux version 2.6.32-431.el6.x86_64 (mockbuild@c6b8.bsys.dev.centos.org) (gcc ve
 2. 保存路由表: /etc/rc.d/init.d/iptables save
 3. 查看路由表情况
 
-   ```shell
+   ```bash
    /etc/init.d/iptables status
 表格：filter
 Chain INPUT (policy ACCEPT)

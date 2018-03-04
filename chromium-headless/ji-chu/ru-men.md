@@ -8,7 +8,7 @@ chrome在我的机器上属主是root
 
 chrome没有在全局命令中 最好alias一下
 
-```shell
+```bash
 vim ~/.bash_profile
 ...
 alias chrome='/Users/maizhikun/Mac软件/Chrome/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'

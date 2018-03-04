@@ -23,7 +23,7 @@ tips:
 
 ok但是我们怎么关闭呢....?
 
-```shell
+```bash
 work@iZ94fnej0x9Z:~$ ps -ef
 ...
 work     11177     1  0 Oct13 ?        00:00:05 ping baidu.com
@@ -44,14 +44,14 @@ kill -9 11259
 
 把命令运行在新的会话中
 
-```shell
+```bash
 NAME
        setsid - run a program in a new session
 ```
 
 运行一下试试
 
-```shell
+```bash
 work@iZ94fnej0x9Z:~$ setsid ping xunlei.com
 #在另外一个窗口,因为上面的窗口在不断输出ping记录...,而且ctrl+c不能终止....
 work@iZ94fnej0x9Z:~$ ps -ef | grep xunlei.com
@@ -77,7 +77,7 @@ work     13069 12865  0 09:38 pts/1    00:00:00 grep --color=auto xunlei.com
 
 基本参数
 
-```shell
+```bash
 用disown -h jobspec来使某个作业忽略HUP信号。
 用disown -ah 来使所有的作业都忽略HUP信号。
 用disown -rh 来使正在运行的作业忽略HUP信号。
@@ -87,7 +87,7 @@ work     13069 12865  0 09:38 pts/1    00:00:00 grep --color=auto xunlei.com
 
 1. 有加&
 
-  ```shell
+  ```bash
   [root@pvcent107 build]# cp -r testLargeFile largeFile &
 [1] 4825
 [root@pvcent107 build]# jobs
@@ -100,7 +100,7 @@ root      4853   968  0 09:46 pts/4    00:00:00 grep largeFile
   ```
 2. 没用&
 
-   ```shell
+   ```bash
     [root@pvcent107 build]# cp -r testLargeFile largeFile2
     #这里按ctrl+z,把任务挂起
   [1]+  Stopped                 cp -i -r testLargeFile largeFile2
@@ -123,7 +123,7 @@ screen 提供了 ANSI/VT100 的终端模拟器，使它能够在一个真实终�
 
 基本参数
 
-```shell
+```bash
 用screen -dmS session name来建立一个处于断开模式下的会话（并指定其会话名）。
 用screen -list 来列出所有会话。
 用screen -r session name来重新连接指定会话。
@@ -132,7 +132,7 @@ screen 提供了 ANSI/VT100 的终端模拟器，使它能够在一个真实终�
 
 使用方法
 
-```shell
+```bash
 [root@pvcent107 ~]# screen -dmS Urumchi
 [root@pvcent107 ~]# screen -list
 There is a screen on:
@@ -147,7 +147,7 @@ There is a screen on:
 
 1. 未使用screen
 
-    ```shell
+    ```bash
     [root@pvcent107 ~]# ping www.google.com &
     [1] 9499
     [root@pvcent107 ~]# pstree -H 9499
@@ -160,7 +160,7 @@ There is a screen on:
     ```
 2. 使用screen
 
-    ```shell
+    ```bash
       [root@pvcent107 ~]# screen -r Urumchi
       [root@pvcent107 ~]# ping www.ibm.com &
       [1] 9488

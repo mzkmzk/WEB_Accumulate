@@ -30,7 +30,7 @@ var config = {
 ```
 
 结果
-```shell
+```bash
 //未压缩
 common.js    1.11 MB       0  [emitted]  common
 index.bundle.js     316 kB       1  [emitted]  index

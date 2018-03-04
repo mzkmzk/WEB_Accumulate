@@ -31,7 +31,7 @@
 5. privoxy /usr/local/etc/privoxy/config //重启privoxy
 6. 检查监听接口
     
-    ```shell
+    ```bash
      ~  netstat -an |grep 8118
     tcp4       0      0  192.168.105.70.8118    172.16.32.111.56374    SYN_RCVD
     tcp4       0     31  192.168.105.70.8118    192.168.2.8.56328      FIN_WAIT_1
@@ -50,7 +50,7 @@ http://daviswang.iteye.com/blog/819176
 
 然后我连了公司的另外一个wifi,然后出现
 
-```shell
+```bash
 tcp4       0      0  192.168.105.70.8118    172.11.111.105.51693    SYN_RCVD
 tcp4       0      0  *.8118                 *.*                    LISTEN
 ```

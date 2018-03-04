@@ -78,7 +78,7 @@ page.onResourceError = function(){
 
 请求一个域名不存在的接口
 
-```shell
+```bash
 page.onResourceError{"0":{"errorCode":5,"errorString":"Operation canceled","id":42,"status":null,"statusText":null,"url":"http://127.0.1.1:10220/"}}
 ```
 

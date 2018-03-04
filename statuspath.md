@@ -7,7 +7,7 @@
 2. nginx设置:
     在任一代理配置下设置
     
-    ```shell
+    ```bash
     location ~ ^/(status|ping)$
     {
         include fastcgi_params;
@@ -18,7 +18,7 @@
 3. 重启php-fpm和nginx
 4. 查看status_path
 
-    ```shell
+    ```bash
     work@TEST01:~$ curl http://example.com/status
 pool:                 www // 连接池的名字,一般叫www
 process manager:      dynamic //进程管理

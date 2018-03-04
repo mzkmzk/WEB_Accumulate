@@ -11,7 +11,7 @@ mac 10.10.3
 
  检查是否加速成功了镜像
  
- ```shell
+ ```bash
  docker info|grep "Registry Mirrors" -A 1
 Registry Mirrors:
  https://registry.docker-cn.com/

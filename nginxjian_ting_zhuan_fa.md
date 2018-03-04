@@ -10,7 +10,7 @@
 
 # 2. 实现
 
-```shell
+```bash
   upstream nodejs__upstream {
        server 127.0.0.1:4000;
        keepalive 64;

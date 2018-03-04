@@ -17,7 +17,7 @@ slowlog = /usr/local/php/log/php-fpm.log.slow
 
 # 3. 效果
 
-```shell
+```bash
 6785 [12-Aug-2016 11:57:08]  [pool www] pid 6722
 6786 script_filename = /data/nginx/hosts/pma/default/db_structure.php
 6787 [0x00007f4277e22d88] mysqli_query() /data/nginx/hosts/pma/phpMyAdmin-4.5.2-all-languages/libraries/dbi/DBIMysqli.class.php:261

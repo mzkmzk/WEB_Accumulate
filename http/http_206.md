@@ -10,7 +10,7 @@
 
 语法: 
 
-```shell
+```bash
 # first-byte-pos 和 last-byte-pos都可忽略,但不能同时忽略
 Range: range-unit=first-byte-pos "-" [last-byte-pos]
 
@@ -29,7 +29,7 @@ Range: range-unit=first-byte-pos "-" [last-byte-pos]
 
 语法
 
-```shell
+```bash
 Content-Range: range-unit first-byte-pos "-" last-byte-pos "/" (instance-length | *)
 ```
 

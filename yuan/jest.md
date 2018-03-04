@@ -27,7 +27,7 @@
     ```
 4. `npm test`
 
-    ```shell
+    ```bash
      ~/Learning/apache_sites/K-Utils: npm run test
 
     > k-utils@0.0.1 test /Users/maizhikun/Learning/apache_sites/K-Utils

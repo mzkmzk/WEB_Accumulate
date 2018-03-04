@@ -8,7 +8,7 @@
 
     创建`./.ssh/config`文件
     
-    ```shell
+    ```bash
     ServerAliveInterval 60
     ```
     
@@ -16,7 +16,7 @@
 
     `/etc/ssh/sshd_config`
     
-    ```shell
+    ```bash
     ClientAliveInterval 60
     ```
     

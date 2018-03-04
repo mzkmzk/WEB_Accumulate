@@ -4,7 +4,7 @@
 
 这里前提在item2中使用
 
-```shell
+```bash
 cd /usr/local/bin
 
 sudo wget https://raw.github.com/mmastrac/iterm2-zmodem/master/iterm2-send-zmodem.sh

@@ -45,7 +45,7 @@ console.log(args);
 
 输出
 
-```shell
+```bash
 //提示语
 ~/Learning/apache_sites/K-Cli/ k_cli
 Usage /usr/local/bin/k_cli -t {type} -out [path]

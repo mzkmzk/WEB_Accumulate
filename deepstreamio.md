@@ -14,7 +14,7 @@
 
 我这里运用Ubuntu
 
-```shell
+```bash
 work@iZ94fnej0x9Z:~$ source /etc/lsb-release && echo "deb http://dl.bintray.com/deepstreamio/deb ${DISTRIB_CODENAME} main" | sudo tee -a /etc/apt/sources.list
 [sudo] password for work:
 deb http://dl.bintray.com/deepstreamio/deb trusty main
@@ -39,7 +39,7 @@ work@iZ94fnej0x9Z:~$ deepstream start
 
 你可以更改一下你的配置
 
-```shell
+```bash
 $ cd ~
 $ cp /etc/deepstream/* .
 $ ls

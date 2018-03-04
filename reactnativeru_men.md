@@ -6,7 +6,7 @@
 2. 安装好Xcode
 3. 切换淘宝源,不然npm很慢
 
-  ```shell
+  ```bash
   //default
    ~/Learning/iOS_APP: npm config get registry
 https://registry.npmjs.org/
@@ -19,7 +19,7 @@ npm config set disturl https://npm.taobao.org/dist --global
   
 # 第一个ReactNative iOS App
 
-```shell
+```bash
 react-native init AwesomeProject
 ...
 To run your app on iOS:
@@ -41,7 +41,7 @@ react-native run-ios
 # 运行第一个APP
 
 我在这里直接运行 react-native run-ios是会报错的...
-```shell
+```bash
  ~/Learning/ReactNative/AwesomeProject:  react-native run-ios
 Found Xcode project AwesomeProject.xcodeproj
 xcrun: error: unable to find utility "instruments", not a developer tool or in PATH
@@ -58,7 +58,7 @@ xcrun: error: unable to find utility "instruments", not a developer tool or in P
 
 但是上诉两种方式都会有编译错误
 
-```shell
+```bash
 Property 'force' not found on object of type 'UITouch'
 ```
 

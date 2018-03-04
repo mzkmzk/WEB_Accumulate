@@ -10,7 +10,7 @@
 
 因为之前由于工作的原因需要修改网段(bridge100默认在192.168.2.1里),有些同学如果公司网段和这个冲突,那也得改bridge100的网段,一般是这样修改
 
-```shell
+```bash
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.nat NAT -dict-add SharingNetworkNumberStart 192.168.0.0
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.nat NAT -dict-add SharingNetworkNumberEnd 192.168.0.20
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.nat NAT -dict-add SharingNetworkMask 255.255.255.0
@@ -22,7 +22,7 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.nat NAT -
 
 然后我悲剧的发现我起始地址和结束地址设成了....
 
-```shell
+```bash
  42         <key>SharingNetworkMask</key>
  43         <string>255.255.255.0</string>
  44         <key>SharingNetworkNumberEnd</key>
@@ -39,7 +39,7 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.nat NAT -
 
 现在设置成了
 
-```shell
+```bash
  42         <key>SharingNetworkMask</key>
  43         <string>255.255.255.0</string>
  44         <key>SharingNetworkNumberEnd</key>
@@ -51,7 +51,7 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.nat NAT -
 bridge100也出来了
 
 
-```shell
+```bash
 bridge100: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
 	options=3<RXCSUM,TXCSUM>
 	ether 82:e6:50:80:47:64

@@ -11,7 +11,7 @@
 
 1. 设置配置文件
 
-    ```shell
+    ```bash
       6     server_name  xxx.cn www.com;
       7     if ($host != xxx.cn) {
       8         rewrite ^/(.*)$ http://xxx.cn/$1 permanent;

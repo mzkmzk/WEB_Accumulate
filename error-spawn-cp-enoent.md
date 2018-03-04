@@ -56,7 +56,7 @@ Error: spawn cp  ENOENT
 
 输出
 
-```shell
+```bash
 spawn called
 { '0': 'cp ',
   '1':
@@ -101,7 +101,7 @@ vim script
 
 通过更改format 其实原理一样
 
-```shell
+```bash
 brew install dos2unix
 sudo dos2unix /usr/local/lib/node_modules/task-app/src/task-app.js //每个人的node路径不一定一致
 ```

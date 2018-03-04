@@ -6,7 +6,7 @@ top主要用来监控CPU占有率和内存占有率
 
 ![top](QQ20160814-1.png)
 
-```shell
+```bash
 top - 当前系统时间 up 系统运行了多少天, 加上多少小时,多少个用户登录系统,load average: 1分钟,5分钟,15分钟的负载情况
 Tasks: 系统共多少进程 total,多少个运行中 running, 多少个在休眠 sleeping, 多少个stoped,多少个僵尸状态 zombie
 %Cpu(s): 用户空间CPU百分比,内核占用CPU百分比,改变过优先级的进程占用CPU百分比,空闲CPU百分比,硬斩断占用CPU百分比,软中断占用CPU百分比

@@ -16,7 +16,7 @@
 
 参数 
 
-```shell
+```bash
 -b 　以Byte为单位显示内存使用情况。 
 -k 　以KB为单位显示内存使用情况。 
 -m 　以MB为单位显示内存使用情况。
@@ -31,7 +31,7 @@
 
 每10秒 以M为单位 并且显示内存总和列
 
-```shell
+```bash
 2222@1111:~$ free -s10 -mt
              total       used       free     shared    buffers     cached
 Mem:           992        906         86         30        125        403
