@@ -152,6 +152,7 @@
     * [常见问题](webpack_chang_jian_wen_ti.md)
       * [无法安装node-sass](wu_fa_an_zhuang_node_-_sass.md)
     * [前端打包思考](qian-duan-da-bao-si-kao.md)
+    * [webpack万金油配置](webpackwan-jin-you-pei-zhi.md)
   * [自制插件](zi_zhi_cha_jian.md)
     * [K-Report](k-report.md)
     * [基于webpack打造一个原生态的前端脚支架](基于webpack打造一个原生态的前端脚支架.md)
