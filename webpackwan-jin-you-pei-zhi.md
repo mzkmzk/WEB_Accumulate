@@ -6,13 +6,20 @@
 
 compilation的hash值
 
-可以简单理解为 每执行一次打包 都会有一次compilation的hash值 
+可以简单理解为 每发生一次变化后打包 都会有一次compilation的hash值 
+
+一次变化可以是
+
+1. js等模块的变化
+2. webpack.config.js的配置内容的变化
 
 compilation对象代表某个版本的资源对应的编译进程
 
 tips:
 
 在file-loader的配置中, hash代表的是该文件的hash
+
+在`html-webpack-plugin`插件中的属性hash:true 表示的也是 compilation的hash值
 
 > chunkhash
 
