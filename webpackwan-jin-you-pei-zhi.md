@@ -34,7 +34,7 @@ plugins: [
 
 它只表示自己文件的hash
 
-> 小测试 
+> 建议配置
 
 ```javascript
 {
@@ -67,3 +67,17 @@ plugins: [
     ]
 }
 ```
+
+以上的配置基本可以满足 
+
+1. js只会根据自己的js模块代码变化而变化 
+2. 图片的url只会根据自身文件的hash变化而变化
+3. styles.css中只因为css代码变化而变化
+
+但是分析下面几种情况
+
+前提: index.js中import了index.css, index.css中引用了index.png
+
+1. 那么假如index.css内容变化了, index.js的版本号会变化吗? 不会
+2. 假如index.png内容变好了了, index.js和index.css的版本号会变化吗? index.js不变 index.css变
+
