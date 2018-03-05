@@ -10,6 +10,10 @@ compilation的hash值
 
 compilation对象代表某个版本的资源对应的编译进程
 
+tips:
+
+在file-loader的配置中, hash代表的是该文件的hash
+
 > chunkhash
 
 在webpack的配置.entry对象中每个模块
@@ -35,7 +39,7 @@ plugins: [
 ```javascript
 {
     output: {
-        filename: [name].js?hash=chunkash
+        filename: [name].js?hash=[chunkash]
     },
     module: {
         rules: [
