@@ -139,6 +139,8 @@ exports.default = index //可以用 transform-es3-member-expression-literals 解
 }
 ```
 
+解决这个问题的插件还有`es3ify-loader`
+
 > class 导致的Object
 
 源码
@@ -164,7 +166,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 这里的`Object.defineProperty`是IE8的终极噩耗...
 
-IE8中首先不支持`Object.defineProperty`这种用法, 然后js如果给`Object.defineProperty`这个赋值进行polyfill
+IE8中
+
+1. 自己实现的`Object.defineProperty`和标准不一样, 只能接受DOM对象
+2. js如果给`Object.defineProperty`这个赋值进行polyfill
 
 IE8也会报错 
 
