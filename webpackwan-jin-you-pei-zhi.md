@@ -203,6 +203,7 @@ Ball.prototype.hide_all = function hide_all() {};
 }
 ```
 
+更多loose模式和normal模式的区别可参加<http://2ality.com/2015/12/babel6-loose-mode.html>
 
 
 
