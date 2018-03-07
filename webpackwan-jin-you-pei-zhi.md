@@ -115,6 +115,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = index //可以用 transform-es3-member-expression-literals 解决 
 ```
 
+上面的default 都会引起报错 而解决
+
+1. `transform-es3-property-literals`会把 `{ default: obj }` 变为 `{ 'default': obj }`
+2. `transform-es3-member-expression-literals`会把 `exprts.default`变为  `exrpots['default']
+
+`
 
 
 # 参考链接
