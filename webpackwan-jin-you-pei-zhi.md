@@ -88,6 +88,10 @@ plugins: [
 1. 那么假如index.css内容变化了, index.js的版本号会变化吗? 不会
 2. 假如index.png内容变好了了, index.js和index.css的版本号会变化吗? index.js不变 index.css变
 
+# 兼容性问题
+
+
+
 # 参考链接
 
 1. hash和contenthash的说明: http://www.cnblogs.com/ihardcoder/p/5623411.html
