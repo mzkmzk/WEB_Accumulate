@@ -120,9 +120,55 @@ exports.default = index //可以用 transform-es3-member-expression-literals 解
 1. [transform-es3-property-literals](https://babeljs.io/docs/plugins/transform-es3-property-literals/ )会把 `{ default: obj }` 变为 `{ 'default': obj }`
 2. [transform-es3-member-expression-literals](https://babeljs.io/docs/plugins/transform-es3-member-expression-literals/)会把 `exprts.default`变为  `exrpots['default']`
 
+> class 导致的Object
+
+源码
+
+```javascript
+class Ball {
+    hide_all(){
+       
+    }
+}
+```
+
+正常的 normal 模式 会把这个转变为 
+
+```javascript
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+ _createClass(Ball, [{
+    key: 'hide_all',
+    value: function hide_all() {}
+}, { ... }
+```
+
+这里的`Object.defineProperty`是IE8的终极噩耗...
+
+IE8中首先不支持`Object.defineProperty`这种用法, 然后js如果给`Object.defineProperty`这个赋值进行polyfill
+
+IE8也会报错 
+
+只能将转换模式转为loose
+
+编译后为 
+
+```javascript
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function Ball(options) {
+    _classCallCheck(this, Ball);
+
+    this.options = options;
+}
+
+Ball.prototype.hide_all = function hide_all() {};
+```
+
 
 
 
 # 参考链接
 
 1. hash和contenthash的说明: http://www.cnblogs.com/ihardcoder/p/5623411.html
+2. babel的loose模式: http://2ality.com/2015/12/babel6-loose-mode.html
