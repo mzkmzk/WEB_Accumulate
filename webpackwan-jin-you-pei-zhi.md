@@ -218,3 +218,4 @@ Ball.prototype.hide_all = function hide_all() {};
 2. babel的loose模式: http://2ality.com/2015/12/babel6-loose-mode.html
 3. ECMAScript的支持列表: http://kangax.github.io/compat-table/es5/
 4. 更多关于preset-env的配置: https://babeljs.io/docs/plugins/preset-env/#loose
+5. 常见的IE8兼容性坑: http://www.aliued.com/?p=3240
