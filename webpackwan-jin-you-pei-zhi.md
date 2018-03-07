@@ -90,6 +90,31 @@ plugins: [
 
 # 兼容性问题
 
+> default catch关键字
+
+跟catch关键字冲突的情况不多, 而default在IE8报错里基本很常见
+
+因为 `export default ...`这样的话, 编译后是这样的
+
+编译前
+```javascript
+import utils from './utils'
+
+export default index 
+```
+
+编译后
+
+```javascript
+var _utils = __webpack_require__(4);
+
+var _utils2 = _interopRequireDefault(_utils);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; } //可以用 transform-es3-property-literals解决 
+
+exports.default = index //可以用 transform-es3-member-expression-literals 解决 
+```
+
 
 
 # 参考链接
