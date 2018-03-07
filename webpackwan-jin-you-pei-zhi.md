@@ -120,6 +120,25 @@ exports.default = index //可以用 transform-es3-member-expression-literals 解
 1. [transform-es3-property-literals](https://babeljs.io/docs/plugins/transform-es3-property-literals/ )会把 `{ default: obj }` 变为 `{ 'default': obj }`
 2. [transform-es3-member-expression-literals](https://babeljs.io/docs/plugins/transform-es3-member-expression-literals/)会把 `exprts.default`变为  `exrpots['default']`
 
+这两个一般在.babelrc中添加
+
+```bash
+{
+  "presets":  [
+    ["env", {
+      "targets": {
+        "browsers": ["ie >= 7"]
+      },
+      "loose": true
+    }]
+  ],
+  "plugins": [
+    "transform-es3-property-literals", //重点
+    "transform-es3-member-expression-literals" //重点
+  ]
+}
+```
+
 > class 导致的Object
 
 源码
@@ -163,6 +182,25 @@ function Ball(options) {
 }
 
 Ball.prototype.hide_all = function hide_all() {};
+```
+
+在babekrc中添加
+
+```bash
+{
+  "presets":  [
+    ["env", {
+      "targets": {
+        "browsers": ["ie >= 7"]
+      },
+      "loose": true //重点
+    }]
+  ],
+  "plugins": [
+    "transform-es3-property-literals", 
+    "transform-es3-member-expression-literals" 
+  ]
+}
 ```
 
 
