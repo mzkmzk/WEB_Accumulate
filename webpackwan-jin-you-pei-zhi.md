@@ -212,7 +212,11 @@ Ball.prototype.hide_all = function hide_all() {};
 
 > UglifyJS的作用
 
+小tips: 
 
+本来想在webpack用uglifyjs-webpack-plugin而直接试用UglifyJS3的 但是折腾来折腾去 总是没压缩
+
+之后就没弄了 乖乖弄webpack自带的uglify
 
 # 参考链接
 
