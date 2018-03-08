@@ -220,9 +220,11 @@ tips:
 
 webpack v3 自带的uglifyjs-webpack-plugin版本是0.46 
 
+对应的文档是 https://github.com/webpack-contrib/uglifyjs-webpack-plugin/tree/v0.4.6
+
 而 uglifyjs-webpack-plugin自带的ugilyfyjs是2.8.29
 
-对应的文档是 https://github.com/webpack-contrib/uglifyjs-webpack-plugin/tree/v0.4.6
+对应的文档是: https://github.com/mishoo/UglifyJS2/tree/v2.x
 
 uglifyjs 理论上只做压缩和混淆代码的作用 
 
