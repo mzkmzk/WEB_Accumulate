@@ -212,15 +212,69 @@ Ball.prototype.hide_all = function hide_all() {};
 
 > UglifyJS的作用
 
+uglifyjs 理论上只做压缩和混淆代码的作用 
+
+但实际上 还可以帮忙处理IE8的问题 其中就有上面的default和catch关键字等
+
+这里有个小插曲
+
+webpack实现的动态require.ensure时
+
+业务代码中使用
+
+```javascript
+require.ensure(['./mock_data.js'], function(require) {
+    ...
+}, 'mock_data');
+```
+
+在编码后会变成
+
+```javascript
+ __webpack_require__.e/* require.ensure */(0).then((function (require) {
+    ...
+}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+```
+
+编译后 这个catch 虽然上面说的`transform-es3-member-expression-literals`会解决
+
+但是注意 编译后的这个代码并不是我们业务代码写的, 而是webpack加的
+
+所以babel并没有去帮这里的catch去转换
+
+这时需要把uglifyjs的配置兼容下IE8
+
+```bash
+new webpack.optimize.UglifyJsPlugin({
+    compress: {
+        screw_ie8: false //主要是这里去给catch等关键字做兼容
+    },
+    output: {
+        screw_ie8: false
+    }
+})
+```
+
+UglifyJs在文档里并没有找到这两个screw_ie8兼容IE8的属性
+
+只能从别人的博客里找到 或者在源码中 发现文档里没列明的属性
+
+例如 
+
+1. compress: https://github.com/mishoo/UglifyJS2/blob/v2.x/lib/compress.js
+2. output: https://github.com/mishoo/UglifyJS2/blob/v2.x/lib/output.js
+
+compress在文档里属性并没有代码中的全: http://lisperator.net/uglifyjs/compress
+
+tips: 
+
 webpack v3 自带的uglifyjs-webpack-plugin版本是0.46 
 
 而 uglifyjs-webpack-plugin自带的ugilyfyjs是2.8.29
 
 对应的文档是 https://github.com/webpack-contrib/uglifyjs-webpack-plugin/tree/v0.4.6
 
-
-
-小tips: 
+再tips: 
 
 本来想在webpack用uglifyjs-webpack-plugin而直接试用UglifyJS3的 
 
