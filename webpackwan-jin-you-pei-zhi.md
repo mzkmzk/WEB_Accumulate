@@ -292,6 +292,30 @@ compress在文档里属性并没有代码中的全: http://lisperator.net/uglify
 
 之后就没弄了 乖乖弄webpack自带的uglify
 
+> 编码后 webpackBootstrap 还有Object.defineProperty
+
+如果用了 webpack就会用webpackJsonpCallback来实现动态加载js
+
+其中有段代码 令人起毛
+
+```javascript
+
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+```
+
+但看下注释是 当harmony模式exports采用运行这个方法 而我们的babelrc设置的是 `browsers: ["ie >=7"]`
+
+会默认不采取harmony取exports, 所以不会进入到这个方法 所以没影响
+
 # 参考链接
 
 1. hash和contenthash的说明: http://www.cnblogs.com/ihardcoder/p/5623411.html
