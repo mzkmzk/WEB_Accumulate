@@ -141,6 +141,10 @@ exports.default = index //可以用 transform-es3-member-expression-literals 解
 
 解决这个问题的插件还有`es3ify-loader`
 
+tips: 
+
+后面提到的ugilyjs也可以解决这类问题
+
 > class 导致的Object
 
 源码
@@ -256,6 +260,8 @@ new webpack.optimize.UglifyJsPlugin({
 ```
 
 UglifyJs在文档里并没有找到这两个screw_ie8兼容IE8的属性
+
+也没有说明为支持IE8的做了什么处理(看源码也没咋懂)
 
 只能从别人的博客里找到 或者在源码中 发现文档里没列明的属性
 
