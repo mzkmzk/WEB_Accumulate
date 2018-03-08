@@ -216,6 +216,14 @@ Ball.prototype.hide_all = function hide_all() {};
 
 > UglifyJS的作用
 
+tips: 
+
+webpack v3 自带的uglifyjs-webpack-plugin版本是0.46 
+
+而 uglifyjs-webpack-plugin自带的ugilyfyjs是2.8.29
+
+对应的文档是 https://github.com/webpack-contrib/uglifyjs-webpack-plugin/tree/v0.4.6
+
 uglifyjs 理论上只做压缩和混淆代码的作用 
 
 但实际上 还可以帮忙处理IE8的问题 其中就有上面的default和catch关键字等
@@ -271,14 +279,6 @@ UglifyJs在文档里并没有找到这两个screw_ie8兼容IE8的属性
 2. output: https://github.com/mishoo/UglifyJS2/blob/v2.x/lib/output.js
 
 compress在文档里属性并没有代码中的全: http://lisperator.net/uglifyjs/compress
-
-tips: 
-
-webpack v3 自带的uglifyjs-webpack-plugin版本是0.46 
-
-而 uglifyjs-webpack-plugin自带的ugilyfyjs是2.8.29
-
-对应的文档是 https://github.com/webpack-contrib/uglifyjs-webpack-plugin/tree/v0.4.6
 
 再tips: 
 
