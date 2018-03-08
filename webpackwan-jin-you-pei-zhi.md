@@ -212,9 +212,21 @@ Ball.prototype.hide_all = function hide_all() {};
 
 > UglifyJS的作用
 
+webpack v3 自带的uglifyjs-webpack-plugin版本是0.46 
+
+而 uglifyjs-webpack-plugin自带的ugilyfyjs是2.8.29
+
+对应的文档是 https://github.com/webpack-contrib/uglifyjs-webpack-plugin/tree/v0.4.6
+
+
+
 小tips: 
 
-本来想在webpack用uglifyjs-webpack-plugin而直接试用UglifyJS3的 但是折腾来折腾去 总是没压缩
+本来想在webpack用uglifyjs-webpack-plugin而直接试用UglifyJS3的 
+
+因为uglify-js的文档感觉是比较全的
+
+但是折腾来折腾去 总是没压缩
 
 之后就没弄了 乖乖弄webpack自带的uglify
 
