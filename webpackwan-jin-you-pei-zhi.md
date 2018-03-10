@@ -417,7 +417,13 @@ runtime比较适合工具库的使用, 因为工具库不应该污染全局, 但
 
 但是 polyfill最大的问题就是太大了 
 
-所以比较建议
+所以最终的建议是
+
+在进行业务开发时
+
+在<https://github.com/zloirock/core-js> 里选择性的 polyfill+runtime
+
+插件开发 其实比较建议就用原生的JS来开发, 减少依赖, 减少插件包的大小
 
 
 
