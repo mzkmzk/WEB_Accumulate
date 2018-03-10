@@ -323,3 +323,4 @@ compress在文档里属性并没有代码中的全: http://lisperator.net/uglify
 3. ECMAScript的支持列表: http://kangax.github.io/compat-table/es5/
 4. 更多关于preset-env的配置: https://babeljs.io/docs/plugins/preset-env/#loose
 5. 常见的IE8兼容性坑: http://www.aliued.com/?p=3240
+6. 解决IE8常见的坑: https://github.com/zuojj/fedlab/issues/5
