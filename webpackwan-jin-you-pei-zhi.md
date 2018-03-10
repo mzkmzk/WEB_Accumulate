@@ -318,6 +318,70 @@ compress在文档里属性并没有代码中的全: http://lisperator.net/uglify
 
 > babel-polyfill 还是 transform-runtime
 
+首先来介绍下两者的作用
+
+polyfill 
+
+其实比较好理解
+
+就是在全局中 添加新语法 例如 Promise, Array.prototype.includes
+
+tranform-runtime
+
+的作用有两个
+
+一: 减少内部实现的次数
+
+看个例子
+
+源代码:
+
+```javascript
+class Person {
+}
+
+```    
+
+babel的默认转换方式是
+
+```javascript
+"use strict";
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Person = function Person() {
+  _classCallCheck(this, Person);
+};
+```
+
+但是问题就在于假如再有个 class Student , class Teacher
+
+babel会在每个类都实现一次 _classCallCheck
+
+而babel-runtime 就会把 _classCallCheck的实现放在一个babel-runtime的模块里
+
+供其他需要用的代码, 直接require即可
+
+babel-runtime后的代码
+
+```javascript
+"use strict";
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Person = function Person() {
+  (0, _classCallCheck3.default)(this, Person);
+};
+```
+
+
+
+
+
 # 参考链接
 
 1. hash和contenthash的说明: http://www.cnblogs.com/ihardcoder/p/5623411.html
