@@ -438,4 +438,5 @@ runtime比较适合工具库的使用, 因为工具库不应该污染全局, 但
 5. 常见的IE8兼容性坑: http://www.aliued.com/?p=3240
 6. 解决IE8常见的坑: https://github.com/zuojj/fedlab/issues/5
 7. babel-trantime文档: https://babeljs.io/docs/plugins/transform-runtime/#helper-aliasing
+8. babel-polyfill文档: https://babeljs.cn/docs/usage/polyfill/
 
