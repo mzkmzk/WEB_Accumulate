@@ -316,6 +316,8 @@ compress在文档里属性并没有代码中的全: http://lisperator.net/uglify
 
 会默认不采取harmony取exports, 所以不会进入到这个方法 所以没影响
 
+> babel-polyfill 还是 transform-runtime
+
 # 参考链接
 
 1. hash和contenthash的说明: http://www.cnblogs.com/ihardcoder/p/5623411.html
