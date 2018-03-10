@@ -378,6 +378,47 @@ var Person = function Person() {
 };
 ```
 
+二: 新语法的兼容
+
+这里说的是 Promise Set Map等语法
+
+但是runtime不是用全局的方法是实现的, 而且require到自己的库, 然后实现的
+
+当然上面说的这些runtime都可以配置
+
+```bash
+{
+  "plugins": [
+    ["transform-runtime", {
+      "helpers": true, // 默认都引入带runtime的库 而不多次实现 
+      "polyfill": true, //是否帮忙转义Promise 等语法
+      "regenerator": true, // regenerator 的语法是否兼容
+      "moduleName": "babel-runtime"
+    }]
+  ]
+}
+```
+
+总结
+
+runtime最大的优点和缺点都在于不会去污染全局代码
+
+缺点在哪? 
+
+例如 `"foobar".includes("foo")` 这样的语法没办法兼容的
+
+因为要兼容, 必须重写 String.prototype.includes, 而runtime不会这么做
+
+所以在Array String 等一些拓展函数, runtime不会帮助到你
+
+所以
+
+runtime比较适合工具库的使用, 因为工具库不应该污染全局, 但是runtime的helpers属性 也许也能帮助减少代码的最终大小
+
+但是 polyfill最大的问题就是太大了 
+
+所以比较建议
+
 
 
 
@@ -390,3 +431,5 @@ var Person = function Person() {
 4. 更多关于preset-env的配置: https://babeljs.io/docs/plugins/preset-env/#loose
 5. 常见的IE8兼容性坑: http://www.aliued.com/?p=3240
 6. 解决IE8常见的坑: https://github.com/zuojj/fedlab/issues/5
+7. babel-trantime文档: https://babeljs.io/docs/plugins/transform-runtime/#helper-aliasing
+
