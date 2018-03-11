@@ -50,6 +50,28 @@ fallback 当css-loader无法处理时, 就交给style-loader处理
 
 extract-text-webpack-plugin README: https://github.com/webpack-contrib/extract-text-webpack-plugin
 
+# 多页面的HTML部分
+
+```javascript
+plugins: [
+    new HtmlWebpackPlugin({  // Also generate a test.html
+      title: '首页title',
+      filename: 'index.html',
+      template: 'src/assets/index.html'
+    },
+    new HtmlWebpackPlugin({  // Also generate a test.html
+      filename: 'test.html',
+      template: 'src/assets/test.html'
+    })
+  ]
+```
+
+html-webpack-plugin官方文档: https://github.com/jantimon/html-webpack-plugin#configuration
+
+文档中列举了很多基于这个插件开发出来更多的插件
+
+假如需要对输出的html做处理, 也可以做个插件来简化平时的html操作
+
 # hash chunkhash contenthash的区分
 
 > hash
