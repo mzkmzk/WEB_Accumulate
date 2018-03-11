@@ -282,6 +282,7 @@ UglifyJs在文档里并没有找到这两个screw_ie8兼容IE8的属性
 
 compress在文档里属性并没有代码中的全: http://lisperator.net/uglifyjs/compress
 
+
 再tips: 
 
 本来想在webpack用uglifyjs-webpack-plugin而直接试用UglifyJS3的 
