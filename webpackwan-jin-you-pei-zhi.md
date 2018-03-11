@@ -1,5 +1,20 @@
 # webpack万金油配置
 
+# 提取JS的公共部分
+
+例如我们的公共库 jquery、underscore等
+
+```javascript
+entry:{
+    'vendor': ['jquery', 'underscore']
+},
+plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor', // 将公共模块提取，生成名为`vendor`的chunk
+    })
+]
+```
+
 # css文件处理
 
 css文件可以内联在js 或者 内联在html里, 不过我习惯是把css单独成一个文件
