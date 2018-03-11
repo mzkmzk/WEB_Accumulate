@@ -1,5 +1,40 @@
 # webpack万金油配置
 
+# css文件处理
+
+css文件可以内联在js 或者 内联在html里, 不过我习惯是把css单独成一个文件
+
+```js
+module: {
+    rules: [
+        {
+            test: /\.css$/,
+            use: ExtractTextPlugin.extract({
+                fallback: 'style-loader',
+                use:  'css-loader' 
+            })
+        },
+        {
+            test: /\.(png|jpg|gif)$/,
+            use: [{
+                loader: 'file-loader?name=[name]',
+                options: {
+                    limit: 1,
+                    name: '[name].[ext]?h=[hash:3]'
+                }
+            }]
+        }
+    ]
+},
+plugins: [
+     new ExtractTextPlugin( (__DEV__ ? '[name].css' : '[name].min.css') + "?h=[contenthash:3]"),
+]
+```
+
+fallback 当css-loader无法处理时, 就交给style-loader处理
+
+extract-text-webpack-plugin README: https://github.com/webpack-contrib/extract-text-webpack-plugin
+
 # hash chunkhash contenthash的区分
 
 > hash
