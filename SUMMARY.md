@@ -246,6 +246,7 @@
   * [Nginx](nginx.md)
     * [基本命令](ji_ben_ming_ling.md)
     * [更改301定向](geng_gai_301_ding_xiang.md)
+    * [代理转发](dai-li-zhuan-fa.md)
   * [MySQL](mysql.md)
     * [常见问题](chang_jian_wen_ti.md)
     * [常见命令](chang_jian_ming_ling.md)
