@@ -21,3 +21,7 @@ location /query_period_try_info {
             }  
         }
 ```
+
+# 参考链接
+
+1. nginx jsonp 桩转发: http://blog.csdn.net/chosen0ne/article/details/7843435
