@@ -1,5 +1,32 @@
 # 深剖定时器
 
+# 思考题
+
+### 防止定时器在少于指定的间隔时间内执行
+
+例如有个函数a, 需要相隔1000ms 执行, 所以写了
+
+```javascript
+setInterval(function(){
+    a()
+}, 1000)
+```
+
+但是问题在于, a函数执行10ms, 所以下次再执行a 会是 1000 - 10 ms之后
+
+这样个别情况就会有问题
+
+所以需要更为严格的不能少于指定时间内执行的话..可以类似这么写自行利用setTimeout去实现setInterval 就可以规避掉这个问题
+
+具体例子可见, (http://demo.404mzk.com/setinterval/) 中的更严格时间间隔
+
+```javascript
+setTimeout(function(){
+    a()
+    setTimeout(function)
+}, 1000)
+```
+
 # 小tips
 
 ### 回调函数中的参数
