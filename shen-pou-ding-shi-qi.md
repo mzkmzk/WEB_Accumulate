@@ -20,11 +20,21 @@ setInterval(function(){
 
 具体例子可见, (http://demo.404mzk.com/setinterval/) 中的更严格时间间隔
 
+setTimeout实现setInterval 的方法
+
 ```javascript
-setTimeout(function(){
-    a()
-    setTimeout(function)
-}, 1000)
+var my_setinterval = function(func, timeout, end_callback) {
+      setTimeout(function() {
+        var result = func();
+
+        if ( result === false) {
+            end_callback && end_callback)_
+            return
+        } 
+
+        my_setinterval(func, timeout);
+      }, timeout);
+    },
 ```
 
 # 小tips
