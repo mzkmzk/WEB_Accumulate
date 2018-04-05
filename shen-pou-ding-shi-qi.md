@@ -33,6 +33,12 @@ test_bibao()
 
 而最好的方式还是第三种, delay参数之后的参数 都会被放进回调的参数列表中
 
+### 回调中的this
+
+简单的说下 setTimeout中的this是全局环境 浏览器中就是window
+
+
+
 # 参考链接
 
 1. 阮一峰的基础讲解文章: http://javascript.ruanyifeng.com/advanced/timer.html#toc1
