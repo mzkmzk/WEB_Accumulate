@@ -11,6 +11,11 @@ var test_bibao = function(){
         setTimeout(function(){
             document.querySelector('.j_test_params_1').innerHTML +=  i + ' '
         },0)
+        
+        setTimeout((function(a){
+            document.querySelector('.j_test_params_1').innerHTML +=  a + ' '
+        })(i) , 0)
+
 
         setTimeout(function(a){
             document.querySelector('.j_test_params_2').innerHTML +=  a + ' '
@@ -23,3 +28,7 @@ test_bibao()
 这算是比较经典的闭包引起的问题了
 
 第一个setTimeout中 因为for循环之后才执行的输出, 所以i一直都是10
+
+虽然解决这个问题可以通过第一个settimeout这种方式
+
+而最好的方式还是第三种, delay参数之后的参数 都会被放进回调的参数列表中
