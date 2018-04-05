@@ -28,7 +28,7 @@ var my_setinterval = function(func, timeout, end_callback) {
         var result = func();
 
         if ( result === false) {
-            end_callback && end_callback)_
+            end_callback && end_callback()
             return
         } 
 
