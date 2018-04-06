@@ -81,7 +81,28 @@ test_bibao()
 1. 调节事件执行的顺序
 2. 防止阻塞
 
-调节顺序的例子有keypress事件
+调节顺序的例子有事件的冒泡机制
+
+例如
+
+1. j_1、j_2元素都监听了click
+2. j_2是j_1的子元素
+3. 点击j_2时, 需要先执行j_1中的监听回调, 再执行j_2的监听回调
+
+```javascript
+var j_1 = document.getElementById('j_1'),
+    j_2 = document.getElementById('j_2')
+
+j_2.onclick = function A() {
+  setTimeout(function() {
+    ...
+  }, 0)
+};
+
+j_1.onclick = function C() {
+  ...
+};
+```
 
 
 
