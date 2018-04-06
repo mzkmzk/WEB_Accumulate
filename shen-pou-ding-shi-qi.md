@@ -104,6 +104,29 @@ j_1.onclick = function C() {
 };
 ```
 
+防止阻塞的例子有, 当需要不断改变背景色时
+
+```javascript
+var div = document.getElementsByTagName('div')[0];
+
+// 写法一
+for (var i = 0xA00000; i < 0xFFFFFF; i++) {
+  div.style.backgroundColor = '#' + i.toString(16);
+}
+
+// 写法二
+var timer;
+var i=0x100000;
+
+function func() {
+  timer = setTimeout(func, 0);
+  div.style.backgroundColor = '#' + i.toString(16);
+  if (i++ == 0xFFFFFF) clearTimeout(timer);
+}
+
+timer = setTimeout(func, 0);
+```
+
 
 
 
