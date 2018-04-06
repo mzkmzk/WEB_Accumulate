@@ -2,7 +2,9 @@
 
 # 简介
 
-javascript
+javascript主要涉及到的键盘事件的顺序为 keydown -> keypress -> keyup
+
+
 
 # 组合键问题
 
