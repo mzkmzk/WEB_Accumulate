@@ -50,6 +50,18 @@ document.querySelector('.j_int_input_1').onkeyup = function () {
 }    
 ```
 
+# TIPS
+
+### keypress 和 keyup或keydown中keycode的区别
+
+在字母数字等情况下 keypress和keyup|keydown的keycode是一致的
+
+但是细分则不一致
+
+keypress中表示的是键入的字符(character code)
+
+keydown和keyup表示的是具体按下的健(virtual keycode)
+
 # 兼容性
 
 ### 存放ASCII地方
