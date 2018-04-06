@@ -38,7 +38,7 @@ tips:
 
 ```javascript
 getCharCode: function(event) {
-    if (typeof event.charCode) {
+    if ( event.charCode) {
         return event.charCode;
     } else {
         return event.keycode;
