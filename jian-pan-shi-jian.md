@@ -19,3 +19,9 @@ tips:
 
 # 中文输入法问题
 
+# 兼容性
+
+### 存放ASCII地方
+
+1. IE9上event对象charCode 保存按键的ASCII
+2. 高级浏览器只有在触发keypress使用包含charCode, 并且值和keycode一致
