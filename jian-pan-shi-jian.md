@@ -13,7 +13,7 @@ this.value可以包含刚按下的字符 | false | false | true
 
 tips:
 
-1. mouse事件都会有shiftkey ctrlkey altkey matakey 代表这几个键是否被按住, matakey在window中代表win键, mac中代表command键, IE不支持matakey
+1. keyboard事件都会有shiftkey ctrlkey altkey matakey 代表这几个键是否被按住, matakey在window中代表win键, mac中代表command键, IE不支持matakey
 2. keydown和keyup区分不出大小写, keycode都是大写的ASCII
 
 # 组合键问题
