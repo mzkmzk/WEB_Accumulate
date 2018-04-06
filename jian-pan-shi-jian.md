@@ -62,6 +62,12 @@ keypress中表示的是键入的字符(character code)
 
 keydown和keyup表示的是具体按下的健(virtual keycode)
 
+比较经典的是`键(小键盘1左边的键)
+
+keypress触发的keycode是96 
+
+keydown|keyup触发的keycode是192
+
 # 兼容性
 
 ### 存放ASCII地方
