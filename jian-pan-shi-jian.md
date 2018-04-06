@@ -29,6 +29,7 @@ tips:
 ```javascript
 var is_mac = navigator.userAgent.indexOf('Mac OS X') !== -1,
     is_window = (navigator.platform == "Win32") || (navigator.platform == "Windows")
+    
 listener(document.querySelector('.j_copy'), 'keydown', function(event){
     if ((is_mac && event.metaKey && getCode(event) === 86)
         || (is_window && event.ctrlKey && getCode(event) === 86)
