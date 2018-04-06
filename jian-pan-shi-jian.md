@@ -41,7 +41,7 @@ getCharCode: function(event) {
     if ( event.charCode) {
         return event.charCode;
     } else {
-        return event.keycode;
+        return event.keyCode;
     }
 }
 ```
