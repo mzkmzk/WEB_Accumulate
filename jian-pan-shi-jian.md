@@ -7,7 +7,7 @@ javascript主要涉及到的键盘事件的顺序为 keydown -> keypress -> keyu
  情况/事件| keydown | keypress | keyup
 ---- | --- | ---
 按住某键后按其他健是否会继续触发 | true | false | false
-忽略系统功能键(TAB、shift等) |  false | true | false
+忽略系统功能键(回退、shift等) |  false | true | false
 区分大小写 | false | true | false
 this.value可以包含刚按下的字符 | false | false | true
 
