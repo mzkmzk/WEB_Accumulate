@@ -52,7 +52,7 @@ document.querySelector('.j_int_input_1').onkeyup = function () {
 
 # TIPS
 
-### keypress 和 keyup或keydown中keycode的区别
+### keypress 和 keyup|keydown中keycode的区别
 
 在字母数字等情况下 keypress和keyup|keydown的keycode是一致的
 
