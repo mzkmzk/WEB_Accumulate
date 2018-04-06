@@ -74,6 +74,14 @@ test_bibao()
 
 简单的说下 setTimeout中的this是全局环境 浏览器中就是window
 
+## setTimeout(function(){}, 0)的作用
+
+作用主要有两个
+
+1. 调节事件执行的顺序
+2. 防止阻塞
+
+
 
 
 # 参考链接
