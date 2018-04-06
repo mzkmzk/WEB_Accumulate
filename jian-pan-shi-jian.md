@@ -37,7 +37,7 @@ tips:
 所以建议这样取ASCII
 
 ```javascript
-getCharCode: function(event) {
+getCode: function(event) {
     if ( event.charCode) {
         return event.charCode;
     } else {
