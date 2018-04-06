@@ -17,6 +17,7 @@
         * [beforeunload和unload](beforeunloadunload.md)
         * [焦点事件](焦点事件.md)
         * [touch事件详解及应用](touchshi-jian-xiang-jie-ji-ying-yong.md)
+        * [键盘事件](jian-pan-shi-jian.md)
       * [使用fetch](shi_yong_fetch.md)
       * [performance](performance.md)
       * [函数节流与反抖](han_shu_jie_liu.md)
