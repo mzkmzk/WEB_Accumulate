@@ -25,3 +25,16 @@ tips:
 
 1. IE9上event对象charCode 保存按键的ASCII
 2. 高级浏览器只有在触发keypress使用包含charCode, 并且值和keycode一致
+3. mac的firefox keydown和keyup用keyCode存放ASCII, keypress用charCode存放ASCII
+
+所以建议这样取ASCII
+
+```javascript
+getCharCode: function(event) {
+    if (typeof event.charCode) {
+        return event.charCode;
+    } else {
+        return event.keycode;
+    }
+}
+```
