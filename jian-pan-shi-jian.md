@@ -10,6 +10,7 @@ javascript主要涉及到的键盘事件的顺序为 keydown -> keypress -> keyu
 忽略系统功能键(回退、shift等) |  false | true | false
 区分大小写 | false | true | false
 this.value可以包含刚按下的字符 | false | false | true
+按键为非字符是否触发 | true | false | true
 
 tips:
 
@@ -68,7 +69,7 @@ keypress触发的keycode是96
 
 keydown|keyup触发的keycode是192
 
-### keypress和keydown|keyup触发的情况
+### keypress和keydown|keyup触发的情况的区别
 
 keypress是有明确字符输入的时候才触发
 
