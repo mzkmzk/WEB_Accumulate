@@ -27,8 +27,12 @@ tips:
 ### 监听粘贴操作
 
 ```javascript
+var is_mac = navigator.userAgent.indexOf('Mac OS X') !== -1,
+    is_window = (navigator.platform == "Win32") || (navigator.platform == "Windows")
 listener(document.querySelector('.j_copy'), 'keydown', function(event){
-    if (event.metaKey && getCode(event) === 86){
+    if ((is_mac && event.metaKey && getCode(event) === 86)
+        || (is_window && event.ctrlKey && getCode(event) === 86)
+    ){
         document.querySelector('.j_copy_ul').innerHTML += '<li>被粘贴辣</li>'
     }
  })
