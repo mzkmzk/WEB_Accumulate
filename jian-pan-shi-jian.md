@@ -68,6 +68,12 @@ keypress触发的keycode是96
 
 keydown|keyup触发的keycode是192
 
+### keypress和keydown|keyup触发的情况
+
+keypress是有明确字符输入的时候才触发
+
+而keydown|keyup则是按下键盘即会触发
+
 # 兼容性
 
 ### 存放ASCII地方
