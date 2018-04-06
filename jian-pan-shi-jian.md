@@ -43,7 +43,6 @@ document.querySelector('.j_int_input_1').onkeyup = function () {
   }else if (this.value === '' ){
 
   }else {
-    console.log(this.value)
     this.value = parseInt(this.value)
     prev_string = this.value
   }
