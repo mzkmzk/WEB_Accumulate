@@ -18,9 +18,21 @@ tips:
 
 # 组合键问题
 
+
+
 # 中文输入法问题
 
 # 常用例子
+
+### 监听粘贴操作
+
+```javascript
+listener(document.querySelector('.j_copy'), 'keydown', function(event){
+    if (event.metaKey && getCode(event) === 86){
+        document.querySelector('.j_copy_ul').innerHTML += '<li>被粘贴辣</li>'
+    }
+ })
+```
 
 ### 输入只能是整数
 
