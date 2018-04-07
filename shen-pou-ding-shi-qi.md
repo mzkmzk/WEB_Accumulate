@@ -11,6 +11,8 @@
 
 要正确的认识定时器的触发时机
 
+### macrotasks和microtasks
+
 需要先了解下macrotasks和microtasks
 
 这两类任务都是异步的任务
@@ -197,3 +199,4 @@ timer = setTimeout(func, 0);
 # 参考链接
 
 1. 阮一峰的基础讲解文章: http://javascript.ruanyifeng.com/advanced/timer.html#toc1
+2. macrotask和microtask: https://github.com/ccforward/cc/issues/48
