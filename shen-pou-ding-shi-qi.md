@@ -9,7 +9,17 @@
 
 # 触发时机
 
+要正确的认识定时器的触发时机
 
+需要先了解下macrotasks和microtasks
+
+这两类任务都是异步的任务
+
+那我们这些异步任务是怎么分类的呢
+
+macrotasks: setTimeout, setInterval, setImmediate, requestAnamationFrame, I/O, UI渲染
+
+microtasks: Promise, process.nextTick, Object.observe, MutationObserver
 
 # 思考题
 
