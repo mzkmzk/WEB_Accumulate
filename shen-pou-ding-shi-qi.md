@@ -1,5 +1,16 @@
 # 深剖定时器
 
+# 定时器类型
+
+1. setTimeout: 指定xx时间后执行回调
+2. setInterval: 指定每隔xx时间后定期执行
+3. setImmediate: 和setTimeout(fn, 0)类似, 执行setTimeout(fn, 0)和setImmediate的顺序问题, 不同环境有差异 (chrome不支持、 IE/node支持)
+4. requestAnimationFrame: 跟着屏幕刷新而执行回调, 一般60HZ对应的间隔是16.7ms, 一般用作处理动画
+
+# 触发时机
+
+
+
 # 思考题
 
 ### 防止定时器在少于指定的间隔时间内执行
