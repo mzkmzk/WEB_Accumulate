@@ -32,7 +32,7 @@ microtasks: Promise, process.nextTick, Object.observe, MutationObserver
 1. 有同步任务执行时, 在执行完毕之前, 永远都轮不到异步任务的执行
 2. js处理异步任务是通过 事件循环来定期访问异步任务队列的
 3. macrotasks一次事件循环只能处理一次, 举个例子setTimeout回调中接着第二次setTimeout, 必须等到下次事件循环才能执行到第二次setTimeout
-4. microtasks一次事件循环能处理多次, 举个例子Promise
+4. microtasks一次事件循环能处理多次, 举个例子Promise里then后继续.then(function(){return new Promise()}), 会同时执行
 5. 异步任务在执行时的函数, 可以理解为同步任务
 
 # 思考题
