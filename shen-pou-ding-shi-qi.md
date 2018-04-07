@@ -146,7 +146,7 @@ test_bibao()
 
 ### 回调中的this
 
-简单的说下 setTimeout中的this是全局环境 浏览器中就是window
+简单的说下 setTimeout中的this在非严格模式下是全局环境 浏览器中就是window, 而严格模式下则为 undefined
 
 ### setTimeout(function(){}, 0)的作用
 
