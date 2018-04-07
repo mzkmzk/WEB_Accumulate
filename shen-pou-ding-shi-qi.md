@@ -35,6 +35,35 @@ microtasks: Promise, process.nextTick, Object.observe, MutationObserver
 4. microtasks一次事件循环能处理多次, 举个例子Promise里then后继续.then(function(){return new Promise()}), 会同时执行
 5. 异步任务在执行时的函数, 可以理解为同步任务
 
+microtasks可以用这个例子理解一下
+
+```javascript
+//输出顺序为 1 2 3 4 5 10
+setTimeout(function(){
+    console.log(10)
+})
+new Promise(function(resolve){
+    console.log(1)
+    resolve()
+    console.log(2)
+})
+.then(function(){
+    return new Promise(function(resolve){
+        console.log(3)
+        resolve()
+    })
+})
+.then(function(){
+    return new Promise(function(resolve){
+        console.log(4)
+        resolve()
+    })
+})
+.then(function(){
+    console.log(5)
+})
+```
+
 # 思考题
 
 ### 防止定时器在少于指定的间隔时间内执行
