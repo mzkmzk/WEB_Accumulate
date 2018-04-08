@@ -203,7 +203,17 @@ function func() {
 timer = setTimeout(func, 0);
 ```
 
+###实际运行的时间比设置的delay长
 
+> 主线程阻塞
+
+因为主线程阻塞, 要等主线程执行完 才会处理定时器
+
+> 最小延时
+
+一般setTimeout(function(){}, 0), 其实实际是和setTimeout(function(){}, 4)作用一样
+
+> 未激活的tab定时最小延时1000
 
 
 # 参考链接
