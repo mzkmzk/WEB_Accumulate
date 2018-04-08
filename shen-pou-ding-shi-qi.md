@@ -113,8 +113,6 @@ var my_setinterval = function(func, timeout, end_callback) {
     },
 ```
 
-# 小tips
-
 ### 回调函数中的参数(不支持IE8)
 
 ```javascript
