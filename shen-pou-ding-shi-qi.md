@@ -219,6 +219,8 @@ timer = setTimeout(func, 0);
 
 假设这个定时器delay是500ms, 然后切换到其他tab, 定时器会将这个delay设为1000
 
+有些浏览器会做个判断: 用户离开XXs例如(firefox)
+
 ![定时器](/assets/QQ20180408-113353.png)
 
 > 最大延时
