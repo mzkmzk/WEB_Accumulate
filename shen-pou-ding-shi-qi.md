@@ -215,6 +215,11 @@ timer = setTimeout(func, 0);
 
 > 未激活的tab定时最小延时1000
 
+就是在chrome中 先打开一个TAB, 启动了定时器, 
+
+假设这个定时器delay是500ms, 然后切换到其他tab, 定时器会将这个delay设为1000
+
+![定时器](/assets/QQ20180408-113353.png)
 
 # 参考链接
 
