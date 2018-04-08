@@ -2,6 +2,8 @@
 
 # 简介
 
+体验地址: http://demo.404mzk.com/event/base/keyboard.html
+
 javascript主要涉及到的键盘事件的顺序为 keydown -> keypress -> keyup
 
  情况/事件| keydown | keypress | keyup
