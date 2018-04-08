@@ -7,6 +7,8 @@
 3. setImmediate: 和setTimeout(fn, 0)类似, 执行setTimeout(fn, 0)和setImmediate的顺序问题, 不同环境有差异 
 4. requestAnimationFrame: 跟着屏幕刷新而执行回调, 一般60HZ对应的间隔是16.7ms, 一般用作处理动画
 
+定时器体验DEMO: http://demo.404mzk.com/setinterval/
+
 # 触发时机
 
 要正确的认识定时器的触发时机
