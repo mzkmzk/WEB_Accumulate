@@ -231,3 +231,4 @@ timer = setTimeout(func, 0);
 
 1. 阮一峰的基础讲解文章: http://javascript.ruanyifeng.com/advanced/timer.html#toc1
 2. macrotask和microtask: https://github.com/ccforward/cc/issues/48
+3. 最小最大延时参考文章: https://developer.mozilla.org/zh-CN/docs/Web/API/Window/setTimeout#Reasons_for_delays_longer_than_specified
