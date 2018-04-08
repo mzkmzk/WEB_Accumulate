@@ -217,7 +217,7 @@ timer = setTimeout(func, 0);
 
 假设这个定时器delay是500ms, 然后切换到其他tab, 定时器会将这个delay设为1000
 
-有些浏览器会做个判断: 用户离开XXs, 但是观察了mac的chrome和firefox都不会做这个判断的
+有些浏览器会做个判断: 用户离开XXs,才改变未激活tab的延时, 但是观察了mac的chrome和firefox都不会做这个判断的
 
 ![定时器](/assets/QQ20180408-113353.png)
 
