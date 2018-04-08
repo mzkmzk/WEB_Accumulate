@@ -221,6 +221,12 @@ timer = setTimeout(func, 0);
 
 ![定时器](/assets/QQ20180408-113353.png)
 
+> 最大延时
+
+浏览器存的delay是用32个bit存储的整形
+
+这就会导致如果一个整数大于 2147483647(Math.pow(2,31)) (大约24.8 天)时就会溢出，导致定时器将会被立即执行。
+
 # 参考链接
 
 1. 阮一峰的基础讲解文章: http://javascript.ruanyifeng.com/advanced/timer.html#toc1
