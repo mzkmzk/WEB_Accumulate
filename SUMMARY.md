@@ -259,6 +259,7 @@
     * [添加SSI功能](ssi.md)
   * [Docker](docker.md)
     * [入门](docker/ru-men.md)
+  * [GitLab-CI使用](gitlab-cishi-yong.md)
 * [工具](gong_ju.md)
   * [PhPStorm](phpstorm.md)
     * [项目支持Babel转JSX的步骤](xiang_mu_zhi_chi_babel_de_bu_zou.md)
