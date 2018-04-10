@@ -2,7 +2,7 @@
 
 # Specific Runners 的搭建
 
-### runner机器的 安装
+### runner机器的依赖安装
 
 首先建议找个linux机器 或者window mac 都可以作为runner的机器
 
@@ -15,6 +15,12 @@
 https://mirrors.tuna.tsinghua.edu.cn/help/gitlab-ci-multi-runner/
 
 笔者的runner机器是centOS6
+
+tips 查询本机CPU版本和centos版本的命令为
+
+```shell
+
+```
 
 ```bash
 > /etc/yum.repos.d/gitlab-ci-multi-runner.repo
@@ -38,4 +44,8 @@ gpgkey=https://packages.gitlab.com/gpg.key
 sudo yum makecache
 sudo yum install gitlab-ci-multi-runner
 ```
+
+### 新建一个runner和git项目相关联
+
+
 
