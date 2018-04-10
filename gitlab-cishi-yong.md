@@ -76,6 +76,8 @@ Please enter the executor: docker-ssh, parallels, virtualbox,
 
 ### runner 的运行环境
 
+> shell环境
+
 假如搭建runner的时候 选择了 shell 
 
 那么建立runner的时候 默认的用户是gitlab-runner
@@ -100,6 +102,8 @@ before_script:
   - npm set registry http://xnpm.repo.xx.cn/
   - npm install
 ```
+
+但是其实这个runner最好跑在docker上, 我现在暂时是为了方便才直接搭在了shell环境上
 
 
 
