@@ -106,6 +106,10 @@ before_script:
 
 但是其实这个runner最好跑在docker上, 我现在暂时是为了方便才直接搭在了shell环境上
 
+# .gitlab-ci.yml说明
+
+https://gitlab.xunlei.cn/help/ci/yaml/README
+
 # 参考文章
 
 1. 兵哥的gitlab说明: https://www.jianshu.com/p/705428ca1410
