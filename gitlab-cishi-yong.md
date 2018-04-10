@@ -18,7 +18,7 @@ https://mirrors.tuna.tsinghua.edu.cn/help/gitlab-ci-multi-runner/
 
 tips 查询本机CPU版本和centos版本的命令为
 
-```shell
+```bash
 > uname -a
 Linux a.com 2.6.32-431.el6.x86_64 #1 SMP Fri Nov 22 03:15:09 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
 > lsb_release -a
