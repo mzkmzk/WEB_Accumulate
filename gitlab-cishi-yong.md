@@ -50,5 +50,21 @@ sudo yum install gitlab-ci-multi-runner
 
 ### 新建一个runner和git项目相关联
 
+先去gitlab中指定项目的Setting->pipelines中查找信息会有说明
+
+1. gitlab ci的地址
+2. 本项目的token
+
+```bash
+Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/):
+Please enter the gitlab-ci token for this runner: 项目特定的token
+Please enter the gitlab-ci description for this runner: 自定义runner描述
+Please enter the gitlab-ci tags for this runner (comma separated): 10.10.1.1-master 给runner定标签 可以用'-'分隔
+Whether to run untagged builds [true/false]: 默认false 是否运行未标记的版本
+Whether to lock Runner to current project [true/false]: 默认fanlse 是否锁定Runner 给本项目
+Please enter the executor: docker-ssh, parallels, virtualbox, 
+    docker+machine, kubernetes, docker, shell, ssh, docker-ssh+machine: 输入可运行的脚本 一般为shell
+```
+
 
 
