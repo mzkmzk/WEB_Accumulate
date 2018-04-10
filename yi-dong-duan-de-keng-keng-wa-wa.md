@@ -46,3 +46,5 @@ document.removeEventListener('touchmove', function(event){
 只有当capture需要跟addEventListener时一致
 
 因为passive和once的值无论如何 都会视为一个监听器
+
+更具体的讲解可参考: https://www.cnblogs.com/ziyunfei/p/5545439.html
