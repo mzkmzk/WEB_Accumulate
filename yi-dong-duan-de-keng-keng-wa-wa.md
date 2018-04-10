@@ -27,7 +27,22 @@ iOS这个鬼鬼, 从11.3开始 就把这个passive:  设为默认为true辣....
 解决这个问题只需显示的改
 
 ```javascript
-addEventListener('touchmove', function(event){
+document.addEventListener('touchmove', function(event){
     event.preventDefault()
 }, { passive: false })
 ```
+
+那么removeEventListener 是否需要这样呢
+
+```javascript
+document.removeEventListener('touchmove', function(event){
+    event.preventDefault()
+}, { passive: false })
+
+```
+
+答案是不需要的
+
+只有当capture需要跟addEventListener时一致
+
+因为passive和once的值无论如何 都会视为一个监听器
