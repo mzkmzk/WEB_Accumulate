@@ -74,7 +74,32 @@ Please enter the executor: docker-ssh, parallels, virtualbox,
 
 如果新建顺利的话 就会在项目的Setting-pipeline中Runners activated for this project中发现你刚的runner了
 
+### runner 的运行环境
 
+假如搭建runner的时候 选择了 shell 
+
+那么建立runner的时候 默认的用户是gitlab-runner
+
+假如你要跑一个node脚本 `npm run build`
+
+它会提示你npm not found
+
+因为gitlab-runner这个用户本来就没有安装npm啊
+
+这时候可以设置一下环境变量
+
+在.gitlab-cli.yml中
+
+```javascript
+before_script:
+  - PATH=/usr/local/node-v6.10.0/bin:/usr/local/bin:$PATH
+  - export PATH
+  - whoami
+  - pwd
+  - echo $PATH
+  - npm set registry http://xnpm.repo.xx.cn/
+  - npm install
+```
 
 
 
