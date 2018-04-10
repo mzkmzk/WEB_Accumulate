@@ -108,5 +108,5 @@ before_script:
 # 参考文章
 
 1. 兵哥的gitlab说明: https://www.jianshu.com/p/705428ca1410
-
+2. gitlab runner说明: https://www.jianshu.com/p/2b43151fb92e
 
