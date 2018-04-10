@@ -66,5 +66,8 @@ Please enter the executor: docker-ssh, parallels, virtualbox,
     docker+machine, kubernetes, docker, shell, ssh, docker-ssh+machine: 输入可运行的脚本 一般为shell
 ```
 
+如果新建顺利的话 就会在项目的Setting-pipeline中Runners activated for this project中发现你刚的runner了
+
+
 
 
