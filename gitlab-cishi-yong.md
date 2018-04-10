@@ -68,11 +68,6 @@ Please enter the executor: docker-ssh, parallels, virtualbox,
 
 上面的这些设置可以在gitlab中点击编辑runner来改变
 
-
-
-
-
-
 如果新建顺利的话 就会在项目的Setting-pipeline中Runners activated for this project中发现你刚的runner了
 
 
