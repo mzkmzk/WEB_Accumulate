@@ -6,6 +6,10 @@
 
 ### iOS11系统中 touchmove preventDefault无效
 
+导致其中一个的影响是 H5监听原因元素touchmove时, 通过preventDefault 阻止浏览器滚动事件
+
+例如不让浏览器滚动等, 失效了, 浏览器还是会滚动
+
 这是因为addEventListener改了规范 新规范为
 
 `target.addEventListener(type, listener ,{capture: Boolean, passive: Boolean, once: Boolean})`
