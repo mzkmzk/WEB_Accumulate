@@ -44,7 +44,8 @@ gpgkey=https://packages.gitlab.com/gpg.key
 然后进行yum 安装
 
 ```bash
-sudo yum makecache
+
+sudo yum makecache //是 将服务器上的软件包信息 现在本地缓存,以提高 搜索 安装软件的速度
 sudo yum install gitlab-ci-multi-runner
 ```
 
