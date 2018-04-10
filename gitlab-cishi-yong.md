@@ -56,6 +56,7 @@ sudo yum install gitlab-ci-multi-runner
 2. 本项目的token
 
 ```bash
+> gitlab-ci-multi-runner register
 Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/):
 Please enter the gitlab-ci token for this runner: 项目特定的token
 Please enter the gitlab-ci description for this runner: 自定义runner描述
