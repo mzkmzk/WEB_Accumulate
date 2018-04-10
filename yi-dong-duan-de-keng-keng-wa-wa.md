@@ -26,4 +26,8 @@ iOS这个鬼鬼, 从11.3开始 就把这个passive:  设为默认为true辣....
 
 解决这个问题只需显示的改
 
-addEventListener('touchmove', function(){}, { passive: false })
+```javascript
+addEventListener('touchmove', function(event){
+    event.preventDefault()
+}, { passive: false })
+```
