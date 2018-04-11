@@ -112,11 +112,11 @@ Web所在环境
 
 ![vConsole](/assets/QQ20171210-161055.png)
 
-[erud](https://github.com/liriliri/erud)
+[erud](https://github.com/liriliri/eruda)
 
 ![erud](/assets/QQ20171210-161216.png)
 
-两款来说 erud第一眼感觉还是不错的
+两款来说 eruda第一眼感觉还是不错的
 
 功能很多 但是试用了一下 还是有点问题的 所以还是建议使用比较稳定的vConsole
 
