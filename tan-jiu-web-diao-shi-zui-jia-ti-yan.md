@@ -13,7 +13,7 @@ Web应用场景
 1. 高级浏览器Chrome
 3. 桌面类混合应用
 4. iOS safari浏览器
-5. iOs混合应用页面
+5. iOS 混合应用页面
 6. android chrome浏览器
 7. android混合应用页面
 
