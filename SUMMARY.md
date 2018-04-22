@@ -295,6 +295,7 @@
   * [JavaScript](javascript.md)
 * [Git](git.md)
   * [常用知识](chang_yong_zhi_shi.md)
+  * [子模块管理](zi-mo-kuai-guan-li.md)
 * [其他](qi_ta.md)
   * [网页收集](wang-ye-shou-ji.md)
   * [读源码经验](du-yuan-ma-jing-yan.md)
