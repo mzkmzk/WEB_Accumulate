@@ -35,6 +35,11 @@ git submodule update
 git clone --recursive xxx
 ```
 
+# 更新远程子模块更新到本地
+
+```bash
+git submodule update --remote
+```
 
 
 
