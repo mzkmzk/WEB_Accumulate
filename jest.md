@@ -309,6 +309,43 @@ it('测试处理exec', () => {
 
 但是写好一次后 以后类似的mock功能 就可以通用了
 
+## mock 引用的css文件和html文件
+
+在引用HTML时, jest一般都会报错
+
+例如
+
+```javascript
+import tplItem from './item.html';
+```
+
+在执行jest测试时候 会报错
+
+```bash
+/packages/vip-vconsole/src/log/item.html:1
+    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,global,jest){<div class="vc-item vc-item-{{logType}} {{if (!noMeta)}}vc-item-nometa{{/if}} {{style}}">
+    
+SyntaxError: Unexpected token <
+```
+
+当这些HTML对我们的测试用例无影响时候 可以这样mock
+
+引入`identity-obj-proxy`模块
+
+`npm install --save-dev identity-obj-proxy`
+
+tips: 
+
+identity-obj-proxy主要的作用就是更改import模块的时候 其导出的是一个无论key为何值 value都等于key的一个对象
+
+在项目跟目录创建jest.config.js文件
+
+```javascript
+moduleNameMapper: {
+    "\\.(html)$": "identity-obj-proxy"
+}
+```
+
 # 疑惑点
 
 ## jest.runAllTimers()和jest.runOnlyPendingTimers()的区别
