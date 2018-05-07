@@ -245,6 +245,10 @@ document.querySelector('.dialog').addEventListener('touchmove',function(e){
 })
 ```
 
+> ios 11 addEventListener的新限制
+
+
+
 ## 下拉刷新及 下拉加载更多
 
 待补充 对Alloytouch的应用
