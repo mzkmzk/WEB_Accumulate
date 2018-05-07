@@ -231,10 +231,10 @@ div.addEventListener('touchmove', function(event){
         min: window.innerHeight - 45 - 48 - 2000, //不必需,滚动属性的最小值
         max: 0, //不必需,滚动属性的最大值
         change: function (value) {
-            pull_refresh.translateY = value;
+            pull_refresh.translateY = value; //控制顶部刷新提示向下移动
         },
         touchMove: function (evt, value) {
-            if (value > 70) {
+            if (value > 70) { //切换顶部提示的文字和箭头方向
                 //http://caniuse.com/#search=classList
                 arrow.classList.add("arrow_up");
             } else {
@@ -242,7 +242,7 @@ div.addEventListener('touchmove', function(event){
             }
         },
         touchEnd: function (evt, value) {
-            if (value > 70) {
+            if (value > 70) { //判断松手时 大于70px 滑动则刷新
                 this.to(60);
                 mockRequest(this);
                 return false;
