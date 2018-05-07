@@ -439,7 +439,7 @@ HTTPS 网页中加载的 HTTP 资源被称之为 Mixed Content（混合内容）
 
 将Mixed Content分为
 
-1. Optionally-blockable: <img>, <video>, <audio>, <source>, Prefetched资源
+1. Optionally-blockable: `<img>`, `<video>`, `<audio>`, `<source>`, Prefetched资源
 2. blockable: 不在Optionally-blockable范围内的
 
 
