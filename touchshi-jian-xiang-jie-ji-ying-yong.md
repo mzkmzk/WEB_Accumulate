@@ -207,9 +207,70 @@ div.addEventListener('touchmove', function(event){
 
 下拉加载更多 需要实现的点有
 
-1. 下拉的过程中列表向下移动
+1. 下拉的过程中列表和刷新提示向下移动
 2. 滑到一定距离后 出现 松开可刷新 并且箭头翻转
 3. 手指离开屏幕 判断距离是否大于指定距离 大于则进行刷新
+
+```javascript
+ var scroller = document.querySelector("#scroller"),
+        arrow = document.querySelector("#arrow"),
+        pull_refresh = document.querySelector("#pull_refresh"),
+        list = document.querySelector("#list"),
+        index = 0;
+
+    Transform(pull_refresh, true);
+    Transform(scroller, true);
+
+
+    new AlloyTouch({
+        touch: "#wrapper",//反馈触摸的dom
+        vertical: true,//不必需，默认是true代表监听竖直方向touch
+        target: scroller, //运动的对象
+        property: "translateY",  //被滚动的属性
+        initialValue: 0,
+        min: window.innerHeight - 45 - 48 - 2000, //不必需,滚动属性的最小值
+        max: 0, //不必需,滚动属性的最大值
+        change: function (value) {
+            pull_refresh.translateY = value;
+        },
+        touchMove: function (evt, value) {
+            if (value > 70) {
+                //http://caniuse.com/#search=classList
+                arrow.classList.add("arrow_up");
+            } else {
+                arrow.classList.remove("arrow_up");
+            }
+        },
+        touchEnd: function (evt, value) {
+            if (value > 70) {
+                this.to(60);
+                mockRequest(this);
+                return false;
+            }
+        }
+    })
+
+    function mockRequest(at) {
+        pull_refresh.classList.add("refreshing");
+        setTimeout(function () {
+            var i = 0,
+                len = 3;
+            for (; i < len; i++) {
+                var li = document.createElement("li");
+                li.innerHTML = "new row " + index++;
+                list.insertBefore(li, list.firstChild);
+            }
+            arrow.classList.remove("arrow_up");
+            pull_refresh.classList.remove("refreshing");
+            pull_refresh.translateY = 0;
+            at.to(at.initialValue);
+            at.min -= 40 * 3;
+        }, 500);
+    }
+```
+
+DEMO示例: http://alloyteam.github.io/AlloyTouch/refresh/pull_refresh/
+
 
 # 注意事项
 
