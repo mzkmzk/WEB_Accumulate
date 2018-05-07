@@ -247,7 +247,9 @@ document.querySelector('.dialog').addEventListener('touchmove',function(e){
 
 > ios 11 addEventListener的新限制
 
+如果你出现了 evnet.preventDefault() 无法阻止 浏览器原生事件, 可能掉进这个新坑里了
 
+<http://blog.404mzk.com/yi-dong-duan-de-keng-keng-wa-wa.html#ios>
 
 ## 下拉刷新及 下拉加载更多
 
