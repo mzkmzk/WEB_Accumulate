@@ -10,7 +10,13 @@
 
 # execCommand和Selection方案
 
+tips: execCommand 其实一直是个野娃娃 W3C标准并不承认它 它的文档也是非官方的 https://w3c.github.io/editing/execCommand.html 
+
 ### 兼容性
+
+### 实现复制功能的核心代码
+
+主要参考clipboard库 
 
 # FLASH 方案
 
