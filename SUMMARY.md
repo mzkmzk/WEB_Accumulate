@@ -217,6 +217,7 @@
   * [深剖定时器](shen-pou-ding-shi-qi.md)
   * [移动端的坑坑洼洼](yi-dong-duan-de-keng-keng-wa-wa.md)
   * [NodeJs在多平台运行的坑坑洼洼](nodejszai-duo-ping-tai-yun-xing-de-keng-keng-wa-wa.md)
+  * [关于H5复制那点事](guan-yu-h5-fu-zhi-na-dian-shi.md)
 * [服务器](fu_wu_qi.md)
   * [Linux](linux.md)
     * [Common](common.md)
