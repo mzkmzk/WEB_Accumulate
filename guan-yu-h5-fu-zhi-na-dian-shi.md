@@ -10,9 +10,16 @@
 
 # execCommand和Selection方案
 
-tips: execCommand 其实一直是个野娃娃 W3C标准并不承认它 它的文档也是非官方的 https://w3c.github.io/editing/execCommand.html 
 
 ### 兼容性
+
+1. IE9+ 但是copy时 浏览器会弹个框 问用户是否同意访问剪贴板
+2. safari10+ : 即ios系统10及其以上
+3. chrome42+
+
+tips: execCommand 其实一直是个野娃娃 W3C标准并不承认它 它的文档也是非官方的 https://w3c.github.io/editing/execCommand.html 所以它到后面可能是会被浏览器抛弃的
+
+
 
 ### 实现复制功能的核心代码
 
