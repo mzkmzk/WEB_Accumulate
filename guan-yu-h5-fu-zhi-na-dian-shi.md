@@ -122,6 +122,8 @@ android的 5-6.x 中的chromium66 是不支持的 但是笔者找了个小米的
 
 tips: execCommand 其实一直是个野娃娃 W3C标准并不承认它 它的文档也是非官方的 https://w3c.github.io/editing/execCommand.html 所以它到后面可能是会被浏览器抛弃的
 
+关于execCommand 更多的操作可访问: http://demo.404mzk.com/execCommands/
+
 # Clipboard API方案
 
 
