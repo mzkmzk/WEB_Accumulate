@@ -135,3 +135,4 @@ tips: execCommand 其实一直是个野娃娃 W3C标准并不承认它 它的文
 # 参考资料
 
 1. https://cloud.tencent.com/developer/article/1004671
+2. https://developers.google.com/web/updates/2015/04/cut-and-copy-commands
