@@ -15,7 +15,7 @@
 具体的核心思路是
 
 1. 创建一个不可见的textarea
-2. 通过select库来模拟用户选中dom 具体参考可见 https://github.com/zenorocha/select/blob/master/src/select.js
+2. 通过select库来模拟用户选中dom 
 3. 通过execCommand来执行copy
 
 主要参考clipboardjs里的源码
@@ -57,6 +57,57 @@ try {
 catch (err) {
     succeeded = false;
 }
+```
+
+如何模拟用户选择操作? 
+
+具体参考可见 https://github.com/zenorocha/select/blob/master/src/select.js
+
+
+```javascript
+function select(element) {
+    var selectedText;
+
+    if (element.nodeName === 'SELECT') {
+        element.focus();
+
+        selectedText = element.value;
+    }
+    else if (element.nodeName === 'INPUT' || element.nodeName === 'TEXTAREA') {
+        var isReadOnly = element.hasAttribute('readonly');
+
+        if (!isReadOnly) {
+            element.setAttribute('readonly', '');
+        }
+
+        element.select();
+        element.setSelectionRange(0, element.value.length);
+
+        if (!isReadOnly) {
+            element.removeAttribute('readonly');
+        }
+
+        selectedText = element.value;
+    }
+    else {
+        if (element.hasAttribute('contenteditable')) {
+            element.focus();
+        }
+
+        var selection = window.getSelection();
+        var range = document.createRange();
+
+        range.selectNodeContents(element);
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        selectedText = selection.toString();
+    }
+
+    return selectedText;
+}
+
+module.exports = select;
 ```
 
 
