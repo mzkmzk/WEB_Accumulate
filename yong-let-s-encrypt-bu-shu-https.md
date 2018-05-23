@@ -12,7 +12,7 @@
 
 > 创建申请认证的.csr文件
 
-`openssl req -new -sha256 -key 404mzk-com-private.key -subj "/" -reqexts SAN -config <(cat /etc/ssl/openssl.cnf <(printf "[SAN]\nsubjectAltName=DNS:www.404mzk.com,404mzk.com")) > 404mzk-com.csr`
+`openssl req -new -sha256 -key 404mzk-com-private.key -subj "/" -reqexts SAN -config <(cat /etc/ssl/openssl.cnf <(printf "[SAN]\nsubjectAltName=DNS:www.404mzk.com,DNS:404mzk.com")) > 404mzk-com.csr`
 
 这里需要注意的是openssl.cnf的位置各个系统不太一致
 
