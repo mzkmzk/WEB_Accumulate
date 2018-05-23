@@ -152,12 +152,12 @@ demo地址: https://demo.404mzk.com/clipboard/clipboardapi.html
 
 ```javascript
 navigator.clipboard.readText()
-                .then(text => {
-                  setTips('Pasted content: '+ text);
-                })
-                .catch(err => {
-                  setTips('Failed to read clipboard contents: ' + JSON.stringify(err));
-                });
+    .then(text => {
+      setTips('Pasted content: '+ text);
+    })
+    .catch(err => {
+      setTips('Failed to read clipboard contents: ' + JSON.stringify(err));
+    });
 ```
 # FLASH 方案
 
