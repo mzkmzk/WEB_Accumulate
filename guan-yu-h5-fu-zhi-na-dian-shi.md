@@ -148,8 +148,6 @@ demo地址: https://demo.404mzk.com/clipboard/clipboardapi.html
     });
 ```
 
-```
-
 获取粘贴板内容 
 
 ```javascript
