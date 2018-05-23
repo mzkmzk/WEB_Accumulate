@@ -169,3 +169,4 @@ navigator.clipboard.readText()
 
 1. https://cloud.tencent.com/developer/article/1004671
 2. https://developers.google.com/web/updates/2015/04/cut-and-copy-commands
+3. 粘贴板: https://zhuanlan.zhihu.com/p/34698155
