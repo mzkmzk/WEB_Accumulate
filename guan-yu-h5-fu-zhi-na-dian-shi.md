@@ -126,8 +126,41 @@ tips: execCommand 其实一直是个野娃娃 W3C标准并不承认它 它的文
 
 # Clipboard API方案
 
+浏览器在写粘贴板时 一般都直接写进去了 而读粘贴板一般都会弹框询问用户
 
+tips: 这个api必须是https域名 && 当前页面处于活跃状态 && 非控制台调试
 
+demo地址: https://demo.404mzk.com/clipboard/clipboardapi.html
+
+这个比较简单 复制到粘贴板
+
+```javascript
+ navigator.clipboard.writeText('要复制的文本')
+    .then(() => {
+      setTips('文本已经成功复制到剪切板')
+     
+    })
+    .catch(err => {
+      // This can happen if the user denies clipboard permissions:
+      // 如果用户没有授权，则抛出异常
+      setTips('无法复制此文本：', JSON.stringify(err))
+     
+    });
+```
+
+```
+
+获取粘贴板内容 
+
+```javascript
+navigator.clipboard.readText()
+                .then(text => {
+                  setTips('Pasted content: '+ text);
+                })
+                .catch(err => {
+                  setTips('Failed to read clipboard contents: ' + JSON.stringify(err));
+                });
+```
 # FLASH 方案
 
 这里就不说了 逐渐抛弃FLASH
