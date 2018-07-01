@@ -181,3 +181,6 @@ console.log( son instanceof Grandfather)
 
 因为instanceof 主要是检验son.__protype__ === Son.prototype
 
+# 参考链接
+
+1. 原型链参考: https://segmentfault.com/a/1190000002900676
