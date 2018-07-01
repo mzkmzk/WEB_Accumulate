@@ -58,6 +58,19 @@ catch中会添加一个catch的作用域
 
 最主要的是 local -> 闭包 -> global的作用域查找
 
+### 何时创建Scope
+
+除了Global作用域 其他作用域 都是 function创建起来的作用域
+
+现在ES6多了一种
+
+```javascript
+{
+    let x = 0;
+}
+console.log(x); // Uncaught ReferenceError: x is not defined
+```
+
 # 原型链
 
 了解原型链之前先理解几个概念
