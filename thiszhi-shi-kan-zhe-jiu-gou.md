@@ -64,7 +64,24 @@ catch中会添加一个catch的作用域
 
 1. prototype: xxx.protype指向的是xxx的原型(原型一般都是对象)
 2. constructor: 存在于xxx.prototype.constructor, 指向xxx(xxx为构造函数)
-3. __proto__: 每次被new的实例化对象 都会包含一个__proto__属性 其值是其constructor的prototyoe
+3. __proto__: 每次被new的实例化对象 都会包含一个__proto__属性 其值是其constructor的prototype
 
-原型链要理解
+从上可得出
+
+1. 函数 都有 __proto__ 和 prototype, __proto__指向函数的构造函数的原型, prototype指向的是 函数的原型
+2. 对象 只有 __proto__ 指向对象的构造函数的原型
+
+下面列出几个对比 来理解原型链
+
+需要注意的额外点
+
+Function.__proto__ === Function.prototype
+
+可以说Function的构造函数还是其自身
+
+好奇为什么Function的构造函数还是Function的读者
+
+如果不是这样的话 那是先有Function的构造函数 还是先有Function呢? 
+
+
 
