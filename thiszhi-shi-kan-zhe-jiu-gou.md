@@ -166,6 +166,10 @@ Son.prototype.sonFn = function(){}
 
 var son = new Son('mzk')
 console.log(son)
+console.log( typeof son) //object
+console.log( son.__proto__ === Son.prototype)
+console.log( Son.prototype === Father.prototype)
+console.log( Father.prototype === Grandfather.prototype)
 console.log( son instanceof Son)
 console.log( son instanceof Father)
 console.log( son instanceof Grandfather)
