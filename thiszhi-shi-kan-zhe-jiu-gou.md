@@ -173,5 +173,7 @@ console.log( son instanceof Grandfather)
 
 需要注意的是构造函数的.prototype 必须声明在 inheritPrototype函数之后 不然会被覆盖掉
 
+考题: 为什么浏览器能判断son 是Son Father Grandfather的实例?
 
+因为instanceof 主要是检验son.__protype__ === Son.prototype
 
