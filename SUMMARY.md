@@ -7,7 +7,6 @@
       * [JS](js.md)
       * [getComputedStyle](getcomputedstyle.md)
       * [获取方向键keyCode问题](keycodewen_ti.md)
-      * [原型链](yuan_xing_lian.md)
       * [事件管理](shi_jian_guan_li.md)
         * [图片Onload事件](tu_pian_onload_shi_jian.md)
         * [onchange](onchange.md)
