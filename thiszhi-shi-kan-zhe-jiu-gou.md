@@ -57,3 +57,14 @@ catch中会添加一个catch的作用域
 当然with一般我们不用 catch里影响到作用域的就只有参数, 一般对我们影响不大
 
 最主要的是 local -> 闭包 -> global的作用域查找
+
+# 原型链
+
+了解原型链之前先理解几个概念
+
+1. prototype: xxx.protype指向的是xxx的原型(原型一般都是对象)
+2. constructor: 存在于xxx.prototype.constructor, 指向xxx(xxx为构造函数)
+3. __proto__: 每次被new的实例化对象 都会包含一个__proto__属性 其值是其constructor的prototyoe
+
+原型链要理解
+
