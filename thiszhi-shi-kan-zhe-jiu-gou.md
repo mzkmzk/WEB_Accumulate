@@ -73,6 +73,55 @@ catch中会添加一个catch的作用域
 
 下面列出几个对比 来理解原型链
 
+体验地址: http://demo.404mzk.com/prototype_chain/
+
+```javascript
+var Foo = function(){}
+var foo = new Foo()
+foo.a = 1
+Foo.prototype.a = 2
+console.log(foo)
+
+console.log(foo.prototype === undefined)
+console.log(foo.__proto__ === Foo.prototype)
+console.log(foo.__proto__.constructor === Foo)
+console.log(Foo.prototype.constructor === Foo)
+
+//对象
+var obj = {}
+console.log(obj)
+console.log( obj.__proto__ === Object.prototype)
+console.log(Object.prototype.__proto__ === null)
+
+//函数
+var fn = function(){}
+console.log( fn )
+console.log(fn.__proto__ === Function.prototype)
+console.log(Function.prototype.__proto__ === Object.prototype)
+console.log(Object.prototype.__proto__ === null)
+
+//正则
+var regExp = /a/
+console.log( regExp )
+console.log( regExp.__proto__ === RegExp.prototype)
+console.log( RegExp.prototype.__proto__ === Object.prototype)
+console.log( Object.prototype.__proto__ === null)
+
+//数组
+
+var array = []
+console.log(array)
+console.log(array.__proto__ === Array.prototype)
+console.log(Array.prototype.__proto__ === Object.prototype)
+console.log(Object.prototype.__proto__ === null)
+```
+
+可以看下几个类似的原型链
+
+总结就是
+
+1. 万物都是Object.prototype出来的
+
 需要注意的额外点
 
 Function.__proto__ === Function.prototype
@@ -82,6 +131,47 @@ Function.__proto__ === Function.prototype
 好奇为什么Function的构造函数还是Function的读者
 
 如果不是这样的话 那是先有Function的构造函数 还是先有Function呢? 
+
+### 原型链的利用
+
+最常见的就是用来做继承了
+
+体验地址: http://demo.404mzk.com/prototype_chain/extend.html
+
+```javascript
+function inheritPrototype(subType, superType){
+    var prototype = Object(superType.prototype)
+    prototype.constructor = subType
+    subType.prototype = prototype
+}
+
+var Grandfather = function(name){
+    this.grandfahterName = name
+}
+Grandfather.prototype.grandfatherFn = function(){}
+
+var Father = function(name){
+    Grandfather.apply(this, arguments)
+    this.fatherName = name
+}
+inheritPrototype(Father, Grandfather)
+Father.prototype.fatherFn = function(){}
+
+var Son = function(name){
+    Father.apply(this, arguments)
+    this.sonName = name
+}
+inheritPrototype(Son, Father)
+Son.prototype.sonFn = function(){}
+
+var son = new Son('mzk')
+console.log(son)
+console.log( son instanceof Son)
+console.log( son instanceof Father)
+console.log( son instanceof Grandfather)
+```
+
+需要注意的是构造函数的.prototype 必须声明在 inheritPrototype函数之后 不然会被覆盖掉
 
 
 
