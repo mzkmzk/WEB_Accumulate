@@ -30,9 +30,30 @@
 
 这取决于 console.log(a)中取的是 b函数的a 还是 最外层定义的a变量
 
-一般来说 前端er最起码能知道作用域链取是 local作用域 -> 闭包作用域 -> window作用域 
+一般来说 前端er最起码能知道作用域链取是 local作用域 -> 闭包作用域 -> global作用域 
 
 但是有没有作用域是在local之前的呢? 有就是wich 和 try catch(e)中的catch(){}
 
 体验demo: http://demo.404mzk.com/actionScope/index.html
 
+普通的作用域
+
+![普通的作用域](/assets/QQ20180701-112457.png)
+
+with的作用域
+
+![with作用域](/assets/QQ20180701-113003.png)
+
+with作用域会排在local作用域前 在with内执行的获取变量
+
+都会类似的先在 this.xxx(this为withObj) 的查找变量 然后再去查找local作用域
+
+try catch(){}中catch的作用域
+
+![try-catch中的作用域](/assets/QQ20180701-113227.png)
+
+catch中会添加一个catch的作用域
+
+当然with一般我们不用 catch里影响到作用域的就只有参数, 一般对我们影响不大
+
+最主要的是 local -> 闭包 -> global的作用域查找
