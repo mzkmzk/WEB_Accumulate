@@ -5,8 +5,8 @@
 tips:
 
 1. 函数表达式 function xxx(){} 会变量提升 可以简单理解为其代码在当前函数的最顶端
-2. 变量提升: var a = 2 会分两步执行, 函数顶部声明var a, 然后到了具体的行 才执行 a = 2 赋值
-3. 变量提升的权重(权重越大 它在越上面 就会越容易被覆盖): (var === 参数) > function xxx
+2. 声明提升: var a = 2 会分两步执行, 函数顶部声明var a, 然后到了具体的代码行 才执行 a = 2 赋值
+3. 声明提升的权重(权重越大 它在越上面 就会越容易被覆盖): (var === 参数) > function xxx
 4. 给未声明的变量赋值: 非严格模式下 会隐式的变为全局变量, 严格模式下会报错
 
 体验DEMO: http://demo.404mzk.com/val_up/
@@ -68,8 +68,8 @@ new testFn()
 
 tips: 
 
-1. 一旦函数被bind 或者 箭头函数定义时, 假如被new 函数 会报错`xxx is not a constructor`
-2. 如果一个函数连续被bind两次, 则this取第一次bind
+1. 一旦函数被bind 或者 箭头函数定义时, 假如new 函数 会报错`xxx is not a constructor`
+2. 如果一个函数连续被bind两次, 则this取第一次bind绑定this
 
 可以看下demo http://demo.404mzk.com/this/
 
