@@ -1,12 +1,152 @@
 # this知识看这就够
 
+# 声明提升
+
+
+
 # this的取值
 
-### 声明式和表达式 定义函数
+### 直接定义function
 
 ```javascript
-
+function testFn(){
+    console.log(this)
+}
+testFn()
 ```
+这样调用 this在非严格模式下为 window 在严格模式下为 undefined
+
+### 属性方法调用
+
+```javascript
+var testObj = {
+    data: 'testObjData',
+    testFn: function(){
+        console.log(this.data)
+    }
+}
+testObj.testFn() //testObjData
+```
+
+方法函数调用时 this为调用对象
+
+### 构造函数
+
+var testFn = function(){
+    this.data = 'counstructoredData'
+}
+
+new testFn()
+
+在new的时候 构造函数this是被实例化的对象
+
+以上都是常规的this调用
+
+那么js 有没有一些改变常规this的方法呢?
+
+有的 优先级是 
+
+箭头函数 > bind > apply、call > 正常this
+
+tips: 
+
+1. 一旦函数被bind 或者 箭头函数定义时, 假如被new 函数 会报错`xxx is not a constructor`
+2. 如果一个函数连续被bind两次, 则this取第一次bind
+
+可以看下demo http://demo.404mzk.com/this/
+
+```javascript
+     
+var data = 'globalData'
+//bind apply 箭头会遵循哪个?
+var bindThis = { data: 'bindThisData'},
+    bind2This = { data: 'bind2This'},
+    applyThis = { data: 'applyThisData'},
+    callThis = { data: 'callThisData'},
+    testObj = {
+        data: 'testObjData',
+        simple: function(){
+            var testFn = function(){
+                console.log(this.data)
+            },
+            obj = { data: 'objData'}
+            console.log(this.data)
+            testFn()
+            obj.testFn = testFn
+            obj.testFn()
+        },
+        all: function(){
+            var testFn = () => {
+                console.log(this.data)
+            }
+
+            testFn = testFn.bind(bindThis)
+            testFn.apply(applyThis)
+            testFn()
+        },
+        binAndApply: function(){
+            var testFn =function(){
+                console.log(this.data)
+            }
+
+            testFn = testFn.bind(bindThis)
+            testFn.apply(applyThis)
+            testFn()
+        },
+        
+        bind2: function(){
+            var testFn = function(){
+                console.log(this.data)
+            }
+            testFn1 = testFn.bind(bindThis)
+            testFn2 = testFn1.bind(bind2This)
+            testFn2()
+        },
+        constructorAndArrow: function(){
+            var testFn = () => {
+                console.log(this.data)
+            }
+           
+            new testFn()
+           //会报错
+        },
+        constructorAndBind: function(){
+            var testFn = () => {
+                console.log(this.data)
+            }
+            testFn = testFn.bind(bindThis)
+           
+            new testFn()
+        }
+
+    }
+    console.log('testObj.simple 开始')
+    testObj.simple()
+    console.log('testObj.all 开始')
+    testObj.all()
+    console.log('testObj.binAndApply 开始')
+    testObj.binAndApply()
+    console.log('testObj.bind2 开始')
+    testObj.bind2()
+    
+    try{
+        console.log('testObj.constructorAndArrow 开始')
+        testObj.constructorAndArrow()
+    }catch(e){
+        console.log(e)
+    }
+    try{
+        console.log('testObj.constructorAndBind 开始')
+        testObj.constructorAndBind()
+    }catch(e){
+        console.log(e)
+    }
+```
+
+### 改变this的方法 bind apply call 箭头函数
+
+
+
 
 # 作用域链
 
