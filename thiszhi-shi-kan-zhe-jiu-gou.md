@@ -341,3 +341,4 @@ console.log( son instanceof Grandfather)
 # 参考链接
 
 1. 原型链参考: https://segmentfault.com/a/1190000002900676
+2. this参考: https://github.com/creeperyang/blog/issues/16
