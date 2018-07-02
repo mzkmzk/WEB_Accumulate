@@ -29,6 +29,8 @@ function testFn(){
     console.log(this)
 }
 testFn()
+
+
 ```
 这样调用 this在非严格模式下为 window 在严格模式下为 undefined
 
@@ -88,10 +90,11 @@ var bindThis = { data: 'bindThisData'},
                 console.log(this.data)
             },
             obj = { data: 'objData'}
-            console.log(this.data)
-            testFn()
+            console.log(this.data)//'testObjData'
+            testFn() //'galobalData'
+
             obj.testFn = testFn
-            obj.testFn()
+            obj.testFn() //'objData'
         },
         all: function(){
             var testFn = () => {
@@ -99,8 +102,8 @@ var bindThis = { data: 'bindThisData'},
             }
 
             testFn = testFn.bind(bindThis)
-            testFn.apply(applyThis)
-            testFn()
+            testFn.apply(applyThis) //'testObjData'
+            testFn() //'testObjData'
         },
         binAndApply: function(){
             var testFn =function(){
@@ -108,8 +111,8 @@ var bindThis = { data: 'bindThisData'},
             }
 
             testFn = testFn.bind(bindThis)
-            testFn.apply(applyThis)
-            testFn()
+            testFn.apply(applyThis) 'bindThisData'
+            testFn() 'bindThisData'
         },
         
         bind2: function(){
@@ -118,15 +121,15 @@ var bindThis = { data: 'bindThisData'},
             }
             testFn1 = testFn.bind(bindThis)
             testFn2 = testFn1.bind(bind2This)
-            testFn2()
+            testFn2() //'bindThisData'
         },
         constructorAndArrow: function(){
             var testFn = () => {
                 console.log(this.data)
             }
            
-            new testFn()
-           //会报错
+            new testFn() //'TypeError: testFn is not a constructor'
+           
         },
         constructorAndBind: function(){
             var testFn = () => {
@@ -134,7 +137,8 @@ var bindThis = { data: 'bindThisData'},
             }
             testFn = testFn.bind(bindThis)
            
-            new testFn()
+            new testFn() //'TypeError: testFn is not a constructor'
+            
         }
 
     }
