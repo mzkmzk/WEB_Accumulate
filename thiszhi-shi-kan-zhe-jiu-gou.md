@@ -2,8 +2,23 @@
 
 # 声明提升
 
+tips:
 
+1. 函数表达式 function xxx(){} 会变量提升 可以简单理解为其
+2. 变量提升: var a = 2 会分两步执行, 函数顶部声明var a, 然后到了具体的行 才执行 a = 2 赋值
+3. 变量提升的权重(权重越大 它在越上面 就会越容易被覆盖): (var === 参数) > function xxx
 
+体验DEMO: http://demo.404mzk.com/val_up/
+
+```javascript
+ var b = function(a){
+    console.log(a)  // ƒ a(){}
+    var a = 2
+    function a(){}
+    console.log(a) //2
+}
+b(1)
+```
 # this的取值
 
 ### 直接定义function
