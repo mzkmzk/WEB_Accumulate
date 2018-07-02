@@ -170,7 +170,7 @@ var bindThis = { data: 'bindThisData'},
 
 当我们取变量时
 
-```function
+```javascript
 (function(){
     var a = 1
     function b(){
