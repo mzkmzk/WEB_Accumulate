@@ -161,9 +161,6 @@ var bindThis = { data: 'bindThisData'},
     }
 ```
 
-
-
-
 # 作用域链
 
 作用域的作用是什么
