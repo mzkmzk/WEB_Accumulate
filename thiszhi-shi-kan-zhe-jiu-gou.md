@@ -44,7 +44,9 @@ new testFn()
 
 那么js 有没有一些改变常规this的方法呢?
 
-有的 优先级是 
+### 改变this的方法 bind apply call 箭头函数
+
+绑定this的 优先级是 
 
 箭头函数 > bind > apply、call > 正常this
 
@@ -142,8 +144,6 @@ var bindThis = { data: 'bindThisData'},
         console.log(e)
     }
 ```
-
-### 改变this的方法 bind apply call 箭头函数
 
 
 
