@@ -9,21 +9,25 @@
 ```javascript
 var quick_sort = function(sort_array){
 
-    if (sort_array.length <= 1) return sort_array 
-
-    var sort_array_length = sort_array.length,
-        privot = 0,
-        left_array = _.filter(sort_array, function(element, index){
-            return ( element <= sort_array[ privot ] && index !== privot ) 
-        }),
-        right_array = _.filter(sort_array, function(element, index){
-            return  ( element > sort_array[ privot ] && index !== privot ) 
-        })
-
+     if (sort_array.length <= 1) return sort_array 
+    
+     var privotNum = sort_array[0],
+        nowNum,
+        left_array = [],
+        right_array = []
+        
+        for (var i = sort_array.length - 1; i > 0; i--) {
+            nowNum = sort_array[i]
+            if ( nowNum <= privotNum ){
+                left_array.push( nowNum)
+            }else {
+                right_array.push( nowNum)
+            }
+        }
         left_array = quick_sort(left_array)
         right_array = quick_sort(right_array)
-
-    return left_array.concat([ sort_array[ privot ] ], right_array)
+        
+    return left_array.concat([ privotNum ], right_array)
 }
 
 console.log(quick_sort([0,3,1,2,2]))
