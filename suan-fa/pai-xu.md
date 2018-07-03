@@ -20,8 +20,8 @@ var quick_sort = function(sort_array){
             return  ( element > sort_array[ privot ] && index !== privot ) 
         })
 
-        left_array = fn(left_array)
-        right_array = fn(right_array)
+        left_array = quick_sort(left_array)
+        right_array = quick_sort(right_array)
 
     return left_array.concat([ sort_array[ privot ] ], right_array)
 }
