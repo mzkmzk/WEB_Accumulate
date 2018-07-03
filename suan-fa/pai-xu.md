@@ -34,6 +34,8 @@ console.log(quick_sort([0,3,1,2,2]))
 console.log(quick_sort([2,4,3,4,6,3,2,5,6,2,3,6,5,4]))
 ```
 
+DEMO: http://demo.404mzk.com/arithmetic/sort/quick_sort/index.html
+
 # 2. 冒泡
 
 两个for
@@ -62,7 +64,7 @@ console.log(bubble_sort([0,3,1,2,2]))
 console.log(bubble_sort([2,4,3,4,6,3,2,5,6,2,3,6,5,4]))
 ```
 
-# 参考链接
+DEMO: http://demo.404mzk.com/arithmetic/sort/bubble_sort/index.html
 
 # 3. 归并排序
 
@@ -92,6 +94,11 @@ Array.prototype.merge_sort = function(){
 console.log([0,3,1].merge_sort())
 console.log([0,3].merge_sort())
 ```
+
+可查找DEMO: http://demo.404mzk.com/arithmetic/sort/merge_sort/index.html
+
+# 参考链接
+
 
 1. 快排: <http://www.ruanyifeng.com/blog/2011/04/quicksort_in_javascript.html>
 2. 归并排序: https://zh.wikipedia.org/wiki/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F
