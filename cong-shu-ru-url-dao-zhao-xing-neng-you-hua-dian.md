@@ -20,6 +20,8 @@ https://blog.csdn.net/zhanghaiyang9999/article/details/39505861
 
 traceroute
 
+# NS记录
+
 # 浏览器加载资源的顺序
 
 # chrome devtools 的network
