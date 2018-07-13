@@ -14,6 +14,12 @@ chrome://dns/
 
 chrome://net-internals/#dns
 
+TTL的含义
+
+https://blog.csdn.net/zhanghaiyang9999/article/details/39505861
+
+traceroute
+
 # 浏览器加载资源的顺序
 
 # chrome devtools 的network
