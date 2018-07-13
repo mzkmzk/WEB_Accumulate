@@ -8,6 +8,12 @@
 
 # 全局过程
 
+# DNS
+
+chrome://dns/
+
+chrome://net-internals/#dns
+
 # 浏览器加载资源的顺序
 
 # chrome devtools 的network
