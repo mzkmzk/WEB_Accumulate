@@ -34,7 +34,11 @@ chrome://net-internals/#dns
 
 另外还有 chrome://dns/ (用隐身模式打开会显示 DNS pre-resolution and TCP pre-connection is disabled.)
 
-主要根据 域名访问的次数 来选取下次启动chrome时 prefetch的NDS
+主要根据 域名访问的次数 来选取下次启动chrome时 prefetch的NDS 
+
+Future startups will prefetch DNS records for 10 hostnames
+
+代表这次启动chrome的时候 预DNS解析的10个域名(根据上次关闭chrome时 访问量最大的10个域名)
 
 ![prefetch dns](/assets/QQ20180716-125120.png)
 
