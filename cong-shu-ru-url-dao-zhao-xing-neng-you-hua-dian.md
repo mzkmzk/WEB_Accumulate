@@ -18,13 +18,13 @@
 
 -> hosts文件查找
 
--> 路由器中查找 (不一定每个路由器都有这个功能)
-
--> ISP(Internet Service Provider 中国电信、联通等)DNS服务器 或 系统设置的DNS服务器中 (例如8.8.8.8) 的缓存中查找
+-> DNS服务器缓存查找( DNS的服务器可能是 ISP(Internet Service Provider 中国电信、联通等) 或 系统设置的DNS服务器中 (例如8.8.8.8) 或路由器设置的DNS服务器 或本机(例如使用dig命令时)) 
 
 -> DNS服务器 分级查询域名
 
 ### 浏览器的DNS缓存 
+
+拿chrome来说
 
 chrome://net-internals/#dns
 
@@ -42,9 +42,7 @@ Future startups will prefetch DNS records for 10 hostnames
 
 ![prefetch dns](/assets/QQ20180716-125120.png)
 
-
-
-拿chrome
+### 
 
 ### CNAME优化
 
