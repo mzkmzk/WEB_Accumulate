@@ -127,7 +127,10 @@ DNS服务器要怎么去找`f.root-servers.net.`的IP呢
 
 具体的计算细节后面再研究 
 
-参考: https://jaminzhang.github.io/dns/The-Reason-of-There-Is-Only-13-DNS-Root-Servers/
+参考: 
+
+1. https://jaminzhang.github.io/dns/The-Reason-of-There-Is-Only-13-DNS-Root-Servers/
+2. https://www.zhihu.com/question/22587247
 
 ### CNAME优化
 
