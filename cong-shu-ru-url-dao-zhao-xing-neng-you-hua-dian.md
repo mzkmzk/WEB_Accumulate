@@ -117,6 +117,9 @@ xunlei.com.		1800	IN	NS	ns2.xunlei.net.
 
 DNS服务器要怎么去找`f.root-servers.net.`的IP呢
 
+这些根域的IP 是直接写在DNS服务器中
+
+
 > 为什么根服务器只有13个IP?
 
 受限于UDP包大小(512) 只能容下13组响应地址
