@@ -117,6 +117,18 @@ xunlei.com.		1800	IN	NS	ns2.xunlei.net.
 
 DNS服务器要怎么去找`f.root-servers.net.`的IP呢
 
+> 为什么根服务器只有13个IP?
+
+受限于UDP包大小(512) 只能容下13组响应地址
+
+在 Internet 数据传输中，UDP 数据长度控制在 576 字节（Internet 标准 MTU 值），
+
+而在许多 UDP 应用程序设计中数据包被限制成 512 字节或更小。这样可以防止数据包的丢失。
+
+具体的计算细节后面再研究 
+
+参考: https://jaminzhang.github.io/dns/The-Reason-of-There-Is-Only-13-DNS-Root-Servers/
+
 ### CNAME优化
 
 https://www.cloudxns.net/Support/detail/id/1937.html
