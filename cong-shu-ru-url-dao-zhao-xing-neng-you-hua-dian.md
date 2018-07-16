@@ -24,8 +24,27 @@
 
 -> DNS服务器 分级查询域名
 
+### 浏览器的DNS缓存 
+
+chrome://net-internals/#dns
+
+![dns缓存](/assets/QQ20180716-124635.png)
+
+这里主要记录域名的IP 和过期时间 TTL这里显示以毫秒为单位 (async DNS configuration 和 最后列的network changes 未研究透彻)
+
+另外还有 chrome://dns/ (用隐身模式打开会显示 DNS pre-resolution and TCP pre-connection is disabled.)
+
+主要根据 域名访问的次数 来选取下次启动chrome时 prefetch的NDS
+
+![prefetch dns](/assets/QQ20180716-125120.png)
 
 
+
+拿chrome
+
+### CNAME优化
+
+https://www.cloudxns.net/Support/detail/id/1937.html
 
 遗留:
 
