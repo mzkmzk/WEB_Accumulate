@@ -10,9 +10,27 @@
 
 # DNS
 
-chrome://dns/
+假设现在要解析http://www.xunlei.com
 
-chrome://net-internals/#dns
+-> 发起http://www.xunlei.com请求
+
+-> 查找浏览器DNS缓存 (可  `chrome://net-internals/#dns`或`chrome://dns/` 查看 DNS缓存情况)
+
+-> hosts文件查找
+
+-> 路由器中查找 (不一定每个路由器都有这个功能)
+
+-> ISP(Internet Service Provider 中国电信、联通等)DNS服务器 或 系统设置的DNS服务器中 (例如8.8.8.8) 的缓存中查找
+
+-> DNS服务器 分级查询域名
+
+
+
+
+遗留:
+
+
+chrome://dns/ 和 chrome://net-internals/#dns图表的解释
 
 TTL的含义
 
