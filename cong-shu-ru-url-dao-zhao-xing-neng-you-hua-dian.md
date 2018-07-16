@@ -54,8 +54,6 @@ Future startups will prefetch DNS records for 10 hostnames
 
 -> 查找到www.xunlei.com.的域名服务器
 
-
-
 ```bash
 dig +trace www.xunlei.com
 
@@ -108,6 +106,16 @@ xunlei.com.		1800	IN	NS	ns3.xunlei.net.
 xunlei.com.		1800	IN	NS	ns2.xunlei.net.
 ;; Received 277 bytes from 180.97.157.20#53(180.97.157.20) in 24 ms
 ```
+
+这里可能会有几个疑问
+
+> 如何拿到根域名服务器的查询地址
+
+例如上面的  
+
+`.			175147	IN	NS	f.root-servers.net.`
+
+DNS服务器要怎么去找`f.root-servers.net.`的IP呢
 
 ### CNAME优化
 
