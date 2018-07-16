@@ -38,7 +38,7 @@ chrome://net-internals/#dns
 
 Future startups will prefetch DNS records for 10 hostnames
 
-代表这次启动chrome的时候 预DNS解析的10个域名(根据上次关闭chrome时 访问量最大的10个域名)
+代表这次启动chrome的时候 预DNS解析的10个域名(根据上次关闭chrome前 访问量最大的10个域名)
 
 ![prefetch dns](/assets/QQ20180716-125120.png)
 
