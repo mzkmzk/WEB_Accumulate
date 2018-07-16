@@ -42,7 +42,72 @@ Future startups will prefetch DNS records for 10 hostnames
 
 ![prefetch dns](/assets/QQ20180716-125120.png)
 
-### 
+###  DNS 服务器 分级查询域名
+
+可以通过dig命令来查询 例如解析www.xunlei.com
+
+-> 查找`.`下一级的域名查找服务器
+
+-> 查看`com.`下一级的域名查找服务器
+
+-> 查找`xunlei.com.`下一级的域名查找服务器
+
+-> 查找到www.xunlei.com.的域名服务器
+
+
+
+```bash
+dig +trace www.xunlei.com
+
+; <<>> DiG 9.8.3-P1 <<>> +trace www.xunlei.com
+;; global options: +cmd
+.			175147	IN	NS	f.root-servers.net.
+.			175147	IN	NS	j.root-servers.net.
+.			175147	IN	NS	a.root-servers.net.
+.			175147	IN	NS	c.root-servers.net.
+.			175147	IN	NS	e.root-servers.net.
+.			175147	IN	NS	b.root-servers.net.
+.			175147	IN	NS	d.root-servers.net.
+.			175147	IN	NS	l.root-servers.net.
+.			175147	IN	NS	m.root-servers.net.
+.			175147	IN	NS	g.root-servers.net.
+.			175147	IN	NS	i.root-servers.net.
+.			175147	IN	NS	h.root-servers.net.
+.			175147	IN	NS	k.root-servers.net.
+;; Received 508 bytes from 192.168.8.24#53(192.168.8.24) in 25 ms
+
+com.			172800	IN	NS	a.gtld-servers.net.
+com.			172800	IN	NS	b.gtld-servers.net.
+com.			172800	IN	NS	c.gtld-servers.net.
+com.			172800	IN	NS	d.gtld-servers.net.
+com.			172800	IN	NS	e.gtld-servers.net.
+com.			172800	IN	NS	f.gtld-servers.net.
+com.			172800	IN	NS	g.gtld-servers.net.
+com.			172800	IN	NS	h.gtld-servers.net.
+com.			172800	IN	NS	i.gtld-servers.net.
+com.			172800	IN	NS	j.gtld-servers.net.
+com.			172800	IN	NS	k.gtld-servers.net.
+com.			172800	IN	NS	l.gtld-servers.net.
+com.			172800	IN	NS	m.gtld-servers.net.
+;; Received 492 bytes from 192.203.230.10#53(192.203.230.10) in 215 ms
+
+xunlei.com.		172800	IN	NS	ns1.xunlei.net.
+xunlei.com.		172800	IN	NS	ns2.xunlei.net.
+xunlei.com.		172800	IN	NS	ns3.xunlei.net.
+xunlei.com.		172800	IN	NS	ns4.xunlei.net.
+xunlei.com.		172800	IN	NS	ns5.xunlei.net.
+;; Received 212 bytes from 192.35.51.30#53(192.35.51.30) in 268 ms
+
+www.xunlei.com.		1800	IN	CNAME	vip1.images.client.xunlei.com.
+vip1.images.client.xunlei.com. 1800 IN	A	183.60.209.24
+vip1.images.client.xunlei.com. 1800 IN	A	180.97.157.249
+xunlei.com.		1800	IN	NS	ns1.xunlei.net.
+xunlei.com.		1800	IN	NS	ns5.xunlei.net.
+xunlei.com.		1800	IN	NS	ns4.xunlei.net.
+xunlei.com.		1800	IN	NS	ns3.xunlei.net.
+xunlei.com.		1800	IN	NS	ns2.xunlei.net.
+;; Received 277 bytes from 180.97.157.20#53(180.97.157.20) in 24 ms
+```
 
 ### CNAME优化
 
