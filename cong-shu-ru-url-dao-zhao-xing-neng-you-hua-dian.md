@@ -252,7 +252,7 @@ flxdns.com.		43200	IN	NS	h102.dlgslb.cn.
 
 为什么最后查nxnop015.flxdns.com.的时候还返回了flxdns.com.的ns?
 
-后续再研究.暂时推测是加热DNS缓存?
+后续再研究.暂时推测是加热DNS服务器缓存?
 
 参考: 
 
