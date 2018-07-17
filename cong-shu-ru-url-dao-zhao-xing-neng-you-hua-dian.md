@@ -300,9 +300,13 @@ danuoyi.alicdn.com.	86400	IN	NS	danuoyinewns4.gds.alicdn.com.
 这里还可以看到一个优化点
 
 查到CNAME时 同时把CNAME的上一级NS找出来 方便CNAME时查找IP
-参考: 
 
+# 优化点
 
+DNS方便可以着手的点
+
+1. CDN: 多了一层CNAME  牺牲DNS时间 但加快内容传输
+2. edns: 
 
 # 浏览器加载资源的顺序
 
@@ -316,4 +320,4 @@ https://developers.google.com/web/tools/chrome-devtools/network-performance/refe
 2. DNS解析: http://www.ruanyifeng.com/blog/2016/06/dns.html
 3. 为何只有13个根服务器IP: https://jaminzhang.github.io/dns/The-Reason-of-There-Is-Only-13-DNS-Root-Servers/
 4. 为何只有13个根服务器IP: https://www.zhihu.com/question/22587247
-
+5. edns: https://www.v2ex.com/t/46596
