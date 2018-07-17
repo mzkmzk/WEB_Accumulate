@@ -44,35 +44,35 @@ Future startups will prefetch DNS records for 10 hostnames
 
 ###  DNS 服务器 分级查询域名
 
-可以通过dig命令来查询 例如解析www.xunlei.com
+可以通过dig命令来查询 例如解析www.baidu.com
 
 -> 查找`.`下一级的域名查找服务器
 
 -> 查看`com.`下一级的域名查找服务器
 
--> 查找`xunlei.com.`下一级的域名查找服务器
+-> 查找`baidu.com.`下一级的域名查找服务器
 
--> 查找到www.xunlei.com.的域名服务器
+-> 查找到www.baidu.com.的域名服务器
 
 ```bash
-dig +trace www.xunlei.com
+dig +trace www.baidu.com
 
-; <<>> DiG 9.8.3-P1 <<>> +trace www.xunlei.com
+; <<>> DiG 9.8.3-P1 <<>> +trace www.baidu.com
 ;; global options: +cmd
-.			175147	IN	NS	f.root-servers.net.
-.			175147	IN	NS	j.root-servers.net.
-.			175147	IN	NS	a.root-servers.net.
-.			175147	IN	NS	c.root-servers.net.
-.			175147	IN	NS	e.root-servers.net.
-.			175147	IN	NS	b.root-servers.net.
-.			175147	IN	NS	d.root-servers.net.
-.			175147	IN	NS	l.root-servers.net.
-.			175147	IN	NS	m.root-servers.net.
-.			175147	IN	NS	g.root-servers.net.
-.			175147	IN	NS	i.root-servers.net.
-.			175147	IN	NS	h.root-servers.net.
-.			175147	IN	NS	k.root-servers.net.
-;; Received 508 bytes from 192.168.8.24#53(192.168.8.24) in 25 ms
+.			88586	IN	NS	c.root-servers.net.
+.			88586	IN	NS	k.root-servers.net.
+.			88586	IN	NS	i.root-servers.net.
+.			88586	IN	NS	g.root-servers.net.
+.			88586	IN	NS	j.root-servers.net.
+.			88586	IN	NS	d.root-servers.net.
+.			88586	IN	NS	h.root-servers.net.
+.			88586	IN	NS	b.root-servers.net.
+.			88586	IN	NS	a.root-servers.net.
+.			88586	IN	NS	l.root-servers.net.
+.			88586	IN	NS	f.root-servers.net.
+.			88586	IN	NS	m.root-servers.net.
+.			88586	IN	NS	e.root-servers.net.
+;; Received 508 bytes from 192.168.8.24#53(192.168.8.24) in 32 ms
 
 com.			172800	IN	NS	a.gtld-servers.net.
 com.			172800	IN	NS	b.gtld-servers.net.
@@ -87,24 +87,22 @@ com.			172800	IN	NS	j.gtld-servers.net.
 com.			172800	IN	NS	k.gtld-servers.net.
 com.			172800	IN	NS	l.gtld-servers.net.
 com.			172800	IN	NS	m.gtld-servers.net.
-;; Received 492 bytes from 192.203.230.10#53(192.203.230.10) in 215 ms
+;; Received 494 bytes from 192.5.5.241#53(192.5.5.241) in 42 ms
 
-xunlei.com.		172800	IN	NS	ns1.xunlei.net.
-xunlei.com.		172800	IN	NS	ns2.xunlei.net.
-xunlei.com.		172800	IN	NS	ns3.xunlei.net.
-xunlei.com.		172800	IN	NS	ns4.xunlei.net.
-xunlei.com.		172800	IN	NS	ns5.xunlei.net.
-;; Received 212 bytes from 192.35.51.30#53(192.35.51.30) in 268 ms
+baidu.com.		172800	IN	NS	dns.baidu.com.
+baidu.com.		172800	IN	NS	ns2.baidu.com.
+baidu.com.		172800	IN	NS	ns3.baidu.com.
+baidu.com.		172800	IN	NS	ns4.baidu.com.
+baidu.com.		172800	IN	NS	ns7.baidu.com.
+;; Received 201 bytes from 192.43.172.30#53(192.43.172.30) in 326 ms
 
-www.xunlei.com.		1800	IN	CNAME	vip1.images.client.xunlei.com.
-vip1.images.client.xunlei.com. 1800 IN	A	183.60.209.24
-vip1.images.client.xunlei.com. 1800 IN	A	180.97.157.249
-xunlei.com.		1800	IN	NS	ns1.xunlei.net.
-xunlei.com.		1800	IN	NS	ns5.xunlei.net.
-xunlei.com.		1800	IN	NS	ns4.xunlei.net.
-xunlei.com.		1800	IN	NS	ns3.xunlei.net.
-xunlei.com.		1800	IN	NS	ns2.xunlei.net.
-;; Received 277 bytes from 180.97.157.20#53(180.97.157.20) in 24 ms
+www.baidu.com.		1200	IN	CNAME	www.a.shifen.com.
+a.shifen.com.		1200	IN	NS	ns4.a.shifen.com.
+a.shifen.com.		1200	IN	NS	ns1.a.shifen.com.
+a.shifen.com.		1200	IN	NS	ns2.a.shifen.com.
+a.shifen.com.		1200	IN	NS	ns3.a.shifen.com.
+a.shifen.com.		1200	IN	NS	ns5.a.shifen.com.
+;; Received 228 bytes from 220.181.38.10#53(220.181.38.10) in 40 ms
 ```
 
 这里可能会有几个疑问
@@ -130,17 +128,16 @@ www.404mzk.com.		600	IN	A	120.24.37.206
 直接拿到IP. 但是为了更好配置比较灵活都会做个CNAME 例如
 
 ```shell
-dig +trace www.xunlei.com
+dig +trace www.baidu.com
 ...
 ...
-www.xunlei.com.		1800	IN	CNAME	vip1.images.client.xunlei.com.
-vip1.images.client.xunlei.com. 1800 IN	A	183.60.209.24
-vip1.images.client.xunlei.com. 1800 IN	A	180.97.157.249
-xunlei.com.		1800	IN	NS	ns4.xunlei.net.
-xunlei.com.		1800	IN	NS	ns2.xunlei.net.
-xunlei.com.		1800	IN	NS	ns3.xunlei.net.
-xunlei.com.		1800	IN	NS	ns5.xunlei.net.
-xunlei.com.		1800	IN	NS	ns1.xunlei.net.
+www.baidu.com.		1200	IN	CNAME	www.a.shifen.com.
+a.shifen.com.		1200	IN	NS	ns4.a.shifen.com.
+a.shifen.com.		1200	IN	NS	ns1.a.shifen.com.
+a.shifen.com.		1200	IN	NS	ns2.a.shifen.com.
+a.shifen.com.		1200	IN	NS	ns3.a.shifen.com.
+a.shifen.com.		1200	IN	NS	ns5.a.shifen.com.
+;; Received 228 bytes from 220.181.38.10#53(220.181.38.10) in 40 ms
 ```
 
 好处 
@@ -150,6 +147,10 @@ xunlei.com.		1800	IN	NS	ns1.xunlei.net.
     的话 只要改C的IP即可
     
 *. 设置CDN厂商IP: 做CDN 一般域名上CDN 会把自己的域名配置成CDN商的分配的域名 方便CDN做智能DNS 
+
+> 为什么www.baidu.com最后查询还返回了a.shifen.com.的NS?
+
+因为方便CNAME www.a.shi.fen.com去取IP
 
 > 如何拿到根域名服务器的查询地址
 
