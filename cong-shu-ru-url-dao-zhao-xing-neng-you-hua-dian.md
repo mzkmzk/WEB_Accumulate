@@ -214,6 +214,46 @@ f.root-servers.net.	604619	IN	A	192.5.5.241
 
 具体的计算细节后面再研究 
 
+> 为什么有些CDN厂商最后返回了多余的NS?
+
+例如
+
+```shell
+dig +trace nxnop015.flxdns.com.
+
+...
+;; Received 497 bytes from 192.203.230.10#53(192.203.230.10) in 258 ms
+
+flxdns.com.		172800	IN	NS	dns1.flxdns.com.
+flxdns.com.		172800	IN	NS	dns2.flxdns.com.
+flxdns.com.		172800	IN	NS	dns4.flxdns.com.
+flxdns.com.		172800	IN	NS	dns5.flxdns.com.
+flxdns.com.		172800	IN	NS	dns6.flxdns.com.
+flxdns.com.		172800	IN	NS	h102.dlgslb.cn.
+;; Received 240 bytes from 192.12.94.30#53(192.12.94.30) in 303 ms
+
+nxnop015.flxdns.com.	120	IN	A	183.232.201.64
+nxnop015.flxdns.com.	120	IN	A	183.232.201.65
+nxnop015.flxdns.com.	120	IN	A	183.232.201.88
+nxnop015.flxdns.com.	120	IN	A	183.232.201.89
+nxnop015.flxdns.com.	120	IN	A	183.240.6.94
+nxnop015.flxdns.com.	120	IN	A	183.240.6.95
+flxdns.com.		43200	IN	NS	dns1.flxdns.com.
+flxdns.com.		43200	IN	NS	dns2.flxdns.com.
+flxdns.com.		43200	IN	NS	dns4.flxdns.com.
+flxdns.com.		43200	IN	NS	dns5.flxdns.com.
+flxdns.com.		43200	IN	NS	dns6.flxdns.com.
+flxdns.com.		43200	IN	NS	h102.dlgslb.cn.
+;; Received 400 bytes from 122.11.50.214#53(122.11.50.214) in 39 ms
+
+```
+
+在查flxdns.com.的时候已经得到了NS
+
+为什么最后查nxnop015.flxdns.com.的时候还返回了flxdns.com.的ns?
+
+后续再研究.暂时推测是加热DNS缓存?
+
 参考: 
 
 1. https://jaminzhang.github.io/dns/The-Reason-of-There-Is-Only-13-DNS-Root-Servers/
