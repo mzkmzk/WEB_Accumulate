@@ -297,16 +297,15 @@ danuoyi.alicdn.com.	86400	IN	NS	danuoyinewns3.gds.alicdn.com.
 danuoyi.alicdn.com.	86400	IN	NS	danuoyinewns4.gds.alicdn.com.
 ```
 
+这里还可以看到一个优化点
+
+查到CNAME时 同时把CNAME的上一级NS找出来 方便CNAME时查找IP
 参考: 
 
 1. https://jaminzhang.github.io/dns/The-Reason-of-There-Is-Only-13-DNS-Root-Servers/
 2. https://www.zhihu.com/question/22587247
 
 # DNSPod
-
-TTL的含义
-
-https://blog.csdn.net/zhanghaiyang9999/article/details/39505861
 
 traceroute
 
