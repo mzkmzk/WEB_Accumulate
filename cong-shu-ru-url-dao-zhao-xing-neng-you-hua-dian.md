@@ -119,6 +119,8 @@ DNS服务器要怎么去找`f.root-servers.net.`的IP呢
 
 这些根域的IP 是直接写在DNS服务器中
 
+可以通过`dig ns .` 查看部分根服务器的IP
+
 
 > 为什么根服务器只有13个IP?
 
