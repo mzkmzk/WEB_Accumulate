@@ -109,6 +109,48 @@ xunlei.com.		1800	IN	NS	ns2.xunlei.net.
 
 这里可能会有几个疑问
 
+> 设置CNAME的作用 
+
+一般普通点的解析可能是这样的
+
+```shell
+dig +trace www.404mzk.com
+...
+...
+;; Received 492 bytes from 193.0.14.129#53(193.0.14.129) in 216 ms
+
+404mzk.com.		172800	IN	NS	dns9.hichina.com.
+404mzk.com.		172800	IN	NS	dns10.hichina.com.
+;; Received 335 bytes from 192.35.51.30#53(192.35.51.30) in 275 ms
+
+www.404mzk.com.		600	IN	A	120.24.37.206
+;; Received 48 bytes from 140.205.41.25#53(140.205.41.25) in 32 ms
+```
+
+直接拿到IP. 但是为了更好配置比较灵活都会做个CNAME 例如
+
+```shell
+dig +trace www.xunlei.com
+...
+...
+www.xunlei.com.		1800	IN	CNAME	vip1.images.client.xunlei.com.
+vip1.images.client.xunlei.com. 1800 IN	A	183.60.209.24
+vip1.images.client.xunlei.com. 1800 IN	A	180.97.157.249
+xunlei.com.		1800	IN	NS	ns4.xunlei.net.
+xunlei.com.		1800	IN	NS	ns2.xunlei.net.
+xunlei.com.		1800	IN	NS	ns3.xunlei.net.
+xunlei.com.		1800	IN	NS	ns5.xunlei.net.
+xunlei.com.		1800	IN	NS	ns1.xunlei.net.
+```
+
+好处 
+
+*. 批量更改IP方便: 同一IP同时指向一个域名, 例如 A->1.1.1.1 B->1.1.1.1 
+    如果此时1.1.1.1的机器发生变了变化, 那么A和B的解析都要变, 如果A CNAME C , B CNAME C
+    的话 只要改C的IP即可
+    
+*. 设置CDN厂商IP: 做CDN 一般域名上CDN 会把自己的域名配置成CDN商的分配的域名 方便CDN做智能DNS 
+
 > 如何拿到根域名服务器的查询地址
 
 例如上面的  
@@ -121,6 +163,45 @@ DNS服务器要怎么去找`f.root-servers.net.`的IP呢
 
 可以通过`dig ns .` 查看部分根服务器的IP
 
+```shell
+> dig ns .
+
+; <<>> DiG 9.8.3-P1 <<>> ns .
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 64857
+;; flags: qr rd ra; QUERY: 1, ANSWER: 13, AUTHORITY: 0, ADDITIONAL: 4
+
+;; QUESTION SECTION:
+;.				IN	NS
+
+;; ANSWER SECTION:
+.			105234	IN	NS	l.root-servers.net.
+.			105234	IN	NS	a.root-servers.net.
+.			105234	IN	NS	h.root-servers.net.
+.			105234	IN	NS	b.root-servers.net.
+.			105234	IN	NS	g.root-servers.net.
+.			105234	IN	NS	i.root-servers.net.
+.			105234	IN	NS	e.root-servers.net.
+.			105234	IN	NS	d.root-servers.net.
+.			105234	IN	NS	c.root-servers.net.
+.			105234	IN	NS	k.root-servers.net.
+.			105234	IN	NS	j.root-servers.net.
+.			105234	IN	NS	m.root-servers.net.
+.			105234	IN	NS	f.root-servers.net.
+
+;; ADDITIONAL SECTION:
+a.root-servers.net.	604595	IN	A	198.41.0.4
+h.root-servers.net.	604712	IN	A	198.97.190.53
+k.root-servers.net.	604712	IN	A	193.0.14.129
+f.root-servers.net.	604619	IN	A	192.5.5.241
+
+;; Query time: 27 msec
+;; SERVER: 202.96.128.86#53(202.96.128.86)
+;; WHEN: Tue Jul 17 00:22:58 2018
+;; MSG SIZE  rcvd: 292
+
+```
 
 > 为什么根服务器只有13个IP?
 
@@ -137,14 +218,7 @@ DNS服务器要怎么去找`f.root-servers.net.`的IP呢
 1. https://jaminzhang.github.io/dns/The-Reason-of-There-Is-Only-13-DNS-Root-Servers/
 2. https://www.zhihu.com/question/22587247
 
-### CNAME优化
 
-https://www.cloudxns.net/Support/detail/id/1937.html
-
-遗留:
-
-
-chrome://dns/ 和 chrome://net-internals/#dns图表的解释
 
 TTL的含义
 
