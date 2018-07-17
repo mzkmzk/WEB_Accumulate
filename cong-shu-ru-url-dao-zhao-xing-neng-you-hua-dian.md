@@ -274,3 +274,8 @@ traceroute
 # chrome devtools 的network
 
 https://developers.google.com/web/tools/chrome-devtools/network-performance/reference
+
+# 参考链接
+
+1. DNS解析: https://blog.csdn.net/crazw/article/details/8986504
+2. DNS解析: http://www.ruanyifeng.com/blog/2016/06/dns.html
