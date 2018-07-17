@@ -302,14 +302,7 @@ danuoyi.alicdn.com.	86400	IN	NS	danuoyinewns4.gds.alicdn.com.
 查到CNAME时 同时把CNAME的上一级NS找出来 方便CNAME时查找IP
 参考: 
 
-1. https://jaminzhang.github.io/dns/The-Reason-of-There-Is-Only-13-DNS-Root-Servers/
-2. https://www.zhihu.com/question/22587247
 
-# DNSPod
-
-traceroute
-
-# NS记录
 
 # 浏览器加载资源的顺序
 
@@ -321,3 +314,6 @@ https://developers.google.com/web/tools/chrome-devtools/network-performance/refe
 
 1. DNS解析: https://blog.csdn.net/crazw/article/details/8986504
 2. DNS解析: http://www.ruanyifeng.com/blog/2016/06/dns.html
+3. 为何只有13个根服务器IP: https://jaminzhang.github.io/dns/The-Reason-of-There-Is-Only-13-DNS-Root-Servers/
+4. 为何只有13个根服务器IP: https://www.zhihu.com/question/22587247
+
