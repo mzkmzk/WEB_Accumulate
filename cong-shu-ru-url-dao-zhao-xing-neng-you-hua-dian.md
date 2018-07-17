@@ -254,6 +254,49 @@ flxdns.com.		43200	IN	NS	h102.dlgslb.cn.
 
 后续再研究.暂时推测是加热DNS服务器缓存?
 
+> CDN 跟 DNS的关联
+
+其实从dig表名看来 就是多设了一层CNAME
+
+CNAME到 解析到 CDN的DNS服务器 然后 CDN的NDS服务器进行就近IP选择
+
+```shell
+dig +trace g.alicdn.com
+...
+alicdn.com.		172800	IN	NS	nsp.alibabaonline.com.
+alicdn.com.		172800	IN	NS	ns8.alibabaonline.com.
+alicdn.com.		172800	IN	NS	nshz.alibabaonline.com.
+alicdn.com.		172800	IN	NS	nsp2.alibabaonline.com.
+;; Received 246 bytes from 192.54.112.30#53(192.54.112.30) in 421 ms
+
+g.alicdn.com.		86400	IN	CNAME	g.alicdn.com.danuoyi.alicdn.com.
+danuoyi.alicdn.com.	86400	IN	NS	danuoyinewns2.gds.alicdn.com.
+danuoyi.alicdn.com.	86400	IN	NS	danuoyinewns1.gds.alicdn.com.
+danuoyi.alicdn.com.	86400	IN	NS	danuoyinewns3.gds.alicdn.com.
+danuoyi.alicdn.com.	86400	IN	NS	danuoyinewns4.gds.alicdn.com.
+```
+
+然后对 CNAME到CDN的域名上
+
+```shell
+dig +trace g.alicdn.com.danuoyi.alicdn.com.
+
+...
+danuoyi.alicdn.com.	86400	IN	NS	danuoyinewns4.gds.alicdn.com.
+danuoyi.alicdn.com.	86400	IN	NS	danuoyinewns3.gds.alicdn.com.
+danuoyi.alicdn.com.	86400	IN	NS	danuoyinewns2.gds.alicdn.com.
+danuoyi.alicdn.com.	86400	IN	NS	danuoyinewns1.gds.alicdn.com.
+;; Received 165 bytes from 140.205.71.243#53(140.205.71.243) in 1240 ms
+
+g.alicdn.com.danuoyi.alicdn.com. 180 IN	A	113.96.109.122
+g.alicdn.com.danuoyi.alicdn.com. 180 IN	A	183.57.82.243
+g.alicdn.com.danuoyi.alicdn.com. 180 IN	A	113.96.109.123
+danuoyi.alicdn.com.	86400	IN	NS	danuoyinewns1.gds.alicdn.com.
+danuoyi.alicdn.com.	86400	IN	NS	danuoyinewns2.gds.alicdn.com.
+danuoyi.alicdn.com.	86400	IN	NS	danuoyinewns3.gds.alicdn.com.
+danuoyi.alicdn.com.	86400	IN	NS	danuoyinewns4.gds.alicdn.com.
+```
+
 参考: 
 
 1. https://jaminzhang.github.io/dns/The-Reason-of-There-Is-Only-13-DNS-Root-Servers/
