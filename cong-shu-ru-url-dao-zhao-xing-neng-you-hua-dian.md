@@ -12,6 +12,8 @@
 
 -> TCP
 
+-> SSL/TLS
+
 -> HTTP 请求 
 
 -> 浏览器渲染DOM TREE CSS RULE TREE 和最后的RENDER TREE
