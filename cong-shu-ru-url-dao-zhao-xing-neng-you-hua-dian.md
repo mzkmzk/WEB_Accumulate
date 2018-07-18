@@ -8,6 +8,12 @@
 
 # 全局过程
 
+-> DNS
+
+-> TCP
+
+-> 浏览器渲染DOM TREE CSS RULE TREE 和最后的RENDER TREE
+
 # DNS
 
 假设现在要解析http://www.xunlei.com
@@ -306,7 +312,7 @@ danuoyi.alicdn.com.	86400	IN	NS	danuoyinewns4.gds.alicdn.com.
 DNS方便可以着手的点
 
 1. CDN: 多了一层CNAME  牺牲DNS时间 但加快内容传输
-2. edns: 加入用户原始IP到DNS协议中 找到最合适用户的IP 包括在ISP层面和 地域层面
+2. edns: 加入用户原始IP 找到最合适用户的IP 包括在ISP层面和 地域层面
 
 # 浏览器加载资源的顺序
 
