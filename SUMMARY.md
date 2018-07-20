@@ -125,6 +125,7 @@
       * [object-position和object-fit](object-positionhe-object-fit.md)
       * [Transition](transition.md)
       * [Animation](animation.md)
+      * [background](background.md)
   * [HTML](_html.md)
     * [基本标签](_html/ji-ben-biao-qian.md)
       * [hr标签](_html/ji-ben-biao-qian/hrbiao-qian.md)
