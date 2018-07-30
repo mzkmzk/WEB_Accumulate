@@ -33,3 +33,7 @@ html{ font-size: xxxxvw }
 
 .xxx{ padding: aaarem }
 ```
+
+# 参考链接
+
+1. https://github.com/simaQ/cssfun/issues/1
