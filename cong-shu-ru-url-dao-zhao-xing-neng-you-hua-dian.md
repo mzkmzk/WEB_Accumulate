@@ -137,7 +137,7 @@ www.404mzk.com.		600	IN	A	120.24.37.206
 
 直接拿到IP. 但是为了更好配置比较灵活都会做个CNAME 例如
 
-```shell
+```bash
 dig +trace www.baidu.com
 ...
 ...
