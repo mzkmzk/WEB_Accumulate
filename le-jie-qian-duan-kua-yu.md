@@ -42,7 +42,7 @@ form跨域传输数据有两种
 JSONP的原理就是
 
 1. 先在window设置一个全局函数名 window.abc = function(){}
-2. 往页面插入一个script: script src="...?callback=abc"
+2. 往页面插入一个script标签: script src="...?callback=abc"
 3. 服务器返回 abc({...}) 
 
 所以JSONP只是类似请求一个JS资源..所以它当然只能GET拉
