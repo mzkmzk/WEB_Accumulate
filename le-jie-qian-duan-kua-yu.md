@@ -41,7 +41,7 @@ form跨域传输数据有两种
 
 JSONP的原理就是
 
-1. 现在window设置一个函数名 window.abc = function(){}
+1. 先在window设置一个全局函数名 window.abc = function(){}
 2. 往页面插入一个script: script src="...?callback=abc"
 3. 服务器返回 abc({...}) 
 
