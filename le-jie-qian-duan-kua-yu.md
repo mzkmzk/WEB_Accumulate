@@ -67,6 +67,10 @@ form表单和jsonp都是默认带cookie
 
 服务器需要带`Access-Control-Allow-Credentials: true`
 
+但是设置了 上面这个属性
+
+那么` Access-Control-Allow-Origin: 不能写*, 只能写一个地址`
+
 而浏览器需要设置`xhr.withCredentials = true`
 
 这样才能带上cookie
