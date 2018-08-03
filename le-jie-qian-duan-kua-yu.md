@@ -29,7 +29,9 @@ form跨域传输数据有两种
 
 在响应问中返回类似的结构
 
-`<script>document.domain="xxx.com";window.top.btupload({"result":0})</script>`
+````html
+<script>document.domain="xxx.com";window.top.btupload({"result":0})</script>
+```
 
 因为第一种Set Cookie 服务器只能设置服务器根域或子域的Cookie
 
