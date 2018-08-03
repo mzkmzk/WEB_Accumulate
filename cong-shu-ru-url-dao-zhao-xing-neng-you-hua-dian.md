@@ -121,7 +121,7 @@ a.shifen.com.		1200	IN	NS	ns5.a.shifen.com.
 
 一般普通点的解析可能是这样的
 
-```shell
+```bash
 dig +trace www.404mzk.com
 ...
 ...
@@ -174,7 +174,7 @@ DNS服务器要怎么去找`f.root-servers.net.`的IP呢
 
 可以通过`dig ns .` 查看部分根服务器的IP
 
-```shell
+```bash
 > dig ns .
 
 ; <<>> DiG 9.8.3-P1 <<>> ns .
@@ -228,7 +228,7 @@ f.root-servers.net.	604619	IN	A	192.5.5.241
 
 例如
 
-```shell
+```bash
 dig +trace nxnop015.flxdns.com.
 
 ...
@@ -270,7 +270,7 @@ flxdns.com.		43200	IN	NS	h102.dlgslb.cn.
 
 CNAME到 解析到 CDN的DNS服务器 然后 CDN的NDS服务器进行就近IP选择
 
-```shell
+```bash
 dig +trace g.alicdn.com
 ...
 alicdn.com.		172800	IN	NS	nsp.alibabaonline.com.
@@ -288,7 +288,7 @@ danuoyi.alicdn.com.	86400	IN	NS	danuoyinewns4.gds.alicdn.com.
 
 然后对 CNAME到CDN的域名上
 
-```shell
+```bash
 dig +trace g.alicdn.com.danuoyi.alicdn.com.
 
 ...
