@@ -29,7 +29,7 @@ form跨域传输数据有两种
 
 在响应问中返回类似的结构
 
-````html
+```html
 <script>document.domain="xxx.com";window.top.btupload({"result":0})</script>
 ```
 
