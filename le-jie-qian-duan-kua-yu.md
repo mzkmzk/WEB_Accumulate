@@ -95,6 +95,6 @@ aaa.xxx.com接口返回Set-Cookie: upgrade=; Path=/; Domain=xxx.com
 
 这样才能设置cookie 否则无效(抓包有Set-Cookie头 但是chrome Response没有)
 
-![无效cookie](/assets/QQ20180802-183651.png)
+![无效cookie](/assets/QQ20180803-125705.png)
 
 
