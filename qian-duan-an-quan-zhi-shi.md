@@ -148,3 +148,4 @@ export default class CheckRequestHost {
 # 参考链接
 
 1. 运营商劫持: https://js8.in/2017/08/04/Web%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2%E5%8A%AB%E6%8C%81%E5%92%8C%E5%8F%8D%E5%8A%AB%E6%8C%81/
+2. 安全系列文章: https://div.io/user/118
