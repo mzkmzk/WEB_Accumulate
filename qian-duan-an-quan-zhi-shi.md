@@ -6,18 +6,82 @@
 
 反射型XSS: 在url中添加参数, 假如JS里取了这个参数 然后直接填充到HTML中, 就容易引发反射型XSS
 
-存储型XSS: 例如在论坛里的评论区 黑客A评论了有害的脚本内容 有害内容存储到了服务器中 用户B在加载到黑客A的评论的时 就触发了XSS
+存储型XSS: 例如在论坛里的评论区 黑客A评论了有害的脚本内容 有害内容存储到了服务器中 用户B在加载到黑客A的评论的时 就触发了XSS  
 
-  
+更多攻的思路可参考: https://wps2015.org/drops/drops/Bypass%20xss%E8%BF%87%E6%BB%A4%E7%9A%84%E6%B5%8B%E8%AF%95%E6%96%B9%E6%B3%95.html
+
+
 
 ### 检
 
-1. XSS 很多是通过内联事件来触发的
-2. 窃听到的数据 或者 加载的黑客JS脚本 都是需要发网络请求的
+XSS攻击很多都是在html上面去做手脚
 
-第二点中
+特别是在内联事件中
+
+比如
+
+```html
+<img src="{路径}" />
+
+<img src="{路径" onload="alert(/xss/)}" />
+```
+
+所以检测内联事件的代码是一种思路 
+
+```javascript
+;(function(){
+    function hookEvent(onevent) {
+        document.addEventListener(onevent.substr(2), function (e) {
+            var element = e.target;
+
+            // 跳过已扫描的事件
+            var flags = element['_flag'];
+            if (!flags) {
+                flags = element['_flag'] = {};
+            }
+            if (typeof flags[onevent] != 'undefined') {
+                return;
+            }
+            flags[onevent] = true;
+
+            if (element.nodeType != Node.ELEMENT_NODE) {
+                return;
+            }
+            var code = element.getAttribute(onevent);
+            if (code && /xss|alert|eval|setTimeout|setInterval|Function/.test(code)) {
+                // element[onevent] = null; //拦截内联事件
+                window._windowVipReportErrorArray.push({
+                    isCustom: true,
+                    eventType: 11002, //自定义错误ID 建议2W以上
+                    message: code
+                 })
+            }
+        }, true);
+    }
+
+    if ( document.addEventListener ){
+        for (var k in document) {
+            if (/^on/.test(k)) {
+                hookEvent(k);
+            }
+        }
+    }
+    
+})()
+```
+
+这段代码主要是
+
+1. 遍历document的on属性进行绑定事件
+2. 对绑定过一次的事情 以后直接跳过
 
 ### 防
+
+防XSS 最重要的还是靠读取URL参数、读取用户输入数据和获取后端数据的时候
+
+必须要过滤或转义
+
+
 
 # CSRF
 
