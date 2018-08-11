@@ -231,4 +231,4 @@ export default class CheckRequestHost {
 2. 安全系列文章: https://div.io/user/118
 3. etherdream的博客: https://www.cnblogs.com/index-html/
 4. etherdream的github: https://github.com/EtherDream
-5. 基础型的XSS说明: https://mp.weixin.qq.com/s/6ChuUdOm7vej8vQ3dbC8fw?
+5. 基础型的XSS说明: https://mp.weixin.qq.com/s/6ChuUdOm7vej8vQ3dbC8fw
