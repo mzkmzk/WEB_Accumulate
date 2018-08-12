@@ -148,9 +148,23 @@ function escapeHtml(value) {
 
 ### 攻
 
+运营商或者DNS解析 串改JS HTML 的内容
+
 ### 检
 
+其实比较简单的校验方法有 
+
+ HTML 文件里 写好MD5值
+
+如果发现执行时 HTML内容和写好的MD5值不一致 上报HTML内容
+
+但是这个方案不好实施是 每次改变HTML内容的时 都要重新写MD5值 是比较麻烦的
+
 ### 防
+
+可以加CSP规则 阻止其他域的script和iframe加载
+
+终极大招 HTTPS+HSTS
 
 鸡肋的标签检查: https://div.io/topic/443
 
