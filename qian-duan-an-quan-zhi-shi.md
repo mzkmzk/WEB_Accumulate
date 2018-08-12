@@ -10,8 +10,6 @@
 
 更多攻的思路可参考: https://wps2015.org/drops/drops/Bypass%20xss%E8%BF%87%E6%BB%A4%E7%9A%84%E6%B5%8B%E8%AF%95%E6%96%B9%E6%B3%95.html
 
-
-
 ### 检
 
 XSS攻击很多都是在html上面去做手脚
@@ -92,6 +90,35 @@ XSS攻击很多都是在html上面去做手脚
 | ' | &#x27; |
 | / | &#x2F; |
 
+简单的过滤下
+
+```javascript
+
+function escapeHtml(value) {
+  if (typeof value !== 'string') {
+    return value
+  }
+  return value.replace(/[&<>`"'\/]/g, function(result) {
+    return {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '`': '&#x60;',
+      '"': '&quot;',
+      "'": '&#x27;',
+      '/': '&#x2f;',
+    }[result]
+  })
+}
+```
+
+但是通过上面的转义 并不要以为就这样就结束了 黑客们其他怪招还很多...
+
+还一颗通过CSP来防止内联脚本的执行
+
+```html
+<meta http-equiv="Content-Security-Policy" content="script-src *.baidu.com baidu.com ... 'unsafe-inline' 'unsafe-eval';">
+```
 
 # CSRF
 
