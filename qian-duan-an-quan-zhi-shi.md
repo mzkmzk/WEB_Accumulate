@@ -280,7 +280,9 @@ export default class CheckRequestHost {
 
 要么嵌入iframe (通过上面监听网络可捕抓) 
 
+而窃听数据时 一般都会发包的攻击者的服务器上的 
 
+而伪装成用户的话 就靠上面说的CSRF防范
 
 # 参考链接
 
