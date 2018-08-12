@@ -127,9 +127,22 @@ function escapeHtml(value) {
 
 ### 攻
 
+类似攻击的是在a.com里有一个接口c 是改变收货地址的
+
+在hacker.com 发 c接口 结果c接口还执行成功了
+
+导致hacker.com的所有者 可以随便模仿用户 改变收货地址
+
 ### 检
 
+检查的话 接口方检查检查referfrom 非白名单的话就记录下
+
 ### 防
+
+1. token每次刷新页面 会生成一个token 在input hidden的value里, 每次发请求前取出来给到服务器
+2. 服务器验证白名单referfrom
+3. 验证码
+4. 设置验证请求头: 例如取出cookie里的userid sessionid 加上对称密钥和时间戳 然后base64 发到服务器验证
 
 # 劫持
 
