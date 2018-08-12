@@ -120,6 +120,9 @@ function escapeHtml(value) {
 <meta http-equiv="Content-Security-Policy" content="script-src *.baidu.com baidu.com ... 'unsafe-inline' 'unsafe-eval';">
 ```
 
+或者通过一个脚本来帮助标签和属性的白名单设置`https://jsxss.com/zh/index.html`
+
+
 # CSRF
 
 ### 攻
