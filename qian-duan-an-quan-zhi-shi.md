@@ -73,6 +73,14 @@ XSS攻击很多都是在html上面去做手脚
 1. 遍历document的on属性进行绑定事件
 2. 对绑定过一次的事情 以后直接跳过
 
+这种方法还是会有遗漏的地方就是
+
+节点结构是: body->div->a
+
+heakcer把onclick写在div里 然后用户点击a 
+
+会触发heacker的div中的onclick 但是代码检查的是a的onclick 是无结果的
+
 ### 防
 
 防XSS 最重要的还是靠读取URL参数、读取用户输入数据和获取后端数据的时候
