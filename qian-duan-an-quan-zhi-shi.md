@@ -51,7 +51,7 @@ XSS攻击很多都是在html上面去做手脚
                 window._windowVipReportErrorArray.push({
                     isCustom: true,
                     eventType: 11002, //自定义错误ID 建议2W以上
-                    message: code
+                    message: element.outerHTML || 'element.outerHTML is undefined'
                  })
             }
         }, true);
@@ -80,6 +80,10 @@ XSS攻击很多都是在html上面去做手脚
 heakcer把onclick写在div里 然后用户点击a 
 
 会触发heacker的div中的onclick 但是代码检查的是a的onclick 是无结果的
+
+但是hacker 一般其实比较追求 onload onerror等 自动触发的情况 所以e.target一般就是hacker控制的节点
+
+这种情况还是OK的
 
 ### 防
 
