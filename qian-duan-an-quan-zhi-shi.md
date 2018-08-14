@@ -219,10 +219,10 @@ export default class CheckRequestHost {
         this.options = options.checkRequestHost
         // document.readyState === ''
         if( this.options ){
-            this.writeArray = [/xunlei\.com$/, 
-                                /a\.88cdn\.com/, 
-                                /baidu\.com$/,
-                                /kanimg\.com$/,
+            this.writeArray = [/\.xunlei\.com$/, 
+                                /\.a\.88cdn\.com/, 
+                                /\.baidu\.com$/,
+                                /\.kanimg\.com$/,
                               ].concat( this.options.writeArray || [])
             //this.lastPerformanceEntriesIndex = 0
             this.errorObj = errorObj
