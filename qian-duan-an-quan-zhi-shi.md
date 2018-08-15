@@ -120,7 +120,8 @@ function escapeHtml(value) {
 还一颗通过CSP来防止内联脚本的执行
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="script-src *.baidu.com baidu.com ... 'unsafe-inline' 'unsafe-eval';">
+<!-- 默认就是不允许内联脚本执行的 加上'unsafe-inline' 'unsafe-eval' 则允许内联脚本和eval的执行 -->
+<meta http-equiv="Content-Security-Policy" content="script-src *.baidu.com baidu.com ... ;">
 ```
 
 或者通过一个脚本来帮助标签和属性的白名单设置`https://jsxss.com/zh/index.html`
@@ -138,7 +139,7 @@ function escapeHtml(value) {
 
 ### 检
 
-检查的话 接口方检查检查referfrom 非白名单的话就记录下
+检查的话 接口方检查referfrom 非白名单的话就记录下
 
 ### 防
 
