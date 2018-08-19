@@ -87,7 +87,7 @@ performance.getEntriesByType('measure')获取
 
 1. Date.now返回到毫秒,而performance.mark|performance.now()是计算到百万分之一秒的
 2. Date.now会受系统程序阻塞,而performance.now()是以恒定速率递增,不受系统时间或阻塞影响
-3. 获得结果,一般相见后的结果要主动的报错,而performance.measure,会保存到performance里
+3. 获得结果,一般相减后的结果要主动的报错,而performance.measure,会保存到performance里
 
 # tips
 
