@@ -63,7 +63,7 @@ timing和getEntries有很多一样的属性,但是还是有些不一样的
 15. domInteractive
 16. domContentLoadedEventStart
 17. domContentLoadedEventEnd
-18. dpmComplete
+18. domComplete
 19. loadEventStart
 20. loadEventEnd
 
