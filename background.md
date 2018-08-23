@@ -20,6 +20,8 @@ positionY = ( 容器的高度 - 图片的高度 ) * percentY
 
 ![backgroun-postion](/assets/QQ20180720-183836.png)
 
+
+
 # 参考链接
 
 1. MDNbackground-postion的说明: https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-position
