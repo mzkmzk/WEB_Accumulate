@@ -20,6 +20,10 @@ positionY = ( 容器的高度 - 图片的高度 ) * percentY
 
 ![backgroun-postion](/assets/QQ20180720-183836.png)
 
+# CSS渐变
+
+线性渐变
+
 
 
 # 参考链接
