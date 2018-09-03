@@ -13,6 +13,7 @@
 5. 不可能省略top-left的
 6.  border-radius 属性是一个简写属性，用于设置四个 border-*-radius 属性。
 
+单独设置border-radius的x轴和y轴圆心时 可用/分隔 `border-radius: 100px / 75px`
 
 # border-radius设置的值
 
