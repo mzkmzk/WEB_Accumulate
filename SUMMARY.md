@@ -192,7 +192,6 @@
     * [浏览器缓存机制](http/liu-lan-qi-huan-cun-ji-zhi.md)
   * [单元测试](yuan.md)
     * [jest](yuan/jest.md)
-    * [K-Report的单元测试](yuan/k-reportyuan.md)
   * [自动构建](automatic-construction.md)
     * [多浏览器自动测试](automatic-construction/more_brower_test.md)
     * [自动化性能测试探索之路](automatic-construction/auto_performance.md)
