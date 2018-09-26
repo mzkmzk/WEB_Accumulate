@@ -174,8 +174,6 @@
         * [Event](event.md)
         * [数据缓存Data](数据缓存data.md)
         * [core](core.md)
-    * [jest](jest.md)
-      * [关于mock](jest/guan-yu-mock.md)
   * [小实验室](xiao_shi_yan_shi.md)
     * [JavaScript](javascript.md)
       * [scroll和resize的监听是否并发的](scrollhe_resize_de_jian_ting_shi_fou_bing_fa_de.md)
