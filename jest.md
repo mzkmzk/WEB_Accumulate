@@ -309,6 +309,51 @@ it('测试处理exec', () => {
 
 但是写好一次后 以后类似的mock功能 就可以通用了
 
+### 场景: 简单mock自己的库
+
+业务代码:
+
+不需要测试的库文件
+```javascript
+let msgbox = function(){...}
+
+module.exports = msgbox 
+```
+依赖了不需要测试的库文件
+
+```javascript
+let utils = {
+    check: (result) => {
+        if ( result === -100 ){
+            msgbox()
+        }
+    }
+}
+```
+
+而我们 需要测试 check 方法 
+
+###测试用例
+
+```javascript
+jest.mock('../../src/common/msgbox.js', () => {
+    return jest.fn()
+})
+
+beforeEach(() => {
+    msgbox.mockClear()
+})
+
+ it('-100要重新登录时 ', () => {
+        let result = util.checkAjaxError({
+            result: -100
+        })
+        
+        expect(msgbox.mock.calls[0][0]).toBe('抱歉，您当前的登录信息异常，需要重新登录。')
+    })
+
+```
+
 ## mock 引用的css文件、html和tpl文件
 
 在引用HTML时, jest一般都会报错
