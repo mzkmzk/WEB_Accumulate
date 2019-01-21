@@ -19,11 +19,13 @@
 
 来兼容window和linux设置环境变量的不同
 
-# spawn 执行 npm install
+# spawn 执行 命令 多平台命令名 不一致
+
+这里以 npm install为例
 
 用child_process的spawn执行 npm install时, 
 
-window的第一个参数要是npm.cmd 而linux则是cmd
+window的第一个参数要是npm.cmd 而linux则是npm
 
 为了兼容不同平台 用了 [cross-spawn](https://www.npmjs.com/package/cross-spawn)
 
@@ -34,3 +36,28 @@ let spawnInstall = spawn.sync('npm', ['install'], {
     cwd: path.join(__dirname, '../','template', 'jquery')
 })
 ```
+
+# spawn 执行命令 尽量使用局部命令
+
+像babel-cli webpack 等这些命令 和容易直接写成
+
+```javascript
+let { spawn } = require('child_process')
+
+spawn('webpack', ...)
+```
+
+假设开发者本机上全局装了 webpack 就会OK
+
+但是没装就不行了 
+
+所以我们需要把webpack安装在本项目的 node_modules 并且 使用node_modules的webpack命令
+
+在package.json 里增加 webpack
+
+```javascript
+spawn((path.join(__dirname, '..','node_modules', '.bin', 'webpack'), ...)
+```
+
+在node_modules里假设插件里有命令行设置 那么都会在本项目的node_modules/bin里
+

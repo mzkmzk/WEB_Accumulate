@@ -221,6 +221,7 @@
   * [了解前端跨域](le-jie-qian-duan-kua-yu.md)
   * [前端安全知识](qian-duan-an-quan-zhi-shi.md)
   * [常用代码段收集](chang-yong-dai-ma-duan-shou-ji.md)
+  * [vue的初学者问题](qian-duan/vuede-chu-xue-zhe-wen-ti.md)
 * [服务器](fu_wu_qi.md)
   * [Linux](linux.md)
     * [Common](common.md)
@@ -319,6 +320,7 @@
 * [源码理解](yuan-ma-yue-du.md)
   * [lighthouse](yuan-ma-yue-du/lighthouse.md)
   * [jQuery](yuan-ma-yue-du/jquery.md)
+  * [vue-cli](yuan-ma-yue-du/vue-cli.md)
 * [生活](sheng-huo.md)
   * [煲汤秘籍](sheng-huo/bao-tang-mi-ji.md)
 
