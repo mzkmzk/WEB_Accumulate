@@ -117,6 +117,19 @@ function escapeHtml(value) {
 
 但是通过上面的转义 并不要以为就这样就结束了 黑客们其他怪招还很多...
 
+> tips 浏览器偷偷帮忙做的转义
+
+笔者尝试的浏览器是 Mac的 Chrome 72.0.3626.109
+
+
+例如输入 `http://demo.404mzk.com/xss/xunlian/location.html?t= %<>/\"'`&=`
+
+location.href 得到的是 `http://demo.404mzk.com/xss/xunlian/location.html?t=%20%%3C%3E/\%22%27`&=`
+
+除了正反斜线和&= 没被encodeUri 之外 其他都被转义了...
+
+但是也不要灰心...很多前端在获取location.href 得到具体参数后 ..都会重新decodeURIComponent的 V_V
+
 还一颗通过CSP来防止内联脚本的执行
 
 ```html
@@ -211,10 +224,10 @@ export default class CheckRequestHost {
         this.options = options.checkRequestHost
         // document.readyState === ''
         if( this.options ){
-            this.writeArray = [/\.xunlei\.com$/, 
-                                /\.a\.88cdn\.com/, 
+            this.writeArray = [/\.xxx\.com$/, 
+                                /\.a\.xxxx\.com/, 
                                 /\.baidu\.com$/,
-                                /\.kanimg\.com$/,
+                                /\.xxxx\.com$/,
                               ].concat( this.options.writeArray || [])
             //this.lastPerformanceEntriesIndex = 0
             this.errorObj = errorObj

@@ -27,6 +27,16 @@ semver.valid(semver.coerce('42.6.7.9.3-alpha')) // '42.6.7'
 
 github地址: https://github.com/npm/node-semver
 
+### commander 命令行插件
+
+vue-cli 有非常多的命令行交互 
+
+选择的是 commander https://github.com/tj/commander.js
+
+而像webpack使用的是 yargs https://github.com/yargs/yargs
+
+其实非常类似 但是commander 的start多些
+
 # 学习到的技能
 
 ### jest设置初始化环境变量

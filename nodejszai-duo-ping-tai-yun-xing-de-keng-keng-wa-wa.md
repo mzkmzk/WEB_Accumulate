@@ -61,3 +61,17 @@ spawn((path.join(__dirname, '..','node_modules', '.bin', 'webpack'), ...)
 
 在node_modules里假设插件里有命令行设置 那么都会在本项目的node_modules/bin里
 
+# path 模块处理路径 
+
+假设现在场景是: node要把本地文件上传到linux服务器 
+
+假设开发是在 mac上开发的 很可能直接这样拼接 linux服务器的文件路径 path.join(....)
+
+但是假如使用者在win上使用 path.join 就会按win的文件规则来, 这样很明显生成的服务器路径是错误的
+
+而正确的是应该强制使用linux的文件规则 `path.posix.join(...)`
+
+而与之对应的强制使用win的文件规则 `path.win32.join(...)`
+
+
+
