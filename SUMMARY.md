@@ -119,6 +119,7 @@
       * [高斯模糊+图片缩放](gao_si_mo_7cca+_tu_pian_suo_fang.md)
       * [布局相关](bu-ju-xiang-guan.md)
     * [常用语法](常用api.md)
+      * [CSS选择器](css/chang-yong-yu-fa/xuan-ze-qi.md)
       * [border-radius](border-radius.md)
       * [clip-path](clip-path.md)
       * [position](postion.md)
@@ -323,4 +324,5 @@
   * [vue-cli](yuan-ma-yue-du/vue-cli.md)
 * [生活](sheng-huo.md)
   * [煲汤秘籍](sheng-huo/bao-tang-mi-ji.md)
+  * [车相关的入门知识](sheng'hu)
 
