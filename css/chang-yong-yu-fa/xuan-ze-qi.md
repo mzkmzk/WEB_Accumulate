@@ -5,7 +5,7 @@
 | 选择器 | demo | demo描述 | CSS |
 | --- | --- | --- | --- |
 | .class |.hide|选择class值含有用空格分隔后有hide值的元素|1 |
-| `#id` |#my_id|选择id属性为my_id的元素|1 |
+| #id |#my_id|选择id属性为my_id的元素|1 |
 | * |* |匹配所以元素|2 |
 | element | p | 匹配所有p标签|1 |
 | element,element|div,p|匹配所有div元素和p元素|1 |
@@ -21,9 +21,9 @@
 |[attr]|[tagert]|匹配所有含有target属性的元素|2|
 |[attr=val]|[target=_blank]|匹配含有target值为_blank的元素|2|
 |[attr~=val]|[class=a]|匹配所有class值以空格为分隔符分隔后值含有a的元素|2|
-|`[attr|=val]`|`[langth|=en]`|匹配lang属以en-开头的元素|2|
+|[attr\|=val]|[langth\|=en]|匹配lang属以en-开头的元素|2|
 |[attr^=val]|[href^=https]|匹配href以https开头的元素|3|
-|[attr$=val]|[href^=.pdf]匹配href以.pdf结尾的元素|3|
+|[attr$=val]|[href$=.pdf]|匹配href以.pdf结尾的元素|3|
 |[attr*=val]|[href*=xxx.com]|匹配href包含xunlei.com的元素|3|
 
 伪类选择器
@@ -35,6 +35,10 @@
 |:active|p:active|匹配鼠标按下去的p标签|1|
 |:hover|p:hover|匹配鼠标hover的p标签|1|
 |:focus|p:focus|匹配获取焦点的p标签元素|1|
+
+tips:
+
+一般就表单元素和链接才会用有焦点.但是只要元素有tabindex属性就可以触发focus
 
 |选择器|demo|demo描述|CSS|
 | --- | --- | --- | --- |
@@ -67,12 +71,8 @@
 |:checked|input:checked|匹配被选中的的input元素|3|
 |:not(selector)|:not(p)|匹配非p的元素|3|
 |:target|:target|匹配当前页面的瞄点元素|3|
-|::selection|::selection|匹配被用户选择的元|3|
+|::selection|::selection|匹配被用户选择的元素|3|
 
-
-tips:
-
-一般就表单元素和链接才会用有焦点.但是只要元素有tabindex属性就可以触发focus
 
 ### element + element 选择器
 
