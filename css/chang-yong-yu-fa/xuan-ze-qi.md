@@ -26,7 +26,7 @@
 |[attr*=val]|[href*=xxx.com]|匹配href包含xunlei.com的元素|3|
 |[attr&brvbar;=val]|[langth&brvbar;=en]|匹配lang属以en-开头的元素|2|
 
-tips: &brvbar; 实为 `|`, 引gitbook生成html时这里有问题 所以这里需要做下替换
+tips: &brvbar; 实为 `|`, 因为gitbook生成html时这里有问题 所以这里需要做下替换
 
 伪类选择器
 
