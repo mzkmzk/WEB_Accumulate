@@ -21,10 +21,12 @@
 |[attr]|[tagert]|匹配所有含有target属性的元素|2|
 |[attr=val]|[target=_blank]|匹配含有target值为_blank的元素|2|
 |[attr~=val]|[class=a]|匹配所有class值以空格为分隔符分隔后值含有a的元素|2|
-|[attr\|=val]|[langth\|=en]|匹配lang属以en-开头的元素|2|
 |[attr^=val]|[href^=https]|匹配href以https开头的元素|3|
 |[attr$=val]|[href$=.pdf]|匹配href以.pdf结尾的元素|3|
 |[attr*=val]|[href*=xxx.com]|匹配href包含xunlei.com的元素|3|
+|[attr&brvbar;=val]|[langth&brvbar;=en]|匹配lang属以en-开头的元素|2|
+
+tips: &brvbar; 实为 `|`, 引gitbook生成html时这里有问题 所以这里需要做下替换
 
 伪类选择器
 
