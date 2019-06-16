@@ -8,3 +8,9 @@ WEB开发积累
 在这里主要积累一些WEB中我遇到一些..奇奇怪怪的东西......~
 
 
+# 打包
+
+```bash
+npm install -g gitbook
+gitbook build
+```

@@ -234,12 +234,12 @@ console.log(x); // Uncaught ReferenceError: x is not defined
 
 1. prototype: xxx.protype指向的是xxx的原型(原型一般都是对象)
 2. constructor: 存在于xxx.prototype.constructor, 指向xxx(xxx为构造函数)
-3. __proto__: 每次被new的实例化对象 都会包含一个__proto__属性 其值是其constructor的prototype
+3. `__proto__`: 每次被new的实例化对象 都会包含一个`__proto__`属性 其值是其constructor的prototype
 
 从上可得出
 
-1. 函数 都有 __proto__ 和 prototype, __proto__指向函数的构造函数的原型, prototype指向的是 函数的原型
-2. 对象 只有 __proto__ 指向对象的构造函数的原型
+1. 函数 都有 `__proto__` 和 prototype, `__proto__`指向函数的构造函数的原型, prototype指向的是 函数的原型
+2. 对象 只有 `__proto__` 指向对象的构造函数的原型
 
 下面列出几个对比 来理解原型链
 
@@ -294,7 +294,7 @@ console.log(Object.prototype.__proto__ === null)
 
 需要注意的额外点
 
-Function.__proto__ === Function.prototype
+`Function.__proto__` === Function.prototype
 
 可以说Function的构造函数还是其自身
 
@@ -353,7 +353,7 @@ console.log( son instanceof Grandfather)
 
 考题: 为什么浏览器能判断son 是Son Father Grandfather的实例?
 
-因为instanceof 主要是检验son.__protype__ === Son.prototype
+因为instanceof 主要是检验`son.__protype__` === Son.prototype
 
 # 参考链接
 

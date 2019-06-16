@@ -391,6 +391,42 @@ moduleNameMapper: {
 }
 ```
 
+## alias查找路径重命名
+
+例如像笔者一般习惯在webpack.config.js里配置
+
+```javascript
+{
+    ...
+    resolve: {
+        alias: {
+            "@": path.join(__dirname, 'src', 'js')
+        }
+    }
+}
+```
+
+业务JS
+
+```javascript
+import xxx from '@/pages/abs'
+```
+
+然后在跑业务JS的时候 jest并找不到 '@/pages/abs'
+
+而这时 jest配置里也有webpack类似的alias功能
+
+```javascript
+{
+    ...
+    "jest": {
+        "^@/(.*)$": "<rootDir>/src/js/$1"
+    }
+}
+```
+
+这样配置就可以设置正则匹配到路径 如何重新找路径
+
 # 疑惑点
 
 ## jest.runAllTimers()和jest.runOnlyPendingTimers()的区别
@@ -469,7 +505,7 @@ All files |      100 |      100 |      100 |      100 |                |
 
 通常80%以上的覆盖率就足够
 
-若每个分支都要走一遍 很多是意义的
+若每个分支都要走一遍 很多是无意义的
 
 什么叫做无意义, 是即使你走了这个分支 你的断言也不知道该怎么检查
 

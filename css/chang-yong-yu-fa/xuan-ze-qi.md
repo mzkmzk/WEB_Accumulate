@@ -143,7 +143,60 @@ tips:
 
 而:nth-of-type(2) 只要父元素有两个同类型的元素 就可以匹配上
 
+### nth-child 类的用法
 
+这里包括 nth-child nth-last-child nth-of-type nth-last-of-type 其实是一样的 但是拿nth-child举例
+
+- :nth-child(odd|even): odd代表取位置在奇数的位置 even代表取位置在偶数的元素 
+- :nth-child(7): 取位置在第7位的元素
+- :nth-child(3n+4): 取第4 7 10 13 ...的元素
+- :nth-child(-n+3): 取第3 2 1 的元素
+- :nth-child(n): 写了等于没写 全选择
+- :nth-child(n+8):nth-child(-n+15): 选择第8到第15个元素
+
+了解完上面基础的属性后 可以来点灵活应用的例子
+
+> 例如微信的朋友圈晒图样式...
+
+一张图显示为A布局
+
+四张图显示为B布局
+
+其余为默认的C布局
+
+这种纯CSS如何写呢
+
+```css
+ul li:only-of-type{ 布局A }
+ul li:first-of-type:nth-last-of-type(4), ul li:first-of-type:nth-last-of-type(4) ~ li{ 布局B }
+ul li{ 布局C }
+```
+
+> 数字活动规则
+
+当css用counter-increment来添加:before数字时 要考虑的情况是 条数 小于10和大于等于10的情况
+
+因为小于10条时 所以before的content都是` content: counter(计数器) '. ';`
+
+而大于等于10条时 为了保持数字对齐. 第1-9条要设置为 `content: '\00a0\00a0' counter(rule_test_3) '. \00a0';`
+
+所以设置为
+
+```css
+.demo-3 li{
+    counter-increment: rule_test_3;
+    list-style: none;
+}
+.demo-3 li:before{
+    content: counter(rule_test_3) '. \00a0';
+}
+
+.demo-3 li:first-of-type:nth-last-of-type(n+10)::before, .demo-3 li:first-of-type:nth-last-of-type(n+10) ~ li:nth-of-type(-n+9)::before {
+     content: '\00a0\00a0' counter(rule_test_3) '. \00a0';
+}
+```
+
+参考链接: https://blog.csdn.net/u013778905/article/details/79309773
 
 
 
