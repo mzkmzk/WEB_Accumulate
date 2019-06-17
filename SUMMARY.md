@@ -327,6 +327,6 @@
   * [TCP握手和挥手](wang-luo/tcp-wo-shou-he-hui-shou.md)
 * [生活](sheng-huo.md)
   * [煲汤秘籍](sheng-huo/bao-tang-mi-ji.md)
-  * [车相关的入门知识](che-xiang-guan-de-ru-men-zhi-shi.md)
-  * [初探宝宝疫苗](sheng-huo/chu-tan-bao-bao-yi-miao.md)
+  * [车相关的入门知识](sheng-huo/che-xiang-guan-de-ru-men-zhi-shi.md)
+  * [初探宝宝疫苗](sheng-huo/sheng-huo/chu-tan-bao-bao-yi-miao.md)
 
