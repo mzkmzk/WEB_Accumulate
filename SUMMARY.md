@@ -328,5 +328,5 @@
 * [生活](sheng-huo.md)
   * [煲汤秘籍](sheng-huo/bao-tang-mi-ji.md)
   * [车相关的入门知识](sheng-huo/che-xiang-guan-de-ru-men-zhi-shi.md)
-  * [初探宝宝疫苗](sheng-huo/sheng-huo/chu-tan-bao-bao-yi-miao.md)
+  * [初探宝宝疫苗](sheng-huo/chu-tan-bao-bao-yi-miao.md)
 
