@@ -324,9 +324,9 @@
   * [jQuery](yuan-ma-yue-du/jquery.md)
   * [vue-cli](yuan-ma-yue-du/vue-cli.md)
 * [网络](wang-luo.md)
-  * [TCP握手和挥手](tcp-wo-shou-he-hui-shou.md)
+  * [TCP握手和挥手](wang-luo/tcp-wo-shou-he-hui-shou.md)
 * [生活](sheng-huo.md)
   * [煲汤秘籍](sheng-huo/bao-tang-mi-ji.md)
   * [车相关的入门知识](che-xiang-guan-de-ru-men-zhi-shi.md)
-  * [初探宝宝疫苗](chu-tan-bao-bao-yi-miao.md)
+  * [初探宝宝疫苗](sheng-huo/chu-tan-bao-bao-yi-miao.md)
 
