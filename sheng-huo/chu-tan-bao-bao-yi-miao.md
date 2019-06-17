@@ -45,7 +45,7 @@
 
 # 宝宝打疫苗时间方案
 
-其实有N种...但是目标基本非通作用的疫苗都打完
+其实有N种...但是目标都是把各类疫苗都打完
 
 https://mp.weixin.qq.com/s/1prCuZQ1vdEbqycfXPV77Q
 
