@@ -223,6 +223,8 @@
   * [前端安全知识](qian-duan-an-quan-zhi-shi.md)
   * [常用代码段收集](chang-yong-dai-ma-duan-shou-ji.md)
   * [vue的初学者问题](qian-duan/vuede-chu-xue-zhe-wen-ti.md)
+  * [puppeteer简介与源码阅读](qian-duan/puppeteer-jian-jie.md)
+  * [puppeteer跳转页面后response获取](qian-duan/puppeteer-tiao-zhuan-ye-mian-hou-response-huo-qu.md)
 * [服务器](fu_wu_qi.md)
   * [Linux](linux.md)
     * [Common](common.md)
