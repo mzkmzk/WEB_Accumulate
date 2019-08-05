@@ -225,6 +225,7 @@
   * [vue的初学者问题](qian-duan/vuede-chu-xue-zhe-wen-ti.md)
   * [puppeteer简介与源码阅读](qian-duan/puppeteer-jian-jie.md)
   * [puppeteer跳转页面后response获取](qian-duan/puppeteer-tiao-zhuan-ye-mian-hou-response-huo-qu.md)
+  * [前端代码规范实施](qian-duan-dai-ma-gui-fan-shi-shi.md.md)
 * [服务器](fu_wu_qi.md)
   * [Linux](linux.md)
     * [Common](common.md)
