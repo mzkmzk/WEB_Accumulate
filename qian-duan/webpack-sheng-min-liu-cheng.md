@@ -374,6 +374,31 @@ module.exports = function(content){
 }
 ```
 
+### file-loader
+
+https://github.com/webpack-contrib/file-loader
+
+```javascript
+const loaderUtils = require('loader-utils')
+module.exports = function(content){
+    // content为文件内容
+    // 获取webpack关于本loader的配置内容
+    const options = loaderUtils.getOptions(this) || {}
+    // 获取url路径
+    const url = loaderUtils.interpolateName(this, options.name, {
+        context: options.context || this.rootContext,
+        content,
+        regExp: options.regExp
+    })
+    let outputPath = url
+    // 经过options.outputpath的处理
+    let publicPath = `__webpack_public_path__ + ${JSON.stringify(outputPath)}`;
+    // 经过options.publicPath路径处理
+    // 通知webpack生成文件
+    this.emitFile(outputPath, content)
+    return `module.exports = ${publicPath}`
+}
+```
 ### mini-css-extract-plugin.Loader
 
 ```javascript
@@ -421,6 +446,26 @@ export function pitch(request){
 
 }
 ```
+
+# 辅助模块说明
+
+### loader-utils
+
+> interpolateName 获取loader要处理的文件路径
+
+调用示例
+
+```javascript
+const url = _loaderUtils.default.interpolateName(this, options.name, {
+    context,
+    content,
+    regExp: options.regExp
+  })
+```
+
+根据loader上下文, 配置的name例如`[path][name].[ext]?h=[${hashName}:8]`, 文件内容
+
+进行生成新的相对于参数context路径的路径+自定义规则的文件名
 
 # 参考文章
 
