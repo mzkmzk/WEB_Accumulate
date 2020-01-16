@@ -227,6 +227,8 @@
   * [puppeteer跳转页面后response获取](qian-duan/puppeteer-tiao-zhuan-ye-mian-hou-response-huo-qu.md)
   * [前端代码规范实施](qian-duan/qian-duan-dai-ma-gui-fan-shi-shi.md)
   * [webpack流程理解](qian-duan/webpack-sheng-min-liu-cheng.md)
+  * [webpack性能优化经验](qian-duan/webpack-xing-neng-you-hua-jing-yan.md)
+  * [细说peerDependencies](qian-duan/xi-shuo-peer-dependencies.md)
 * [服务器](fu_wu_qi.md)
   * [Linux](linux.md)
     * [Common](common.md)
@@ -315,6 +317,8 @@
   * [压测](ya_ce.md)
     * [ab压测](abya_ce.md)
   * [prometheus+grafana监测系统](yun-wei/prometheus_grafana_jian_kong_xi_tong.md)
+  * [在linux中给全部用户安装node](yun-wei/linux_quan_bu_yong_hu_an_zhuang_node.md)
+  * [安装gitlab-runner](yun-wei/install-gitlab-runner.md)
 * [安全](安全.md)
   * [前端](前端.md)
     * [XSS](xss.md)
@@ -333,4 +337,5 @@
   * [煲汤秘籍](sheng-huo/bao-tang-mi-ji.md)
   * [车相关的入门知识](sheng-huo/che-xiang-guan-de-ru-men-zhi-shi.md)
   * [初探宝宝疫苗](sheng-huo/chu-tan-bao-bao-yi-miao.md)
+  * [羽毛球拍选择](sheng-huo/yu-mao-qiu-pai-xuan-zhe.md)
 
