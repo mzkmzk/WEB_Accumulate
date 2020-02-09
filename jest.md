@@ -427,6 +427,44 @@ import xxx from '@/pages/abs'
 
 这样配置就可以设置正则匹配到路径 如何重新找路径
 
+## 监听location.href的赋值
+
+场景: 要测试代码有无执行更改url
+
+例如业务代码
+
+```javascript
+location.href = 'https://xxx.com'
+```
+
+测试代码就为
+
+```javascript
+global.window = Object.create(window)
+
+Object.defineProperty(window, 'location', {
+  value: {
+    href: 'https://www.aaa.com'
+  }
+})
+...
+expect(window.location.href).toMathSnapshot(`https://xxx.com`)
+
+```
+
+## new Date的mock
+
+有时候断言含有时间戳, 应该如何mock
+
+```javascript
+const DATE_TO_USE = new Date('2016');
+const _Date = Date;
+global.Date = jest.fn(() => DATE_TO_USE);
+global.Date.UTC = _Date.UTC;
+global.Date.parse = _Date.parse;
+global.Date.now = _Date.now;
+```
+
 # 疑惑点
 
 ## jest.runAllTimers()和jest.runOnlyPendingTimers()的区别

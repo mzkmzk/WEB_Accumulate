@@ -229,6 +229,8 @@
   * [webpack流程理解](qian-duan/webpack-sheng-min-liu-cheng.md)
   * [webpack性能优化经验](qian-duan/webpack-xing-neng-you-hua-jing-yan.md)
   * [细说peerDependencies](qian-duan/xi-shuo-peer-dependencies.md)
+  * [create-nuxt-app源码阅读](qian-duan/create-nuxt-app-yuan-ma-chu-tan.md)
+  * [validate-npm-package-name源码阅读](qian-duan/validate-npm-package-name-source-read.md)
 * [服务器](fu_wu_qi.md)
   * [Linux](linux.md)
     * [Common](common.md)
