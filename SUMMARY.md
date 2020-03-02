@@ -242,6 +242,7 @@
       * [命令长期运行](ming_ling_chang_qi_yun_xing.md)
       * [命令开机执行](ming_ling_kai_ji_zhi_xing.md)
     * [对外开放网络端口](open_port_web.md)
+    * [Linux新建用户的学问](linux/linux-xin-jian-yong-hu-de-xue-wen.md)
   * [PHP](php.md)
     * [常见知识](chang_jian_zhi_shi.md)
     * [PHPUnit](phpunit.md)
