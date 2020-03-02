@@ -6,7 +6,7 @@
 
 服务器只是有root这么一个可登陆用户
 
-但是生产环境中, 我们千万不能视图用root用户去跑所有的程序
+但是生产环境中, 我们千万不能试图用root用户去跑所有的程序
 
 服务器要跑服务, 一般是要新建一个用户来承担这项工作
 
@@ -16,14 +16,14 @@
 # 新建用户组
 > groupadd work
 # 新建用户work, 并且加入到work用户组, 并指定家目录为/home/work
-> useradd -g work work -d /home/work
+> useradd -g work -d /home/ work
 # 指定用户shell 为/bin/bash
 > usermod -s /bin/bash work
 ```
 
 # 添加root的命令行设置到work
 
-即使我们这是了work 的执行shell 为/bin/bash
+即使我们设置了work 的执行shell 为/bin/bash
 
 我们会发现阿里云给我们创建的root
 
@@ -49,12 +49,14 @@
 
 本机shell(非服务器shell, 一般指用户自己的计算机)
 
-```bash
+
+```bash
 > cd ~/.ssh
 # 会创建 404mzk-serve-work 和 404mzk-serve-work.pub文件
 > ssh-keygen -f 404mzk-serve-work
 # 通过root的密钥 将公钥发放到到云服务器中, 切勿忘记最后的ip
-scp -i /Users/maizhikun/.ssh/root密钥文件.pem  404mzk-serve-work.pub root@云服务器ip:
+> scp -i /Users/maizhikun/.ssh/root密钥文件.pem  404mzk-serve-work.pub root@云服务器ip:
+
 ```
 
 云服务器root-shell
