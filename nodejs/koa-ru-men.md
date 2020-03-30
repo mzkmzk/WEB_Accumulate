@@ -210,4 +210,23 @@ router.get(
 
 # 异常错误
 
-由上面的中间件
+由上面的中间件遇到异常都是直接`thorw new Error`的, 所以这里需要对错误进行一个统一的处理
+
+```javascript
+app.use(async function(ctx, next){
+  
+  try {
+    await next()
+  } catch(err) {
+    ctx.body = { code: -1, msg: err.message }
+  }
+})
+
+// response
+app.use(router.routes(), router.allowedMethods())
+```
+
+这里没有定义为`koa-router`的middleware, 而是`koa`的middleware
+
+这里错误处理函数需要定义在koa-router之前, 因为错误异常函数要把所有业务代码给`try-catch`住
+
