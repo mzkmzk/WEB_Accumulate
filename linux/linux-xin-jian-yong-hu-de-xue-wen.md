@@ -39,6 +39,20 @@
 > source /home/work/bashrc
 ```
 
+需要添加`~/.bash_profile`文件为每次ssh登录 `source ./bashrc`
+
+```bash
+$ vim ~/.bash_profile
+```
+
+内容
+
+```bash
+if test -f .bashrc ; then
+  source .bashrc 
+fi
+```
+
 # 新增用户work 用密钥进行ssh登录
 
 阿里云服务器中, 创建服务器时, 可以选择root的ssh登录方式为密钥/密码 等方式
@@ -54,7 +68,7 @@
 > cd ~/.ssh
 # 会创建 404mzk-serve-work 和 404mzk-serve-work.pub文件
 > ssh-keygen -f 404mzk-serve-work
-# 通过root的密钥 将公钥发放到到云服务器中, 切勿忘记最后的ip
+# 通过root的密钥 将公钥发放到到云服务器中, 切勿忘记最后的:
 > scp -i /Users/maizhikun/.ssh/root密钥文件.pem  404mzk-serve-work.pub root@云服务器ip:
 
 ```
@@ -65,4 +79,40 @@
 # 将/root/404mzk-serve-work.pub 复制到work用户中
 > mkdir /home/work/.ssh
 > mv 404mzk-serve-work.pub /home/work/.ssh/ authorized_keys
+```
+
+# 用户work添加免密sudo
+
+一般情况下 给work加sudo权限, work执行sudo命令的时候 还是需要确认密码的
+
+但我们的work木有密码阿 怎么破, 执行以下命令即可
+
+```bash
+chmod u+w /etc/sudoers
+echo "work       ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers
+chmod u-w /etc/sudoers
+```
+
+# github账号ssh设置
+
+假设阿里云服务器要拉取github的仓库 则需要在github设置服务器的ssh-key
+
+参考链接 https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+执行的相关shell
+
+```bash
+# cd到~/.ssh并生成ssh-key 之后需要填写密钥名字和密码信息 ,密码信息可以直接回车 不设置密码
+$ cd ~/.ssh & ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+# 启动ssh-agent服务
+$ eval "$(ssh-agent -s)"
+# 添加密钥文件到ssh
+$ ssh-add ~/.ssh/密钥名
+```
+
+笔者的服务器之前没有ssh-add这个命令 所以需要安装
+
+```bash
+# 具体参考 https://www.cyberciti.biz/faq/how-to-install-ssh-on-ubuntu-linux-using-apt-get/
+$ sudo apt-get install openssh-client
 ```
