@@ -23,7 +23,6 @@ from flask import Flask
 app = Flask(__name__)
 cache = redis.Redis(host='redis', port=6379)
 
-
 def get_hit_count():
     retries = 5
     while True:
@@ -136,5 +135,34 @@ $ docker-compose stop
 ```bash
 # redis计数器的数据会被清除
 $ docker-compose down
+```
+
+# docker-compose.yaml文件的切换
+
+### 场景一: docker-compose 去分开发环境与线上环境
+
+我们开发的时候也是通过`docker-compose`部署 
+
+但是开发和线上的, 部署步骤或者命令不一样, 这个时候建议设定两个`docker-compose`启动配置文件
+
+通过`-f`来更改配置文件的使用
+
+```bash
+$ docker-compose -f ./docker-compose.dev.yaml up -d
+```
+
+参考链接: https://www.cnblogs.com/sparkdev/p/9803554.html
+
+一般而言 对应的Dockerfile也需要设置为dev文件
+
+```
+version: '3'
+services:
+  serve:
+    build: 
+      context: ./serve
+      # 相对于./serve的dockerfile路径
+      dockerfile: ./Dockerfile.dev
+      ...
 ```
 

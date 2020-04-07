@@ -231,6 +231,8 @@
   * [细说peerDependencies](qian-duan/xi-shuo-peer-dependencies.md)
   * [create-nuxt-app源码阅读](qian-duan/create-nuxt-app-yuan-ma-chu-tan.md)
   * [validate-npm-package-name源码阅读](qian-duan/validate-npm-package-name-source-read.md)
+  * [浏览器发版计划查询](qian-duan/liu-lan-qi-fa-ban-ji-hua-cha-xun.md)
+  * [cookie中samesite的介绍](qian-duan/cookie-zhong-samesite-de-jie-shao.md)
 * [nodejs](nodejs/index.md)
   * [koa入门](nodejs/koa-ru-men.md)
   * [koa-router源码分析](nodejs/koa-router-yuan-ma-fen-xi.md)
