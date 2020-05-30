@@ -166,3 +166,22 @@ services:
       ...
 ```
 
+# docker-compose中的容器开机自启动
+
+```bash
+version: '3.4'
+x-restart-policy: &restart_policy
+  restart: unless-stopped
+services:
+  web:
+    << : *restart_policy
+    build: ./
+    volumes: 
+      xxx
+```
+
+主要设置restart属性为`unless-stopped`
+
+然后将配置放入到web容器中
+
+具体参考: https://docs.docker.com/compose/compose-file/#/deploy#restart

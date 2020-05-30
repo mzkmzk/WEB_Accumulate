@@ -69,7 +69,7 @@ const {
 异步任务中的并行或串行的hook
 
 - paralle: 并行hook
-- series: 并行hook
+- series: 串行hook
 
 hook返回值的作用
 
@@ -155,7 +155,7 @@ Webpack的生命流程由lodash/plugins的配置所决定
 -> 调用options.plugins数组插件函数
 -> 执行compiler.run真正跑程序
 -> new 构建的Compilation
--> 通知addEvtry钩子加载entry的资源
+-> 通知addEntry钩子加载entry的资源
 -> compilation进行buildModule
 -> compilation进行shouldGenerateChunkAssets
 -> compilation.emit完成

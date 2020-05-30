@@ -33,5 +33,5 @@
 # safari
 
 - 发版本记录: https://developer.apple.com/documentation/safari_release_notes
-
+- 下载最新的safari: https://developer.apple.com/download/more/?=Safari
 

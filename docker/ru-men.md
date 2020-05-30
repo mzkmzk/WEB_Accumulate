@@ -16,8 +16,18 @@ mac 10.10.3
 Registry Mirrors:
  https://registry.docker-cn.com/
  ```
- 
- 
-# Docker中跑node
 
-1. 下载node镜像
+
+# 在Dockerfile忽略指定文件
+
+我们在Dockerfile经常执行`COPY . .`
+
+这样把代码放进放进镜像里
+
+但是我们可能想排除一些目录/文件
+
+这就需要忽略指定文件
+
+这个通过.dockerignore 来指定, 用法跟.gitignore类似
+
+可以参考 https://qhh.me/2019/02/24/dockerignore-%E6%96%87%E4%BB%B6%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/
