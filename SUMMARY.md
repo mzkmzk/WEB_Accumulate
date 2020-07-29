@@ -290,7 +290,6 @@
     * [添加SSI功能](ssi.md)
   * [Docker](docker.md)
     * [入门](docker/ru-men.md)
-  * [GitLab-CI使用](gitlab-cishi-yong.md)
 * [工具](gong_ju.md)
   * [PhPStorm](phpstorm.md)
     * [项目支持Babel转JSX的步骤](xiang_mu_zhi_chi_babel_de_bu_zou.md)
@@ -339,6 +338,7 @@
   * [nginx实战](yun-wei/nginx-shi-zhan.md)
   * [Unbound实战](yun-wei/unbound-shi-zhan.md)
   * [CDN原理解析](yun-wei/cdn-yuan-li-jie-xi.md)
+  * [Sentry搭建](yun-wei/sentry-da-jian.md)
 * [安全](安全.md)
   * [前端](前端.md)
     * [XSS](xss.md)
@@ -361,4 +361,9 @@
   * [车相关的入门知识](sheng-huo/che-xiang-guan-de-ru-men-zhi-shi.md)
   * [初探宝宝疫苗](sheng-huo/chu-tan-bao-bao-yi-miao.md)
   * [羽毛球拍选择](sheng-huo/yu-mao-qiu-pai-xuan-zhe.md)
-
+* [Gitlab](gitlab/index.md)
+  * [Gitlab-Runner的安装](gitlab-cishi-yong.md)
+  * [gitlab-ci.yaml文件学习](gitlab/gitlab-cy-yaml-wen-jian-xue-xi.md)
+  * [gitlab-runner缓存机制](gitlab/gitlab-runner-huan-cun-ji-zhi.md)
+* [golang][golang/ru-men.md]
+  * [golang入门](golang/ru-men.md)

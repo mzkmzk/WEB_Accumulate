@@ -58,7 +58,7 @@ tips:
 |选择器|demo|demo描述|CSS|
 | --- | --- | --- | --- |
 |:first-of-type|p:first-of-type|匹配父元素的第一个p元素|3|
-|:last-of-tyoe|p:last-of-type|匹配父元素的最后一个p元素|3|
+|:last-of-type|p:last-of-type|匹配父元素的最后一个p元素|3|
 |:nth-of-type(n)|p:nth-of-type(n)|匹配父元素的第n个p元素|3|
 |:nth-last-of-type(n)|p:nth-last-of-type(n)|匹配父元素的倒数第n个p元素|3|
 
