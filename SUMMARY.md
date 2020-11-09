@@ -367,3 +367,5 @@
   * [gitlab-runner缓存机制](gitlab/gitlab-runner-huan-cun-ji-zhi.md)
 * [golang][golang/ru-men.md]
   * [golang入门](golang/ru-men.md)
+* [GraphQL](graphql/ru-men.md)
+  * [Graphql入门](graphql/ru-men.md)
