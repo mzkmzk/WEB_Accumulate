@@ -129,6 +129,7 @@
       * [background](background.md)
       * [CSS计量单位](cssji-liang-dan-wei.md)
       * [vertical-align](vertical-align.md)
+      * [linear-gradient](css/linear-gradient.md)
     * [BEM实战](css/BEM-shi-zhan.md)
   * [HTML](_html.md)
     * [基本标签](_html/ji-ben-biao-qian.md)
