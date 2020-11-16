@@ -2,7 +2,7 @@
 
 # 远程连接数据库
 
-```shell
+```bash
 # mydb = 数据库名
 mysql --host=localhost --user=myname --password=password mydb
 ```
