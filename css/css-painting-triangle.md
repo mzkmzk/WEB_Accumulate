@@ -13,7 +13,7 @@
 
 基本的实现代码
 
-![基本实现css三角形代码](https://mzk-blog-static.oss-cn-shenzhen.aliyuncs.com/study-css-demo/QQ20201113-183331.png)
+![基本实现css三角形代码](https://mzk-blog-static.oss-cn-shenzhen.aliyuncs.com/study-css-demo/QQ20201116-153333.png)
 
 
 [体验链接](http://study-css-demo.404mzk.com/effect/triangle/)
