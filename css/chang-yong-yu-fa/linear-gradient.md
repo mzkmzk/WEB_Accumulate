@@ -20,7 +20,7 @@
 
 如图所示
 
-![https://mzk-blog-static.oss-cn-shenzhen.aliyuncs.com/study-css-demo/QQ20201110-183640.png]()
+![](https://mzk-blog-static.oss-cn-shenzhen.aliyuncs.com/study-css-demo/QQ20201110-183640.png)
 
 渐变线的方向为由角度所决定
 
@@ -30,13 +30,13 @@
 
 类似于这个图的形式
 
-![https://mzk-blog-static.oss-cn-shenzhen.aliyuncs.com/study-css-demo/QQ20201111-122606.png]()
+![](https://mzk-blog-static.oss-cn-shenzhen.aliyuncs.com/study-css-demo/QQ20201111-122606.png)
 
 [体验角度变化demo](http://study-css-demo.404mzk.com/css3/linear-gradient/base/)
 
 体验demo截图
 
-![https://mzk-blog-static.oss-cn-shenzhen.aliyuncs.com/study-css-demo/QQ20201111-123927.png]()
+![](https://mzk-blog-static.oss-cn-shenzhen.aliyuncs.com/study-css-demo/QQ20201111-123927.png)
 
 # 参考资料
 
