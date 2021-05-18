@@ -259,7 +259,8 @@
     * [Tmux简介](linux/tmux-jian-jie.md)
     * [getopts获取shell参数](linux/getopts-huo-qu-shell-can-shu.md)
     * [envsubst替换配置项](linux/envsubst-ti-huan-pei-zhi-xiang.md)
-    * [rsync实践](linix/rsync-shi-jian.md)
+    * [rsync实践](linux/rsync-shi-jian.md)
+    * [nc命令](linux/nc-command.md)
   * [PHP](php.md)
     * [常见知识](chang_jian_zhi_shi.md)
     * [PHPUnit](phpunit.md)
@@ -368,7 +369,7 @@
   * [Gitlab-Runner的安装](gitlab-cishi-yong.md)
   * [gitlab-ci.yaml文件学习](gitlab/gitlab-cy-yaml-wen-jian-xue-xi.md)
   * [gitlab-runner缓存机制](gitlab/gitlab-runner-huan-cun-ji-zhi.md)
-* [golang][golang/ru-men.md]
+* [golang](golang/ru-men.md)
   * [golang入门](golang/ru-men.md)
 * [GraphQL](graphql/ru-men.md)
   * [Graphql入门](graphql/ru-men.md)
