@@ -232,8 +232,8 @@ console.log(x); // Uncaught ReferenceError: x is not defined
 
 了解原型链之前先理解几个概念
 
-1. prototype: xxx.protype指向的是xxx的原型(原型一般都是对象)
-2. constructor: 存在于xxx.prototype.constructor, 指向xxx(xxx为构造函数)
+1. prototype: xxx.protype指向的是xxx的原型
+2. constructor: 存在于xxx.prototype.constructor, 指向xxx
 3. `__proto__`: 每次被new的实例化对象 都会包含一个`__proto__`属性 其值是其constructor的prototype
 
 从上可得出

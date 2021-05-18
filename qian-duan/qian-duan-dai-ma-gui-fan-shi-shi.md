@@ -75,7 +75,8 @@ eslint就会给出错误的提示
     "javascriptreact",
     "html",
     "vue"
-  ],}
+  ]
+}
 
 ```
 
