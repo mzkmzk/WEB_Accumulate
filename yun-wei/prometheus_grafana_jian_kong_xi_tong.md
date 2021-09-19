@@ -48,7 +48,15 @@ prometheus 专用的查询语句 称为 PromQL (Prometheus Query Language)
 
 > rate()
 
-rate(表达式) 计算每秒平均增长率
+rate(表达式) 计算每秒平均增长率(适合缓慢变化的计数器)
+
+rate会取指定时间范围内所有数据点
+
+> irate()
+
+计算每秒平均增长率(适合快速变化的计数器)
+
+irate取的是在指定时间范围内的最近两个数据点来算速率
 
 # prometheus 内置变量
 
