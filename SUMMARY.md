@@ -261,6 +261,7 @@
     * [envsubst替换配置项](linux/envsubst-ti-huan-pei-zhi-xiang.md)
     * [rsync实践](linux/rsync-shi-jian.md)
     * [netcat命令](linux/nc-command.md)
+    * [tcpdump命令](linux/tcpdump.md)
   * [PHP](php.md)
     * [常见知识](chang_jian_zhi_shi.md)
     * [PHPUnit](phpunit.md)
@@ -376,3 +377,4 @@
 * [k8s](k8s/k8s-ru-men.md)
   * [kubectl入门](k8s/kubectl-ru-men.md)
   * [安装minikube](k8s/an-zhuang-minikube.md)
+* [kratos源码解读](kratos/index.md)
